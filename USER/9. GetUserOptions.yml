@@ -1,0 +1,177 @@
+info:
+  name: 9. GetUserOptions
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: "{{url}}/user/GetUserOptions/chile/productor@passline.cl"
+  headers:
+    - name: content-type
+      value: application/json
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error bad params
+    request:
+      url: "{{url}}/user/GetUserOptions"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 14:20:55 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d28367bec91dd19-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The country field is required.",
+                  "The email field is required.",
+                  "The value of the email field must be email format."
+              ]
+          }
+  - name: Success response
+    request:
+      url: "{{url}}/user/GetUserOptions/chile/productor@passline.cl"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 21:08:07 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6c75fa8af5bcc0-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "menu": {
+                  "is_producer": true,
+                  "is_promoter": true,
+                  "is_sub_rrpp": false,
+                  "totem": true,
+                  "pos": true,
+                  "sales": true
+              },
+              "my_etickets": true,
+              "personal_data": true,
+              "fan_registration": true,
+              "my_biometrics_records": true,
+              "broker_session": true,
+              "change_pass": true,
+              "end_sesion": true,
+              "oneclick_unsubscribe": false,
+              "event_create": true,
+              "my_events": true,
+              "Financing_and_advances": false,
+              "my_consume": true,
+              "qr_menu": true,
+              "courtesy_tickets": true,
+              "product_sale": true,
+              "rrpp": true,
+              "courtesy_send": true,
+              "request_physical_tickets": true,
+              "passline_resources": true,
+              "total_sales": true,
+              "transactions": true,
+              "accreditors": true,
+              "ticket_office": true,
+              "own_ticket_holder": true,
+              "planimetry": true,
+              "database": true,
+              "club_cards": true,
+              "bank_data": true,
+              "paypal_account": true,
+              "grouping_events": true,
+              "bbdd_fans": true,
+              "subscribers": true,
+              "purchase_exceptions": true,
+              "venues": true,
+              "data_organizer": true,
+              "your_products": true,
+              "sale_details": true,
+              "sale_products": true,
+              "assigned_machines": true,
+              "liquidation_machines": true,
+              "request_your_machine": true,
+              "pos_device": true,
+              "consolidated": true,
+              "machine_service": true,
+              "linkpass": true,
+              "report_sales": true,
+              "my_points": true,
+              "cashless": true,
+              "subadministrators": true,
+              "business_partners": false,
+              "link_sale": false,
+              "sell_cash": false,
+              "subs_rrpp": false,
+              "sell_report": false,
+              "rr_pp_manual": false
+          }
+
+docs: Trae las opciones de un usuario mediante el envío de su token. La respuesta es TRUE o FALSE dependiendo del caso.

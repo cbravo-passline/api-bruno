@@ -1,0 +1,42 @@
+info:
+  name: 45. EditProductCashless
+  type: http
+  seq: 21
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/EditProductCashless"
+  body:
+    type: multipart-form
+    data:
+      - name: product
+        type: text
+        value: GGNdBAhmIDXQqRG2WjPsyw@@
+      - name: category
+        type: text
+        value: D0LMsWSJukbTMy2_1uYOGA@@
+      - name: name
+        type: text
+        value: PEPSI
+      - name: description
+        type: text
+        value: Bebida resfrecante con hielo
+      - name: price
+        type: text
+        value: "1560"
+      - name: stock
+        type: text
+        value: "10000"
+      - name: image
+        type: file
+        value:
+          - postman-cloud:///1f027860-68a4-4030-a17a-ff28e073a920
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

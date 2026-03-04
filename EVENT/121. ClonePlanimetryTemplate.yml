@@ -1,0 +1,31 @@
+info:
+  name: 121. ClonePlanimetryTemplate
+  type: http
+  seq: 122
+
+http:
+  method: POST
+  url: "{{url}}/event/ClonePlanimetryTemplate"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event_id\" : \"608e170b60b7fd6f11914a4ec9dfedbd\",\r
+
+      \    \"planimetry_id\" : \"SiZkPzuLs6w982TTLr2ro9bRHGCaXWHCabSEGUyuvYQ@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

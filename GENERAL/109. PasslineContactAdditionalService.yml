@@ -1,0 +1,41 @@
+info:
+  name: 109. PasslineContactAdditionalService
+  type: http
+  seq: 104
+
+http:
+  method: POST
+  url: "{{url}}/general/PasslineContactAdditionalService"
+  headers:
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"nombre\": \"Cristian\",\r
+
+      \    \"apellido\":\"Bravo\",\r
+
+      \    \"email\":\"cbravo@passline.dev\",\r
+
+      \    \"telefono\": \"12345678\",\r
+
+      \    \"mensaje\": \"mensaje de pruebas mensaje de pruebas mensaje de pruebas mensaje de pruebas mensaje de pruebas mensaje de pruebas\",\r
+
+      \    \"country\": \"chile\",\r
+
+      \    \"evento\": \"evento de pruebas\",\r
+
+      \    \"servicio_adicional\": \"prueba de texto de servicio adicional\",\r
+
+      \    \"g-recaptcha-response\": \"0cAFcWeA5QhE7Sco1YHZR88EsCBLktb5SU7vbX_8_xdsUh-fBQTVpSnaN465NQ6ng8CGSdcG96fUsY-IvuMvpFfwiWy9luMQBjbYye3l5r40p3MOs2JJBqp__Qj398GDYuO8Tz1m7Gmd9ZNxDhJcGmuTKYPLikyxTa8IzavMbJqHWXSpht4otGBgQCYvhLAp2ywfwhdRJF2Ukg35WFRUU7v94P9vOU51dIuiMMAvpNfTqdyM5c-eZwnqfSNN_IXEw2agTtWLlvjY8P_H--R7mHCgne9L9miDR4G0eJNjl6fXEEqfO2IKf-FMVUAK2EwLSUuA24iwziX8GMzfQOAZ7-yuPURd8AwZXdo04jTqCjkUomk1UwT41C2r1qKrdy02eB2Bta37MrdFHHFSHPpP9BSGTWLb5MgBC7uhrQow4Z9ocMuhcKbOoy2QF3frouKR_pg1z_xSYRqhT_UxgVMmXxR0XoLjoKwt_n4dwsbIQUprN1XrptTHb9iTkytF_tV0Gum2JGdBNxMHP-fVlMDuF9f8-noU37pE2-QKbCjOME22Ma9g8CsKpDRxOgWR12s4icm_CpjjWL14U9IkjH9C71-7vIdv7hOevgCUBxEYhFJ1zNtzfcZPjeTzSVuCG_lJqSfS6h4aNDOXaoH1YFWuGFZTN7nA8rRCwBVxAgMDkyitmycm0_XnQkyXQrr7yQUGBRKDsVEPWPTPvNIM-jasf5kekUjo4CUv1M35wdXQTULZZbtTPXAiAuB4JDLqwubUttb7UsVKLqc5IW3RNeo7vRf2WJEUQ_cgU5kQ\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,26 @@
+info:
+  name: 41. ChangeStatusCashlessCategory
+  type: http
+  seq: 17
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/ChangeStatusCashlessCategory"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"category\":\"C74BGqJTyGs6BKOV7dIF7A@@\",\r
+
+      \    \"status\":0\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

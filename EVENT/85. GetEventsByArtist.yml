@@ -1,0 +1,24 @@
+info:
+  name: 85. GetEventsByArtist
+  type: http
+  seq: 86
+
+http:
+  method: GET
+  url: "{{url}}/event/GetEventsByArtist?country=&event=Akamba&artist=Ben Böhmer"
+  params:
+    - name: country
+      value: ""
+      type: query
+    - name: event
+      value: Akamba
+      type: query
+    - name: artist
+      value: Ben Böhmer
+      type: query
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,29 @@
+info:
+  name: 113. EditStatusFunctions
+  type: http
+  seq: 114
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditStatusFunctions"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"eventFunctionsId\" : \"VUJ5cpfjBvJXYcHPKjB0gA@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

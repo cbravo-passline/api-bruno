@@ -1,0 +1,14 @@
+info:
+  name: 82. GetWebEticketSales
+  type: http
+  seq: 83
+
+http:
+  method: GET
+  url: "{{url}}/general/GetWebEticketSales"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

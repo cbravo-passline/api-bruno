@@ -1,0 +1,26 @@
+info:
+  name: 120. ChangeStatusConsumerProduct
+  type: http
+  seq: 115
+
+http:
+  method: PUT
+  url: "{{url}}/general/ChangeStatusConsumerProduct"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"product\": \"zFj-8p22blsVkPyGHCxzgQ@@\",\r
+
+      \    \"status\": 0\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

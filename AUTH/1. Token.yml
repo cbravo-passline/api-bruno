@@ -1,0 +1,341 @@
+info:
+  name: 1. Token
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/auth/token"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    //\"email\": \"compratotems@passline.com\",\r
+
+      \    //\"password\": \"pass4321\",\r
+
+      \    \"email\": \"{{email}}\",\r
+
+      \    \"password\": \"{{password}}\",\r
+
+      \    \"g-recaptcha-response\": \"03AFcWeA7WrV9OquPptIB_fOx3p1oSVYvMgBiSHYnsUMG0HZHoz1Q68Dc1wNbPBit8AXK8GGXD8Vd_7QiOXPLXo3hPeCZFYR0Xl5GHGkqTxcia14luQ45DtoCyef1J5mirU7TC5OEZ5ZmHVjTrkis9Sn79vCiqPGNwDvLNlWibjUZaDWW5bT3Ml7iGo4yK1OF2F35MP0iNat3xzIRg-HJcizfkZd6t-IPASaGrlEUGKiOzTLLqxNOyoygy6YK7oWOc0I7KtLh8ZcRGhEUZDhGvwAkpvc7bV4nQy29OPxGm6oPuwF6lQLfbxDMBK-yb3YgMSsU0gcfJ46Y2hMEAzAxYZdmB_lkECjhJN5kixRw8Udk1tM-9JYwiEgzd0R-bYp_7XygOQPoZOO6qk2XC7g6CPSf1ZzXXoFf4jcRUxKoiroxA6ZLSUW7kGESTrnVSjvJRxQXFn_73NITHeZxfjKgJOejxxTIOEUSxqdRnO8JyEgNNMr70qYqxmLTfVI11Ydz8-_Ob5rQaKPHnJX2oc5Xw5wu7hVk-YaABCyqr-WC3n48OyrqAGrGH9-wzRLcjFnLBTJLNHSmDSy4QuGS4TEuyFvyLIEf2WimA2kp49GUoIkqc2hk90HbiJxjKsvPQ8zUNDrP3A6r8jIbfwsrRh55aB77mBKR2E146MNMIAelsaBvYB_-BHIBsAR1uxfM1h9kL1FJCKyWKLzBdX5dJTlsYcs1L1IK0DUyrT0HWHbQNxVVhqH3jVe7fHSKIheIRLpdaKY8KpBG_SRNaQYvu8qS7Z__rYe0piRE4rpcfmc3RQ4J-dcVDoJgs4QXk04dnKcOZrWBnEClNsW6PkZ-W0FlJ9cgLPlcZvz-z7SNVfFednmVQBJVMZo9eDeJx4T_X9pPvQpe4UBesk0GJb6I9EHtiX1oAHHDGibMYeMpyYha9DFnNWM1J8AspCnmH2-61SFaqn641C4gMRLQC\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/auth/token"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+        - name: User-Agent
+          value: Passline-PHP
+      body:
+        type: json
+        data: "{\r
+
+          \    \"email\": \"productor@passline.cl\",\r
+
+          \    \"password\": \"123456\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 10 Oct 2024 19:34:31 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: set-cookie
+          value: access=U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welEwUk9kV2RUWjJveFZFWk5TbmhOWmxsWFdsWjBha1pxT1VSRlQxVnBhMEpoYjBsUFQwRndVRVZqVEVkUVlqTm9TVXRITmpWVVRETjBjbnB4SzBRdlJsSlJOMk5PVjAxa05FcG1LM1ZaTVcxNlVGUnNXV05HTWxvM2JrVm1RWEJXTVcxTVNtTnRUbXhySzFsQ2FuRkJXRVExZEhKeGFITmhlRXhFT0RCc09HMVJWVEJNYkZsTmNuVkZWbWszYm5aaWJIQkhaR3BpWjJWRWNVVmtTWFJUVkU1a016Tm1NV3MzTXlzclFXMXJORkZFVTAxSWJqVjZZbXM1WkZkU2VtVklNblZtTkdwRlRYSnhPSGxvVlZGNVJDc3lNWGc1TDA1d2VIWlhjRnB2Tm05bllVbENTV3AxVVVWdVlVVTRRazVQTkZaeFpIUkxTM2xYVURoQ1RqazNiRFZ2V1c1dWRtSlRVbmc0YVVvM1RWSmlhMUJEZG5JM1FYVm5URU5IVDJ4UWVFTTVORmxZVVhWTE5DOW9RME40S3pZdlFYRldUbFpZVmpVMFMyNVJTeTg0U3pablVGTldZMnBEYTJ4aWNWSkVZMlpvWjJ4SWJWUnFVbnBYVkZkMGVXdFlNbGxOTldWSGIwRTM.ZUUxS2RsZFdhREZZV0ZkT05HRnpSa2sxZERRdlRVRmhUa0Z2WnpCUWRrRnpXSEphVVZaMVFrUklkejA9; expires=Sat, 18-Jan-2025 19:34:31 GMT; Max-Age=8640000; path=/; domain=.passline.com
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: refresh=U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.WjNaYWFYbzBNR2xNSzI1dE1FTXllV1FyVmxsNVVISTFkMFZPTlhKbFVqRlpOVWhyZVV0TVRHWkJMMGRSTkZwRk0xWjVRVEJsUTB4QlVtZFdhV1J6Tm5rek5GRllhRVo1V0RWNlJsTlViRlZ3TUV3M1JtOUdNREo0UkdOMEt6Qm5TRWxGV1dwck1XUlVXSEFyUWpoYWFWQkZjVTByUlM5ck1YcGtZelZ2ZVc5RU5uRmlVbVI2TVZwV2JGbzNaMmhrVWpkeGJXSmhORlIwUjFCRFozaFBhVm9yU0ZORlJqRkROelY1ZDFWb2RYUjJiSEE1SzFsUGVHdGxiVlJ0VVZKQlJYSmxUbFJqTlc5eVZFaDBXR0YwVVVGbmFtUnpVSEI2YVVOWmFFOUdheko0YURCNGFGTjBkMlpyTmxWc016SlhMMjFPVFdwQlozVTFabWh5VGpWb1NVdHJkR2RtZWpOR1dIVTFjVEJRTjI5MU0zVnRRMk54VVhSSGJpOXJieTlQZFZCb2EwZFFiVzFRTlRWUk5IbDFlbEZQTXpkeFlsbFJTbGxqYlVGWVVtTk5jMnRxV0VSME1uUTBXWGRrVlRFd1ZHbDZVMDk2VkV4M1prWTFSMk15V2xneEt6RmtkRVptU0hWV1ZuWjVTRTFsVGxSa1ZuRjRSRlZVWVdoemRISjY.VGxvMGVUVjJLMUJCTjFkU2FuaHFOMFJHVTFGQmRsWk9aWGRGWXpKM1NqaGtWblU1ZGxoeFdtd3hhejA9; expires=Sat, 18-Jan-2025 19:34:31 GMT; Max-Age=8640000; path=/; domain=.passline.com
+        - name: Set-Cookie
+          value: __cf_bm=CT2VlDpvXTUGZAEzQKHym7h9baxBsHv8DgiG2QnNXro-1728588871-1.0.1.1-8gjaaOV6WeN4hF6eXoivmpxIhy2_uwSwxA77fs2B_BtB4N7oAIaXda8I1nkMUHP0Wu3m7AU6BtPCnh6loZGQaA; path=/; expires=Thu, 10-Oct-24 20:04:31 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d090c5a0e9912cf-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "access": "U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welEwUk9kV2RUWjJveFZFWk5TbmhOWmxsWFdsWjBha1pxT1VSRlQxVnBhMEpoYjBsUFQwRndVRVZqVEVkUVlqTm9TVXRITmpWVVRETjBjbnB4SzBRdlJsSlJOMk5PVjAxa05FcG1LM1ZaTVcxNlVGUnNXV05HTWxvM2JrVm1RWEJXTVcxTVNtTnRUbXhySzFsQ2FuRkJXRVExZEhKeGFITmhlRXhFT0RCc09HMVJWVEJNYkZsTmNuVkZWbWszYm5aaWJIQkhaR3BpWjJWRWNVVmtTWFJUVkU1a016Tm1NV3MzTXlzclFXMXJORkZFVTAxSWJqVjZZbXM1WkZkU2VtVklNblZtTkdwRlRYSnhPSGxvVlZGNVJDc3lNWGc1TDA1d2VIWlhjRnB2Tm05bllVbENTV3AxVVVWdVlVVTRRazVQTkZaeFpIUkxTM2xYVURoQ1RqazNiRFZ2V1c1dWRtSlRVbmc0YVVvM1RWSmlhMUJEZG5JM1FYVm5URU5IVDJ4UWVFTTVORmxZVVhWTE5DOW9RME40S3pZdlFYRldUbFpZVmpVMFMyNVJTeTg0U3pablVGTldZMnBEYTJ4aWNWSkVZMlpvWjJ4SWJWUnFVbnBYVkZkMGVXdFlNbGxOTldWSGIwRTM.ZUUxS2RsZFdhREZZV0ZkT05HRnpSa2sxZERRdlRVRmhUa0Z2WnpCUWRrRnpXSEphVVZaMVFrUklkejA9",
+              "refresh": "U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.WjNaYWFYbzBNR2xNSzI1dE1FTXllV1FyVmxsNVVISTFkMFZPTlhKbFVqRlpOVWhyZVV0TVRHWkJMMGRSTkZwRk0xWjVRVEJsUTB4QlVtZFdhV1J6Tm5rek5GRllhRVo1V0RWNlJsTlViRlZ3TUV3M1JtOUdNREo0UkdOMEt6Qm5TRWxGV1dwck1XUlVXSEFyUWpoYWFWQkZjVTByUlM5ck1YcGtZelZ2ZVc5RU5uRmlVbVI2TVZwV2JGbzNaMmhrVWpkeGJXSmhORlIwUjFCRFozaFBhVm9yU0ZORlJqRkROelY1ZDFWb2RYUjJiSEE1SzFsUGVHdGxiVlJ0VVZKQlJYSmxUbFJqTlc5eVZFaDBXR0YwVVVGbmFtUnpVSEI2YVVOWmFFOUdheko0YURCNGFGTjBkMlpyTmxWc016SlhMMjFPVFdwQlozVTFabWh5VGpWb1NVdHJkR2RtZWpOR1dIVTFjVEJRTjI5MU0zVnRRMk54VVhSSGJpOXJieTlQZFZCb2EwZFFiVzFRTlRWUk5IbDFlbEZQTXpkeFlsbFJTbGxqYlVGWVVtTk5jMnRxV0VSME1uUTBXWGRrVlRFd1ZHbDZVMDk2VkV4M1prWTFSMk15V2xneEt6RmtkRVptU0hWV1ZuWjVTRTFsVGxSa1ZuRjRSRlZVWVdoemRISjY.VGxvMGVUVjJLMUJCTjFkU2FuaHFOMFJHVTFGQmRsWk9aWGRGWXpKM1NqaGtWblU1ZGxoeFdtd3hhejA9",
+              "user": {
+                  "id": "3679",
+                  "username": "productor-3679",
+                  "name": "Productor",
+                  "last_name": "Prueba",
+                  "email": "productor@passline.cl",
+                  "phone": "+1988234232",
+                  "country": "chile",
+                  "gender": "M",
+                  "rut": ""
+              },
+              "user_options": {
+                  "my_etickets": 1,
+                  "personal_data": 1,
+                  "fan_registration": 1,
+                  "my_biometrics_records": 1,
+                  "broker_session": 1,
+                  "change_pass": 1,
+                  "end_sesion": 1,
+                  "oneclick_unsubscribe": 0,
+                  "event_create": 1,
+                  "my_events": 1,
+                  "Financing_and_advances": 0,
+                  "my_consume": 1,
+                  "qr_menu": 1,
+                  "courtesy_tickets": 1,
+                  "product_sale": 1,
+                  "rrpp": 1,
+                  "courtesy_send": 1,
+                  "request_physical_tickets": 1,
+                  "passline_resources": 1,
+                  "total_sales": 1,
+                  "transactions": 1,
+                  "accreditors": 1,
+                  "ticket_office": 1,
+                  "own_ticket_holder": 1,
+                  "planimetry": 1,
+                  "database": 1,
+                  "club_cards": 1,
+                  "bank_data": 1,
+                  "paypal_account": 1,
+                  "grouping events": 1,
+                  "bbdd_fans": 1,
+                  "subscribers": 1,
+                  "purchase_exceptions": 1,
+                  "venues": 1,
+                  "data_organizer": 1,
+                  "your_products": 1,
+                  "sale_details": 1,
+                  "sale_products": 1,
+                  "assigned_machines": 1,
+                  "liquidation_machines": 1,
+                  "request_your_machine": 1,
+                  "pos_device": 1,
+                  "consolidated": 1,
+                  "machine_service": 1,
+                  "linkpass": 1,
+                  "report_sales": 1,
+                  "my_points": 1,
+                  "cashless": 1,
+                  "subadministrators": 1,
+                  "business_partners": 0,
+                  "link_sale": 0,
+                  "sell_cash": 0,
+                  "subs_rrpp": 0,
+                  "sell_report": 0,
+                  "rr_pp_manual": 0
+              }
+          }
+  - name: Error wrong password
+    request:
+      url: "{{url}}/auth/token"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+        - name: User-Agent
+          value: Passline-PHP
+      body:
+        type: json
+        data: "{\r
+
+          \    \"email\": \"productor@passline.cl\",\r
+
+          \    \"password\": \"1234563\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 10 Oct 2024 20:49:23 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d097a08192f6743-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": 200,
+              "message": "Username or password invalid"
+          }
+  - name: Error bad params
+    request:
+      url: "{{url}}/auth/token"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+        - name: User-Agent
+          value: Passline-PHP
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 10 Oct 2024 19:35:28 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d090dc26ffd12cf-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The email field is required.",
+                  "The value of the email field must be email format.",
+                  "The password field is required."
+              ]
+          }
+  - name: Error email unknown
+    request:
+      url: "{{url}}/auth/token"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+        - name: User-Agent
+          value: Passline-PHP
+      body:
+        type: json
+        data: "{\r
+
+          \    \"email\": \"productor@passline2.cl\",\r
+
+          \    \"password\": \"1234563\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 10 Oct 2024 20:51:23 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "40"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d097cf2d9054527-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": 200,
+              "message": "User not found"
+          }
+
+docs: |-
+  Función para generar un token mediante el ingreso del usuario y password.
+
+  Respuesta:
+
+  StartFragment
+
+  { "access": "U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV4bFNXdzJSaTlPUkRCMFlUUjRVbWMzU1daNVJFWjVTU3RUVDFZcmJGZEhjMUV6ZURKcmRERnZWemhKUFE9PQ.YzFBMVExSTNTV0owTVhkSWEzUnRZbk5OVWtKQ1UxSXdPV2hyVFdKVWMzWlVMMVY1ZG5aMVNrdDJWVDA9", "refresh": "U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.WjNaYWFYbzBNR2xNSzI1dE1FTXllV1FyVmxsNVRVMXpOMWRYYVRVdmVFUlZNbklyUmpoM2RtSkdLMEV6Ym10cGRIaDFhWGhZV1ZJNFdVSTRMemhJUkVGblp6aFFkWGhoVVhkNlVEZFpOeXRWWTNkc1ZrVkxhWE5sWTB4cFpGZHFhVVp1VmsxQllqQnJRMFZVZDBneFlta3ZiVlJEU0ZWUmRFeEtjMkZzVUU1UE1FUmpaa3hxUWtsVGRDOUdTVmRTTVZNMWJsUm1UMlpwTUdsdlFrSmhXakIwTTJzemVuUmpNRWh2UFE9PQ.U0RCVlJVNXBjbWh5V0dzeVdYYzVSM0psWW5SU2NWa3dTVkJuYVRWdldFUmhNV1ZGTUhWR01IRk1PRDA9", "user": { "id": "3679", "username": "martin-mujica-productor", "name": "Productor", "email": "[productor@passline.cl](https://mailto:productor@passline.cl)", "phone": "+503845573737", "country": "chile" }}
+
+  EndFragment

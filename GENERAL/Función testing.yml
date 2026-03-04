@@ -1,0 +1,43 @@
+info:
+  name: Función testing
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/general/PostForTesting"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"nombre\": \"Nombre\",\r
+
+      \    \"apellido\":\"Apellido\",\r
+
+      \    \"email\":\"correo@pruebas.cl\",\r
+
+      \    \"telefono\": \"12345678\",\r
+
+      \    \"mensaje\": \"mensaje de pruebas\",\r
+
+      \    \"country\": \"chile\",\r
+
+      \    \"g-recaptcha-response\": \"12345\"\r
+
+      }\r\n"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  Trae los eventos por periodo de fechas.
+
+  Respuesta
+
+  json de eventos por fecha.

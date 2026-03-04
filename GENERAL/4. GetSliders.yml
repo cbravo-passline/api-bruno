@@ -1,0 +1,899 @@
+info:
+  name: 4. GetSliders
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{url}}/general/GetSliders/peru"
+  headers:
+    - name: content-type
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/GetSliders/chile"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 18:15:43 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d73b6d0dae7b055-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "titulo": "ESPECIAL HALLOWEEN",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9326-3450.jpg",
+                  "enlace": "https://home.passline.com/eventos.php?q=halloween&region=&comuna=&mes=&pais=chile&page=1",
+                  "slug_evento": "eventos.php?q=halloween&region=&comuna=&mes=&pais=chile&page=1",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "JORGE ALIS / GIRA BARES",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9342-6399.jpg",
+                  "enlace": "https://www.passline.com/sitio/el-cachafaz",
+                  "slug_evento": "el-cachafaz",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "IRAN / AMERICA CUP",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9334-8362.jpg",
+                  "enlace": "https://www.passline.com/sitio/feba-chile",
+                  "slug_evento": "feba-chile",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "OPEN BLONDIE 2024",
+                  "imagen": "https://imagenes.passline.com/slider/slide-8532-6571.jpg",
+                  "enlace": "https://www.passline.com/eventos/open-blondie-noche-de-brujas-2024-club-hipico",
+                  "slug_evento": "open-blondie-noche-de-brujas-2024-club-hipico",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "275135",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "BOSQUE LUZ / HALLOWEEN",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9341-0913.jpg",
+                  "enlace": "https://www.passline.com/eventos/halloween-bosque-luz",
+                  "slug_evento": "halloween-bosque-luz",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "308481",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "ICE MAITENCILLO HALLOWEEN",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9319-5960.jpg",
+                  "enlace": "https://www.passline.com/eventos/halloween-puerto-mai-jueves-31-oct-ice-maitencillo",
+                  "slug_evento": "halloween-puerto-mai-jueves-31-oct-ice-maitencillo",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "318386",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LA FERIA / ARTBAT",
+                  "imagen": "https://imagenes.passline.com/slider/slide-8740-6433.jpg",
+                  "enlace": "https://www.passline.com/eventos/la-feria-on-tour-artbat-287821",
+                  "slug_evento": "la-feria-on-tour-artbat-287821",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "287821",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "FESTIGAME 2024",
+                  "imagen": "https://imagenes.passline.com/slider/slide-8520-5488.jpg",
+                  "enlace": "https://www.passline.com/sitio/festigame-2024",
+                  "slug_evento": "festigame-2024",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "MANUEL / CHILE TASTE",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9325-5204.jpg",
+                  "enlace": "https://www.passline.com/eventos/chili-taste-ammo-avenue",
+                  "slug_evento": "chili-taste-ammo-avenue",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "318380",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "FELIPE / BOB SINCLAR",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9267-8679.jpg",
+                  "enlace": "https://www.passline.com/eventos/bob-sinclar-en-chile",
+                  "slug_evento": "bob-sinclar-en-chile",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "313011",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LAS CONDES / MAMA ESTA CHIQUITITA",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9285-0502.jpg",
+                  "enlace": "https://www.culturallascondes.cl/2024/09/11/mama-esta-mas-chiquita/",
+                  "slug_evento": "",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "10611",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LA FERIA / CARL COX",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9200-1117.jpg",
+                  "enlace": "https://www.passline.com/carlcox/",
+                  "slug_evento": "",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "10611",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CHICO PEREZ / CASA TUDOR",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9309-1386.jpg",
+                  "enlace": "https://www.passline.com/eventos/fiesta-80-y-90-de-chile-en-talagante-parte-2",
+                  "slug_evento": "fiesta-80-y-90-de-chile-en-talagante-parte-2",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "303195",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "ICE HALLOWEEN SABADO",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9320-8987.jpg",
+                  "enlace": "https://www.passline.com/eventos/halloween-the-moment-sabado-2-nov-ice-maitencillo",
+                  "slug_evento": "halloween-the-moment-sabado-2-nov-ice-maitencillo",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "318374",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "REFOREST / CORRIDA VIÑA",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9301-2819.jpg",
+                  "enlace": "https://www.passline.com/eventos/reforest-running-vina-del-mar",
+                  "slug_evento": "reforest-running-vina-del-mar",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "302864",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CAMISETA NUEVA STA FERIA",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9263-4353.jpg",
+                  "enlace": "https://www.passline.com/eventos/santaferia-lanza-su-nueva-piel-su-camiseta-en-cooperacion-con-umbro-club-chocolate-9-de-nov",
+                  "slug_evento": "santaferia-lanza-su-nueva-piel-su-camiseta-en-cooperacion-con-umbro-club-chocolate-9-de-nov",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "316303",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "TROTA OCTUBRE",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9211-1967.jpg",
+                  "enlace": "https://www.passline.com/sitio/trotamundos-quilpue",
+                  "slug_evento": "trotamundos-quilpue",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CAA / LA BESTIA",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9269-3693.jpg",
+                  "enlace": "https://home.passline.com/eventos.php?q=La+bestia&mes=&pais=chile&page=1&region=&comuna=",
+                  "slug_evento": "eventos.php?q=La+bestia&mes=&pais=chile&page=1&region=&comuna=",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "AURA / HALLOWEEN",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9218-5206.jpg",
+                  "enlace": "https://www.passline.com/sitio/aura-club",
+                  "slug_evento": "aura-club",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "NICO / VITALIZA",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9266-4750.jpg",
+                  "enlace": "https://www.passline.com/sitio/productora-muevete-360",
+                  "slug_evento": "productora-muevete-360",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LILY / BELANOVA",
+                  "imagen": "https://imagenes.passline.com/slider/slide-8906-9974.jpg",
+                  "enlace": "https://www.passline.com/eventos/belanova-en-chile",
+                  "slug_evento": "belanova-en-chile",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "297125",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CHOCOLATE / KING ÁFRICA",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9251-9694.jpg",
+                  "enlace": "https://www.passline.com/eventos/king-africa-fiesta-i-love-90s-dj-invitados-fader-catboy-miercoles-30-de-octubre-club-chocolate",
+                  "slug_evento": "king-africa-fiesta-i-love-90s-dj-invitados-fader-catboy-miercoles-30-de-octubre-club-chocolate",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "314874",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CENTRO ARTE ALAMEDA / ESPANORAMAS",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9268-1675.jpg",
+                  "enlace": "https://www.passline.com/sitio/centro-arte-alameda-tickets",
+                  "slug_evento": "centro-arte-alameda-tickets",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CORNEZ / MASSU vs GONZALEZ",
+                  "imagen": "https://imagenes.passline.com/slider/slide-7845-5855.jpg",
+                  "enlace": "https://www.passline.com/sitio/5631387-massu-vs-gonzalez",
+                  "slug_evento": "5631387-massu-vs-gonzalez",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "HUGO / GIRA UBIERGO",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9253-4438.jpg",
+                  "enlace": "https://www.passline.com/sitio/vientosdelsurproducciones",
+                  "slug_evento": "vientosdelsurproducciones",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "EMMA / CLUB OASIS",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9239-4105.jpg",
+                  "enlace": "https://www.passline.com/eventos/siniestro-halloween-2024-la-fiesta-tenebrosa-de-stgo-31-oct-spot-secreto-club-oasis",
+                  "slug_evento": "siniestro-halloween-2024-la-fiesta-tenebrosa-de-stgo-31-oct-spot-secreto-club-oasis",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "303585",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "THE KLAN / MASQUERADE",
+                  "imagen": "https://imagenes.passline.com/slider/slide-8816-9209.jpg",
+                  "enlace": "https://www.passline.com/eventos/masquerade-chile-by-claptone",
+                  "slug_evento": "masquerade-chile-by-claptone",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "291302",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "FERIA PULSAR 2024 / ABONO",
+                  "imagen": "https://imagenes.passline.com/slider/slide-8979-1059.jpg",
+                  "enlace": "https://www.passline.com/eventos/feria-pulsar-2024",
+                  "slug_evento": "feria-pulsar-2024",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "301644",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LA FERIA / MICHAEL BIBI",
+                  "imagen": "https://imagenes.passline.com/slider/slide-9158-2623.jpg",
+                  "enlace": "https://www.passline.com/michael-bibi/",
+                  "slug_evento": "",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "10611",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "THE KLAN / EL ROW",
+                  "imagen": "https://imagenes.passline.com/slider/slide-8994-8812.jpg",
+                  "enlace": "https://www.passline.com/eventos/el-row-chile-2024-delusionville",
+                  "slug_evento": "el-row-chile-2024-delusionville",
+                  "target": "_self",
+                  "type": "desktop",
+                  "evento": "302042",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "JORGE ALIS / GIRA BARES",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5799-7228.jpg",
+                  "enlace": "https://www.passline.com/sitio/el-cachafaz",
+                  "slug_evento": "el-cachafaz",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "ESPECIAL HALLOWEEN",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5784-8572.jpg",
+                  "enlace": "https://home.passline.com/eventos.php?q=halloween&region=&comuna=&mes=&pais=chile&page=1",
+                  "slug_evento": "eventos.php?q=halloween&region=&comuna=&mes=&pais=chile&page=1",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "FESTIGAME 2024",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5025-3391.jpg",
+                  "enlace": "https://www.passline.com/sitio/festigame-2024",
+                  "slug_evento": "festigame-2024",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "IRAN / AMERICA CUP",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5789-4142.jpg",
+                  "enlace": "https://www.passline.com/sitio/feba-chile",
+                  "slug_evento": "feba-chile",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "MANUEL / CHILE TASTE",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5783-9884.jpg",
+                  "enlace": "https://www.passline.com/eventos/chili-taste-ammo-avenue",
+                  "slug_evento": "chili-taste-ammo-avenue",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "318380",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "OPEN BLONDIE 2024",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5036-0048.jpg",
+                  "enlace": "https://www.passline.com/eventos/open-blondie-noche-de-brujas-2024-club-hipico",
+                  "slug_evento": "open-blondie-noche-de-brujas-2024-club-hipico",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "275135",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "ICE MAITENCILLO / HALLOWEEN",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5773-8359.jpg",
+                  "enlace": "https://www.passline.com/eventos/halloween-puerto-mai-jueves-31-oct-ice-maitencillo",
+                  "slug_evento": "halloween-puerto-mai-jueves-31-oct-ice-maitencillo",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "318386",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CORNEZ / MASSU vs GONZALEZ VALDIVIA",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5756-4032.jpg",
+                  "enlace": "https://www.passline.com/sitio/5631387-massu-vs-gonzalez",
+                  "slug_evento": "5631387-massu-vs-gonzalez",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CORNEZ / MASSU vs GONZALEZ PTO MONTT",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5757-9627.jpg",
+                  "enlace": "https://www.passline.com/sitio/5631387-massu-vs-gonzalez",
+                  "slug_evento": "5631387-massu-vs-gonzalez",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "SANTA FERIA NUEVA CAMISETA",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5725-2758.jpg",
+                  "enlace": "https://www.passline.com/eventos/santaferia-lanza-su-nueva-piel-su-camiseta-en-cooperacion-con-umbro-club-chocolate-9-de-nov",
+                  "slug_evento": "santaferia-lanza-su-nueva-piel-su-camiseta-en-cooperacion-con-umbro-club-chocolate-9-de-nov",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "316303",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CHICO PEREZ / CASA TUDOR",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5763-0920.jpg",
+                  "enlace": "https://www.passline.com/eventos/fiesta-80-y-90-de-chile-en-talagante-parte-2",
+                  "slug_evento": "fiesta-80-y-90-de-chile-en-talagante-parte-2",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "303195",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LAS CONDES / MAMA ES TA CHIQUITITA",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5743-2144.jpg",
+                  "enlace": "https://www.culturallascondes.cl/2024/09/11/mama-esta-mas-chiquita/",
+                  "slug_evento": "",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "10611",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "ICE HALLOWEEN SABADO",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5774-0843.jpg",
+                  "enlace": "https://www.passline.com/eventos/halloween-the-moment-sabado-2-nov-ice-maitencillo",
+                  "slug_evento": "halloween-the-moment-sabado-2-nov-ice-maitencillo",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "318374",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "REFOREST / CORRIDA VIÑA",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5752-7115.jpg",
+                  "enlace": "https://www.passline.com/eventos/reforest-running-vina-del-mar",
+                  "slug_evento": "reforest-running-vina-del-mar",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "302864",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LA FERIA / ARTBAT",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5232-4441.jpg",
+                  "enlace": "https://www.passline.com/eventos/la-feria-on-tour-artbat-287821",
+                  "slug_evento": "la-feria-on-tour-artbat-287821",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "287821",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "NICO / BOB SINCLAR",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5729-7910.jpg",
+                  "enlace": "https://www.passline.com/eventos/bob-sinclar-en-chile",
+                  "slug_evento": "bob-sinclar-en-chile",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "313011",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "HUGO / GIRA UBIERGO",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5716-7723.jpg",
+                  "enlace": "https://www.passline.com/sitio/vientosdelsurproducciones",
+                  "slug_evento": "vientosdelsurproducciones",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CHOCOLATE / KING ÁFRICA",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5714-5140.jpg",
+                  "enlace": "https://www.passline.com/eventos/king-africa-fiesta-i-love-90s-dj-invitados-fader-catboy-miercoles-30-de-octubre-club-chocolate",
+                  "slug_evento": "king-africa-fiesta-i-love-90s-dj-invitados-fader-catboy-miercoles-30-de-octubre-club-chocolate",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "314874",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "NICO / VITALIZA",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5728-5933.jpg",
+                  "enlace": "https://www.passline.com/sitio/productora-muevete-360",
+                  "slug_evento": "productora-muevete-360",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "AURA / HALLOWEEN",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5684-8046.jpg",
+                  "enlace": "https://www.passline.com/sitio/aura-club",
+                  "slug_evento": "aura-club",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "THE KLAN / EL ROW",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5477-6120.jpg",
+                  "enlace": "https://www.passline.com/eventos/el-row-chile-2024-delusionville",
+                  "slug_evento": "el-row-chile-2024-delusionville",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "302042",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LA FERIA / CARL COX",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5666-0232.jpg",
+                  "enlace": "https://www.passline.com/carlcox/",
+                  "slug_evento": "",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "10611",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "EMMA / CLUB OASIS",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5704-9671.jpg",
+                  "enlace": "https://www.passline.com/eventos/siniestro-halloween-2024-la-fiesta-tenebrosa-de-stgo-31-oct-spot-secreto-club-oasis",
+                  "slug_evento": "siniestro-halloween-2024-la-fiesta-tenebrosa-de-stgo-31-oct-spot-secreto-club-oasis",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "303585",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LILY / BELANOVA",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5390-3866.jpg",
+                  "enlace": "https://www.passline.com/eventos/belanova-en-chile",
+                  "slug_evento": "belanova-en-chile",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "297125",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LA FERIA MICHAEL BIBI",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5626-9140.jpg",
+                  "enlace": "https://www.passline.com/michael-bibi/",
+                  "slug_evento": "",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "10611",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "THE KLAN / MASQUERADE",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5307-6881.jpg",
+                  "enlace": "https://www.passline.com/eventos/masquerade-chile-by-claptone",
+                  "slug_evento": "masquerade-chile-by-claptone",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "291302",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CHICO PEREZ CASA TUDOR",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5616-2517.jpg",
+                  "enlace": "https://www.passline.com/eventos/fiesta-80-y-90-de-chile-en-talagante-parte-2",
+                  "slug_evento": "fiesta-80-y-90-de-chile-en-talagante-parte-2",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "303195",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "LA FERIA / RESISTENCE",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5486-8865.jpg",
+                  "enlace": "https://www.passline.com/eventos/resistance-santiago",
+                  "slug_evento": "resistance-santiago",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "298161",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "HUGO / PERSONAJES INFANTILES",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-5636-8804.jpg",
+                  "enlace": "https://www.passline.com/eventos/festival-de-personajes-infantiles",
+                  "slug_evento": "festival-de-personajes-infantiles",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": "310926",
+                  "tiene_planimetria": "1",
+                  "canal_venta": "1",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "TACHUELAS SEPTIEMBRE",
+                  "imagen": "https://imagenes.passline.com/slider_mobile/slide-4313-9061.jpg",
+                  "enlace": "https://www.passline.com/sitio/circo-los-tachuelas",
+                  "slug_evento": "circo-los-tachuelas",
+                  "target": "_self",
+                  "type": "mobile",
+                  "evento": null,
+                  "tiene_planimetria": "0",
+                  "canal_venta": null,
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "CHILE TASTE",
+                  "imagen": "https://imagenes.passline.com/banners_home_mobile/banner-587-7481.jpg",
+                  "enlace": "https://www.passline.com/eventos/chili-taste-ammo-avenue",
+                  "slug_evento": "",
+                  "target": "_self",
+                  "type": "mini_banners",
+                  "evento": "",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "MAMA ESTA CHIQUITITA",
+                  "imagen": "https://imagenes.passline.com/banners_home_mobile/banner-585-1298.jpg",
+                  "enlace": "https://www.culturallascondes.cl/2024/09/11/mama-esta-mas-chiquita/",
+                  "slug_evento": "",
+                  "target": "_self",
+                  "type": "mini_banners",
+                  "evento": "",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              },
+              {
+                  "titulo": "FESTIVAL CERVEZA INDIO",
+                  "imagen": "https://imagenes.passline.com/banners_home_mobile/banner-582-9552.jpg",
+                  "enlace": "https://www.passline.com/eventos/fiesta-de-la-cerveza-serena-elqui",
+                  "slug_evento": "",
+                  "target": "_self",
+                  "type": "mini_banners",
+                  "evento": "",
+                  "tiene_planimetria": "0",
+                  "canal_venta": "0",
+                  "dias_atencion": "0"
+              }
+          ]
+  - name: Success empty response
+    request:
+      url: "{{url}}/general/GetSliders/chile2"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 18:20:38 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "2"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d73be026fae7bdb-ATL
+      body:
+        type: json
+        data: "[]"
+  - name: Success no path params
+    request:
+      url: "{{url}}/general/GetSliders"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 18:23:11 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "2"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d73c1bbe8abbcf0-ATL
+      body:
+        type: json
+        data: "[]"
+
+docs: Trae los sliders de los eventos mediante el envío del país del que se requiere los sliders.

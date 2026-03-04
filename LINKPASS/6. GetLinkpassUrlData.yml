@@ -1,0 +1,124 @@
+info:
+  name: 6. GetLinkpassUrlData
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{url}}/linkpass/GetLinkpassUrlData?linkpassId=KAjnABxrIqoUBZLrMCwauA@@&linkpassUrlId=alReL8mz0nEuZVBhHx2mIQ@@"
+  headers:
+    - name: content-type
+      value: application/json
+  params:
+    - name: linkpassId
+      value: KAjnABxrIqoUBZLrMCwauA@@
+      type: query
+    - name: linkpassUrlId
+      value: alReL8mz0nEuZVBhHx2mIQ@@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/user/GetPasslinePoints"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 16:18:01 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "24"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=iH6EmAoXSQddKOTQfDjc6XWqiz.kU9wBCE5x0axUQwI-1728922681-1.0.1.1-nLgLK.rdfkCHrA3Hwq4C_D4kp6honVZ8x0ehfZKMgY7Dad062dLbKDD.8taqQmMhY0TRh8QBKL8dq7HAq1dRcg; path=/; expires=Mon, 14-Oct-24 16:48:01 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d28e206ee8e7b90-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "puntos_passline": 3125
+          }
+  - name: Error token expired
+    request:
+      url: "{{url}}/user/GetPasslinePoints"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 16:22:14 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d28e8369bd77bde-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "token expired"
+          }
+
+docs: Permite traer los puntos de un usuario mediante el envío de su token.

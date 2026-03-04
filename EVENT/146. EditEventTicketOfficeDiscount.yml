@@ -1,0 +1,28 @@
+info:
+  name: 146. EditEventTicketOfficeDiscount
+  type: http
+  seq: 147
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditEventTicketOfficeDiscount"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"ticket_office_discount\":\"tYCzmm3zUcwqOY206BH6wOMJnkfuHoi6LVjnBtQHn0E@\",\r
+
+      \    \"name\":\"test 123 de descuento\",\r
+
+      \    \"discount\":\"20\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

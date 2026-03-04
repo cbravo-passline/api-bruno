@@ -1,0 +1,89 @@
+info:
+  name: 27. GetEventReportDay
+  type: http
+  seq: 28
+
+http:
+  method: POST
+  url: "{{url}}/general/GetEventReportDay"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event\": \"31114\",\r
+
+      \    \"date_start\": \"2022-09-22\",\r
+
+      \    \"date_end\": \"2025-06-22\"\r
+
+      }\r\n"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error  dont access to event
+    request:
+      url: "{{url}}/general/GetEventReportDay"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"120922\",\r
+
+          \    \"date_start\": \"2022-09-22\",\r
+
+          \    \"date_end\": \"2022-09-22\"\r
+
+          }\r\n"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 25 Oct 2024 20:41:53 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d8507aede4dbd0c-ATL
+        - name: Content-Encoding
+          value: gzip
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "You dont have access."
+          }

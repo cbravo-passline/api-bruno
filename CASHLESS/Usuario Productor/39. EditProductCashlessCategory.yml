@@ -1,0 +1,26 @@
+info:
+  name: 39. EditProductCashlessCategory
+  type: http
+  seq: 15
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/EditProductCashlessCategory"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"category\":\"6sIe7Wjp6gvwpJcqVvJYLQ@@\",\r
+
+      \    \"name\":\"test222\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

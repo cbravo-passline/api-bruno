@@ -1,0 +1,21 @@
+info:
+  name: 87. RemovePlanimetry
+  type: http
+  seq: 88
+
+http:
+  method: DELETE
+  url: "{{url}}/event/RemovePlanimetry?planimetry=yRfMIBWuyF5pckaOiW7Fnw@@"
+  params:
+    - name: planimetry
+      value: yRfMIBWuyF5pckaOiW7Fnw@@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

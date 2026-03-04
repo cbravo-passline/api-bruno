@@ -1,0 +1,2932 @@
+info:
+  name: 28. GetEventGeneralReport
+  type: http
+  seq: 29
+
+http:
+  method: POST
+  url: "{{url}}/general/GetEventGeneralReport"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event\": \"31114\",\r
+
+      \    \"date_start\": \"2022-09-22\",\r
+
+      \    \"date_end\": \"2025-06-22\"\r
+
+      }\r\n"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/GetEventGeneralReport"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"31114\"\r
+
+          }\r\n"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 28 Oct 2024 16:52:11 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d9c6f4fcdfa4507-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "tickets_total": [
+                  {
+                      "nombre": "Prueba Passline",
+                      "precio": "0.00",
+                      "stock_total": "1000",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "522",
+                      "cortesias": "522",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba Passline -",
+                      "precio": "0.00",
+                      "stock_total": "1",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": "0.00",
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "General - Promo Tarjeta Naranja",
+                      "precio": "50.00",
+                      "stock_total": "2000",
+                      "cantidad": "10",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "78",
+                      "cortesias": "72",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": "4",
+                      "total_devuelto": null,
+                      "diff_dev": "650.00",
+                      "total_descuento": "0.00",
+                      "total_vendido": "950.00",
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "VIP",
+                      "precio": "50.00",
+                      "stock_total": "300",
+                      "cantidad": "6",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "2",
+                      "cortesias": "0",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": "4",
+                      "total_devuelto": null,
+                      "diff_dev": "202.00",
+                      "total_descuento": "0.00",
+                      "total_vendido": "302.00",
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Promo Tarjeta Galicia DIIV",
+                      "precio": "300.00",
+                      "stock_total": "100000",
+                      "cantidad": "45",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "1",
+                      "cortesias": "0",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": "44",
+                      "total_devuelto": null,
+                      "diff_dev": "4004.00",
+                      "total_descuento": "45.00",
+                      "total_vendido": "4259.00",
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "General Access",
+                      "precio": "0.00",
+                      "stock_total": "50",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "7",
+                      "cortesias": "7",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": "0.00",
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Ticket General Banco de Chile",
+                      "precio": "500.00",
+                      "stock_total": "3000",
+                      "cantidad": "6",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "13",
+                      "cortesias": "7",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": "0.00",
+                      "total_descuento": "200.00",
+                      "total_vendido": "804.00",
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Cortesia General",
+                      "precio": "0.00",
+                      "stock_total": "20",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": "0.00",
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba Streaming",
+                      "precio": "2050.00",
+                      "stock_total": "250",
+                      "cantidad": "1",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "2",
+                      "cortesias": "1",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": "0.00",
+                      "total_vendido": "2050.00",
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Entrada barata",
+                      "precio": "50.00",
+                      "stock_total": "50",
+                      "cantidad": "4",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "5",
+                      "cortesias": "2",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": "1",
+                      "total_devuelto": null,
+                      "diff_dev": "300.00",
+                      "total_descuento": "0.00",
+                      "total_vendido": "450.00",
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Entrada general",
+                      "precio": "0.00",
+                      "stock_total": "39217",
+                      "cantidad": "25",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_validadas": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": "25",
+                      "total_devuelto": null,
+                      "diff_dev": "25000.00",
+                      "total_descuento": "0.00",
+                      "total_vendido": "25000.00",
+                      "monto_efectivo_anulado": null
+                  }
+              ],
+              "productos_total": [
+                  {
+                      "nombre": "ticket prueba padre 4",
+                      "precio": "1.00",
+                      "stock_total": "100000",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Ricardo Dev Prueba 11",
+                      "precio": "1.00",
+                      "stock_total": "100000",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "PRODUCTO X",
+                      "precio": "1000.00",
+                      "stock_total": "10",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba Ricardo",
+                      "precio": "0.00",
+                      "stock_total": "0",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "mezcal",
+                      "precio": "50.00",
+                      "stock_total": "1000",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Whisky",
+                      "precio": "5.00",
+                      "stock_total": "1000",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Papitas",
+                      "precio": "10.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "JUGO 4000",
+                      "precio": "4000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "AGUA 4000",
+                      "precio": "4000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "CERVEZA 4.000",
+                      "precio": "4000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "VODKA 4000",
+                      "precio": "4000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "PISCO 4000",
+                      "precio": "4000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "RON 4000",
+                      "precio": "4000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "JUGO",
+                      "precio": "3000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "BEBIDA",
+                      "precio": "3000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "AGUA 3000",
+                      "precio": "3000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "CERVEZA 3000",
+                      "precio": "3000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "VODKA 3000",
+                      "precio": "3000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "PISCO 3000",
+                      "precio": "3000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "RON 3000",
+                      "precio": "3000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "165",
+                      "precio": "10.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba Producto",
+                      "precio": "12.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "patatas",
+                      "precio": "10.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "redbull experince",
+                      "precio": "9.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "strawberry gin forever",
+                      "precio": "23000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "prueba",
+                      "precio": "5.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "AGUA",
+                      "precio": "10000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Preventa General",
+                      "precio": "13560.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "ENTRADA",
+                      "precio": "25000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "MISTRAL 35",
+                      "precio": "4000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Agua Mineral",
+                      "precio": "2000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Heineken",
+                      "precio": "2000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Otro producto",
+                      "precio": "2000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "A",
+                      "precio": "1000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Caminito",
+                      "precio": "100.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Caminito",
+                      "precio": "100.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Pecesito",
+                      "precio": "100.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "A",
+                      "precio": "0.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Uno",
+                      "precio": "0.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Pisco",
+                      "precio": "10.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Fernet",
+                      "precio": "15000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "clases de tenis",
+                      "precio": "5000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Pisco Mistral",
+                      "precio": "4000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "fernet",
+                      "precio": "25000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Absolut",
+                      "precio": "32000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Gatorade",
+                      "precio": "2000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Promo MISTRAL",
+                      "precio": "35000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "1redbull + 1agua",
+                      "precio": "5.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba8",
+                      "precio": "5000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba7",
+                      "precio": "5000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba6",
+                      "precio": "5000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba5",
+                      "precio": "5000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba4",
+                      "precio": "5000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba3",
+                      "precio": "5000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba2",
+                      "precio": "5000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Prueba1",
+                      "precio": "2500.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "piscola",
+                      "precio": "4000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Vino",
+                      "precio": "2000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "pizza",
+                      "precio": "2.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Crudo",
+                      "precio": "14000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Sandwich del Dia",
+                      "precio": "200.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Pollo Teriyaki",
+                      "precio": "10000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Roast Beef",
+                      "precio": "50.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Fresas con Crema",
+                      "precio": "1000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Cachapa",
+                      "precio": "1500.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Cerveza",
+                      "precio": "2000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Malta",
+                      "precio": "4000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Malta",
+                      "precio": "1200.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Vegetariano",
+                      "precio": "30.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Spiner",
+                      "precio": "100.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Whisky",
+                      "precio": "10.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Rediel",
+                      "precio": "4500.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Old Fashion",
+                      "precio": "10.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Polera",
+                      "precio": "10.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Jamon de Pavo",
+                      "precio": "50.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Bombon Frambuesa",
+                      "precio": "10.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Frambuesa Menta",
+                      "precio": "50.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Miel de Ulmo",
+                      "precio": "30.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Empanada",
+                      "precio": "1000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Arepa",
+                      "precio": "2100.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "prueba",
+                      "precio": "1000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Terremoto",
+                      "precio": "1.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Vodka",
+                      "precio": "1.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Paleta",
+                      "precio": "5.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Ovo",
+                      "precio": "50.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Barquillo",
+                      "precio": "1.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Banana Split",
+                      "precio": "2.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Producto 1",
+                      "precio": "9.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Entrada",
+                      "precio": "100.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "2 piscolas",
+                      "precio": "5.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": "0.00",
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "undurraga brut",
+                      "precio": "2.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Black",
+                      "precio": "5000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Choripan",
+                      "precio": "300.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Redbull",
+                      "precio": "5.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Agua",
+                      "precio": "5.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Jugo",
+                      "precio": "0.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Agua",
+                      "precio": "10.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "PISCOLA",
+                      "precio": "50.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Piscola",
+                      "precio": "200.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Agua",
+                      "precio": "100.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Cerveza",
+                      "precio": "3.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "AGUA",
+                      "precio": "5.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Tres erre",
+                      "precio": "5.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Cerveza heineken",
+                      "precio": "5.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "promo",
+                      "precio": "10.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "COCA COLA",
+                      "precio": "2100.00",
+                      "stock_total": "5000",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Hamburgesa",
+                      "precio": "5000.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "PROSCIUTTO",
+                      "precio": "500.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Producto de prueba",
+                      "precio": "100.00",
+                      "stock_total": "100000",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Producto de Prueba",
+                      "precio": "5.00",
+                      "stock_total": "100000",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "pizza",
+                      "precio": "150.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Jugo de Naranja",
+                      "precio": "100.00",
+                      "stock_total": "9999",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Pizza Motzzarella",
+                      "precio": "10.00",
+                      "stock_total": "1000",
+                      "cantidad": "0",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": null,
+                      "total_devuelto": null,
+                      "diff_dev": null,
+                      "total_descuento": null,
+                      "total_vendido": null,
+                      "monto_efectivo_anulado": null
+                  },
+                  {
+                      "nombre": "Agua Purificada Normal",
+                      "precio": "5000.00",
+                      "stock_total": "20",
+                      "cantidad": "1",
+                      "cantidad_efectivo_anulado": "0",
+                      "cantidad_emitida": "0",
+                      "cortesias": "0",
+                      "cantidad_dev": "0",
+                      "diff_cant_dev": "1",
+                      "total_devuelto": null,
+                      "diff_dev": "500.00",
+                      "total_descuento": "0.00",
+                      "total_vendido": "500.00",
+                      "monto_efectivo_anulado": null
+                  }
+              ],
+              "tickets_boleteria_total": [
+                  {
+                      "nombre": "Prueba Reversa POS MP",
+                      "precio": "11.00",
+                      "cantidad": "102",
+                      "total_vendido": "1737.5"
+                  },
+                  {
+                      "nombre": "Producto de 500",
+                      "precio": "500.00",
+                      "cantidad": "4",
+                      "total_vendido": "1500"
+                  },
+                  {
+                      "nombre": "Producto de 300",
+                      "precio": "300.00",
+                      "cantidad": "41",
+                      "total_vendido": "11325"
+                  },
+                  {
+                      "nombre": "Ticket General",
+                      "precio": "5000.00",
+                      "cantidad": "2",
+                      "total_vendido": "10000"
+                  },
+                  {
+                      "nombre": "Prueba Rechazo POS MP",
+                      "precio": "12.00",
+                      "cantidad": "2",
+                      "total_vendido": "24"
+                  }
+              ],
+              "tickets_boleteria_planimetria_total": [
+                  {
+                      "nombre": "Entrada general",
+                      "precio": "0.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Entrada barata",
+                      "precio": "50.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba Streaming",
+                      "precio": "2050.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Cortesia General",
+                      "precio": "0.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Agua Purificada Normal",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Pizza Motzzarella",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Jugo de Naranja",
+                      "precio": "100.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Ticket General Banco de Chile",
+                      "precio": "500.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "General Access",
+                      "precio": "0.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "pizza",
+                      "precio": "150.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Producto de Prueba",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Producto de prueba",
+                      "precio": "100.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "PROSCIUTTO",
+                      "precio": "500.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Hamburgesa",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "COCA COLA",
+                      "precio": "2100.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "promo",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Cerveza heineken",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Tres erre",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "AGUA",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Cerveza",
+                      "precio": "3.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Agua",
+                      "precio": "100.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Piscola",
+                      "precio": "200.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "PISCOLA",
+                      "precio": "50.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Agua",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Jugo",
+                      "precio": "0.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Agua",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Redbull",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Choripan",
+                      "precio": "300.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Black",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "undurraga brut",
+                      "precio": "2.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "2 piscolas",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Entrada",
+                      "precio": "100.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Producto 1",
+                      "precio": "9.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Banana Split",
+                      "precio": "2.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Barquillo",
+                      "precio": "1.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Ovo",
+                      "precio": "50.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Paleta",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Vodka",
+                      "precio": "1.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Terremoto",
+                      "precio": "1.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "prueba",
+                      "precio": "1000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Arepa",
+                      "precio": "2100.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Empanada",
+                      "precio": "1000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Miel de Ulmo",
+                      "precio": "30.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Frambuesa Menta",
+                      "precio": "50.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Bombon Frambuesa",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Jamon de Pavo",
+                      "precio": "50.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Polera",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Old Fashion",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Rediel",
+                      "precio": "4500.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Whisky",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Spiner",
+                      "precio": "100.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Vegetariano",
+                      "precio": "30.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Malta",
+                      "precio": "1200.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Malta",
+                      "precio": "4000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Cerveza",
+                      "precio": "2000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Cachapa",
+                      "precio": "1500.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Fresas con Crema",
+                      "precio": "1000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Roast Beef",
+                      "precio": "50.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Pollo Teriyaki",
+                      "precio": "10000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Sandwich del Dia",
+                      "precio": "200.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Crudo",
+                      "precio": "14000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "pizza",
+                      "precio": "2.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Vino",
+                      "precio": "2000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "piscola",
+                      "precio": "4000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba1",
+                      "precio": "2500.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba2",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba3",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba4",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba5",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba6",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba7",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba8",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "1redbull + 1agua",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Promo MISTRAL",
+                      "precio": "35000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Gatorade",
+                      "precio": "2000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Absolut",
+                      "precio": "32000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "fernet",
+                      "precio": "25000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Pisco Mistral",
+                      "precio": "4000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "clases de tenis",
+                      "precio": "5000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Fernet",
+                      "precio": "15000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Pisco",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Uno",
+                      "precio": "0.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "A",
+                      "precio": "0.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Pecesito",
+                      "precio": "100.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Caminito",
+                      "precio": "100.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Caminito",
+                      "precio": "100.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "A",
+                      "precio": "1000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Otro producto",
+                      "precio": "2000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Heineken",
+                      "precio": "2000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Agua Mineral",
+                      "precio": "2000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "MISTRAL 35",
+                      "precio": "4000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "ENTRADA",
+                      "precio": "25000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Preventa General",
+                      "precio": "13560.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "AGUA",
+                      "precio": "10000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "prueba",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "strawberry gin forever",
+                      "precio": "23000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "redbull experince",
+                      "precio": "9.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "patatas",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba Producto",
+                      "precio": "12.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "165",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "RON 3000",
+                      "precio": "3000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "PISCO 3000",
+                      "precio": "3000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "VODKA 3000",
+                      "precio": "3000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "CERVEZA 3000",
+                      "precio": "3000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "AGUA 3000",
+                      "precio": "3000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "BEBIDA",
+                      "precio": "3000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "JUGO",
+                      "precio": "3000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "RON 4000",
+                      "precio": "4000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "PISCO 4000",
+                      "precio": "4000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "VODKA 4000",
+                      "precio": "4000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "CERVEZA 4.000",
+                      "precio": "4000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "AGUA 4000",
+                      "precio": "4000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "JUGO 4000",
+                      "precio": "4000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Papitas",
+                      "precio": "10.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Whisky",
+                      "precio": "5.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Promo Tarjeta Galicia DIIV",
+                      "precio": "300.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "VIP",
+                      "precio": "50.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "mezcal",
+                      "precio": "50.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "General - Promo Tarjeta Naranja",
+                      "precio": "50.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba Passline -",
+                      "precio": "0.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba Passline",
+                      "precio": "0.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Prueba Ricardo",
+                      "precio": "0.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "PRODUCTO X",
+                      "precio": "1000.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "Ricardo Dev Prueba 11",
+                      "precio": "1.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  },
+                  {
+                      "nombre": "ticket prueba padre 4",
+                      "precio": "1.00",
+                      "cantidad": "0",
+                      "total_vendido": null
+                  }
+              ]
+          }
+  - name: Error invalid params
+    request:
+      url: "{{url}}/general/GetEventGeneralReport"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 28 Oct 2024 17:10:33 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d9c8a3ccc8e674f-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required."
+              ]
+          }

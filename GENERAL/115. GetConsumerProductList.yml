@@ -1,0 +1,21 @@
+info:
+  name: 115. GetConsumerProductList
+  type: http
+  seq: 110
+
+http:
+  method: GET
+  url: "{{url}}/general/GetConsumerProductList?category=wZdQSzKxc20TLEzvfnVAaQ@@"
+  params:
+    - name: category
+      value: wZdQSzKxc20TLEzvfnVAaQ@@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

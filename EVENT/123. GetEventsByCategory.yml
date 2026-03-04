@@ -1,0 +1,35 @@
+info:
+  name: 123. GetEventsByCategory
+  type: http
+  seq: 124
+
+http:
+  method: POST
+  url: "{{url}}/event/GetEventsByCategory"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"country\": \"chile\",\r
+
+      \    \"category\": \"Fiesta Navidad\",\r
+
+      \    \"start_date\": \"\",\r
+
+      \    \"end_date\": \"\",\r
+
+      \    \"limit\":1000\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

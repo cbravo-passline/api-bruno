@@ -1,0 +1,43 @@
+info:
+  name: 4. RegisterPurchase
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/boxoffice/RegisterPurchase"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event\":\"kZipC2zeuFhox3hCOiNzRQ@@\",\r
+
+      \    \"card_type\":1,\r
+
+      \    \"auth_code\":\"0123\",\r
+
+      \    \"products\": [\r
+
+      \        {\r
+
+      \            \"id\": \"9ngoh_IaPb3D2aXmvb9-Jg@@\", //Agua Purificada Normal\r
+
+      \            \"quantity\": \"1\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_boxoffice}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

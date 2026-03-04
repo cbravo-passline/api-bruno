@@ -1,0 +1,39 @@
+info:
+  name: 38. PasslineContactProducer
+  type: http
+  seq: 39
+
+http:
+  method: POST
+  url: "{{url}}/general/PasslineContactProducer"
+  headers:
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"nombre\": \"Cristian\",\r
+
+      \    \"apellido\":\"Bravo\",\r
+
+      \    \"email\":\"cbravo@passline.dev\",\r
+
+      \    \"telefono\": \"12345678\",\r
+
+      \    \"mensaje\": \"mensaje de pruebas mensaje de pruebas mensaje de pruebas mensaje de pruebas mensaje de pruebas mensaje de pruebas\",\r
+
+      \    \"country\": \"chile\",\r
+
+      \    \"evento\": \"evento de pruebas\",\r
+
+      \    \"g-recaptcha-response\": \"0cAFcWeA4-oxnJbbgdBM9TkX5FAJFis34HfCfDIRbZDjR-6GEiSWvd7k2hRUDPFjC8E3w-M-kjon8cwrNG0B3nSHGS1DLDn9gjXXcJjA7IftwTEHWCRRM4VDIrhyc9sE31mo5EoUWbLxpirVeMEoAUmg1PsZYReEtREfxfSMmNrR7YwxXSrnAgS-sIygnO3ghG0WwberZ5e_ws_zm_bv4q6YDNL9KWfOOUhgE3o_k0qJq2kk8KWO669FXJF0ymK2GLM18Yogfn-fj87UW_8V8cVKuGCH_rPtzcWW5sLwnyytq3HUtvYKSxs-t_NeTVV-TkSS3fx4ngChD0-Ks14Qvbaa0eHg33Gv-Bi4s2xAaMTDXoc2YYlw8tuD5QIZLO_LV-Y7lWOLWVkiZ25xzdTzuBdQZVluHJZ8xQODLk-NSnsG0fFAobbIV_cfQnBkAmQ_rpQqY7a3HBJJQ-h0vB0b8gLjxG2y5qQuMVjA0BiJAOaet1YMjV7oV8G40PqJzYXLt2M0t6Iex21CnL9WVSjIIgOO3NsV2_NAYjku0yk92Yrr9YeZPddFmX4Q4suCbS98oY6JZpx8z8gbo-8xZncFR8UOx-C0EucoasA2AY6FiurVaa0kD7tnh83TKMGhZzrNMiJS7tB9-a9V34UP-CQKJ6DaQsWjnuisX34bvY69xmp2wgq87t1jTf5GKxlUm9Pt5gToBnw_exqWnjrLJSr_T2n9D9VPEwJRMku9JI3pYjzYLwg5fsFYmGin4Ys7cMY6waBU1r6aAkR5XgUUC82G2h6Lc8tLcKVH9Hg6IIhbC3irmFbAw8xPKXJML-eyP9uqptYVAMmKq_vXHiU0H-nzsWSPJMXq5p2Nz040lRPtCZZpqfvq2f8eL_DiIhBpTyhGnFm13TxoqmO99q\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

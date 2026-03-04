@@ -1,0 +1,32 @@
+info:
+  name: 154. RegisterTicketOfficeProductImportEvent
+  type: http
+  seq: 155
+
+http:
+  method: POST
+  url: "{{url}}/event/RegisterTicketOfficeProductImportEvent"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: current_event
+        type: text
+        value: 4d0ebffeac55e9e3f97252077b15c87e
+      - name: event_to_import
+        type: text
+        value: 0a25cfa80dd18c852fdcf93dbbd30616
+      - name: auth_code
+        type: text
+        value: "5056"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

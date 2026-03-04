@@ -1,0 +1,93 @@
+info:
+  name: 13. GetFavoriteEvent
+  type: http
+  seq: 14
+
+http:
+  method: GET
+  url: "{{url}}/event/GetFavoriteEvent"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetFavoriteEvent"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 19:43:24 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=Xo8rGqsfvKYJQtaDScsEvSLSzh5_P11B7NgjcK_2CD0-1729021404-1.0.1.1-6zCnh2PohPwHqVWb0D5HWKZdYU_aNjLraYhlcg0uHUKl_9Afy6XLV.aUL37l5SfoyPiZqpbqoOVmTVADGZbBKA; path=/; expires=Tue, 15-Oct-24 20:13:24 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d324c3da80b4545-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "9981",
+                  "id_usuario": "3679",
+                  "id_evento": "315083",
+                  "nombre": "Club Rosa Presenta Noche de Bendiciones",
+                  "fecha_inicio": "2024-10-17 23:00:00",
+                  "fecha_termino": "2024-10-18 03:45:00",
+                  "descripcion": "NOS VISITA POR PRIMERA VEZ, NUESTRO QUERIDO AMIGO BAMBINO EL PADRE, VIENE A BAUTIZAR, EXORCISAR A TODAS LAS VILLARRICENCES... LOS ESPERAMOS EN LA CATEDRAL DEL WEBEO CLUB ROSA, JUEVES 17 DE OCTUBRE VEN A CONFESARTE TE ESPERAMOS.\r\n\r\nMUJERES +18\r\nHOMBRES +21",
+                  "pais": "chile",
+                  "region": "9",
+                  "lugar": "Club Rosa",
+                  "reg_nombre": "IX Regi&oacute;n de la Araucan&iacute;a",
+                  "direccion": "Epulef 1008",
+                  "imagen": "https://imagenes.passline.com/eventos/club-rosa-presenta-noche-de-bendiciones-315083-img.jpg",
+                  "miniatura": "https://imagenes.passline.com/eventos/club-rosa-presenta-noche-de-bendiciones-315083-min.jpg",
+                  "recorte": "https://imagenes.passline.com/eventos/club-rosa-presenta-noche-de-bendiciones-315083-rec.jpg"
+              },
+              {
+                  "id": "10026",
+                  "id_usuario": "3679",
+                  "id_evento": "18462744444",
+                  "nombre": null,
+                  "fecha_inicio": null,
+                  "fecha_termino": null,
+                  "descripcion": null,
+                  "pais": null,
+                  "region": null,
+                  "lugar": null,
+                  "reg_nombre": null,
+                  "direccion": null,
+                  "imagen": "",
+                  "miniatura": "",
+                  "recorte": ""
+              }
+          ]

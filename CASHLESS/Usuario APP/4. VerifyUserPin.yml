@@ -1,0 +1,23 @@
+info:
+  name: 4. VerifyUserPin
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/cashless/VerifyUserPin"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r\n    \"pin\":\"123456\"\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_ariel@passline.dev}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

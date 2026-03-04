@@ -1,0 +1,220 @@
+info:
+  name: 1. RegisterUser
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/user/RegisterUser"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\":\"compratotems@passline.com\",\r
+
+      \    \"name\":\"Totems\",\r
+
+      \    \"country\":\"chile\",\r
+
+      \    \"password\":\"pass4321\",\r
+
+      \    \"phone\": \"56945669933\",\r
+
+      \    \"g-recaptcha-response\":\"03AFcWeA7P6IfJqEmpdaSMkRe7Go87g8Y-ZC4lNIaq33mKjfN1SkMAdBugWR4ptEWAe5cWMcEnr6R0eiCj7mqKy-SvT_FFTLAKcbt9scD_YvBrvbyNA5y8vtUIbYWPJy1ngsXWTOVSgAIFEMXESlsecWK6rjGSLI5Qb1mVjyE6sOOFZhW9pZxdAHJAKbGfZgKZGBen6sDZwz5hSfvlqgOqjJbnzJt3wbedHM_l5Bmzqk2qIKr8Qs6SeuRTBczi_-1NptEXfE5yrdI9_SL5wkbNrBSIHSF2Fo2b_2dPalBYvT9MrbMU9xH9ZKE1aefcDN0qDJZBmV7yTjGXglddod4Wq20YFyvGRNzTvMEW8WvOjUIUsW672jQIOutIStSO76b2sqLGJekrJ3PYUycAIcJMcV0W_G3FL1wPPbwML9n3Crq9JXqtb6nkLxWKStUL2665KsEewc0O8coLhiR0Nj-QeW-nNX31vFJvrsiuvZoPEZ_kroBwohiNwIfCxMit-EvU1GkS2fBK-g_VKRBZ6hJ6IYU5y68di-ETHh09-4AfnC9eskHN7QwGf8GhbRuNQZ575gN6juLYDrF8quSUFP4eu2PwhdN9dHGWISScN1qoIzCWpgYx-ILIr24xHTLNXSZoj1MaQT99RKGCYpO35rCBHRsuCUGLWrX3Px6fvC0cE6s9nLdclOoenjX2GL7ansp1NYYFjTJ5r8ZxZodFi-OSGv6hK2X9_nqpfct6_V3s1NqLYcgNlSH8XxM1P_W7O5COy4uNAq-SulULWuiAl0O3qmet_faUifMoUtwzIhO-iVOE_bfHRF2lMkLx0-Kmck7a7wpU6LYjeylAd7boYizdwQh6I2T1wUSXliuSkhbh8kBVpaf9ip4QWUsz_U0k-a7RSLXRIPCPoLzndUixwJcF6yRR_ivm7ubfi9ArC8M7lUhwlyMxUID8YpdVW6FQENNlprkNG5IKNd1-sJy-pWnwmaJXhAumMdzZwZ9X7WPjHrR-GWfLHqa2XVo\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/user/RegisterUser"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"email\":\"lchacon7@passline.dev\",\r
+
+          \    \"name\":\"Luis O'Chacon\",\r
+
+          \    \"country\":\"chile\",\r
+
+          \    \"password\":\"123456\",\r
+
+          \    \"phone\": \"56945669933\",\r
+
+          \    \"g-recaptcha-response\":\"123123\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 11 Oct 2024 14:09:01 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "33"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d0f6cef7882bfd4-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "status": "SUCCESS",
+              "id": 7478104
+          }
+  - name: Error bad parameters
+    request:
+      url: "{{url}}/user/RegisterUser"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 11 Oct 2024 14:13:37 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d0f73aacf35c007-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The g-recaptcha-response field is required.",
+                  "The email field is required.",
+                  "The value of the email field must be email format.",
+                  "The name field is required.",
+                  "The country field is required.",
+                  "The password field is required."
+              ]
+          }
+  - name: Error email already exist
+    request:
+      url: "{{url}}/user/RegisterUser"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"email\":\"lchacon7@passline.dev\",\r
+
+          \    \"name\":\"Luis O'Chacon\",\r
+
+          \    \"country\":\"chile\",\r
+
+          \    \"password\":\"123456\",\r
+
+          \    \"phone\": \"56945669933\",\r
+
+          \    \"g-recaptcha-response\":\"123123\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 11 Oct 2024 14:15:08 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d0f75e74b18bfe3-ATL
+        - name: Content-Encoding
+          value: gzip
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Email already exists"
+          }
+
+docs: |-
+  Función para registrar un nuevo usuario.
+
+  Respuesta:
+
+  StartFragment
+
+  {    "status": "SUCCESS",    "id": 5172818}
+
+  EndFragment

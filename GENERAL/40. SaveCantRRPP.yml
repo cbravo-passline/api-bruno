@@ -1,0 +1,182 @@
+info:
+  name: 40. SaveCantRRPP
+  type: http
+  seq: 41
+
+http:
+  method: POST
+  url: "{{url}}/general/SaveCantRRPP2"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event\":\"d5058700fd299b23d75fcc47e6620855\",\r
+
+      \    \"items_rrpp\":[\r
+
+      \        {\r
+
+      \            \"id\":\"276820\",\r
+
+      \            \"quanty\":10\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"id\":\"276814\",\r
+
+      \            \"quanty\":5\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/SaveCantRRPP"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"608e170b60b7fd6f11914a4ec9dfedbd\",\r
+
+          \    \"items_rrpp\": [\r
+
+          \        {\r
+
+          \            \"id\": \"276820\",\r
+
+          \            \"quantity\": \"12\"\r
+
+          \        },\r
+
+          \        {\r
+
+          \            \"id\": \"276822\",\r
+
+          \            \"quantity\": \"10\"\r
+
+          \        }\r
+
+          \    ]\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 01 Nov 2024 16:38:28 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8dbd50baa9af5082-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "success",
+              "messages": "The quantities were set for the promoters"
+          }
+  - name: Error rrpp id not belong to user
+    request:
+      url: "{{url}}/general/SaveCantRRPP"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"608e170b60b7fd6f11914a4ec9dfedbd\",\r
+
+          \    \"items_rrpp\": [\r
+
+          \        {\r
+
+          \            \"id\": \"2\",\r
+
+          \            \"quantity\": \"2\"\r
+
+          \        },\r
+
+          \        {\r
+
+          \            \"id\": \"2\",\r
+
+          \            \"quantity\": \"10\"\r
+
+          \        }\r
+
+          \    ]\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 01 Nov 2024 16:52:21 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=iKHseJ1iUBhoD6U.L48QNudi2zyDs.ekQmPO8_fj6xU-1730479941-1.0.1.1-EMiVPtpELE7qs.AkyJKyfeJkduf.pZiwdofFRyj4dohRB3kwamnZcOq10rur4548l9sb6_L7nA35HGeVAfcCFQ; path=/; expires=Fri, 01-Nov-24 17:22:21 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8dbd650e7ae0dd19-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "The rrpp does not exists."
+          }

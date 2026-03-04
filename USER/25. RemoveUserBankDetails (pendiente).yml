@@ -1,0 +1,15 @@
+info:
+  name: 25. RemoveUserBankDetails (pendiente)
+  type: http
+  seq: 26
+
+http:
+  method: DELETE
+  url: "{{url}}/accreditor/RemoveUserBankDetails"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

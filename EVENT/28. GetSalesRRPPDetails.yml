@@ -1,0 +1,263 @@
+info:
+  name: 28. GetSalesRRPPDetails
+  type: http
+  seq: 29
+
+http:
+  method: GET
+  url: "{{url}}/event/GetSalesRRPPDetails/4d0ebffeac55e9e3f97252077b15c87e"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetSalesRRPPDetails/4d0ebffeac55e9e3f97252077b15c87e"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 17 Oct 2024 18:30:27 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d425c270ddb12db-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "name": "Ariel Daza",
+                  "email": "ariel@passline.dev",
+                  "cant_sol": "0",
+                  "cant_disp": "0",
+                  "cant_vend": "0",
+                  "sonsQuantities": []
+              },
+              {
+                  "name": "erika lugo",
+                  "email": "erikalugo@passline.dev",
+                  "cant_sol": "0",
+                  "cant_disp": "0",
+                  "cant_vend": "0",
+                  "sonsQuantities": []
+              },
+              {
+                  "name": "LUIS",
+                  "email": "lchacon@passline.cl",
+                  "cant_sol": "0",
+                  "cant_disp": "0",
+                  "cant_vend": "0",
+                  "sonsQuantities": []
+              },
+              {
+                  "name": "luis",
+                  "email": "luischr@gmail.com",
+                  "cant_sol": "0",
+                  "cant_disp": "0",
+                  "cant_vend": "0",
+                  "sonsQuantities": []
+              },
+              {
+                  "name": "Productor RRPP",
+                  "email": "productor@passline.cl",
+                  "cant_sol": "0",
+                  "cant_disp": "0",
+                  "cant_vend": "0",
+                  "sonsQuantities": []
+              },
+              {
+                  "name": "Ricardo Dev Prueba",
+                  "email": "rfigueroa@passline.dev",
+                  "cant_sol": "0",
+                  "cant_disp": "0",
+                  "cant_vend": "0",
+                  "sonsQuantities": []
+              },
+              {
+                  "name": "test",
+                  "email": "test@gmail.com",
+                  "cant_sol": "0",
+                  "cant_disp": "0",
+                  "cant_vend": "0",
+                  "sonsQuantities": []
+              }
+          ]
+  - name: Error bad parameters
+    request:
+      url: "{{url}}/event/GetSalesRRPPDetails/"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 17 Oct 2024 18:31:26 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d425d98882312db-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required."
+              ]
+          }
+  - name: Error event does not exist
+    request:
+      url: "{{url}}/event/GetSalesRRPPDetails/23"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 17 Oct 2024 18:32:15 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d425ec9a87312db-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "The event does not exists."
+          }
+  - name: Error dont access to event
+    request:
+      url: "{{url}}/event/GetSalesRRPPDetails/51c3f7ebee2ca78e24ff50aa67abdcf1"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 17 Oct 2024 18:43:40 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d426f819acdadb9-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "You dont have access to this event."
+          }
+
+docs: Permite traer los etickets de un usuario registrado, se envía el token.

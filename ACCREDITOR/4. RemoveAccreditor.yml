@@ -1,0 +1,24 @@
+info:
+  name: 4. RemoveAccreditor
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{url}}/accreditor/RemoveAccreditor"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"accreditor_id\":\"LhH-AcgXPMCeEQTiplhZNA@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

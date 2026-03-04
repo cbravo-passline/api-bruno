@@ -1,0 +1,243 @@
+info:
+  name: 23. PurchaseData
+  type: http
+  seq: 24
+
+http:
+  method: PUT
+  url: "{{url}}/general/PurchaseData"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"purchase_id\":\"36336906\",\r
+
+      \    \"attendant\":[\r
+
+      \        {\r
+
+      \            \"rut\":\"11.111.111-1\",\r
+
+      \            \"name\":\"Nombre Completo\",\r
+
+      \            \"foreign\":true\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"rut\":\"22.222.222-2\",\r
+
+      \            \"name\":\"Nombre Completo\",\r
+
+      \            \"foreign\":true\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/PurchaseData"
+      method: PUT
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"purchase_id\":\"36336906\",\r
+
+          \    \"attendant\":[\r
+
+          \        {\r
+
+          \            \"rut\":\"11.111.111-1\",\r
+
+          \            \"name\":\"Nombre Completo\",\r
+
+          \            \"foreign\":true\r
+
+          \        },\r
+
+          \        {\r
+
+          \            \"rut\":\"22.222.222-2\",\r
+
+          \            \"name\":\"Nombre Completo\",\r
+
+          \            \"foreign\":true\r
+
+          \        }\r
+
+          \    ]\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 25 Oct 2024 17:03:39 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=CGvexsB027AyKYCi4kkViCIL0RdL0bCLQOR8ktwvBww-1729875819-1.0.1.1-wxESqMY2YYkSVuxhLcsw4Mvn7pweSEJj2qKgg3HPmrMi9TgmVIRW5iQIwmGMfPvvARfWd84S4FxKb3JAH.453w; path=/; expires=Fri, 25-Oct-24 17:33:39 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d83c7fbba4953aa-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "SUCCESS",
+              "purchase_id": "36336906",
+              "attendant": [
+                  {
+                      "rut": "11.111.111-1",
+                      "name": "Nombre Completo",
+                      "foreign": true
+                  },
+                  {
+                      "rut": "22.222.222-2",
+                      "name": "Nombre Completo",
+                      "foreign": true
+                  }
+              ]
+          }
+  - name: Error response no attendant
+    request:
+      url: "{{url}}/general/PurchaseData"
+      method: PUT
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"purchase_id\":\"36336906\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 25 Oct 2024 17:04:20 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d83c8fe3e6453aa-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "ERROR",
+              "purchase_id": "36336906",
+              "attendant": null
+          }
+  - name: Error invalid params
+    request:
+      url: "{{url}}/general/PurchaseData"
+      method: PUT
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 25 Oct 2024 18:30:01 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d84468089deb0d5-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The purchase_id field is required.",
+                  "The value of the purchase_id field must be numeric.",
+                  "The value of the purchase_id must be greater than 0.",
+                  "The attendant field is required."
+              ]
+          }

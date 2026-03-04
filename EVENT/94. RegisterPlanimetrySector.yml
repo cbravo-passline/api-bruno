@@ -1,0 +1,39 @@
+info:
+  name: 94. RegisterPlanimetrySector
+  type: http
+  seq: 95
+
+http:
+  method: POST
+  url: "{{url}}/event/RegisterPlanimetrySector"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: sector planimetria de prueba223423
+      - name: description
+        type: text
+        value: esta es una prueba de sector planimetria2
+      - name: image
+        type: file
+        value:
+          - /C:/Users/cbral/Downloads/414x497.png
+      - name: color
+        type: text
+        value: "#FFB600"
+      - name: planimetry
+        type: text
+        value: feXBdHMvynwMEg5RQDRMbw@@
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

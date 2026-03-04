@@ -1,0 +1,54 @@
+info:
+  name: 110. EditEventLanding
+  type: http
+  seq: 111
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditEventLanding"
+  body:
+    type: multipart-form
+    data:
+      - name: eventLandingId
+        type: text
+        value: GGNdBAhmIDXQqRG2WjPsyw@@
+      - name: eventName
+        type: text
+        value: Prueba Fpay
+      - name: underTitleText
+        type: text
+        value: prueba de texto debajo botones de compra
+      - name: textUnderBuyButton
+        type: text
+        value: Esta es una prueba de texto
+      - name: disclaimer
+        type: text
+        value: PRUEBA disclaimer 123
+      - name: inlineCheckbox3
+        type: text
+        value: "1"
+      - name: textSpotify
+        type: text
+        value: https://open.spotify.com/episode/5D1htNXsqSNlAcbyEzNqxD
+      - name: inlineCheckbox4
+        type: text
+        value: "1"
+      - name: textVideo
+        type: text
+        value: https://www.youtube.com/watch?v=zIRRpTFAFUc&ab_channel=Gimb
+      - name: imagePrincipal
+        type: file
+        value:
+          - /C:/Users/cbral/Downloads/400x400.png
+      - name: eventCode
+        type: text
+        value: "3947"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

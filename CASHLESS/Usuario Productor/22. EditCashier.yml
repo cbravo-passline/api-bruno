@@ -1,0 +1,30 @@
+info:
+  name: 22. EditCashier
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/EditCashier"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"cashier_id\":\"\",\r
+
+      \    \"full_name\":\"\",\r
+
+      \    \"email\":\"\",\r
+
+      \    \"status\":\"\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,145 @@
+info:
+  name: 20. LinkUserToPurchaseOrder
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/LinkUserToPurchaseOrder"
+  headers:
+    - name: User-Agent
+      value: Passline-PHP
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"hash\":\"d0p0Y184dFVINHgwdlRnNEw2RFd0bGFsdThXejlWd25aQl8yMmdsSllzVkVfRm00TWxwVjA1STUtVUplbDh2YUtwd2lHNzEwaldMVUVFLW1LRXVablRGWGxCMjFkN3E1YUUzb19GaTdhYUFA\",\r
+
+      \    \"order\":15\r
+
+      }"
+  auth:
+    type: apikey
+    key: Cashier-Token
+    value: "{{cashier_token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 20. LinkUserToPurchaseOrder
+    request:
+      url: "{{url}}/cashless/LinkUserToPurchaseOrder"
+      method: PUT
+      headers:
+        - name: User-Agent
+          value: Passline-PHP
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"hash\":\"OHRhbEZ4R09tbmFtaV9Wd09KMHYwZEhZT3lKX0k5RkZHRHcxQXJXZ1ZnZ0A=\",\r
+
+          \    \"order\":12\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 25 Aug 2025 22:14:07 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Content-Encoding
+          value: br
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 974e70c80ff1e644-IAD
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Error processing purchase order, the user wallet belongs to a different country.",
+              "timestamp": 1756160047
+          }
+  - name: Error different country user producer
+    request:
+      url: "{{url}}/cashless/LinkUserToPurchaseOrder"
+      method: PUT
+      headers:
+        - name: User-Agent
+          value: Passline-PHP
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"hash\":\"OHRhbEZ4R09tbmFtaV9Wd09KMHYwZEhZT3lKX0k5RkZHRHcxQXJXZ1ZnZ0A=\",\r
+
+          \    \"order\":12\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 25 Aug 2025 22:14:07 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Content-Encoding
+          value: br
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 974e70c80ff1e644-IAD
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Error processing purchase order, the user wallet belongs to a different country.",
+              "timestamp": 1756160047
+          }

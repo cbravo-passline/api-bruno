@@ -1,0 +1,35 @@
+info:
+  name: 103. EditMySiteBanner
+  type: http
+  seq: 99
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditMySiteBanner"
+  body:
+    type: multipart-form
+    data:
+      - name: title
+        type: text
+        value: nombre
+      - name: banner
+        type: text
+        value: luwhpJaRX-5wxMEY_SWwEA@@
+      - name: link
+        type: text
+        value: ""
+      - name: target
+        type: text
+        value: _blank
+      - name: image
+        type: file
+        value: []
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

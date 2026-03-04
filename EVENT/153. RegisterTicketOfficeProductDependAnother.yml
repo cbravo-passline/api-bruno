@@ -1,0 +1,32 @@
+info:
+  name: 153. RegisterTicketOfficeProductDependAnother
+  type: http
+  seq: 154
+
+http:
+  method: POST
+  url: "{{url}}/event/RegisterTicketOfficeProductDependAnother"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: product_id
+        type: text
+        value: bulfFiIw44q3te5DmiyAQHM7M5M60DK6cxaQE7RaRBA@
+      - name: auth_code
+        type: text
+        value: "5056"
+      - name: event
+        type: text
+        value: 4d0ebffeac55e9e3f97252077b15c87e
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

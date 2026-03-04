@@ -1,0 +1,103 @@
+info:
+  name: 30. TicketDiscountsList
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/cashier/TicketDiscountsList?page=1&limit=1&lang=es_ES"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "1"
+      type: query
+    - name: lang
+      value: es_ES
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{url}}/cashier/TicketDiscountsList?page=1&limit=1&lang=es_ES"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "1"
+          type: query
+        - name: lang
+          value: es_ES
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 26 Dec 2024 19:26:11 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8f8376080fe1e590-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "records": [
+                  {
+                      "id": "299",
+                      "autor_passline": "3679",
+                      "autor_mago": null,
+                      "nombre": "descuento 2 prueba",
+                      "descuento": "0.1",
+                      "pais": "chile",
+                      "fecha_creacion": "2024-10-23 18:01:07",
+                      "fecha_edicion": "2024-12-24 18:40:56",
+                      "estado": "1",
+                      "evento_asignado": "321123",
+                      "nombre_evento": "prueba boleteria octubre",
+                      "nombre_estado": "ACTIVO",
+                      "ticketdiscount": "cbRtNPpdlVvbgHDYus06_A@@"
+                  }
+              ],
+              "pagination": {
+                  "limit": 1,
+                  "total_records": 9,
+                  "total_records_filtered": 9,
+                  "total_pages": 9,
+                  "current_page": 1
+              }
+          }

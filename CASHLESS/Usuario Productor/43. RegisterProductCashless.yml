@@ -1,0 +1,32 @@
+info:
+  name: 43. RegisterProductCashless
+  type: http
+  seq: 19
+
+http:
+  method: POST
+  url: "{{url}}/cashless/RegisterProductCashless"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"category\":\"D0LMsWSJukbTMy2_1uYOGA@@\",\r
+
+      \    \"name\":\"PEPSI 2\",\r
+
+      \    \"price\":\"1560\",\r
+
+      \    \"stock\":\"10000\",\r
+
+      \    \"description\":\"Bebida resfrecante con hielo\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

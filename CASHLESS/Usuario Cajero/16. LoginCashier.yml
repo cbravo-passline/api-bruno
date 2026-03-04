@@ -1,0 +1,94 @@
+info:
+  name: 16. LoginCashier
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/cashless/LoginCashier"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: User-Agent
+      value: Passline-PHP
+  body:
+    type: json
+    data: "{\r
+
+      \    \"access_code\":\"ADCBE1\",\r
+
+      \    \"producer_id\":3679\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/cashless/LoginCashier"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+        - name: User-Agent
+          value: Passline-PHP
+      body:
+        type: json
+        data: "{\r
+
+          \    \"access_code\":\"ADCBE1\",\r
+
+          \    \"producer_id\":3679\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Sat, 02 Nov 2024 00:13:41 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8dbfeb8f793c53b4-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "cashier_data": {
+                  "id": "1",
+                  "full_name": "Nombre Cajero Prueba",
+                  "email": "test@test.com",
+                  "producer_id": "3679",
+                  "producer_name": "Productor de Prueba",
+                  "producer_rut": "76011664-5",
+                  "producer_email": "productor@passline.cl"
+              },
+              "cashier_token": "aExzRkhxd25qSDlGRGdobGpUOGNaMGNnOC1YY05TU2Z4V2l3STdzMzF0OEN3aGVsSlZOQW9mSkI4YmVTZlQ3SXlTb1lha2Z2bTZHQkR4TGtidDFLUDRlWXJEUXRNM3ZiYVdnSW53ZkN2MzhA"
+          }

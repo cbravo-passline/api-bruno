@@ -1,0 +1,18 @@
+info:
+  name: 78. LoadCourtesyTicketByDataBase (pendiente)
+  type: http
+  seq: 79
+
+http:
+  method: POST
+  url: "{{url}}/event/LoadCourtesyTicketByDataBase"
+  headers:
+    - name: content-type
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

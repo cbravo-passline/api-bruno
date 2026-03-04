@@ -1,0 +1,21 @@
+info:
+  name: 69. GetAccreditationSummary
+  type: http
+  seq: 70
+
+http:
+  method: GET
+  url: "{{url}}/event/GetAccreditationSummary?param1=f1a58918e5937cbf008a17b8ce77b579"
+  params:
+    - name: param1
+      value: f1a58918e5937cbf008a17b8ce77b579
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

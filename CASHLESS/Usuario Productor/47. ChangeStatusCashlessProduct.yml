@@ -1,0 +1,26 @@
+info:
+  name: 47. ChangeStatusCashlessProduct
+  type: http
+  seq: 23
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/ChangeStatusCashlessProduct"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"product\":\"yVJw80QDhgEeuYT_pHUKDg@@\",\r
+
+      \    \"status\":1\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

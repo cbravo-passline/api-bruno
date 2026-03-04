@@ -1,0 +1,94 @@
+info:
+  name: 22. EditEvent
+  type: http
+  seq: 23
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditEvent"
+  body:
+    type: multipart-form
+    data:
+      - name: event
+        type: text
+        value: "184715"
+        description: 0 Publico, 1 Privado, 3 Oculto
+      - name: type
+        type: text
+        value: "0"
+      - name: adults_only
+        type: text
+        value: "0"
+      - name: age_range
+        type: text
+        value: "18"
+      - name: tags
+        type: text
+        value: 4320,3519,35
+      - name: tags[0]
+        type: text
+        value: "4320"
+        disabled: true
+      - name: tags[1]
+        type: text
+        value: "3519"
+        disabled: true
+      - name: event_group
+        type: text
+        value: ""
+        disabled: true
+      - name: artist
+        type: text
+        value: Artisita 23, Artista 23
+      - name: description
+        type: text
+        value: descripción 3
+      - name: itinerary
+        type: text
+        value: Ninguno3
+      - name: end_date
+        type: text
+        value: 2024-12-25 23:30:00
+      - name: venue
+        type: text
+        value: "7"
+        disabled: true
+      - name: region
+        type: text
+        value: "13"
+      - name: comune
+        type: text
+        value: "1411"
+      - name: url_video
+        type: text
+        value: https://www.youtube.com/watch?v=py6OqgSbvCc
+      - name: address
+        type: text
+        value: Direccion 2
+      - name: name_place
+        type: text
+        value: Lugar del Evento 2
+      - name: ticket_order
+        type: text
+        value: "0"
+      - name: allow_function_update
+        type: text
+        value: "1"
+      - name: authorize_code
+        type: text
+        value: "8030"
+      - name: image
+        type: file
+        value: []
+      - name: top_banner
+        type: file
+        value: []
+  auth:
+    type: bearer
+    token: "{{Token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: 145. RegisterEventTicketOfficeDiscount
+  type: http
+  seq: 146
+
+http:
+  method: POST
+  url: "{{url}}/event/RegisterEventTicketOfficeDiscount"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event\":\"608e170b60b7fd6f11914a4ec9dfedbd\",\r
+
+      \    \"name\":\"test de descuento\",\r
+
+      \    \"discount\":\"50\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

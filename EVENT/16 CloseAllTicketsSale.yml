@@ -1,0 +1,23 @@
+info:
+  name: 16 CloseAllTicketsSale
+  type: http
+  seq: 17
+
+http:
+  method: PUT
+  url: "{{url}}/event/CloseAllTicketsSale"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r\n    \"event\": 184702\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

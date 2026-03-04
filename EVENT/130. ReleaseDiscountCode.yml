@@ -1,0 +1,24 @@
+info:
+  name: 130. ReleaseDiscountCode
+  type: http
+  seq: 131
+
+http:
+  method: PUT
+  url: "{{url}}/event/ReleaseDiscountCode"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"discount\":\"8fTKcd4QubnnLcvfEZGMgA@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

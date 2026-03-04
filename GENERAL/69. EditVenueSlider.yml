@@ -1,0 +1,36 @@
+info:
+  name: 69. EditVenueSlider
+  type: http
+  seq: 70
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditVenueSlider"
+  body:
+    type: multipart-form
+    data:
+      - name: venue_slider
+        type: text
+        value: CRDCVDmI2_JrRjvPNll6Rw@@
+      - name: title
+        type: text
+        value: Test43
+      - name: link
+        type: text
+        value: test43
+      - name: target
+        type: text
+        value: _self
+      - name: image
+        type: file
+        value:
+          - postman-cloud:///1ef490d9-1992-44f0-967b-d848998e924d
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

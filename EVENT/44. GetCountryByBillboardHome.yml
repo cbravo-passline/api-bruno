@@ -1,0 +1,1078 @@
+info:
+  name: 44. GetCountryByBillboardHome
+  type: http
+  seq: 45
+
+http:
+  method: POST
+  url: "{{url}}/event/GetCountryByBillboardHome"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"country\": \"chile\",\r
+
+      \    \"limit\":\"0,8\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetCountryByBillboardHome"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"country\": \"chile\",\r
+
+          \    \"limit\":\"3,3\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 20:10:33 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6c21a30ababd16-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "EventTop10": [
+                  {
+                      "id": "162624",
+                      "nombre": "ExpoCafé Chile 2023",
+                      "slug": "expocafe-chile-2023",
+                      "url": "https://www.passline.com/eventos/expocafe-chile-2023",
+                      "fecha_inicio": "2023-07-01",
+                      "hora_inicio": "10:00:00",
+                      "fecha_termino": "2023-07-02",
+                      "hora_termino": "21:00:00",
+                      "lugar": "Centro de Eventos CentroParque",
+                      "image": "https://www.passline.com/imagenes/eventos/expocafe-chile-2023-162624-rec.jpg"
+                  },
+                  {
+                      "id": "149842",
+                      "nombre": "integración VAN GOGH Sueño inmersivo ( La Serena )",
+                      "slug": "van-gogh-sueno-inmerisivo-la-serena",
+                      "url": "https://www.passline.com/eventos/van-gogh-sueno-inmerisivo-la-serena",
+                      "fecha_inicio": "2023-05-18",
+                      "hora_inicio": "11:00:00",
+                      "fecha_termino": "2023-07-23",
+                      "hora_termino": "21:00:00",
+                      "lugar": "Mallplaza",
+                      "image": "https://www.passline.com/imagenes/eventos/van-gogh-sueno-inmersivo-la-serena-149842-rec_1.jpg"
+                  },
+                  {
+                      "id": "179049",
+                      "nombre": "Fiebre del Memo - La Fonda",
+                      "slug": "fiebre-del-memo-la-fonda-179049",
+                      "url": "https://www.passline.com/eventos/fiebre-del-memo-la-fonda-179049",
+                      "fecha_inicio": "2023-09-09",
+                      "hora_inicio": "12:00:00",
+                      "fecha_termino": "2023-09-10",
+                      "hora_termino": "01:00:00",
+                      "lugar": "Club Hípico de Santiago",
+                      "image": "https://www.passline.com/imagenes/eventos/fiebre-del-memo-la-fonda-179049-179049-rec.jpg"
+                  },
+                  {
+                      "id": "181562",
+                      "nombre": "Los Dos Carnales en Chile - Tour del Rancho para el Mundo 2023 - Medialuna Monumental de Rancagua",
+                      "slug": "los-dos-carnales-en-chile-tour-del-rancho-para-el-mundo-2023-medialuna-monumental-de-rancagua",
+                      "url": "https://www.passline.com/eventos/los-dos-carnales-en-chile-tour-del-rancho-para-el-mundo-2023-medialuna-monumental-de-rancagua",
+                      "fecha_inicio": "2023-11-19",
+                      "hora_inicio": "16:00:00",
+                      "fecha_termino": "2023-11-19",
+                      "hora_termino": "23:00:00",
+                      "lugar": "Medialuna Monumental de Rancagua",
+                      "image": "https://www.passline.com/imagenes/eventos/los-dos-carnales-en-chile-tour-del-rancho-para-el-mundo-2023-medialuna-monumental-de-rancagua-181562-rec.jpg"
+                  },
+                  {
+                      "id": "178509",
+                      "nombre": "Open Blondie, Noche de Brujas 2023",
+                      "slug": "open-blondie-noche-de-brujas-2023",
+                      "url": "https://www.passline.com/eventos/open-blondie-noche-de-brujas-2023",
+                      "fecha_inicio": "2023-10-31",
+                      "hora_inicio": "18:00:00",
+                      "fecha_termino": "2023-11-01",
+                      "hora_termino": "04:00:00",
+                      "lugar": "Club Hípico de Santiago",
+                      "image": "https://www.passline.com/imagenes/eventos/open-blondie-noche-de-brujas-2023-178509-rec.jpg"
+                  },
+                  {
+                      "id": "178055",
+                      "nombre": "KE PERSONAJES EN VIVO COPIAPÓ",
+                      "slug": "ke-personajes-en-vivo-copiapo",
+                      "url": "https://www.passline.com/eventos/ke-personajes-en-vivo-copiapo",
+                      "fecha_inicio": "2023-09-08",
+                      "hora_inicio": "20:00:00",
+                      "fecha_termino": "2023-09-08",
+                      "hora_termino": "01:00:00",
+                      "lugar": "CLUB DE CAMPO EL BOSQUE",
+                      "image": "https://www.passline.com/imagenes/eventos/ke-personajes-en-vivo-copiapo-236784-rec.jpg"
+                  },
+                  {
+                      "id": "155158",
+                      "nombre": "Leprous y Borknagar en Chile",
+                      "slug": "leprous-y-borknagar-en-chile",
+                      "url": "https://www.passline.com/eventos/leprous-y-borknagar-en-chile",
+                      "fecha_inicio": "2023-11-15",
+                      "hora_inicio": "19:00:00",
+                      "fecha_termino": "2023-11-15",
+                      "hora_termino": "23:45:00",
+                      "lugar": "La Cúpula Parque Ohiggins",
+                      "image": "https://www.passline.com/imagenes/eventos/leprous-y-borknagar-en-chile-201480-rec.jpg"
+                  },
+                  {
+                      "id": "179289",
+                      "nombre": "MISS MONIQUE EN CHILE",
+                      "slug": "miss-monique-en-chile",
+                      "url": "https://www.passline.com/eventos/miss-monique-en-chile",
+                      "fecha_inicio": "2023-07-15",
+                      "hora_inicio": "21:00:00",
+                      "fecha_termino": "2023-07-16",
+                      "hora_termino": "04:45:00",
+                      "lugar": "CENTROPARQUE",
+                      "image": "https://www.passline.com/imagenes/eventos/miss-monique-en-chile-232855-rec.jpg"
+                  },
+                  {
+                      "id": "174635",
+                      "nombre": "ALAN FITZPATRICK & CRISTOPH",
+                      "slug": "alan-fitzpatrick-cristoph",
+                      "url": "https://www.passline.com/eventos/alan-fitzpatrick-cristoph",
+                      "fecha_inicio": "2023-06-24",
+                      "hora_inicio": "21:00:00",
+                      "fecha_termino": "2023-06-25",
+                      "hora_termino": "05:00:00",
+                      "lugar": "ESPACIO RIESCO",
+                      "image": "https://www.passline.com/imagenes/eventos/alan-fitzpatrick-cristoph-227185-rec.jpg"
+                  },
+                  {
+                      "id": "175331",
+                      "nombre": "we love 2000 - Kudai en vivo - Blondie - scl",
+                      "slug": "we-love-2000-kudai-en-vivo-blondie-scl",
+                      "url": "https://www.passline.com/eventos/we-love-2000-kudai-en-vivo-blondie-scl",
+                      "fecha_inicio": "2023-07-15",
+                      "hora_inicio": "21:00:00",
+                      "fecha_termino": "2023-07-15",
+                      "hora_termino": "22:30:00",
+                      "lugar": "Blondie",
+                      "image": "https://www.passline.com/imagenes/eventos/we-love-2000-kudai-en-vivo-blondie-scl-230316-rec.jpg"
+                  }
+              ],
+              "BillboardByCountry": [
+                  {
+                      "act_fullhome": "0",
+                      "id": "184709",
+                      "nombre": "Evento creado API",
+                      "url": "https://www.passline.com/eventos/evento-creado-api",
+                      "slug": "evento-creado-api",
+                      "artistas": "",
+                      "fecha_inicio": "2024-12-02",
+                      "hora_inicio": "20:00:00",
+                      "fecha_termino": "2024-12-02",
+                      "hora_termino": "23:00:00",
+                      "promocion": "",
+                      "lugar": "Lugar del Evento",
+                      "streaming": "0",
+                      "streaming_cat": "0",
+                      "act_promo_label": "1",
+                      "comuna": "1310",
+                      "nombre_communa": "&amp;Ntilde;u&amp;ntilde;oa",
+                      "region": "13",
+                      "nombre_region": "Regi&oacute;n Metropolitana de Santiago",
+                      "dias_atencion": "0",
+                      "precio_min": "",
+                      "productor": "5639653",
+                      "miniatura": "https://imagenes.passline.com/eventos/evento-creado-api-240068-min.jpg",
+                      "recorte": "https://imagenes.passline.com/eventos/evento-creado-api-240068-rec.jpg",
+                      "tiene_funciones": "0",
+                      "tiene_planimetria": "0",
+                      "agotado": "0",
+                      "disponibles": "",
+                      "category_id": "",
+                      "category_name": "",
+                      "usa_decimales": "0",
+                      "simbolo_moneda": "$",
+                      "termino_cedula": "RUT",
+                      "cantidad_decimales": "0",
+                      "sep_decimales": ",",
+                      "sep_miles": ".",
+                      "canal_venta": "0",
+                      "formato_hora": "24",
+                      "venta_externa": "0"
+                  },
+                  {
+                      "act_fullhome": "0",
+                      "id": "184711",
+                      "nombre": "Evento creado APIDEV",
+                      "url": "https://www.passline.com/eventos/evento-creado-apidev",
+                      "slug": "evento-creado-apidev",
+                      "artistas": "",
+                      "fecha_inicio": "2024-12-02",
+                      "hora_inicio": "20:00:00",
+                      "fecha_termino": "2024-12-02",
+                      "hora_termino": "23:00:00",
+                      "promocion": "",
+                      "lugar": "Lugar del Evento",
+                      "streaming": "0",
+                      "streaming_cat": "0",
+                      "act_promo_label": "1",
+                      "comuna": "1310",
+                      "nombre_communa": "&amp;Ntilde;u&amp;ntilde;oa",
+                      "region": "13",
+                      "nombre_region": "Regi&oacute;n Metropolitana de Santiago",
+                      "dias_atencion": "0",
+                      "precio_min": "",
+                      "productor": "5639653",
+                      "miniatura": "https://imagenes.passline.com/eventos/evento-creado-apidev-184711-min.jpg",
+                      "recorte": "https://imagenes.passline.com/eventos/evento-creado-apidev-184711-rec.jpg",
+                      "tiene_funciones": "0",
+                      "tiene_planimetria": "0",
+                      "agotado": "0",
+                      "disponibles": "",
+                      "category_id": "",
+                      "category_name": "",
+                      "usa_decimales": "0",
+                      "simbolo_moneda": "$",
+                      "termino_cedula": "RUT",
+                      "cantidad_decimales": "0",
+                      "sep_decimales": ",",
+                      "sep_miles": ".",
+                      "canal_venta": "0",
+                      "formato_hora": "24",
+                      "venta_externa": "0"
+                  },
+                  {
+                      "act_fullhome": "0",
+                      "id": "184712",
+                      "nombre": "Evento creado APIDEV 2",
+                      "url": "https://www.passline.com/eventos/evento-creado-apidev-2",
+                      "slug": "evento-creado-apidev-2",
+                      "artistas": "",
+                      "fecha_inicio": "2024-12-02",
+                      "hora_inicio": "20:00:00",
+                      "fecha_termino": "2024-12-02",
+                      "hora_termino": "23:00:00",
+                      "promocion": "",
+                      "lugar": "Lugar del Evento",
+                      "streaming": "0",
+                      "streaming_cat": "0",
+                      "act_promo_label": "1",
+                      "comuna": "1310",
+                      "nombre_communa": "&amp;Ntilde;u&amp;ntilde;oa",
+                      "region": "13",
+                      "nombre_region": "Regi&oacute;n Metropolitana de Santiago",
+                      "dias_atencion": "0",
+                      "precio_min": "",
+                      "productor": "5639653",
+                      "miniatura": "https://imagenes.passline.com/eventos/evento-creado-apidev-2-184712-min.jpg",
+                      "recorte": "https://imagenes.passline.com/eventos/evento-creado-apidev-2-184712-rec.jpg",
+                      "tiene_funciones": "0",
+                      "tiene_planimetria": "0",
+                      "agotado": "0",
+                      "disponibles": "",
+                      "category_id": "",
+                      "category_name": "",
+                      "usa_decimales": "0",
+                      "simbolo_moneda": "$",
+                      "termino_cedula": "RUT",
+                      "cantidad_decimales": "0",
+                      "sep_decimales": ",",
+                      "sep_miles": ".",
+                      "canal_venta": "0",
+                      "formato_hora": "24",
+                      "venta_externa": "0"
+                  }
+              ],
+              "Sliders": [
+                  {
+                      "titulo": "MEMO LA FONDA",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6637-0082.jpg",
+                      "enlace": "https://www.passline.com/eventos/fiebre-del-memo-la-fonda-179049",
+                      "slug_evento": "fiebre-del-memo-la-fonda-179049",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "179049",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "THE KLAN / ALAN & CRISTOPH",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6652-8128.jpg",
+                      "enlace": "https://www.passline.com/eventos/alan-fitzpatrick-cristoph",
+                      "slug_evento": "alan-fitzpatrick-cristoph",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "174635",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "HUGO / ENJOY STGO",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6697-1430.jpg",
+                      "enlace": "https://www.passline.com/eventos/kramer-en-concierto",
+                      "slug_evento": "kramer-en-concierto",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "176832",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "JOSE / RAAK FIGHT 5",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6608-8636.jpg",
+                      "enlace": "https://www.passline.com/eventos/raak-fight-night-5",
+                      "slug_evento": "raak-fight-night-5",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "162261",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "LOS MALUENDA VACACIONES DE INVIERNO",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6725-7533.jpg",
+                      "enlace": "https://www.passline.com/sitio/circo-los-maluenda",
+                      "slug_evento": "circo-los-maluenda",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "129819",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "JL / DOS CARNALES RANCAGUA",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6706-2550.jpg",
+                      "enlace": "https://www.passline.com/eventos/los-dos-carnales-en-chile-tour-del-rancho-para-el-mundo-2023-medialuna-monumental-de-rancagua",
+                      "slug_evento": "los-dos-carnales-en-chile-tour-del-rancho-para-el-mundo-2023-medialuna-monumental-de-rancagua",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "181562",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "VALE / KUNSHINE VALPO",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6704-5136.jpg",
+                      "enlace": "https://www.passline.com/eventos/el-camino-de-kunshine-173031",
+                      "slug_evento": "el-camino-de-kunshine-173031",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "173031",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "PATO / KE PERSONAJES COPIAPO",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6712-2624.jpg",
+                      "enlace": "https://www.passline.com/eventos/ke-personajes-en-vivo-copiapo",
+                      "slug_evento": "ke-personajes-en-vivo-copiapo",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "178055",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "KRONOS / CLUB 80 90 VIÑA",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6703-1318.jpg",
+                      "enlace": "https://www.passline.com/eventos/club-80-edicion-tributo-la-ley",
+                      "slug_evento": "club-80-edicion-tributo-la-ley",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "182807",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "HUGO / BLACK OFFICE JUNIO",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6698-2356.jpg",
+                      "enlace": "https://www.passline.com/eventos/blackoffice-santiago-is-back-viernes-30-de-junio-en-vista-santiago",
+                      "slug_evento": "blackoffice-santiago-is-back-viernes-30-de-junio-en-vista-santiago",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "181923",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "UVA / FRAN VALENZUELA",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6683-8054.jpg",
+                      "enlace": "https://www.passline.com/eventos/francisca-valenzuela-en-valparaiso",
+                      "slug_evento": "francisca-valenzuela-en-valparaiso",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "181666",
+                      "tiene_planimetria": "1",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "UVA / CAMILA MORENO",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6676-8798.jpg",
+                      "enlace": "https://www.passline.com/eventos/camila-moreno-valparaiso",
+                      "slug_evento": "camila-moreno-valparaiso",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "180658",
+                      "tiene_planimetria": "1",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "SALA CESAR / FLOY MENOR",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6710-8092.jpg",
+                      "enlace": "https://www.passline.com/eventos/floyymenor-los-malvekes",
+                      "slug_evento": "floyymenor-los-malvekes",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "181518",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "KATHERINE / LA FINCA",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6678-7147.jpg",
+                      "enlace": "https://www.passline.com/eventos/la-finca-urban-music",
+                      "slug_evento": "la-finca-urban-music",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "175371",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TROTA JUNIO",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6644-3864.jpg",
+                      "enlace": "https://www.passline.com/sitio/trotamundos-quilpue",
+                      "slug_evento": "trotamundos-quilpue",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": null,
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TERRAMORE / LUIS SLIMMING",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6720-2886.jpg",
+                      "enlace": "https://www.passline.com/eventos/luis-slimming-show-de-stand-up-comey",
+                      "slug_evento": "luis-slimming-show-de-stand-up-comey",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "178799",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "CHILEANWEY / SEPTIEMBRE",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6639-2980.jpg",
+                      "enlace": "https://www.passline.com/sitio/chilean-wey-festival",
+                      "slug_evento": "chilean-wey-festival",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": null,
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "ISMAIL / MIL CAMINOS",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6596-6904.jpg",
+                      "enlace": "https://www.passline.com/eventos?q=Mil+caminos&page=1",
+                      "slug_evento": "eventos?q=Mil+caminos&page=1",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": null,
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "FIGUEROA / KUDAI BLONDIE",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6583-6632.jpg",
+                      "enlace": "https://www.passline.com/eventos/we-love-2000-kudai-en-vivo-blondie-scl",
+                      "slug_evento": "we-love-2000-kudai-en-vivo-blondie-scl",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "175331",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "KROSSBAR / HSUR",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6631-3484.jpg",
+                      "enlace": "https://www.passline.com/eventos/hsur-en-klub-kross",
+                      "slug_evento": "hsur-en-klub-kross",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "179817",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "LÍQUIDOS PROMO",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6540-1481.jpg",
+                      "enlace": "https://www.passline.com/eventos/descuento-especial-liquidoscl",
+                      "slug_evento": "descuento-especial-liquidoscl",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "169548",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "ROBERT 202 / LISS PEREIRA",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6604-7631.jpg",
+                      "enlace": "https://www.passline.com/eventos/el-futuro-prometido",
+                      "slug_evento": "el-futuro-prometido",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "161654",
+                      "tiene_planimetria": "1",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "MYRIAM GIRA PTO MONTT Y PUQ",
+                      "imagen": "https://imagenes.passline.com/slider/slide-5997-8729.jpg",
+                      "enlace": "https://www.passline.com/myriam-hernandez-mi-paraiso-tour/",
+                      "slug_evento": "",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "10611",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "AMIGO FELIPE / TRICICLO 1915",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6611-6753.jpg",
+                      "enlace": "https://www.passline.com/eventos/1915-triciclo-parlante-en-club-chocolate",
+                      "slug_evento": "1915-triciclo-parlante-en-club-chocolate",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "178601",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "CENTRO ARTE ALAMEDA / CIUDADANO CHAVEZ",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6602-8373.jpg",
+                      "enlace": "https://www.passline.com/eventos/ciudadano-chavez-en-centro-arte-alameda",
+                      "slug_evento": "ciudadano-chavez-en-centro-arte-alameda",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "175647",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TEATRO FIEBRE / NO SOY YO",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6591-7470.jpg",
+                      "enlace": "https://www.passline.com/eventos/no-soy-yo-eres-tu-show-aniversario-3-anos",
+                      "slug_evento": "no-soy-yo-eres-tu-show-aniversario-3-anos",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "178073",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "REDEYES / VAN GOGH LA SERENA",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6418-4083.jpg",
+                      "enlace": "https://www.passline.com/eventos/van-gogh-sueno-inmerisivo-la-serena",
+                      "slug_evento": "van-gogh-sueno-inmerisivo-la-serena",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "149842",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "7"
+                  },
+                  {
+                      "titulo": "CENTENARIO / SOL Y LLUVIA",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6416-2929.jpg",
+                      "enlace": "https://www.passline.com/eventos/sol-y-lluvia-en-la-serena",
+                      "slug_evento": "sol-y-lluvia-en-la-serena",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "163624",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TERRA VIVA  ABRIL / MAYO / JUNIO",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6007-3829.jpg",
+                      "enlace": "https://www.passline.com/sitio/terra-viva-tickets",
+                      "slug_evento": "terra-viva-tickets",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": null,
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "VALE / CRIATURAS EXTREMAS",
+                      "imagen": "https://imagenes.passline.com/slider/slide-6295-3757.jpg",
+                      "enlace": "https://www.passline.com/eventos/criaturas-extremas",
+                      "slug_evento": "criaturas-extremas",
+                      "target": "_self",
+                      "type": "desktop",
+                      "evento": "154087",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "7"
+                  },
+                  {
+                      "titulo": "THE KLAN / ALAN & CRISTOPH",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3244-4139.jpg",
+                      "enlace": "https://www.passline.com/eventos/alan-fitzpatrick-cristoph",
+                      "slug_evento": "alan-fitzpatrick-cristoph",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "174635",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "VALE / KUNSHINE VALDIVIA",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3293-7260.jpg",
+                      "enlace": "https://www.passline.com/eventos/el-camino-de-kunshine-173031",
+                      "slug_evento": "el-camino-de-kunshine-173031",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "173031",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "LOS MALUENDA VACAS INVIERNO",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3317-8662.jpg",
+                      "enlace": "https://www.passline.com/sitio/circo-los-maluenda",
+                      "slug_evento": "circo-los-maluenda",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "129819",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "PATO / KE PERSONAJES COPIAPO",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3301-3195.jpg",
+                      "enlace": "https://www.passline.com/eventos/ke-personajes-en-vivo-copiapo",
+                      "slug_evento": "ke-personajes-en-vivo-copiapo",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "178055",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "JOSE LUIS / DOS CARNALES RCGUA",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3296-0203.jpg",
+                      "enlace": "https://www.passline.com/eventos/los-dos-carnales-en-chile-tour-del-rancho-para-el-mundo-2023-medialuna-monumental-de-rancagua",
+                      "slug_evento": "los-dos-carnales-en-chile-tour-del-rancho-para-el-mundo-2023-medialuna-monumental-de-rancagua",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "181562",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "ANNETTE / STUDIO 54",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3303-0970.jpg",
+                      "enlace": "https://www.passline.com/eventos/studio-54-20",
+                      "slug_evento": "studio-54-20",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "182893",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TERRAMORE / ALVARO SALAS",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3311-9579.jpg",
+                      "enlace": "https://www.passline.com/eventos/alvaro-salas-show-de-stand-up-comey",
+                      "slug_evento": "alvaro-salas-show-de-stand-up-comey",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "178777",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "HUGO / ENJOY STGO",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3288-3831.jpg",
+                      "enlace": "https://www.passline.com/sitio/5467322-gm-distribution-chile-ltda",
+                      "slug_evento": "5467322-gm-distribution-chile-ltda",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": null,
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TERRAMORE / LA BOTOTA",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3313-8843.jpg",
+                      "enlace": "https://www.passline.com/eventos/la-botota-show-de-stand-up-comedy",
+                      "slug_evento": "la-botota-show-de-stand-up-comedy",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "181915",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "HUGO / BLACKOFFICE",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3289-1297.jpg",
+                      "enlace": "https://www.passline.com/eventos/blackoffice-santiago-is-back-viernes-30-de-junio-en-vista-santiago",
+                      "slug_evento": "blackoffice-santiago-is-back-viernes-30-de-junio-en-vista-santiago",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "181923",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "UVA / FRANCISCA VALENZUELA",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3274-3428.jpg",
+                      "enlace": "https://www.passline.com/eventos/francisca-valenzuela-en-valparaiso",
+                      "slug_evento": "francisca-valenzuela-en-valparaiso",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "181666",
+                      "tiene_planimetria": "1",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "UVA / CAMILA MORENO",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3268-1999.jpg",
+                      "enlace": "https://www.passline.com/eventos/camila-moreno-valparaiso",
+                      "slug_evento": "camila-moreno-valparaiso",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "180658",
+                      "tiene_planimetria": "1",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TERRAMORE / LUIS SLIMMING",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3312-4978.jpg",
+                      "enlace": "https://www.passline.com/eventos/luis-slimming-show-de-stand-up-comey",
+                      "slug_evento": "luis-slimming-show-de-stand-up-comey",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "178799",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "HUGO / PAILITA CURICO",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3263-1136.jpg",
+                      "enlace": "https://www.passline.com/eventos/pailita-en-concierto-media-luna-curico",
+                      "slug_evento": "pailita-en-concierto-media-luna-curico",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "180200",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "JOSE / RAAK FIGHT 5",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3202-5885.jpg",
+                      "enlace": "https://www.passline.com/eventos/raak-fight-night-5",
+                      "slug_evento": "raak-fight-night-5",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "162261",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "ISMAIL / LUCYBELL",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3194-9811.jpg",
+                      "enlace": "https://www.passline.com/eventos?q=Mil+caminos&page=1",
+                      "slug_evento": "eventos?q=Mil+caminos&page=1",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": null,
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "CHILEANWEY SEPTIEMBRE",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3231-5911.jpg",
+                      "enlace": "https://www.passline.com/sitio/chilean-wey-festival",
+                      "slug_evento": "chilean-wey-festival",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": null,
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "KROSSBAR / HSUR",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3226-9730.jpg",
+                      "enlace": "https://www.passline.com/eventos/hsur-en-klub-kross",
+                      "slug_evento": "hsur-en-klub-kross",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "179817",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TROTA JUNIO",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3236-2318.jpg",
+                      "enlace": "https://www.passline.com/sitio/trotamundos-quilpue",
+                      "slug_evento": "trotamundos-quilpue",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": null,
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "ISMAIL / LYCYBELL MAULE",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3191-5508.jpg",
+                      "enlace": "",
+                      "slug_evento": "",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "10611",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "ROBERTO / CALIGULAS cacho",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3262-3842.jpg",
+                      "enlace": "https://www.passline.com/eventos/caligulas-horse-latin-american-tour-2023",
+                      "slug_evento": "caligulas-horse-latin-american-tour-2023",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "177387",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TEATRO FIEBRE / NO SOY YO",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3190-7385.jpg",
+                      "enlace": "https://www.passline.com/eventos/no-soy-yo-eres-tu-show-aniversario-3-anos",
+                      "slug_evento": "no-soy-yo-eres-tu-show-aniversario-3-anos",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "178073",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "KATHE / LA FINCA",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3237-6685.jpg",
+                      "enlace": "https://www.passline.com/eventos/la-finca-urban-music",
+                      "slug_evento": "la-finca-urban-music",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "175371",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "AMIGO FELIPE / TRICICLO 1915",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3205-8929.jpg",
+                      "enlace": "https://www.passline.com/eventos/1915-triciclo-parlante-en-club-chocolate",
+                      "slug_evento": "1915-triciclo-parlante-en-club-chocolate",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "178601",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "LIQUIDOS PROMO",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3143-4234.jpg",
+                      "enlace": "https://www.passline.com/eventos/descuento-especial-liquidoscl",
+                      "slug_evento": "descuento-especial-liquidoscl",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "169548",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "HUGO / RUTA ALEJOS",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3206-0245.jpg",
+                      "enlace": "https://www.passline.com/sitio/alejos-ruta-66",
+                      "slug_evento": "alejos-ruta-66",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": null,
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "REDEYES / VAN GOGH LA SERENA",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3047-1772.jpg",
+                      "enlace": "https://www.passline.com/eventos/van-gogh-sueno-inmerisivo-la-serena",
+                      "slug_evento": "van-gogh-sueno-inmerisivo-la-serena",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "149842",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "7"
+                  },
+                  {
+                      "titulo": "DELUXE / STAR WARS",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3127-7455.jpg",
+                      "enlace": "https://www.passline.com/eventos/star-wars-sinfonico-teatro-municipal-valparaiso",
+                      "slug_evento": "star-wars-sinfonico-teatro-municipal-valparaiso",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "172098",
+                      "tiene_planimetria": "1",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "CENTENARIO / SOL Y LLUVIA",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-3046-4141.jpg",
+                      "enlace": "https://www.passline.com/eventos/sol-y-lluvia-en-la-serena",
+                      "slug_evento": "sol-y-lluvia-en-la-serena",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "163624",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "CRIATURAS EXTREMAS",
+                      "imagen": "https://imagenes.passline.com/slider_mobile/slide-2978-9505.jpg",
+                      "enlace": "https://www.passline.com/eventos/criaturas-extremas",
+                      "slug_evento": "criaturas-extremas",
+                      "target": "_self",
+                      "type": "mobile",
+                      "evento": "154087",
+                      "tiene_planimetria": "0",
+                      "canal_venta": null,
+                      "dias_atencion": "7"
+                  },
+                  {
+                      "titulo": "TERRAMORE FELIPE IZQUIERDO",
+                      "imagen": "https://imagenes.passline.com/banners_home_mobile/banner-435-4326.jpg",
+                      "enlace": "https://www.passline.com/eventos/felipe-izquierdo-show-de-stand-up-comey",
+                      "slug_evento": "",
+                      "target": "_self",
+                      "type": "mini_banners",
+                      "evento": "",
+                      "tiene_planimetria": "0",
+                      "canal_venta": "0",
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TERRAMORE / LA BOTOTA",
+                      "imagen": "https://imagenes.passline.com/banners_home_mobile/banner-434-7828.jpg",
+                      "enlace": "https://www.passline.com/eventos/la-botota-show-de-stand-up-comedy",
+                      "slug_evento": "",
+                      "target": "_self",
+                      "type": "mini_banners",
+                      "evento": "",
+                      "tiene_planimetria": "0",
+                      "canal_venta": "0",
+                      "dias_atencion": "0"
+                  },
+                  {
+                      "titulo": "TERRAMORE LUIS SLIMMING",
+                      "imagen": "https://imagenes.passline.com/banners_home_mobile/banner-433-8827.jpg",
+                      "enlace": "https://www.passline.com/eventos/luis-slimming-show-de-stand-up-comey",
+                      "slug_evento": "",
+                      "target": "_self",
+                      "type": "mini_banners",
+                      "evento": "",
+                      "tiene_planimetria": "0",
+                      "canal_venta": "0",
+                      "dias_atencion": "0"
+                  }
+              ]
+          }

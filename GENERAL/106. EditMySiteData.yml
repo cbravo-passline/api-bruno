@@ -1,0 +1,23 @@
+info:
+  name: 106. EditMySiteData
+  type: http
+  seq: 101
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditMySiteData/Color"
+  body:
+    type: multipart-form
+    data:
+      - name: color
+        type: text
+        value: "#BF263C"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

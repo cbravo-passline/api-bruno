@@ -1,0 +1,54 @@
+info:
+  name: 150. RegisterTicketOfficeProduct
+  type: http
+  seq: 151
+
+http:
+  method: POST
+  url: "{{url}}/event/RegisterTicketOfficeProduct"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: productoso
+      - name: description
+        type: text
+        value: un producto productoso
+      - name: image
+        type: file
+        value:
+          - /C:/Users/cbral/Downloads/384x75_er.jpg
+      - name: type
+        type: text
+        value: "1"
+      - name: price
+        type: text
+        value: "500"
+      - name: quantity
+        type: text
+        value: "35"
+      - name: end_date
+        type: text
+        value: 2029-05-05
+      - name: end_time
+        type: text
+        value: 04:48
+      - name: auth_code
+        type: text
+        value: "0505"
+      - name: event
+        type: text
+        value: 0a25cfa80dd18c852fdcf93dbbd30616
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

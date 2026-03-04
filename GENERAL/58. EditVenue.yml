@@ -1,0 +1,484 @@
+info:
+  name: 58. EditVenue
+  type: http
+  seq: 59
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditPromoter"
+  body:
+    type: multipart-form
+    data:
+      - name: promoter_id
+        type: text
+        value: "276616"
+      - name: full_name
+        type: text
+        value: ad
+      - name: phone
+        type: text
+        value: "123456"
+      - name: image
+        type: file
+        value:
+          - postman-cloud:///1eebac94-85c3-47a0-a857-646bfe591da9
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{url}}/general/EditVenue"
+      method: PUT
+      body:
+        type: multipart-form
+        data:
+          - name: venue
+            type: text
+            value: yVJw80QDhgEeuYT_pHUKDg@@
+          - name: name
+            type: text
+            value: Evento Venue Prueba 1
+          - name: region
+            type: text
+            value: "13"
+          - name: comune
+            type: text
+            value: "1301"
+          - name: address
+            type: text
+            value: C. de la Ternera, 4, Centro, 28013 Madrid, España
+          - name: max_capacity
+            type: text
+            value: "100"
+          - name: url_facebook
+            type: text
+            value: https://www.facebook.com/passlinechile?fref=ts
+          - name: url_instagram
+            type: text
+            value: https://www.instagram.com/passline_oficial/
+          - name: url_twitter
+            type: text
+            value: https://twitter.com/PassLineChile
+          - name: url_tiktok
+            type: text
+            value: https://www.tiktok.com/
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1eebac94-85c3-47a0-a857-646bfe591da9
+          - name: logo
+            type: file
+            value:
+              - postman-cloud:///1eebbbe6-a6dd-4fb0-80eb-10c26255d4f7
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 18:00:26 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 903001422cf96762-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "success",
+              "message": "The venue was updated successfully"
+          }
+  - name: Error field required
+    request:
+      url: "{{url}}/general/EditVenue"
+      method: PUT
+      body:
+        type: multipart-form
+        data:
+          - name: venue
+            type: text
+            value: yVJw80QDhgEeuYT_pHUKDg@@
+            disabled: true
+          - name: name
+            type: text
+            value: Evento Venue Prueba 1
+            disabled: true
+          - name: region
+            type: text
+            value: "13"
+            disabled: true
+          - name: comune
+            type: text
+            value: "1301"
+            disabled: true
+          - name: address
+            type: text
+            value: C. de la Ternera, 4, Centro, 28013 Madrid, España
+            disabled: true
+          - name: max_capacity
+            type: text
+            value: "100"
+            disabled: true
+          - name: url_facebook
+            type: text
+            value: https://www.facebook.com/passlinechile?fref=ts
+            disabled: true
+          - name: url_instagram
+            type: text
+            value: https://www.instagram.com/passline_oficial/
+            disabled: true
+          - name: url_twitter
+            type: text
+            value: https://twitter.com/PassLineChile
+            disabled: true
+          - name: url_tiktok
+            type: text
+            value: https://www.tiktok.com/
+            disabled: true
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1eebac94-85c3-47a0-a857-646bfe591da9
+            disabled: true
+          - name: logo
+            type: file
+            value:
+              - postman-cloud:///1eebbbe6-a6dd-4fb0-80eb-10c26255d4f7
+            disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 18:01:43 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 9030032b996fbcbc-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The venue field is required.",
+              "timestamp": 1737050503
+          }
+  - name: Error field mane not blank
+    request:
+      url: "{{url}}/general/EditVenue"
+      method: PUT
+      body:
+        type: multipart-form
+        data:
+          - name: venue
+            type: text
+            value: yVJw80QDhgEeuYT_pHUKDg@@
+          - name: name
+            type: text
+            value: "   "
+          - name: region
+            type: text
+            value: "13"
+          - name: comune
+            type: text
+            value: "1301"
+          - name: address
+            type: text
+            value: C. de la Ternera, 4, Centro, 28013 Madrid, España
+            disabled: true
+          - name: max_capacity
+            type: text
+            value: "100"
+            disabled: true
+          - name: url_facebook
+            type: text
+            value: https://www.facebook.com/passlinechile?fref=ts
+            disabled: true
+          - name: url_instagram
+            type: text
+            value: https://www.instagram.com/passline_oficial/
+            disabled: true
+          - name: url_twitter
+            type: text
+            value: https://twitter.com/PassLineChile
+            disabled: true
+          - name: url_tiktok
+            type: text
+            value: https://www.tiktok.com/
+            disabled: true
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1eebac94-85c3-47a0-a857-646bfe591da9
+            disabled: true
+          - name: logo
+            type: file
+            value:
+              - postman-cloud:///1eebbbe6-a6dd-4fb0-80eb-10c26255d4f7
+            disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 18:02:38 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 903004817c53bcbc-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The value of the name field should not be blank.",
+              "timestamp": 1737050558
+          }
+  - name: Error field numeric
+    request:
+      url: "{{url}}/general/EditVenue"
+      method: PUT
+      body:
+        type: multipart-form
+        data:
+          - name: venue
+            type: text
+            value: yVJw80QDhgEeuYT_pHUKDg@@
+          - name: name
+            type: text
+            value: Evento Venue Prueba 1
+          - name: region
+            type: text
+            value: t
+          - name: comune
+            type: text
+            value: "1301"
+          - name: address
+            type: text
+            value: C. de la Ternera, 4, Centro, 28013 Madrid, España
+            disabled: true
+          - name: max_capacity
+            type: text
+            value: "100"
+            disabled: true
+          - name: url_facebook
+            type: text
+            value: https://www.facebook.com/passlinechile?fref=ts
+            disabled: true
+          - name: url_instagram
+            type: text
+            value: https://www.instagram.com/passline_oficial/
+            disabled: true
+          - name: url_twitter
+            type: text
+            value: https://twitter.com/PassLineChile
+            disabled: true
+          - name: url_tiktok
+            type: text
+            value: https://www.tiktok.com/
+            disabled: true
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1eebac94-85c3-47a0-a857-646bfe591da9
+            disabled: true
+          - name: logo
+            type: file
+            value:
+              - postman-cloud:///1eebbbe6-a6dd-4fb0-80eb-10c26255d4f7
+            disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 18:03:18 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 90300578d9acbcbc-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The value of the region field must be numeric.",
+              "timestamp": 1737050598
+          }
+  - name: Error venue does not exist
+    request:
+      url: "{{url}}/general/EditVenue"
+      method: PUT
+      body:
+        type: multipart-form
+        data:
+          - name: venue
+            type: text
+            value: y1
+          - name: name
+            type: text
+            value: Evento Venue Prueba 1
+          - name: region
+            type: text
+            value: "13"
+          - name: comune
+            type: text
+            value: "1301"
+          - name: address
+            type: text
+            value: C. de la Ternera, 4, Centro, 28013 Madrid, España
+          - name: max_capacity
+            type: text
+            value: "100"
+          - name: url_facebook
+            type: text
+            value: https://www.facebook.com/passlinechile?fref=ts
+          - name: url_instagram
+            type: text
+            value: https://www.instagram.com/passline_oficial/
+          - name: url_twitter
+            type: text
+            value: https://twitter.com/PassLineChile
+          - name: url_tiktok
+            type: text
+            value: https://www.tiktok.com/
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1eebac94-85c3-47a0-a857-646bfe591da9
+          - name: logo
+            type: file
+            value:
+              - postman-cloud:///1eebbbe6-a6dd-4fb0-80eb-10c26255d4f7
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 18:27:08 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=uTn.e_yQ5_mCRqHTIPkgvrHilLM7.Oz.e1UL6W8Qqcc-1737052028-1.0.1.1-i5OcRs84RJrHuW1gjLMSIoDRphQrZ20HaAh5J_zUT2X_Uih7v4DiNOM8h.TUV2kxagEVaPjckvAFJuPNCDH0.Q; path=/; expires=Thu, 16-Jan-25 18:57:08 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 9030285f6a4112da-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "The venue does not exist.",
+              "timestamp": 1737052028
+          }

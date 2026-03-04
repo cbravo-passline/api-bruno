@@ -1,0 +1,24 @@
+info:
+  name: 129. RemoveDiscountCode
+  type: http
+  seq: 130
+
+http:
+  method: DELETE
+  url: "{{url}}/event/RemoveDiscountCode"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"discount\":\"em7i8TZOw0juxOebVtwSCA@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

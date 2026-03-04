@@ -1,0 +1,33 @@
+info:
+  name: 5. AccreditorDetailTransaction
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{url}}/boxoffice/AccreditorDetailTransaction?event_key=444997&start_date=2025-12-01 00:00:00&end_date=2025-12-04 23:59:59&page=1&limit=100"
+  params:
+    - name: event_key
+      value: "444997"
+      type: query
+    - name: start_date
+      value: 2025-12-01 00:00:00
+      type: query
+    - name: end_date
+      value: 2025-12-04 23:59:59
+      type: query
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "100"
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_boxoffice}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,35 @@
+info:
+  name: 42. AssignGests
+  type: http
+  seq: 43
+
+http:
+  method: POST
+  url: "{{url}}/general/AssignGuests"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event\": \"184753\",\r
+
+      \    \"promoter\": \"276593\",\r
+
+      \    \"quantity\": \"8\",\r
+
+      \    \"product\": \"941366\",\r
+
+      \    \"automatic_approval\": \"1\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,281 @@
+info:
+  name: 35. GetPurchaseData
+  type: http
+  seq: 36
+
+http:
+  method: GET
+  url: "{{url}}/event/GetPurchaseData/55925011"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error dont access to this event
+    request:
+      url: "{{url}}/event/GetPurchaseData/0aa17df19f8e680e672fdfe2a5a5b036"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 14:36:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d61fb9d4d52b536-SCL
+        - name: Content-Encoding
+          value: gzip
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "You dont have access."
+          }
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetPurchaseData/55925011"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 14:37:24 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d61fc43be16b536-SCL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "55925011",
+                  "slug": "0aa17df19f8e680e672fdfe2a5a5b036",
+                  "usuario": "3679",
+                  "session_id": "jk8n517pqut7d6as5hkato8dh6",
+                  "fecha": "2023-12-12 10:46:11",
+                  "anno": "2023",
+                  "documento": "Boleta",
+                  "evento": "181803",
+                  "entrega": "",
+                  "ip": "2800:150:15b:103c:3835:19d3:a5bc:358, 162.158.225.173, 34.98.68.242",
+                  "nombre": "Productor",
+                  "apellido": "Prueba",
+                  "nombre_completo": "Productor Prueba",
+                  "rut": "132331227",
+                  "email": "productor@passline.cl",
+                  "telefono": "+59854927849",
+                  "razon": "",
+                  "giro": "",
+                  "direccion_comercial": "",
+                  "pais": "uruguay",
+                  "region": "0",
+                  "comuna": "0",
+                  "ciudad": "",
+                  "direccion": "",
+                  "codigo_postal": "0",
+                  "retiro_nombre": "",
+                  "retiro_rut": "",
+                  "retiro_telefono": "",
+                  "promotor": "0",
+                  "email_promotor": "",
+                  "complemento_1": "12",
+                  "complemento_2": "2",
+                  "complemento_3": "3",
+                  "complemento_4": "4",
+                  "complemento_5": "5",
+                  "complemento_6": "6",
+                  "complemento_7": "",
+                  "complemento_8": "",
+                  "complemento_9": "",
+                  "complemento_10": "",
+                  "complemento_11": "",
+                  "complemento_12": "",
+                  "id_productos": ",911873",
+                  "id_promotores": ",0",
+                  "cant_productos": ",1",
+                  "precio_productos": ",5750",
+                  "precio_neto_productos": ",5000.00",
+                  "localidades": ",",
+                  "funciones": ",,",
+                  "precio_produccion": null,
+                  "despacho": "0",
+                  "subtotal": "0.00",
+                  "total_comision": "750.00",
+                  "comision_metodopago": "0.00",
+                  "porcentaje_comision": "0.15",
+                  "total_neto": "5000.00",
+                  "total_impuestos": "0.00",
+                  "total_proteccion": "0.00",
+                  "total": "5750.00",
+                  "codigo_asociacion": "",
+                  "codigo_envio": "",
+                  "tipo_pago": "MercadopagoUy",
+                  "tipo_compra": "0",
+                  "visualizado": "0",
+                  "estado": "2",
+                  "estado_pago": "1",
+                  "comentarios": null,
+                  "tipo_de_compra": "0",
+                  "mensaje_descuento": "",
+                  "porcentaje_descuento": "0",
+                  "codigo_movistar": "",
+                  "porcentaje_descuento_movistar": "0",
+                  "monto_descuento": "0.00",
+                  "codigo_entel": "",
+                  "telefono_entel": "",
+                  "tbk_orden_compra": "",
+                  "tbk_tipo_transaccion": "",
+                  "tbk_respuesta": "",
+                  "tbk_monto": "",
+                  "tbk_final_numero_tarjeta": "",
+                  "tbk_fecha_contable": "",
+                  "tbk_fecha_transaccion": "",
+                  "tbk_hora_transaccion": "",
+                  "tbk_id_sesion": "",
+                  "tbk_id_transaccion": "",
+                  "tbk_tipo_pago": "",
+                  "tbk_numero_cuotas": "",
+                  "tbk_tasa_interes_max": "",
+                  "tbk_codigo_autorizacion": "",
+                  "tbk_mac": "",
+                  "ws_token": "",
+                  "wp_authorizationCode": "",
+                  "wp_paymentTypeCode": "0",
+                  "wp_responseCode": "",
+                  "wp_responseDescription": "",
+                  "wp_sharesNumber": "",
+                  "wp_amount": "",
+                  "wp_cardNumber": "0",
+                  "wp_transactionDate": "",
+                  "wp_transactionId": "",
+                  "sp_id_socio": "",
+                  "sp_num_pedido": "",
+                  "sp_num_transaccion": "",
+                  "sp_fecha_hora_trans": "",
+                  "sp_moneda": "",
+                  "sp_importe": "",
+                  "sp_resultado": "",
+                  "sp_cod_respuesta": "",
+                  "sp_txt_respuesta": "",
+                  "sp_medio_pago": "",
+                  "sp_tipo_respuesta": "",
+                  "sp_cod_autoriza": "",
+                  "sp_num_referencia": "",
+                  "sp_hash": "",
+                  "sp_cod_producto": "",
+                  "sp_num_tarjeta": "",
+                  "sp_nom_tarjetahabiente": "",
+                  "sp_fecha_de_vencimiento": "",
+                  "mp_estado_del_pago": "",
+                  "mp_id_pago": "",
+                  "mp_fecha_transaccion": "",
+                  "mp_fecha_aprobacion": "",
+                  "mp_monto_solicitado": "",
+                  "mp_monto_pagado": "",
+                  "mp_email_mercado_pago": "",
+                  "mp_nickname_mercado_pago": "",
+                  "mp_forma_de_pago": "",
+                  "mp_tipo_de_operacion": "",
+                  "mp_metodo_de_pago": "",
+                  "cq_pedido": "",
+                  "cq_moneda": "",
+                  "cq_token": "",
+                  "cq_marca": "",
+                  "cq_num_tarjeta": "",
+                  "cq_emisor": "",
+                  "cq_tipo": "",
+                  "cq_codigo_error": "",
+                  "cq_mensaje": "",
+                  "cq_mensaje_usuario": "",
+                  "pe_pin": "0",
+                  "tm_bo_codigo": "0",
+                  "uuid_uy_uruware": null,
+                  "pin_redpagos_uy": "0",
+                  "redpagos_uy_fecha_transaccion": "0000-00-00 00:00:00",
+                  "pin_pagotransferencia_bo": "0",
+                  "pin_pagotransferencia_ec": "0",
+                  "bb_token": "",
+                  "fpay_invoice_number": "",
+                  "datos_extra_tickets": null,
+                  "url_boleta": null,
+                  "folio_boleta": null,
+                  "colppy_id_cliente": "0",
+                  "medio_pago_boleteria": null,
+                  "sucursal_venta": null,
+                  "compra_promo": "",
+                  "pais_int": "3",
+                  "contrafraude": "0",
+                  "aceptar_contacto": "0",
+                  "canal_venta": "1"
+              }
+          ]
+
+docs: |-
+  Trae los eventos por periodo de fechas.
+
+  Respuesta
+
+  json de eventos por fecha.

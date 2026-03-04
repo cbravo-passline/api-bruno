@@ -1,0 +1,125 @@
+info:
+  name: 71. RemoveVenueSlider
+  type: http
+  seq: 72
+
+http:
+  method: DELETE
+  url: "{{url}}/general/RemoveVenueSlider"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"venue_slider\":\"Ccjdow4kpRAuuIou_njgFQ@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error venue slider does not exist
+    request:
+      url: "{{url}}/general/RemoveVenueSlider"
+      method: DELETE
+      body:
+        type: json
+        data: "{\r
+
+          \    \"venue_slider\":\"QjFmUygorIC9zpIIhaXRKg@@\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 18:54:57 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 903051286a33b0e5-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "The venue slider does not exist.",
+              "timestamp": 1737053697
+          }
+  - name: Success
+    request:
+      url: "{{url}}/general/RemoveVenueSlider"
+      method: DELETE
+      body:
+        type: json
+        data: "{\r
+
+          \    \"venue_slider\":\"R8LjXaiXjW96hlSrSpyW7A@@\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 18:55:45 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 903052551940b0e5-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "success",
+              "message": "The venue slider was successfully removed"
+          }

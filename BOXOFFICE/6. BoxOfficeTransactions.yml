@@ -1,0 +1,37 @@
+info:
+  name: 6. BoxOfficeTransactions
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{url}}/boxoffice/BoxOfficeTransactions?key=444997"
+  params:
+    - name: key
+      value: "444997"
+      type: query
+    - name: start_date
+      value: 2025-12-01 00:00:00
+      type: query
+      disabled: true
+    - name: end_date
+      value: 2025-12-04 23:59:59
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "2"
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{Token_boxoffice}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,155 @@
+info:
+  name: 2. Refresh
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/auth/refresh"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"refresh\": \"{{Token_refresh_productor}}\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success Reponse
+    request:
+      url: "{{url}}/auth/refresh"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"refresh\": \"U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.WjNaYWFYbzBNR2xNSzI1dE1FTXllV1FyVmxsNVRVMXpOMWRYYVRVdmVFUlZNbklyUmpoM2RtSkdLMEV6Ym10cGRIaDFhWGhZV1ZJNFdVSTRMemhJUkVGblp6aFFkWGhoVVhkNlVEZFpOeXRWWTNkc1ZrTjZaVWxWT1ZCTWJYWjJjRzFhYTJkMVZsTXhiMFkyZVZKQ1VVVmhUMFJzWlRKTGRYQk1lVFVyUVZselptVktPVEkxTnpWUFZsRlNVVmhrWmxRM1dIUTBVSGR3Vm1WbE1VVXhZVnBTTjBoRVpWa3ZWbGhSUFE9PQ.ZUdSalpIUkVXaXRwZFZGWmFtcHVTbEExSzJSMmRuUnZTR05rWmxadWRrVllSVXA1VGt4WGVtRmpiejA9\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 10 Oct 2024 21:01:53 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=zArp0mEYcDl3OA2OZ8sZywfkGKUXT0cMX7kOqnUKBg8-1728594113-1.0.1.1-reKPQu6SO.82fbcW_Pi7Nxc78nItZf0YG9BinaC7YjaaFa0FDl9xv55I4xsfou.GhpP0i1m_FEmm9Od.RJ.nwQ; path=/; expires=Thu, 10-Oct-24 21:31:53 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d098c54bb7d7be1-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "access": "U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welEwUk9kV2RUWjJveFZFWk5TbmhOWmxsWFdsWjBhRlJ2ZEV0c1EwOVNORTVqWmxGM1p6UnJXbmg0VFdwNE9VcFhaRVY1YTJwNU5EZFBielpwYUVGSFRVUTBjM2syV0ZkallWSnlhV3hoUm5wSk5tRjRWRkJhY0ROa2IyRXlZVlpvWlVaM04yeHBZbUY1V1RKWWNYcFhSVGhTYzFaT1FTczRPVFVyVldwNE1HUnJlVTlyYzI1blQzWnVlVkZ3VlhWelNsbGtRamwzTTB0bFVtTTVhMGRLU25Vd05VTnhWREpqU0U1TlRFVjZMMkZHTVZCdFVrcE5ibWhIU2xoaVkzVkJUREE0UjBVMEwwTjRZVWxHTlZjd09VVmxaVWcwT1hONE1HUTBNWGxtY0hCVU5YRjVUMVp1WWxBck9FSjRMek5PY20xV2VHWnFibXQ1V25sUlFVWnBZbmM5UFE9PQ.VDJZME9HWlRUbGhoSzB0R0wwaFhSVzFvZVdsSVpVTm9XalJpUjI5V1VtbE1ZWGR2UVVRdk1FbEhZejA9",
+              "refresh": "U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.WjNaYWFYbzBNR2xNSzI1dE1FTXllV1FyVmxsNVVISTFkMFZPTlhKbFVqRlpOVWhyZVV0TVRHWkJPRTlrTUVaeFluVTRkREV5ZWl0UmVXNURNUzlRTlVoWlJqSkxSblJxY1RaaGJrVlNRVzlGTkVKU2JsTlZNa0pDWjI5QlNGTmhNMmRuWlhjeWFWbEJkVnB4YUZwdVZWUndkR3BxYW5OMVRFMXlZVXhLZWxoMGVrcHVWRWMxVFRSVVYzTjJRa1EyTTBzMVZqWklhVzV0VjNONE1VczVZbk4wS3pWSlN6ZzRiamhXTW01VVRDdHpiR1ZOWW5sSlZHdGtNR0ozU1RONlpGbDJkbVpwTjFRclFqQmFTWEZ1TXpWU2JtMVhUM0YwYVUxWFZXSkhheTh4TlhGS05VTlpTa3d5UVVSd2NXeHhaakIyTXpCMk56UldMMkZETmxNd1JtMVVRbEpvZW1wd1ZVMVBVR0kyUVdKUVoyOXJWRUU5UFE9PQ.VVVWaFVFOUhUak12YkdGbk4xRmlSSFZ4THpkRlIwSlBRbUpWY2xZeWIwbzNlR3RPUTNaVVUyRXdhejA9",
+              "user": {
+                  "id": 3679,
+                  "username": null,
+                  "name": "Productor Prueba",
+                  "last_name": "",
+                  "email": "productor@passline.cl",
+                  "phone": "+34988234232",
+                  "country": "chile",
+                  "rut": "",
+                  "gender": "M"
+              }
+          }
+  - name: Error bad parameters
+    request:
+      url: "{{url}}/auth/refresh"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 11 Oct 2024 13:28:15 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=71GphluCCc43ph_I6RAqV6sYNtHHvalCTi6ruWTdlhE-1728653295-1.0.1.1-hhzTBB.nfGVdaGPWQrZ.9ESx.tAqUTwBA0rPGNig1DN2vt3l5cLHLd61QCX9aCixVe3T_KbP.TtK5EaAv7pwxg; path=/; expires=Fri, 11-Oct-24 13:58:15 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d0f3136bc650ddd-SCL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The refresh field is required."
+              ]
+          }
+
+docs: |-
+  Función para refrescar el token del usuario.
+
+  Respuesta:
+
+  StartFragment
+
+  {    "access": "U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GNVNXSnpjRnBVVW1wUk4zWnNTWFZ3VGtFM2IzZFRUbUZWVGpWdVZFTXJUekZxWjBjdmR6Uk1LMjluUFE9PQ.ZURWTWVrUk9TbGR2ZG1jd05ubEpRVUl5UzA1bkx6QkRRVzkwWjJOTlpqUm5VVEZOU0VwWkwwbzViejA9",    "refresh": "U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.WjNaYWFYbzBNR2xNSzI1dE1FTXllV1FyVmxsNVRVMXpOMWRYYVRVdmVFUlZNbklyUmpoM2RtSkdLMEV6Ym10cGRIaDFhWGhZV1ZJNFdVSTRMemhJUkVGblp6aFFkWGhoVVhkNlVEZFpOeXRWWTNkc1ZrTjZaVWxWT1ZCTWJYWjJjRzFhYTJkMVZsTXhiMFkyZVZKQ1VVVmhUMFJzWlRKTGRYQk1lVFVyUVZsSmFuRlhOVGwxVFhadmQxWlVSVFJMTlcxR1EwaHZNMnhQUTFwVmNrbFFSRUoxTWpGMGFtbzRNVVpOUFE9PQ.TlhCQlZqQTFkbWh2Y1UwNGNrVlBOelZCVjFsamJtUXpaV3huTVVKSllWUnVjMmN2YkhsSFl6azRjejA9",    "user": {        "id": 3679,        "username": "",        "name": "Productor",        "email": "productor@passline.cl",        "phone": "",        "country": "salvador"    }}
+
+  EndFragment

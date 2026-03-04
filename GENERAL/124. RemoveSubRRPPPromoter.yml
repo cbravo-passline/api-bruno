@@ -1,0 +1,20 @@
+info:
+  name: 124. RemoveSubRRPPPromoter
+  type: http
+  seq: 119
+
+http:
+  method: DELETE
+  url: "{{url}}/general/RemoveSubRRPPPromoter"
+  body:
+    type: json
+    data: '{ "promoters": [276901] }'
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

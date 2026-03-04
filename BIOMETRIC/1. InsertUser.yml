@@ -1,0 +1,202 @@
+info:
+  name: 1. InsertUser
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/biometric/InsertUser"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: User-Agent
+      value: Passline-PHP
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: ARIEL
+      - name: last_name
+        type: text
+        value: DAZA CASTELLON
+      - name: birthdate
+        type: text
+        value: 1987-11-19
+      - name: personal_id
+        type: text
+        value: 28038815-7
+      - name: country
+        type: text
+        value: chile
+      - name: document_expiration_date
+        type: text
+        value: 2025-01-11
+      - name: gender
+        type: text
+        value: M
+      - name: document_type
+        type: text
+        value: "0"
+      - name: signature
+        type: text
+        value: bm1fU0tkcWtpYThHN0NvZXFrTEp0NTJlbXFDZUx4SVFiQkpvRERvVVdCV3VTWDlhMmhfU1hyWkZxZ3R2aDJlekZiWkhuMHRFd0xaa19pMmc4WmIteHdAQA==
+        disabled: true
+      - name: signature
+        type: text
+        value: bm1fU0tkcWtpYThHN0NvZXFrTEp0NTJlbXFDZUx4SVFiQkpvRERvVVdCV3VTWDlhMmhfU1hyWkZxZ3R2aDJlem40MUpzX1FvZGpWX0d0bHlyYXk2Rm4yNEdzSFhNRkFCSlZrV21XQVFtdlFA
+      - name: image
+        type: file
+        value:
+          - postman-cloud:///1ef64853-481e-4250-8011-d03f5f947301
+      - name: nationality
+        type: text
+        value: BOL
+      - name: biometric_id
+        type: text
+        value: "689"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error signature
+    request:
+      url: "{{url}}/biometric/InsertUser"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+        - name: User-Agent
+          value: Passline-PHP
+      body:
+        type: multipart-form
+        data:
+          - name: name
+            type: text
+            value: ARIEL
+          - name: last_name
+            type: text
+            value: DAZA CASTELLON
+          - name: birthdate
+            type: text
+            value: 1987-11-19
+          - name: personal_id
+            type: text
+            value: 28038815-7
+          - name: country
+            type: text
+            value: chile
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1ef64853-481e-4250-8011-d03f5f947301
+          - name: signature
+            type: text
+            value: bm1fU0tkcWtpYThDDDDDDDDDDDDDDDDDDDDdHN0NvZXFrTEp0NTJlbXFDZUx4SVFiQkpvRERvVVdCV3VTWDlhMmhfU1hyWkZxZ3R2aDJlekZiWkhuMHRFd0xaa19pMmc4WmIteHdAQA==
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 07 Nov 2024 18:21:03 GMT
+        - name: Server
+          value: Apache/2.4.57 (Debian)
+        - name: X-Powered-By
+          value: Passline
+        - name: Content-Length
+          value: "43"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Error signature"
+          }
+  - name: Error user already exist
+    request:
+      url: "{{url}}/biometric/InsertUser"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+        - name: User-Agent
+          value: Passline-PHP
+      body:
+        type: multipart-form
+        data:
+          - name: name
+            type: text
+            value: ARIEL
+          - name: last_name
+            type: text
+            value: DAZA CASTELLON
+          - name: birthdate
+            type: text
+            value: 1987-11-19
+          - name: personal_id
+            type: text
+            value: 28038815-7
+          - name: country
+            type: text
+            value: chile
+          - name: document_expiration_date
+            type: text
+            value: 2025-01-11
+          - name: gender
+            type: text
+            value: M
+          - name: document_type
+            type: text
+            value: "0"
+          - name: signature
+            type: text
+            value: bm1fU0tkcWtpYThHN0NvZXFrTEp0NTJlbXFDZUx4SVFiQkpvRERvVVdCV3VTWDlhMmhfU1hyWkZxZ3R2aDJlem40MUpzX1FvZGpWX0d0bHlyYXk2RmlCdDVTUlBCdzJVdFN5em45TERQUjhA
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1ef64853-481e-4250-8011-d03f5f947301
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 12 Nov 2024 19:14:57 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8e18d8f90da64511-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "The user already been register in passline biometric service."
+          }

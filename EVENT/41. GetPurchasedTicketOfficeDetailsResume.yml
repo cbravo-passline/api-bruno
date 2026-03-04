@@ -1,0 +1,257 @@
+info:
+  name: 41. GetPurchasedTicketOfficeDetailsResume
+  type: http
+  seq: 42
+
+http:
+  method: GET
+  url: "{{url}}/event/GetPurchasedTicketOfficeDetailsResume/608e170b60b7fd6f11914a4ec9dfedbd"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success empty response
+    request:
+      url: "{{url}}/event/GetPurchasedTicketOfficeDetailsResume/3461d7bce31452bf240f6a3076683d3c"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 15:34:01 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "2"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=d4mHW.wrD5dK7LJslq770sTn.q5z2sr8pcuVL7LDIoI-1729611241-1.0.1.1-K.HDUnI.WFZdMuojhjYfegeGQ6ICgho9OqdoY6knJas.c_4KRs0a4.H4DQtTdCdnivLlBK053dG7Rvc3W6k.mQ; path=/; expires=Tue, 22-Oct-24 16:04:01 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6a8c901e50adb2-ATL
+      body:
+        type: json
+        data: "[]"
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetPurchasedTicketOfficeDetailsResume/608e170b60b7fd6f11914a4ec9dfedbd"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 15:37:38 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6a91dbb8e84523-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "producto": "15657",
+                  "nombre_producto": "Prueba Reversa POS MP",
+                  "cantidad_producto": "134",
+                  "total_producto": "23345.2"
+              },
+              {
+                  "producto": "19834",
+                  "nombre_producto": "Producto de 300",
+                  "cantidad_producto": "70",
+                  "total_producto": "20895"
+              },
+              {
+                  "producto": "21267",
+                  "nombre_producto": "Ticket General",
+                  "cantidad_producto": "2",
+                  "total_producto": "10000"
+              },
+              {
+                  "producto": "19833",
+                  "nombre_producto": "Producto de 500",
+                  "cantidad_producto": "9",
+                  "total_producto": "4400"
+              },
+              {
+                  "producto": "27753",
+                  "nombre_producto": "Prueba Rechazo POS MP",
+                  "cantidad_producto": "5",
+                  "total_producto": "60"
+              }
+          ]
+  - name: Error event does not exist
+    request:
+      url: "{{url}}/event/GetPurchasedTicketOfficeDetailsResume/608e170"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 16:28:54 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=SP2zr9.EUSQk5lLtd3Jjy7dA9x7gSqLLohiA1ny3NPM-1729614534-1.0.1.1-SQd5t2qkj8jv7gBvR5_1pD.hLyRYzsXPZDyaHEa.8PnKSzKbAqb.2k2EYNRMT.ln8mY9THEA3eAgXVmv8lLtnw; path=/; expires=Tue, 22-Oct-24 16:58:54 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6adcf9585f7ba2-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "The event does not exists."
+          }
+  - name: Error not access to this event
+    request:
+      url: "{{url}}/event/GetPurchasedTicketOfficeDetailsResume/424141e8862792bca415bda77afca405"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 16:30:47 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6adfb5bac2bfd3-ATL
+        - name: Content-Encoding
+          value: gzip
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "You dont have access."
+          }
+  - name: Error invalid path params
+    request:
+      url: "{{url}}/event/GetPurchasedTicketOfficeDetailsResume/"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 16:31:25 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6ae0a5f934bfd3-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required."
+              ]
+          }

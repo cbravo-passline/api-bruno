@@ -1,0 +1,35 @@
+info:
+  name: 97. RegisterPlanimetrySeatMapSector
+  type: http
+  seq: 98
+
+http:
+  method: POST
+  url: "{{url}}/event/RegisterPlanimetrySeatMapSector"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"sector\": \"feXBdHMvynwMEg5RQDRMbw@@@\",\r
+
+      \    \"row\" : [\"10\", \"15\", \"24\"],\r
+
+      \    \"column\" : [\"5\", \"4\", \"33\"],\r
+
+      \    \"name\" : [\"A1\", \"B1\"],\r
+
+      \    \"status\" : [\"Disponible\", \"Bloqueado\", \"Separador\"]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

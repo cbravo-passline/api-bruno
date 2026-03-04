@@ -1,0 +1,205 @@
+info:
+  name: 124. GetEventGallery
+  type: http
+  seq: 125
+
+http:
+  method: GET
+  url: "{{url}}/event/GetEventGallery?event=efdbb1c5156b72da0dd6b9b3798042db"
+  headers:
+    - name: content-type
+      value: application/json
+  params:
+    - name: event
+      value: efdbb1c5156b72da0dd6b9b3798042db
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error evento not available
+    request:
+      url: "{{url}}/event/GetEventDetails/31114"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 17:00:05 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "47"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=rxPxeBAbu1WSPYDTxxM4XRz4lRu1KRHk9HBxQCEJXMI-1729011605-1.0.1.1-n9bh5J5L1a_w0MYYj1QPaQTvmj56V59wTvQNuxZksmzKt4ARD4u.kkT1bcIWR2mEY9UqtIikejNyQCQwod.BAw; path=/; expires=Tue, 15-Oct-24 17:30:05 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d315d05c99407d2-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Event not available"
+          }
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetEventDetails/304819"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 17:13:34 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d3170c6a867455a-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "act_lightmode": "0",
+              "id": "304819",
+              "pais": "chile",
+              "nombre": "SEAMAN CONCÓN 2025",
+              "descripcion": "El éxito de un Seaman es un mix de muchos factores, donde se deben conjugar 3 elementos fundamentales: Un lugar extraordinario Una organización consolidada Una experiencia memorable Sin lugar a dudas, después del éxito de Seaman Concón 2024, repetiremos este proyecto que reúne a la perfección cada uno de estos requerimientos. Playa Amarilla , es un lugar extraordinario para aguas abiertas con una medida dosis de adrenalina, de la mano de SEAMAN, aportan lo necesario para una apuesta que aportara a la región un proyecto de turismo deportivo que sin lugar a dudas aportará importantes recursos a la comunidad, trayendo deporte y visa saludable en familia.",
+              "itinerario": "",
+              "slug": "seaman-concon-2025",
+              "md5_id": "9f0bce2b5a94c773cbbff971cfe84aab",
+              "url": "https://www.passline.com/eventos/seaman-concon-2025",
+              "artistas": "",
+              "fecha_inicio": "2025-09-06",
+              "hora_inicio": "00:00:00",
+              "fecha_termino": "2025-09-06",
+              "hora_termino": "00:00:00",
+              "lugar": "Plata amarilla",
+              "streaming": "0",
+              "streaming_cat": "0",
+              "orden_productos": "2",
+              "mayores": "0",
+              "rango_edad": "0",
+              "productor": "4849738",
+              "act_terminos_condiciones": "0",
+              "documento_pdf": "",
+              "imagen": "https://imagenes.passline.com/eventos/",
+              "miniatura": "https://imagenes.passline.com/eventos/",
+              "recorte": "https://imagenes.passline.com/eventos/",
+              "imagen_descuento": "",
+              "banner_superior": "",
+              "banner_inferior": "",
+              "gallery_image": [],
+              "gallery_miniature": [],
+              "gallery_cutout": [],
+              "funciones": [],
+              "id_planimetria": "",
+              "productos": [],
+              "canal_venta": "1",
+              "nominative_purchase": "0",
+              "usa_decimales": "0",
+              "simbolo_moneda": "$",
+              "termino_cedula": "RUT",
+              "cantidad_decimales": "0",
+              "separador_decimales": ",",
+              "separador_miles": ".",
+              "cod_telefono": "+56",
+              "termino_region": "Regi&oacute;n",
+              "termino_comuna": "Regi&oacute;n",
+              "termino_moneda": "Pesos",
+              "termino_moneda_var": "CLP",
+              "dias_atencion": "0",
+              "payment_method": [],
+              "url_video": "",
+              "id_video": "",
+              "host_video": "",
+              "url_spotify": "",
+              "id_evento_seatmap": "",
+              "tickets": [
+                  {
+                      "id": "1735244",
+                      "nombre": "3,0 K",
+                      "descripcion": "",
+                      "precio": "50000.00",
+                      "minimo_compra": "1",
+                      "maximo_compra": "6",
+                      "disponibles": "100",
+                      "estado": "1",
+                      "fecha_inicio": "2024-09-02 00:00:00"
+                  },
+                  {
+                      "id": "1735243",
+                      "nombre": "1,5 K",
+                      "descripcion": "",
+                      "precio": "40000.00",
+                      "minimo_compra": "1",
+                      "maximo_compra": "6",
+                      "disponibles": "100",
+                      "estado": "1",
+                      "fecha_inicio": "2024-09-02 00:00:00"
+                  },
+                  {
+                      "id": "1735245",
+                      "nombre": "ACREDITACIÓN VIP",
+                      "descripcion": "",
+                      "precio": "10000.00",
+                      "minimo_compra": "1",
+                      "maximo_compra": "6",
+                      "disponibles": "100",
+                      "estado": "1",
+                      "fecha_inicio": "2024-09-02 00:00:00"
+                  }
+              ],
+              "event_sliders": []
+          }
+
+docs: Trae el detalle de un evento por su id.

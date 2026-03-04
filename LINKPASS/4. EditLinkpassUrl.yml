@@ -1,0 +1,38 @@
+info:
+  name: 4. EditLinkpassUrl
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{url}}/linkpass/EditLinkpassUrl"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: hola un texto
+      - name: name_link
+        type: text
+        value: https://www.uni.com
+      - name: icon
+        type: text
+        value: icono4.png
+      - name: linkpassUrlId
+        type: text
+        value: GW7oUNvJqQUN5vggod9NuQ@@
+      - name: linkpassId
+        type: text
+        value: eYu1MDwlqfapiUOP5YAi3w@@
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

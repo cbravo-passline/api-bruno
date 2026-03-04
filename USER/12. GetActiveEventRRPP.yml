@@ -1,0 +1,428 @@
+info:
+  name: 12. GetActiveEventRRPP
+  type: http
+  seq: 13
+
+http:
+  method: GET
+  url: "{{url}}/user/GetActiveEventRRPP"
+  headers:
+    - name: Content-Type
+      value: application/json
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error data not found
+    request:
+      url: "{{url}}/user/GetActiveEventRRPP"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 16:59:09 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "2"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d291e46ba118831-ATL
+      body:
+        type: json
+        data: "[]"
+  - name: Success response
+    request:
+      url: "{{url}}/user/GetActiveEventRRPP"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 17:01:22 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d292185fb7f44df-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "247989",
+                  "usuario": "3679",
+                  "nombre": "Prueba Cortesia Panama",
+                  "slug": "https://www.passline.com/eventos/prueba-cortesia-panamaproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2030-02-26 04:30:00",
+                  "fecha_inicio": "2030-02-26 00:35:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "173164",
+                  "usuario": "3679",
+                  "nombre": "Prueba Evento Boleteria Mexico",
+                  "slug": "https://www.passline.com/eventos/prueba-evento-boleteria-mexicoproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2029-05-05 04:15:00",
+                  "fecha_inicio": "2029-05-05 00:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "164359",
+                  "usuario": "3679",
+                  "nombre": "Prueba erika peru",
+                  "slug": "https://www.passline.com/eventos/prueba-erika-peru-164359productor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2029-03-29 23:55:00",
+                  "fecha_inicio": "2029-03-29 00:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "171531",
+                  "usuario": "3679",
+                  "nombre": "prueba ws twillio",
+                  "slug": "https://www.passline.com/eventos/prueba-ws-twillioproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2028-04-27 18:00:00",
+                  "fecha_inicio": "2028-04-27 00:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "15759",
+                  "usuario": "3679",
+                  "nombre": "Prueba de pasarelas de pago",
+                  "slug": "https://www.passline.com/eventos/prueba-de-pasarelas-de-pagoproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-12-09 06:00:00",
+                  "fecha_inicio": "2025-12-09 00:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "257515",
+                  "usuario": "3679",
+                  "nombre": "Evento test APIDEV 2",
+                  "slug": "https://www.passline.com/eventos/evento-test-apidev-2productor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-12-02 23:00:00",
+                  "fecha_inicio": "2025-12-02 20:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "257539",
+                  "usuario": "3679",
+                  "nombre": "Evento test APIDEV 3",
+                  "slug": "https://www.passline.com/eventos/evento-test-apidev-3productor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-12-02 23:00:00",
+                  "fecha_inicio": "2025-12-02 20:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "209484",
+                  "usuario": "3679",
+                  "nombre": "prueba cargo 1",
+                  "slug": "https://www.passline.com/eventos/prueba-cargo-1productor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-09-26 15:00:00",
+                  "fecha_inicio": "2025-09-26 02:30:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "310613",
+                  "usuario": "3679",
+                  "nombre": "mesas erika dvm clonado",
+                  "slug": "https://www.passline.com/eventos/mesas-erika-dvm-clonadoproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-09-26 06:55:00",
+                  "fecha_inicio": "2025-09-26 01:20:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "284215",
+                  "usuario": "3679",
+                  "nombre": "mesas erika dvm",
+                  "slug": "https://www.passline.com/eventos/mesas-erika-dvmproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-07-01 03:00:00",
+                  "fecha_inicio": "2025-07-01 00:30:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "272193",
+                  "usuario": "3679",
+                  "nombre": "prueba dvm teatro talca sin divisiones",
+                  "slug": "https://www.passline.com/eventos/prueba-dvm-teatro-talca-sin-divisionesproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-05-23 23:55:00",
+                  "fecha_inicio": "2025-05-23 01:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "269351",
+                  "usuario": "3679",
+                  "nombre": "evento prueba1 dvm",
+                  "slug": "https://www.passline.com/eventos/evento-prueba1-dvmproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-05-14 23:55:00",
+                  "fecha_inicio": "2025-05-14 00:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "257781",
+                  "usuario": "3679",
+                  "nombre": "Prueba Evento Vzla",
+                  "slug": "https://www.passline.com/eventos/prueba-evento-vzlaproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-04-03 07:20:00",
+                  "fecha_inicio": "2025-04-03 03:50:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "250031",
+                  "usuario": "3679",
+                  "nombre": "pruebadiegos",
+                  "slug": "https://www.passline.com/eventos/pruebadiegoproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2030-03-05 01:25:00",
+                  "fecha_inicio": "2025-03-05 00:35:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "248421",
+                  "usuario": "3679",
+                  "nombre": "dvprueba",
+                  "slug": "https://www.passline.com/eventos/dvpruebaproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2030-02-27 00:20:00",
+                  "fecha_inicio": "2025-02-27 00:20:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "257508",
+                  "usuario": "3679",
+                  "nombre": "Prueba Verificar Registro Hinchas",
+                  "slug": "https://www.passline.com/eventos/prueba-verificar-registro-hinchasproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-12-02 21:00:00",
+                  "fecha_inicio": "2024-12-02 15:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "263566",
+                  "usuario": "3679",
+                  "nombre": "Prueba Registro Biométrico",
+                  "slug": "https://www.passline.com/eventos/prueba-registro-biometricoproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2024-12-02 23:50:00",
+                  "fecha_inicio": "2024-12-02 15:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "317561",
+                  "usuario": "3679",
+                  "nombre": "evento prueba ricardo",
+                  "slug": "https://www.passline.com/eventos/evento-prueba-ricardo-noviembreproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2024-12-01 00:00:00",
+                  "fecha_inicio": "2024-11-30 19:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "317563",
+                  "usuario": "3679",
+                  "nombre": "cambio de nombre noviembre",
+                  "slug": "https://www.passline.com/eventos/cambio-de-nombre-noviembreproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2024-12-01 00:00:00",
+                  "fecha_inicio": "2024-11-30 16:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "317560",
+                  "usuario": "3679",
+                  "nombre": "evento prueba ricardo",
+                  "slug": "https://www.passline.com/eventos/evento-prueba-ricardo-octubreproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2024-11-01 00:00:00",
+                  "fecha_inicio": "2024-10-31 20:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "317562",
+                  "usuario": "3679",
+                  "nombre": "cambio de nombre octubre",
+                  "slug": "https://www.passline.com/eventos/cambio-de-nombre-octubreproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2024-11-01 00:00:00",
+                  "fecha_inicio": "2024-10-31 16:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "303060",
+                  "usuario": "3679",
+                  "nombre": "evento prueba ricardo",
+                  "slug": "https://www.passline.com/eventos/evento-prueba-ricardoproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2024-10-29 23:40:00",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "132103",
+                  "usuario": "3679",
+                  "nombre": "Evento Pruebas Comisión",
+                  "slug": "https://www.passline.com/eventos/evento-pruebas-comisionproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2024-10-21 22:00:00",
+                  "fecha_inicio": "2024-10-21 20:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "312074",
+                  "usuario": "3679",
+                  "nombre": "Ricardo Dev Prueba NO",
+                  "slug": "https://www.passline.com/eventos/ricardo-dev-prueba-noproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-09-26 03:20:00",
+                  "fecha_inicio": "2024-09-27 00:50:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "246497",
+                  "usuario": "3679",
+                  "nombre": "evento test1",
+                  "slug": "https://www.passline.com/eventos/evento-test1productor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2025-09-24 02:10:00",
+                  "fecha_inicio": "2024-08-18 03:35:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "224276",
+                  "usuario": "3679",
+                  "nombre": "Diego p6",
+                  "slug": "https://www.passline.com/eventos/diego-p6productor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2024-11-23 00:55:00",
+                  "fecha_inicio": "2023-11-27 00:30:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              },
+              {
+                  "id": "224272",
+                  "usuario": "3679",
+                  "nombre": "cambio de nombre",
+                  "slug": "https://www.passline.com/eventos/chico-pruebaproductor-rrpp",
+                  "estado_evento": "1",
+                  "fecha_termino": "2024-11-23 23:50:00",
+                  "fecha_inicio": "2023-11-26 12:00:00",
+                  "cortesias": "0",
+                  "enviadas": "0",
+                  "vendidas": "0"
+              }
+          ]

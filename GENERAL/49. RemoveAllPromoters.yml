@@ -1,0 +1,17 @@
+info:
+  name: 49. RemoveAllPromoters
+  type: http
+  seq: 50
+
+http:
+  method: DELETE
+  url: "{{url}}/general/RemoveAllPromoters"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

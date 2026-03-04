@@ -1,0 +1,24 @@
+info:
+  name: 128. EditLogoMysite
+  type: http
+  seq: 123
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditLogoMySite"
+  body:
+    type: multipart-form
+    data:
+      - name: logo
+        type: file
+        value:
+          - postman-cloud:///1eea9ad8-81fd-4d10-b775-b5d7fe014dca
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

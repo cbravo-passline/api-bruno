@@ -1,0 +1,51 @@
+info:
+  name: 130. PasslineContactProducer_v2
+  type: http
+  seq: 125
+
+http:
+  method: POST
+  url: "{{url}}/general/PasslineContactProducer_v2"
+  headers:
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"nombre\": \"Prueba\",\r
+
+      \    \"apellido\":\"Bravo\",\r
+
+      \    \"empresa\":\"eventos pruebas 2\",\r
+
+      \    \"email\":\"cbravo@passline.dev\",\r
+
+      \    \"telefono\": \"12345678\",\r
+
+      \    \"mensaje\": \"Este es un mensaje de pruebas para ver que todos los datos llegan correctamente.\",\r
+
+      \    \"country\": \"chile\",\r
+
+      \    \"evento\": \"evento de pruebas\",\r
+
+      \    \"categoria\": \"Teatros, Musicales y Circos\",\r
+
+      \    \"fecha_tentativa\": \"Dentro de 1 Mes\",\r
+
+      \    \"asistentes_esperados\": \"Entre 2.001 y 5.000\",\r
+
+      \    \"red_social\":\"www.facebook.com\",\r
+
+      \    \"pagina_web\":\"www.passline.com\",\r
+
+      \    \"g-recaptcha-response\": \"0cAFcWeA6uJSsfxk51DTELDvGhIrVe40qCQf0KHZJUCK1GxUnZPh5cIo039afxymmb_Ie35b9waOaep7pqW4gUfAiGoKQIIGNX9amBcVZaMQ0Rr6tXGY6iV64u64YfxI9vztbaOq1rB7LutuuKkC1JcDj-EPokyoSfLi5UMCAKafrnXUaNb1Xis6yLaMLKaqWg6IBNweOsmosO2E-zIM4z-OD_NJkaHMdQHuH1-9ROc25eOiGKV-secacU7xVD6r4p2-8BtP6fjwr16lNNFxlBvjjFuiYmDGsKRiJtAgwCaDxTfl3Cj1v9cR1R6yjVhz12VigwYxgViZZMu2mKNCBZH4qInwC2ZlNDPzfxw3ll3ugNn8OuuZKSKsxxndE6rZPK5mA_Iy3bD6_yTf_XCQC9Bg5n-jyDjaEF3vbS-CXYjx5l_N4MLjbr-Y816bkthRQLQO_MbmvapsL4005UWoJtyNA2geefs-g4VL-EAIX9jYwKGT-kn3XFSgoend8dGKL4b8TbmpX3Aqs6GUzns5AN-kVJetnEWLemqaja91wed6-lm6kx-upiLlNLXD67ApSnmknjYnwl-Gk8Uv_TNkgtnhhjVVza1BDP2vkJwEg59a0PpxfobI7i8aCAv0l6VwitbC9xzoM1CMAunLt92MtH9-JEYei8LTZCL4Gk6vSyvkfljpP_kebpDrcG1i5-KTCov336QZOYfZhNy6-HY-wCg4zygw-zgvZHUcZIhiSCsYDiRJyfPtHEJSVLWXPkOjvJFXmwa8FHWdplcJFcjuJsI8vl5kAO_Ccajg\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

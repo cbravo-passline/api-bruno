@@ -1,0 +1,90 @@
+info:
+  name: 31. CreateAccreditorsRequest
+  type: http
+  seq: 32
+
+http:
+  method: POST
+  url: "{{url}}/event/CreateNotifications"
+  body:
+    type: multipart-form
+    data:
+      - name: eventId
+        type: text
+        value: "15759"
+      - name: affair
+        type: text
+        value: prueba 1
+      - name: text
+        type: text
+        value: prueba 1
+      - name: productId
+        type: text
+        value: "420076"
+      - name: image
+        type: file
+        value:
+          - /C:/Users/ociel/OneDrive/Escritorio/logo_passline.jpg
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error invalid body params
+    request:
+      url: "{{url}}/general/CreateAccreditorsRequest"
+      method: POST
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 29 Oct 2024 14:06:22 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=2ffvwnC_vxvFB3NspDUb2JKYkMVzQyRZiy48gZWtWi4-1730210782-1.0.1.1-pRVxs_RN4jjTcfU8j92kIuePPrlYZ6uiMgbwGELLKseq7OY6Ucn9F7CRWXn2k7PwKbRqqjEW8WfJjZjcXLvnHA; path=/; expires=Tue, 29-Oct-24 14:36:22 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8da3b9cbff9a53ab-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required.",
+                  "The quantityAccess field is required.",
+                  "The contactName field is required.",
+                  "The phone field is required.",
+                  "The observations field is required.",
+                  "The accreditorsQuantity field is required."
+              ]
+          }

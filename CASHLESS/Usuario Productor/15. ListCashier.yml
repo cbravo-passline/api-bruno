@@ -1,0 +1,43 @@
+info:
+  name: 15. ListCashier
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{url}}/cashless/ListCashier"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: User-Agent
+      value: Passline-PHP
+  params:
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "10"
+      type: query
+      disabled: true
+    - name: access_code
+      value: ADCBE1
+      type: query
+      disabled: true
+    - name: email
+      value: test@test.com
+      type: query
+      disabled: true
+    - name: personal_id
+      value: ""
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

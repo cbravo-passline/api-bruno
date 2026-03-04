@@ -1,0 +1,212 @@
+info:
+  name: 43. EditTicketOwner
+  type: http
+  seq: 44
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditTicketOwner"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Ariel DC\",\r
+
+      \    \"email\": \"ariel@passline.dev\",\r
+
+      \    \"rut\": \"28038822-k\",\r
+
+      \    \"hd_event\": \"d5058700fd299b23d75fcc47e6620855\",\r
+
+      \    \"hd_ticket\": \"49226799\",\r
+
+      \    \"lang\": \"en_US\"\r
+
+      } "
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error evento does not exist
+    request:
+      url: "{{url}}/general/EditTicketOwner"
+      method: PUT
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\": \"Ariel DC\",\r
+
+          \    \"email\": \"ariel@passline.dev\",\r
+
+          \    \"rut\": \"28038822-k\",\r
+
+          \    \"hd_event\": \"941366\",\r
+
+          \    \"hd_ticket\": \"49226480\",\r
+
+          \    \"lang\": \"en_US\"\r
+
+          } "
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 01 Nov 2024 18:41:29 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=oKC5D3EDth2q74rWFR7UWaDrW.RDMd35hekpPduHOYM-1730486489-1.0.1.1-y3D7Zt9dsPo6j4jgGkpacq7W6SVY_dALP_2hEqLZvbh7GVWfVb_eignLGlxwgCcLpsnTUz2yyWjnJsZwVuz1Zg; path=/; expires=Fri, 01-Nov-24 19:11:29 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8dbe04ec4be453cd-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "The event does not exists."
+          }
+  - name: Error invalid ticket
+    request:
+      url: "{{url}}/general/EditTicketOwner"
+      method: PUT
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\": \"Ariel DC\",\r
+
+          \    \"email\": \"ariel@passline.dev\",\r
+
+          \    \"rut\": \"28038822-k\",\r
+
+          \    \"hd_event\": \"d5058700fd299b23d75fcc47e6620855\",\r
+
+          \    \"hd_ticket\": \"49226799\",\r
+
+          \    \"lang\": \"en_US\"\r
+
+          } "
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 01 Nov 2024 18:47:36 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "43"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8dbe0de1fa047b9b-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Ticket Invalid."
+          }
+  - name: Error invalid param
+    request:
+      url: "{{url}}/general/EditTicketOwner"
+      method: PUT
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 01 Nov 2024 23:16:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=L64kTVaXFh.7c3uFNJUuLr3k0YHNZLjSX85DqzmkyvQ-1730503018-1.0.1.1-KDG31fGRg.uN138VepwL4GcLYjRBNe6.E1IusoH6OaPsSHf5mZxuLxkXqs6hNMIl14kpi_UCix34xi5nPUXyPQ; path=/; expires=Fri, 01-Nov-24 23:46:58 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8dbf9879f905bfa0-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The name field is required.",
+                  "The email field is required.",
+                  "The hd_ticket field is required.",
+                  "The hd_event field is required."
+              ]
+          }

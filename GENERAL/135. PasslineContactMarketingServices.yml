@@ -1,0 +1,33 @@
+info:
+  name: 135. PasslineContactMarketingServices
+  type: http
+  seq: 130
+
+http:
+  method: POST
+  url: "{{url}}/general/PasslineContactMarketingServices"
+  headers:
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    //event=31114\r
+
+      \    \"event\": \"608e170b60b7fd6f11914a4ec9dfedbd\",\r
+
+      \    \"services\" : \"1 ,8, 9,20\",\r
+
+      \    \"social_profile\" : \"prueba2\"\r
+
+      }\r\n"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

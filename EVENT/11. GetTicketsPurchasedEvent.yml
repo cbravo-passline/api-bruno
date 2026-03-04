@@ -1,0 +1,466 @@
+info:
+  name: 11. GetTicketsPurchasedEvent
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: "{{url}}/event/GetTicketsPurchasedEvent/181803"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetTicketsPurchasedEvent/57456"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 18:55:41 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=sD1.Kgl4elzPVhWA7tB7ibib7eYGeiJMu3TBrhU9Gn8-1729018541-1.0.1.1-2uuh3CLNHCK4Nhpm34WslrjE5Nosah_1AsJ9hTF3pbdXcdyQnzMQ.owPc4.GxCy.mhuUnleIAy.r71quNomthQ; path=/; expires=Tue, 15-Oct-24 19:25:41 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d32065aac78bace-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "bought": [
+                      {
+                          "id": "15621493",
+                          "purchase_id": "14344257",
+                          "full_name": "Productor",
+                          "email": "patricio@passline.cl",
+                          "personal_id": "",
+                          "price": "300.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "15621718",
+                          "purchase_id": "14344270",
+                          "full_name": "Productor",
+                          "email": "patricio@passline.cl",
+                          "personal_id": "",
+                          "price": "300.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "15621821",
+                          "purchase_id": "14344588",
+                          "full_name": "Productor",
+                          "email": "patricio@passline.cl",
+                          "personal_id": "",
+                          "price": "300.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "15621857",
+                          "purchase_id": "14344642",
+                          "full_name": "Productor",
+                          "email": "patricio@passline.cl",
+                          "personal_id": "",
+                          "price": "300.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "15621865",
+                          "purchase_id": "14344652",
+                          "full_name": "Productor",
+                          "email": "patricio@passline.cl",
+                          "personal_id": "",
+                          "price": "300.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "15621866",
+                          "purchase_id": "14344652",
+                          "full_name": "Productor",
+                          "email": "patricio@passline.cl",
+                          "personal_id": "",
+                          "price": "200.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "15621872",
+                          "purchase_id": "14344664",
+                          "full_name": "Productor",
+                          "email": "patricio@passline.cl",
+                          "personal_id": "",
+                          "price": "300.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "15621873",
+                          "purchase_id": "14344664",
+                          "full_name": "Productor",
+                          "email": "patricio@passline.cl",
+                          "personal_id": "",
+                          "price": "200.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "15709212",
+                          "purchase_id": "14454845",
+                          "full_name": "Productor",
+                          "email": "patricio@passline.cl",
+                          "personal_id": "15275133",
+                          "price": "200.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16559948",
+                          "purchase_id": "15265968",
+                          "full_name": "Luis Chacon Rovira",
+                          "email": "luischr@gmail.com",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16559959",
+                          "purchase_id": "15265980",
+                          "full_name": "Luis",
+                          "email": "luischr@gmail.com",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16559960",
+                          "purchase_id": "15265981",
+                          "full_name": "Martin Via",
+                          "email": "mujica@viamagica.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16559961",
+                          "purchase_id": "15265982",
+                          "full_name": "Martin Pass",
+                          "email": "mujica@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16559962",
+                          "purchase_id": "15265983",
+                          "full_name": "Luis Ch",
+                          "email": "lchacon@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16618577",
+                          "purchase_id": "15317851",
+                          "full_name": "Prueba",
+                          "email": "lchacon@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16618578",
+                          "purchase_id": "15317851",
+                          "full_name": "Prueba",
+                          "email": "lchacon@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16618579",
+                          "purchase_id": "15317851",
+                          "full_name": "Prueba",
+                          "email": "lchacon@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16618580",
+                          "purchase_id": "15317851",
+                          "full_name": "Prueba",
+                          "email": "lchacon@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16618635",
+                          "purchase_id": "15317887",
+                          "full_name": "Prueba 2",
+                          "email": "lchacon@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16618636",
+                          "purchase_id": "15317887",
+                          "full_name": "Prueba 2",
+                          "email": "lchacon@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16618637",
+                          "purchase_id": "15317887",
+                          "full_name": "Prueba 2",
+                          "email": "lchacon@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16966386",
+                          "purchase_id": "15621754",
+                          "full_name": "martin",
+                          "email": "mujica@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      },
+                      {
+                          "id": "16966387",
+                          "purchase_id": "15621754",
+                          "full_name": "martin",
+                          "email": "mujica@passline.cl",
+                          "personal_id": "",
+                          "price": "0.00",
+                          "status_id": "0",
+                          "status_description": "ACTIVE"
+                      }
+                  ]
+              },
+              {
+                  "bought_ticket_office": []
+              }
+          ]
+  - name: Success empty data
+    request:
+      url: "{{url}}/event/GetTicketsPurchasedEvent/5745633"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 18:56:16 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d3207343a79bace-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "bought": []
+              },
+              {
+                  "bought_ticket_office": []
+              }
+          ]
+  - name: Error bad parameters
+    request:
+      url: "{{url}}/event/GetTicketsPurchasedEvent"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 18:56:46 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d3207f06c6fbace-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The value of the event field must be numeric.",
+                  "The value of the event must be greater than 0."
+              ]
+          }
+  - name: 13. Función GetTicketsPurchasedEvent
+    request:
+      url: "{{url}}/event/GetTicketsPurchasedEvent"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 18:56:46 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d3207f06c6fbace-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The value of the event field must be numeric.",
+                  "The value of the event must be greater than 0."
+              ]
+          }
+
+docs: Permite traer los tickets comprados de un evento mediante el envío del token y el id del evento.

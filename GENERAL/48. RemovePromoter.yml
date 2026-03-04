@@ -1,0 +1,20 @@
+info:
+  name: 48. RemovePromoter
+  type: http
+  seq: 49
+
+http:
+  method: DELETE
+  url: "{{url}}/general/RemovePromoters"
+  body:
+    type: json
+    data: "{\r\n    \"promoters\": \"[]\"\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

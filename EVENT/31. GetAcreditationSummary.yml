@@ -1,0 +1,869 @@
+info:
+  name: 31. GetAcreditationSummary
+  type: http
+  seq: 32
+
+http:
+  method: GET
+  url: "{{url}}/event/GetAcreditationSummary/9c7224ddb2df6a0aa645c141291f5039"
+  headers:
+    - name: Content-Type
+      value: application/json
+  auth:
+    type: bearer
+    token: "{{Token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetAcreditationSummary/2b9c2b864b7c6ddd56845165104a2549"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 18 Oct 2024 20:55:41 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=HLYNKXx.giFpVpg6m5YAtfX7qJRozvVrd3fK9g39TSs-1729284941-1.0.1.1-s8IE9mOXDyyMwWsh1.FntziyYJ1MnubaYT81j6O_NpCLsqxC5GzKWFe6yx_3Y5yui6ynwmXmIvcDgVO_l9sP4Q; path=/; expires=Fri, 18-Oct-24 21:25:41 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d4b6e448f5c07ce-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "e-ticket": {
+                  "records": [
+                      {
+                          "name": "diego prueba evento",
+                          "total_validated": "0",
+                          "total_remaining": "1",
+                          "total": "1"
+                      },
+                      {
+                          "name": "General",
+                          "total_validated": "3",
+                          "total_remaining": "1744",
+                          "total": "1747"
+                      },
+                      {
+                          "name": "Prueba",
+                          "total_validated": "0",
+                          "total_remaining": "10",
+                          "total": "10"
+                      },
+                      {
+                          "name": "promo",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Cerveza heineken",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Tres erre",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "AGUA",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Cerveza",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Agua",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Piscola",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "PISCOLA",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Agua",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Jugo",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Agua",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Redbull",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Choripan",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Black",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "undurraga brut",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Entrada",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Producto 1",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Banana Split",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Barquillo",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Ovo",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Paleta",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Vodka",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Terremoto",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "prueba",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Arepa",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Empanada",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Miel de Ulmo",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Frambuesa Menta",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Bombon Frambuesa",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Jamon de Pavo",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Polera",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Old Fashion",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Rediel",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Whisky",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Spiner",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Vegetariano",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Malta",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Malta",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Cerveza",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Cachapa",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Fresas con Crema",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Roast Beef",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Pollo Teriyaki",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Sandwich del Dia",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Crudo",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "pizza",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Vino",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "piscola",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba1",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba2",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba3",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba4",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba5",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba6",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba7",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba8",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Promo MISTRAL",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Gatorade",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "fernet",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Pisco Mistral",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "clases de tenis",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Fernet",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Pisco",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Uno",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Pecesito",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Caminito",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Caminito",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Otro producto",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Heineken",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Agua Mineral",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "MISTRAL 35",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "ENTRADA",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Preventa General",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "AGUA",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "prueba",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "strawberry gin forever",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "redbull experince",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "patatas",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba Producto",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "RON 3000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "PISCO 3000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "VODKA 3000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "CERVEZA 3000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "AGUA 3000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "BEBIDA",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "JUGO",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "RON 4000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "PISCO 4000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "VODKA 4000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "CERVEZA 4.000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "AGUA 4000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "JUGO 4000",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Papitas",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Whisky",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Pizza Motzzarella",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "pizza",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "PROSCIUTTO",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Hamburgesa",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "COCA COLA",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Agua Purificada Normal",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Producto de prueba",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Producto de Prueba",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba Ricardo",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "PRODUCTO X",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "Prueba 99",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "ticket prueba padre",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      },
+                      {
+                          "name": "ticket prueba padre 2",
+                          "total_validated": "0",
+                          "total_remaining": "0",
+                          "total": "0"
+                      }
+                  ],
+                  "summary": {
+                      "name": "Total Tickets",
+                      "total_validated": 3,
+                      "total_remaining": 1755,
+                      "total": 1758
+                  }
+              },
+              "physical-ticket": {
+                  "records": [],
+                  "summary": {
+                      "name": "Total Tickets",
+                      "total_validated": 0,
+                      "total_remaining": 0,
+                      "total": 0
+                  }
+              },
+              "ticket-office": {
+                  "records": [],
+                  "summary": {
+                      "name": "Total Tickets",
+                      "total_validated": 0,
+                      "total_remaining": 0,
+                      "total": 0
+                  }
+              },
+              "extra-ticket": {
+                  "records": [
+                      {
+                          "name": null,
+                          "total_validated": "0",
+                          "total_remaining": "3019",
+                          "total": "3019"
+                      }
+                  ],
+                  "summary": {
+                      "name": "Total Tickets",
+                      "total_validated": 0,
+                      "total_remaining": 3019,
+                      "total": 3019
+                  }
+              },
+              "summary": {
+                  "total_validated": 3,
+                  "total": 4777
+              }
+          }
+  - name: Error event doest not exist
+    request:
+      url: "{{url}}/event/GetAcreditationSummary/9c7224ddb2df6a0aa645c141291f5039"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 18 Oct 2024 18:14:12 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=u9i5AnV3gYxw9wvxsuvwFRW6RrTm_VAHmzs1x0n5VmA-1729275252-1.0.1.1-9CLUtQarhgS83tGeUIxHDnbFoWpYus8GN5otHp2P1AQfOb9WM0p4phXCZIGfoiv5RF2ScYqt8WQ_56WYPaPBzw; path=/; expires=Fri, 18-Oct-24 18:44:12 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d4a81b82cfaafa8-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": "The event doesn't exist."
+          }
+  - name: Error invalid params
+    request:
+      url: "{{url}}/event/GetAcreditationSummary"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 18 Oct 2024 18:14:59 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d4a82dfbb0fafa8-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required."
+              ]
+          }

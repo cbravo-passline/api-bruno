@@ -1,0 +1,20 @@
+info:
+  name: 24. PaymentCancel
+  type: http
+  seq: 12
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/PaymentCancel"
+  body:
+    type: json
+    data: "{\r\n    \"order_id\":\"11\"\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

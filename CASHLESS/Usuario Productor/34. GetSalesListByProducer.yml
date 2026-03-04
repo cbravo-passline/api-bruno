@@ -1,0 +1,34 @@
+info:
+  name: 34. GetSalesListByProducer
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: "{{url}}/cashless/GetSalesListByProducer"
+  params:
+    - name: begin_date
+      value: 2025-08-01
+      type: query
+      disabled: true
+    - name: end_date
+      value: 2025-08-31
+      type: query
+      disabled: true
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

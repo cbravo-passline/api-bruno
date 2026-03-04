@@ -1,0 +1,24 @@
+info:
+  name: 140. RemoveWaitingListUser
+  type: http
+  seq: 141
+
+http:
+  method: DELETE
+  url: "{{url}}/event/RemoveWaitingListUser"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"waiting_list_id\":\"9rCiogOlpnMJtwL-aAmKL0yuOEcbI8MRKNURLSqry3o@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

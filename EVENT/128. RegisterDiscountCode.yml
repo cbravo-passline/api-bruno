@@ -1,0 +1,36 @@
+info:
+  name: 128. RegisterDiscountCode
+  type: http
+  seq: 129
+
+http:
+  method: POST
+  url: "{{url}}/event/RegisterDiscountCode"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event\":\"efdbb1c5156b72da0dd6b9b3798042db\",\r
+
+      \    \"discount_type\":\"0\",\r
+
+      \    \"discount_code\":\"WQCMHA22\",\r
+
+      \    \"percentage\":\"25\",\r
+
+      \    \"begin_date\":\"2025-09-10\",\r
+
+      \    \"end_date\":\"2025-09-10\",\r
+
+      \    \"max_usage\":100\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

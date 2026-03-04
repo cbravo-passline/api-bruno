@@ -1,0 +1,17 @@
+info:
+  name: 107. GetProductList
+  type: http
+  seq: 102
+
+http:
+  method: GET
+  url: "{{url}}/general/GetProductList"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

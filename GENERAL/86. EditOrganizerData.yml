@@ -1,0 +1,26 @@
+info:
+  name: 86. EditOrganizerData
+  type: http
+  seq: 87
+
+http:
+  method: PUT
+  url: "{{url}}/general/ChangeOrderVenueSlider"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"venue_slider\":\"CRDCVDmI2_JrRjvPNll6Rw@@\",\r
+
+      \    \"direction\":\"up\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

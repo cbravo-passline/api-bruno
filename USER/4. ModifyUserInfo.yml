@@ -1,0 +1,231 @@
+info:
+  name: 4. ModifyUserInfo
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{url}}/user/ModifyUserInfo"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\":\"Cristian Bravo\",\r
+
+      \    \"last_name\":\"CB\",\r
+
+      \    \"rut\":\"15345698-4\",\r
+
+      \    \"phone\": \"+59996306099\",\r
+
+      \    \"gender\": \"M\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/user/ModifyUserInfo"
+      method: PUT
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\":\"Cristian Bravo\",\r
+
+          \    \"last_name\":\"CB\",\r
+
+          \    \"rut\":\"15345698-4\",\r
+
+          \    \"phone\": \"+59996306099\",\r
+
+          \    \"gender\": \"M\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 11 Oct 2024 20:27:02 GMT
+        - name: Server
+          value: Apache/2.4.57 (Debian)
+        - name: X-Powered-By
+          value: Passline
+        - name: Content-Length
+          value: "158"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "name": "Cristian Bravo",
+              "last_name": "CB",
+              "email": "ariel.daza.development@gmail.com",
+              "phone": "+59996306099",
+              "rut": "15345698-4",
+              "gender": "M",
+              "country": "chile"
+          }
+  - name: Error toke expired
+    request:
+      url: "{{url}}/user/ModifyUserInfo"
+      method: PUT
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\":\"Cristian Bravo\",\r
+
+          \    \"last_name\":\"CB\",\r
+
+          \    \"rut\":\"15345698-4\",\r
+
+          \    \"phone\": \"+59996306099\",\r
+
+          \    \"gender\": \"M\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 11 Oct 2024 19:55:54 GMT
+        - name: Server
+          value: Apache/2.4.57 (Debian)
+        - name: X-Powered-By
+          value: Passline
+        - name: Content-Length
+          value: "41"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "token expired"
+          }
+  - name: Error user not updated
+    request:
+      url: "{{url}}/user/ModifyUserInfo"
+      method: PUT
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\":\"Cristian Bravo \",\r
+
+          \    \"last_name\":\"CB\",\r
+
+          \    \"rut\":\"15345698-4\",\r
+
+          \    \"phone\": \"+59996306099\",\r
+
+          \    \"gender\": \"M\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 11 Oct 2024 20:39:17 GMT
+        - name: Server
+          value: Apache/2.4.57 (Debian)
+        - name: X-Powered-By
+          value: Passline
+        - name: Content-Length
+          value: "44"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Not user updated"
+          }
+  - name: Error bad parameters
+    request:
+      url: "{{url}}/user/ModifyUserInfo"
+      method: PUT
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 11 Oct 2024 20:42:25 GMT
+        - name: Server
+          value: Apache/2.4.57 (Debian)
+        - name: X-Powered-By
+          value: Passline
+        - name: Content-Length
+          value: "228"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The name field is required.",
+                  "The rut field is required.",
+                  "The gender field is required.",
+                  "The value of the gender field is not allowed, the values allowed are [M,F].",
+                  "The phone field is required."
+              ]
+          }
+
+docs: |-
+  Función para registrar un nuevo usuario.
+
+  Respuesta:
+
+  StartFragment
+
+  {    "status": "SUCCESS",    "id": 5172818}
+
+  EndFragment

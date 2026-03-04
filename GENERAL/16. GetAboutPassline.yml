@@ -1,0 +1,196 @@
+info:
+  name: 16. GetAboutPassline
+  type: http
+  seq: 17
+
+http:
+  method: GET
+  url: "{{url}}/general/GetAboutPassline/chile"
+  headers:
+    - name: content-type
+      value: application/json
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success passline
+    request:
+      url: "{{url}}/general/GetAboutPassline/chile"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 24 Oct 2024 20:18:35 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=EIIJjWqYg8T1JSZRLC5pY3Loii5p9UUqZqxPolKzaQM-1729801115-1.0.1.1-5hzhHvKlZ_KTnSa7zuObMm7iraQO9n7elxM2rQOvqN7LHqMtAgc61xfR.FKihtUXRGI7exu5d0HqayuNEg9aSw; path=/; expires=Thu, 24-Oct-24 20:48:35 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7ca8298f1e53cf-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "acerca_de_passline": "<b>Sobre Passline</b><br>\nPassline es una plataforma de eventos global que te permite crear, buscar, compartir y asistir a tus eventos favoritos. Desde festivales de música, fiestas, conferencias, workshops, eventos streaming / ondemand, maratones, competencias de videojuegos, discotecas y mucho más.\n<br>\nNuestra misión es darle a todos nuestros usuarios la herramienta para que puedan administrar y comercializar sus eventos gratis, además del espacio para que puedan encontrar y saber todo lo que hay para hacer.\n<br>\n<b>Funcionamiento de Passline</b>\n¡Es muy fácil! debes ingresar a nuestra página de INICIO e ir arriba a la derecha donde dice CREAR EVENTO. Allí podrás crear tu evento y automáticamente generar una ticketera online ofreciendo todos los medios de pago (tarjetas y efectivo).\n<br>\nAccede a un panel de control, que te permitirá administrar todo lo que necesitas para gestionar la venta y control de acceso para tus eventos.<br>\n<br>\n<b>¿Por qué Passline?</b><br>\nSomos la ticketera con más eventos en el Mercado. Contamos con un equipo de profesionales enfocados en el desarrollo de nuevas tecnologías y en hacer crecer los negocios de nuestros clientes.\n<br>\nNuestra plataforma te entrega toda la exposición que tu evento necesita, mediante la publicación de tu evento en nuestra cartelera y redes sociales.<br>\n<b>Streaming / On Demand</b><br>\nPor eso diseñamos un sistema donde puedas disfrutar los mejores eventos, de tus artistas preferidos sin importar donde estés. Sólo debes adquirir tu entrada e ingresar desde tu celular, tablet, PC o SmartTv."
+              }
+          ]
+  - name: Error countryo not found
+    request:
+      url: "{{url}}/general/GetAboutPassline/"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 24 Oct 2024 20:20:40 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "42"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7cab375838bfe5-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Data not found"
+          }
+  - name: Error country empty
+    request:
+      url: "{{url}}/general/GetAboutPassline/"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 24 Oct 2024 20:24:10 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7cb05b59d4b097-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The country field is required."
+              ]
+          }
+  - name: Error country no found in path params
+    request:
+      url: "{{url}}/general/GetAboutPassline"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 24 Oct 2024 20:24:32 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7cb0e069f0b097-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Invalid parameter [country]"
+          }
+
+docs: Trae los términos y condiciones de un país dado.

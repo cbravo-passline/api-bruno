@@ -1,0 +1,15 @@
+info:
+  name: 64. RemoveUserException
+  type: http
+  seq: 65
+
+http:
+  method: DELETE
+  url: "{{url}}/general/RemoveUserException"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

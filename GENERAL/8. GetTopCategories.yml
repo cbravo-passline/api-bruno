@@ -1,0 +1,195 @@
+info:
+  name: 8. GetTopCategories
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{url}}/general/GetTopCategories/chile"
+  headers:
+    - name: content-type
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/GetTopCategories/chile"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 19:35:15 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d742b4e6b1cbf8e-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id_tag": "1734",
+                  "nombre_tag": "Humor / Stand Up Comedy"
+              },
+              {
+                  "id_tag": "93",
+                  "nombre_tag": "Conciertos"
+              },
+              {
+                  "id_tag": "89",
+                  "nombre_tag": "Fiesta"
+              },
+              {
+                  "id_tag": "58",
+                  "nombre_tag": "Comedia"
+              },
+              {
+                  "id_tag": "1438",
+                  "nombre_tag": "Teatro"
+              },
+              {
+                  "id_tag": "3204",
+                  "nombre_tag": "Halloween"
+              },
+              {
+                  "id_tag": "3123",
+                  "nombre_tag": "Discoteca"
+              },
+              {
+                  "id_tag": "3201",
+                  "nombre_tag": "Música Bailable"
+              },
+              {
+                  "id_tag": "5467",
+                  "nombre_tag": "Standup Comedy"
+              },
+              {
+                  "id_tag": "5",
+                  "nombre_tag": "Electrónica"
+              }
+          ]
+  - name: Error no country in URL
+    request:
+      url: "{{url}}/general/GetTopCategories"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 19:34:23 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d742a095c36bf8e-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Invalid parameter [country]"
+          }
+  - name: Error invalid path param
+    request:
+      url: "{{url}}/general/GetTopCategories/"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 19:34:45 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d742a968b57bf8e-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The country field is required."
+              ]
+          }

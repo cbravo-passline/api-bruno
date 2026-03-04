@@ -1,0 +1,18 @@
+info:
+  name: 81. GetDataBaseUserDetail (pendiente)
+  type: http
+  seq: 82
+
+http:
+  method: POST
+  url: "{{url}}/event/GetDataBaseUserDetail"
+  headers:
+    - name: content-type
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

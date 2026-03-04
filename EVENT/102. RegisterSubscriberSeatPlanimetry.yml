@@ -1,0 +1,35 @@
+info:
+  name: 102. RegisterSubscriberSeatPlanimetry
+  type: http
+  seq: 103
+
+http:
+  method: POST
+  url: "{{url}}/event/RegisterSubscriberSeatPlanimetry"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Prueba Test\",\r
+
+      \    \"email\" : \"cbralop@gmail.com\",\r
+
+      \    \"phone\" : \"99606096\",\r
+
+      \    \"sector\" : \"4e-h0mcZ8zAU-Pdha5ZfMw@@\",\r
+
+      \    \"seat\" : \"xMOrQiChFTNybrsVJmhu2g@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

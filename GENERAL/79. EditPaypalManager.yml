@@ -1,0 +1,14 @@
+info:
+  name: 79. EditPaypalManager
+  type: http
+  seq: 80
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditPaypalManager"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,36 @@
+info:
+  name: 41. RegisterPromoter
+  type: http
+  seq: 42
+
+http:
+  method: POST
+  url: "{{url}}/general/RegisterPromoter"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: full_name
+        type: text
+        value: ariel daza 3
+      - name: email
+        type: text
+        value: ariel@passline.dev
+      - name: phone
+        type: text
+        value: "966212515"
+      - name: image
+        type: file
+        value:
+          - postman-cloud:///1ef490d9-1992-44f0-967b-d848998e924d
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,286 @@
+info:
+  name: 42. GetPurchasedTicketOfficeDetailsTotals
+  type: http
+  seq: 43
+
+http:
+  method: GET
+  url: "{{url}}/event/GetPurchasedTicketOfficeDetailsTotals/608e170b60b7fd6f11914a4ec9dfedbd"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetPurchasedTicketOfficeDetailsTotals/608e170b60b7fd6f11914a4ec9dfedbd?tipo=21267&formaPago=0&estado=0&cajero=1000"
+      method: GET
+      params:
+        - name: tipo
+          value: "21267"
+          type: query
+        - name: formaPago
+          value: "0"
+          type: query
+        - name: estado
+          value: "0"
+          type: query
+        - name: cajero
+          value: "1000"
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 19:06:43 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6bc4219fafbd39-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "cortesias": "0",
+                  "vendidas": "1",
+                  "suma_devoluciones": "0",
+                  "suma_vendidos": "5000",
+                  "total_tickets": 1,
+                  "total_monto": 5000,
+                  "sumaVendidos_formato": "$5.000.-",
+                  "sumaDevoluciones_formato": "-$0.-",
+                  "totalMonto_formato": "$5.000.-"
+              }
+          ]
+  - name: Error do not access to this event
+    request:
+      url: "{{url}}/event/GetPurchasedTicketOfficeDetailsTotals/608e170b60b7fd6f11914a4ec9dfedbd2"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 16:42:50 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6af15ef861b0e8-ATL
+        - name: Content-Encoding
+          value: gzip
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "You dont have access."
+          }
+  - name: Error invalid path params
+    request:
+      url: "{{url}}/event/GetPurchasedTicketOfficeDetailsTotals/"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 16:45:56 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6af5ea9ca8ad80-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required."
+              ]
+          }
+  - name: Error invalid path and query params
+    request:
+      url: "{{url}}/event/GetPurchasedTicketOfficeDetailsTotals/608e170b60b7fd6f11914a4ec9dfedbd?tipo=t&formaPago=t&estado=t&cajero=t"
+      method: GET
+      params:
+        - name: tipo
+          value: t
+          type: query
+        - name: formaPago
+          value: t
+          type: query
+        - name: estado
+          value: t
+          type: query
+        - name: cajero
+          value: t
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 19:00:22 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6bbad7abee6736-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The value of the tipo field must be numeric.",
+                  "The value of the estado field is not allowed, the values allowed are [0,1,2].",
+                  "The value of the formaPago field is not allowed, the values allowed are [0,1,2].",
+                  "The value of the cajero field must be numeric."
+              ]
+          }
+  - name: Error invalid params
+    request:
+      url: "{{url}}/event/GetPurchasedTicketOfficeDetailsTotals/?tipo=t&formaPago=t&estado=t&cajero=t"
+      method: GET
+      params:
+        - name: tipo
+          value: t
+          type: query
+        - name: formaPago
+          value: t
+          type: query
+        - name: estado
+          value: t
+          type: query
+        - name: cajero
+          value: t
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 22 Oct 2024 19:01:11 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6bbc08b9776736-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required.",
+                  "The value of the tipo field must be numeric.",
+                  "The value of the estado field is not allowed, the values allowed are [0,1,2].",
+                  "The value of the formaPago field is not allowed, the values allowed are [0,1,2].",
+                  "The value of the cajero field must be numeric."
+              ]
+          }

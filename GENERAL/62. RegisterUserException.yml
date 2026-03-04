@@ -1,0 +1,15 @@
+info:
+  name: 62. RegisterUserException
+  type: http
+  seq: 63
+
+http:
+  method: POST
+  url: "{{url}}/general/RegisterUserException"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

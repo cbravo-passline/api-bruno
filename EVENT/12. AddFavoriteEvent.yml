@@ -1,0 +1,133 @@
+info:
+  name: 12. AddFavoriteEvent
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{url}}/event/AddFavoriteEvent"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: "Bearer: U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GcFRERTFNVlJ3YlZCVllqbG1jV0Z5UlU4eWJDOVZlVWRaUWtveWJqSktXVVZLVW1wVFRrTllXbE5CUFE9PQ.TkVZeVMzUk9aV3BLVlVOeVp6ZzFabEoyYmxkNWNFSnNjbFZoT0ZSSE56TmhaRVV4Vms4clowNXZaejA9"
+      disabled: true
+  body:
+    type: json
+    data: "{\r\n    \"event\": 46\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/AddFavoriteEvent"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: "Bearer: U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GcFRERTFNVlJ3YlZCVllqbG1jV0Z5UlU4eWJDOVZlVWRaUWtveWJqSktXVVZLVW1wVFRrTllXbE5CUFE9PQ.TkVZeVMzUk9aV3BLVlVOeVp6ZzFabEoyYmxkNWNFSnNjbFZoT0ZSSE56TmhaRVV4Vms4clowNXZaejA9"
+          disabled: true
+      body:
+        type: json
+        data: "{\r\n    \"event\": 184627\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 19:25:25 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "15"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d3231e99eabad6b-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "result": true
+          }
+  - name: Error bad parametes
+    request:
+      url: "{{url}}/event/AddFavoriteEvent"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: "Bearer: U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GcFRERTFNVlJ3YlZCVllqbG1jV0Z5UlU4eWJDOVZlVWRaUWtveWJqSktXVVZLVW1wVFRrTllXbE5CUFE9PQ.TkVZeVMzUk9aV3BLVlVOeVp6ZzFabEoyYmxkNWNFSnNjbFZoT0ZSSE56TmhaRVV4Vms4clowNXZaejA9"
+          disabled: true
+      body:
+        type: json
+        data: "{\r\n    \"event\": \"\"\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 19:26:38 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d3233b08d6ead6b-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required.",
+                  "The value of the event field must be numeric.",
+                  "The value of the event must be greater than 0."
+              ]
+          }
+
+docs: Permite registrar un evento favorito enviando el id del evento y del usuario.

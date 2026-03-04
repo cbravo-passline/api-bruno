@@ -1,0 +1,22 @@
+name: production
+variables:
+  - name: url
+    value: https://api.passline.com/v1
+  - secret: true
+    name: Token_productor
+  - secret: true
+    name: Token_user
+  - secret: true
+    name: Token_userapp
+  - secret: true
+    name: Token_cashier
+  - secret: true
+    name: cashier_token
+  - secret: true
+    name: Token_boxoffice
+  - name: email
+    value: productor@passline.cl
+  - name: password
+    value: pass4321
+  - secret: true
+    name: Token_refresh_productor

@@ -1,0 +1,39 @@
+info:
+  name: 77. SendCourtesyTicketByDataBase (pendiente)
+  type: http
+  seq: 78
+
+http:
+  method: POST
+  url: "{{url}}/event/SendCourtesyTicketByDataBase"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: evento
+        type: text
+        value: "392104"
+      - name: tipo
+        type: text
+        value: "2253704"
+      - name: fecha_termino_cortesia
+        type: text
+        value: "'2025-09-08'"
+      - name: hora_termino
+        type: text
+        value: 21:00
+      - name: codigo_aut
+        type: text
+        value: "1078"
+      - name: id_data_base
+        type: text
+        value: "15066151"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

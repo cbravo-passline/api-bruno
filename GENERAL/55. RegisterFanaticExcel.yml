@@ -1,0 +1,24 @@
+info:
+  name: 55. RegisterFanaticExcel
+  type: http
+  seq: 56
+
+http:
+  method: POST
+  url: "{{url}}/general/RegisterFanaticExcel"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /C:/Users/cbral/Downloads/base_fanaticos.xlsx
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,264 @@
+info:
+  name: 38. GetListEventDetails
+  type: http
+  seq: 39
+
+http:
+  method: POST
+  url: "{{url}}/event/GetListEventDetails"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"events\": [\"'hola\", \"181803\"]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetListEventDetails"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"events\": [316601,303571]\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 19:23:38 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d639f89b9f61d72-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "act_lightmode": "0",
+                  "id": "316601",
+                  "pais": "chile",
+                  "nombre": "MEGAPOOL Edición 2025",
+                  "descripcion": "Blaxxbox y Nitro se reunen nuevamente para recibir el Año 2025 con una nueva edición de la Pool PArty más grande de Chile: MEGAPOOL",
+                  "itinerario": "",
+                  "slug": "megapool-edicion-2025",
+                  "md5_id": "af17e4c22dd832fa0191a7c263e562e3",
+                  "url": "https://www.passline.com/eventos/megapool-edicion-2025",
+                  "artistas": "",
+                  "fecha_inicio": "2025-01-01",
+                  "hora_inicio": "14:00:00",
+                  "fecha_termino": "2025-01-01",
+                  "hora_termino": "22:00:00",
+                  "lugar": "Ex Espacio Broadway",
+                  "streaming": "0",
+                  "streaming_cat": "0",
+                  "orden_productos": "2",
+                  "mayores": "1",
+                  "rango_edad": "18",
+                  "productor": "3863335",
+                  "act_terminos_condiciones": "0",
+                  "documento_pdf": "",
+                  "imagen": "https://imagenes.passline.com/eventos/megapool-edicion-2025-316601-img.jpg",
+                  "miniatura": "https://imagenes.passline.com/eventos/megapool-edicion-2025-316601-min.jpg",
+                  "recorte": "https://imagenes.passline.com/eventos/megapool-edicion-2025-316601-rec.jpg",
+                  "imagen_descuento": "",
+                  "banner_superior": "",
+                  "banner_inferior": "",
+                  "gallery_image": [],
+                  "gallery_miniature": [],
+                  "gallery_cutout": [],
+                  "funciones": [],
+                  "id_planimetria": "",
+                  "productos": [],
+                  "canal_venta": "0",
+                  "nominative_purchase": "0",
+                  "usa_decimales": "0",
+                  "simbolo_moneda": "$",
+                  "termino_cedula": "RUT",
+                  "cantidad_decimales": "0",
+                  "separador_decimales": ",",
+                  "separador_miles": ".",
+                  "cod_telefono": "+56",
+                  "termino_region": "Regi&oacute;n",
+                  "termino_comuna": "Regi&oacute;n",
+                  "termino_moneda": "Pesos",
+                  "termino_moneda_var": "CLP",
+                  "dias_atencion": "0",
+                  "payment_method": [],
+                  "url_video": "",
+                  "id_video": "",
+                  "host_video": "",
+                  "url_spotify": "",
+                  "id_evento_seatmap": "",
+                  "tickets": [
+                      {
+                          "id": "1814642",
+                          "nombre": "Early Bird",
+                          "descripcion": "",
+                          "precio": "15000.00",
+                          "minimo_compra": "1",
+                          "maximo_compra": "6",
+                          "disponibles": "83",
+                          "estado": "1",
+                          "fecha_inicio": "2024-10-09 00:00:00"
+                      }
+                  ],
+                  "event_sliders": []
+              },
+              {
+                  "act_lightmode": "0",
+                  "id": "303571",
+                  "pais": "chile",
+                  "nombre": "ALVARO SALAS EN PUERTO MONTT",
+                  "descripcion": "▶️ ALVARO SALAS 🔸 SABADO 04 DE ENERO ❇️ Estas entradas se acabarán muy rápido, no esperes hasta el final 😬 ❤️ Nos visitará ALVARO SALAS, El Rey del Chiste Corto con su GRAN HUMOR CLASICO con el cual conquistó el Festival de Viña del Mar en varias oportunidades. ❇️ Apertura de Salón 21:30 Hrs 💡 Show a las 22:30 Hrs",
+                  "itinerario": "",
+                  "slug": "alvaro-salas-en-puerto-montt",
+                  "md5_id": "3b3e2aa2c1bddfabf7f92f20c67deba4",
+                  "url": "https://www.passline.com/eventos/alvaro-salas-en-puerto-montt",
+                  "artistas": "",
+                  "fecha_inicio": "2025-01-04",
+                  "hora_inicio": "22:30:00",
+                  "fecha_termino": "2025-01-04",
+                  "hora_termino": "23:45:00",
+                  "lugar": "Los 3 Platos",
+                  "streaming": "0",
+                  "streaming_cat": "0",
+                  "orden_productos": "2",
+                  "mayores": "0",
+                  "rango_edad": "0",
+                  "productor": "5386684",
+                  "act_terminos_condiciones": "0",
+                  "documento_pdf": "",
+                  "imagen": "",
+                  "miniatura": "",
+                  "recorte": "",
+                  "imagen_descuento": "",
+                  "banner_superior": "https://www.passline.com/imagenes/eventos/-comp-2_12269.jpg",
+                  "banner_inferior": "",
+                  "gallery_image": [],
+                  "gallery_miniature": [],
+                  "gallery_cutout": [],
+                  "funciones": [],
+                  "id_planimetria": "",
+                  "productos": [],
+                  "canal_venta": "0",
+                  "nominative_purchase": "0",
+                  "usa_decimales": "0",
+                  "simbolo_moneda": "$",
+                  "termino_cedula": "RUT",
+                  "cantidad_decimales": "0",
+                  "separador_decimales": ",",
+                  "separador_miles": ".",
+                  "cod_telefono": "+56",
+                  "termino_region": "Regi&oacute;n",
+                  "termino_comuna": "Regi&oacute;n",
+                  "termino_moneda": "Pesos",
+                  "termino_moneda_var": "CLP",
+                  "dias_atencion": "0",
+                  "payment_method": [],
+                  "url_video": "",
+                  "id_video": "",
+                  "host_video": "",
+                  "url_spotify": "",
+                  "id_evento_seatmap": "",
+                  "tickets": [
+                      {
+                          "id": "1728001",
+                          "nombre": "Entrada General",
+                          "descripcion": "",
+                          "precio": "15000.00",
+                          "minimo_compra": "1",
+                          "maximo_compra": "6",
+                          "disponibles": "91",
+                          "estado": "1",
+                          "fecha_inicio": "2024-08-29 00:00:00"
+                      }
+                  ],
+                  "event_sliders": []
+              }
+          ]
+  - name: Error invalid params
+    request:
+      url: "{{url}}/event/GetListEventDetails"
+      method: POST
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 19:40:08 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=DbYhBlBYqA1TZ.mvxGE.MrQaPVki.pgkkmbjD1CC4fU-1729539608-1.0.1.1-sB4sU62g54_5rwGT.B7j6aG.5hoIb4577XHV7o2D9h_KuKl3304Gh05ANoxd4kVZdca_FGVBbhpZJ2kR9.1Jzw; path=/; expires=Mon, 21-Oct-24 20:10:08 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d63b7b6dfc3afc5-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The events field is required."
+              ]
+          }

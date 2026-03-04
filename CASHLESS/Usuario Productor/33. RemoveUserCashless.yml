@@ -1,0 +1,20 @@
+info:
+  name: 33. RemoveUserCashless
+  type: http
+  seq: 9
+
+http:
+  method: DELETE
+  url: "{{url}}/cashless/RemoveUserCashless"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: 93. RemoveEventGrouping
+  type: http
+  seq: 92
+
+http:
+  method: DELETE
+  url: "{{url}}/general/RemoveEventGrouping"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"group\":\"GBKzDX9xzHOhL_Y6DEPjhA@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

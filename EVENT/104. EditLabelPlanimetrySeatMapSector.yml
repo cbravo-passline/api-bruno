@@ -1,0 +1,33 @@
+info:
+  name: 104. EditLabelPlanimetrySeatMapSector
+  type: http
+  seq: 105
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditLabelPlanimetrySeatMapSector"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"sector\": \"feXBdHMvynwMEg5RQDRMbw@@\",\r
+
+      \    \"row\" : [\"1\", \"1\"],\r
+
+      \    \"column\" : [\"26\", \"27\"],\r
+
+      \    \"name\" : [\"test\", \"prueba\"]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

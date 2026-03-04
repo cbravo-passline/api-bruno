@@ -1,0 +1,24 @@
+info:
+  name: 67. GetVenueSliderData
+  type: http
+  seq: 68
+
+http:
+  method: GET
+  url: "{{url}}/general/GetVenueSliderData?lang=en&venue_slider=yVJw80QDhgEeuYT_pHUKDg@@"
+  params:
+    - name: lang
+      value: en
+      type: query
+    - name: venue_slider
+      value: yVJw80QDhgEeuYT_pHUKDg@@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

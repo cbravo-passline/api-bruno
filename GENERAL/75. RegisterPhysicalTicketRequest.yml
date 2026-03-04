@@ -1,0 +1,905 @@
+info:
+  name: 75. RegisterPhysicalTicketRequest
+  type: http
+  seq: 76
+
+http:
+  method: POST
+  url: "{{url}}/general/RegisterPhysicalTicketRequest"
+  body:
+    type: multipart-form
+    data:
+      - name: event
+        type: text
+        value: DXVHwOEpS9fNKu0JrYOXnQ@@
+      - name: event_name
+        type: text
+        value: Prueba Fpay
+      - name: event_place
+        type: text
+        value: El Lugar
+      - name: event_address
+        type: text
+        value: La dirección
+      - name: event_date
+        type: text
+        value: 2025-05-30
+      - name: event_hour
+        type: text
+        value: 16:30
+      - name: name
+        type: text
+        value: Nombre del ticket
+      - name: type
+        type: text
+        value: General, VIP, Cortesia, Cortesia VIP
+      - name: has_price
+        type: text
+        value: "1"
+        description: 1-Si, 0-No
+      - name: price
+        type: text
+        value: "20000"
+      - name: quantity
+        type: text
+        value: "100"
+      - name: dispatch_flat
+        type: text
+        value: "1"
+        description: 1-Si, 0-No
+      - name: dispatch_type
+        type: text
+        value: "0"
+        description: 1-Despacho en domicilio, 0-Retiro en Oficina Passline
+      - name: name_who_withdraws
+        type: text
+        value: Nombre quein Retira
+      - name: dispatch_region
+        type: text
+        value: "15"
+      - name: dispatch_comune
+        type: text
+        value: "101"
+      - name: dispatch_office
+        type: text
+        value: Chile express
+      - name: dispatch_email
+        type: text
+        value: test@test.com
+      - name: dispatch_address
+        type: text
+        value: Mapiu 81 Santiago Depto 104
+      - name: identity_document
+        type: text
+        value: 28095845-9
+      - name: dispatch_phone
+        type: text
+        value: "988524785"
+      - name: image
+        type: file
+        value:
+          - postman-cloud:///1efde7b2-5fda-4be0-8df5-f2beb8b25f52
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: error required param
+    request:
+      url: "{{url}}/general/RegisterPhysicalTicketRequest"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: event
+            type: text
+            value: DXVHwOEpS9fNKu0JrYOXnQ@@
+            disabled: true
+          - name: event_name
+            type: text
+            value: Prueba Fpay
+          - name: event_place
+            type: text
+            value: El Lugar
+          - name: event_address
+            type: text
+            value: La dirección
+          - name: event_date
+            type: text
+            value: 2025-05-30
+          - name: event_hour
+            type: text
+            value: 16:30test
+          - name: name
+            type: text
+            value: Nombre del ticket
+          - name: type
+            type: text
+            value: General, VIP, Cortesia, Cortesia VIP
+          - name: has_price
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: price
+            type: text
+            value: "20000"
+          - name: quantity
+            type: text
+            value: "100"
+          - name: dispatch_flat
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: dispatch_type
+            type: text
+            value: "0"
+            description: 1-Despacho en domicilio, 0-Retiro en Oficina Passline
+          - name: name_who_withdraws
+            type: text
+            value: Nombre quein Retira
+          - name: dispatch_region
+            type: text
+            value: "15"
+          - name: dispatch_comune
+            type: text
+            value: "101"
+          - name: dispatch_office
+            type: text
+            value: Chile express
+          - name: dispatch_email
+            type: text
+            value: test@test.com
+          - name: dispatch_address
+            type: text
+            value: Mapiu 81 Santiago Depto 104
+          - name: identity_document
+            type: text
+            value: 28095845-9
+          - name: dispatch_phone
+            type: text
+            value: "988524785"
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1efde7b2-5fda-4be0-8df5-f2beb8b25f52
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 30 Jan 2025 15:08:46 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 90a26115fe26ada0-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The event field is required.",
+              "timestamp": 1738249726
+          }
+  - name: error value not allowed [0,1]
+    request:
+      url: "{{url}}/general/RegisterPhysicalTicketRequest"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: event
+            type: text
+            value: DXVHwOEpS9fNKu0JrYOXnQ@@
+          - name: event_name
+            type: text
+            value: Prueba Fpay
+          - name: event_place
+            type: text
+            value: El Lugar
+          - name: event_address
+            type: text
+            value: La dirección
+          - name: event_date
+            type: text
+            value: 2025-05-30
+          - name: event_hour
+            type: text
+            value: 16:30test
+          - name: name
+            type: text
+            value: Nombre del ticket
+          - name: type
+            type: text
+            value: General, VIP, Cortesia, Cortesia VIP
+          - name: has_price
+            type: text
+            value: 1test
+            description: 1-Si, 0-No
+          - name: price
+            type: text
+            value: "20000"
+          - name: quantity
+            type: text
+            value: "100"
+          - name: dispatch_flat
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: dispatch_type
+            type: text
+            value: "0"
+            description: 1-Despacho en domicilio, 0-Retiro en Oficina Passline
+          - name: name_who_withdraws
+            type: text
+            value: Nombre quein Retira
+          - name: dispatch_region
+            type: text
+            value: "15"
+          - name: dispatch_comune
+            type: text
+            value: "101"
+          - name: dispatch_office
+            type: text
+            value: Chile express
+          - name: dispatch_email
+            type: text
+            value: test@test.com
+          - name: dispatch_address
+            type: text
+            value: Mapiu 81 Santiago Depto 104
+          - name: identity_document
+            type: text
+            value: 28095845-9
+          - name: dispatch_phone
+            type: text
+            value: "988524785"
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1efde7b2-5fda-4be0-8df5-f2beb8b25f52
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 30 Jan 2025 15:09:44 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 90a2627bd9c4ada0-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The value of the has_price field is not allowed, the values allowed are [0,1].",
+              "timestamp": 1738249784
+          }
+  - name: error numeric param
+    request:
+      url: "{{url}}/general/RegisterPhysicalTicketRequest"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: event
+            type: text
+            value: DXVHwOEpS9fNKu0JrYOXnQ@@
+          - name: event_name
+            type: text
+            value: Prueba Fpay
+          - name: event_place
+            type: text
+            value: El Lugar
+          - name: event_address
+            type: text
+            value: La dirección
+          - name: event_date
+            type: text
+            value: 2025-05-30
+          - name: event_hour
+            type: text
+            value: 16:30
+          - name: name
+            type: text
+            value: Nombre del ticket
+          - name: type
+            type: text
+            value: General, VIP, Cortesia, Cortesia VIP
+          - name: has_price
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: price
+            type: text
+            value: 20000t
+          - name: quantity
+            type: text
+            value: 100t
+          - name: dispatch_flat
+            type: text
+            value: 1t
+            description: 1-Si, 0-No
+          - name: dispatch_type
+            type: text
+            value: "0"
+            description: 1-Despacho en domicilio, 0-Retiro en Oficina Passline
+          - name: name_who_withdraws
+            type: text
+            value: Nombre quein Retira
+          - name: dispatch_region
+            type: text
+            value: "15"
+          - name: dispatch_comune
+            type: text
+            value: "101"
+          - name: dispatch_office
+            type: text
+            value: Chile express
+          - name: dispatch_email
+            type: text
+            value: test@test.com
+          - name: dispatch_address
+            type: text
+            value: Mapiu 81 Santiago Depto 104
+          - name: identity_document
+            type: text
+            value: 28095845-9
+          - name: dispatch_phone
+            type: text
+            value: "988524785"
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1efde7b2-5fda-4be0-8df5-f2beb8b25f52
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 30 Jan 2025 15:16:48 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 90a26cd95885455a-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The value of the quantity field must be numeric.",
+              "timestamp": 1738250208
+          }
+  - name: error greather than 0
+    request:
+      url: "{{url}}/general/RegisterPhysicalTicketRequest"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: event
+            type: text
+            value: DXVHwOEpS9fNKu0JrYOXnQ@@
+          - name: event_name
+            type: text
+            value: Prueba Fpay
+          - name: event_place
+            type: text
+            value: El Lugar
+          - name: event_address
+            type: text
+            value: La dirección
+          - name: event_date
+            type: text
+            value: 2025-05-30
+          - name: event_hour
+            type: text
+            value: 16:30
+          - name: name
+            type: text
+            value: Nombre del ticket
+          - name: type
+            type: text
+            value: General, VIP, Cortesia, Cortesia VIP
+          - name: has_price
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: price
+            type: text
+            value: 20000t
+          - name: quantity
+            type: text
+            value: "0"
+          - name: dispatch_flat
+            type: text
+            value: 1t
+            description: 1-Si, 0-No
+          - name: dispatch_type
+            type: text
+            value: "0"
+            description: 1-Despacho en domicilio, 0-Retiro en Oficina Passline
+          - name: name_who_withdraws
+            type: text
+            value: Nombre quein Retira
+          - name: dispatch_region
+            type: text
+            value: "15"
+          - name: dispatch_comune
+            type: text
+            value: "101"
+          - name: dispatch_office
+            type: text
+            value: Chile express
+          - name: dispatch_email
+            type: text
+            value: test@test.com
+          - name: dispatch_address
+            type: text
+            value: Mapiu 81 Santiago Depto 104
+          - name: identity_document
+            type: text
+            value: 28095845-9
+          - name: dispatch_phone
+            type: text
+            value: "988524785"
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1efde7b2-5fda-4be0-8df5-f2beb8b25f52
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 30 Jan 2025 15:17:20 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 90a26da06d29455a-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The value of the quantity must be greater than 0.",
+              "timestamp": 1738250240
+          }
+  - name: error email format
+    request:
+      url: "{{url}}/general/RegisterPhysicalTicketRequest"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: event
+            type: text
+            value: DXVHwOEpS9fNKu0JrYOXnQ@@
+          - name: event_name
+            type: text
+            value: Prueba Fpay
+          - name: event_place
+            type: text
+            value: El Lugar
+          - name: event_address
+            type: text
+            value: La dirección
+          - name: event_date
+            type: text
+            value: 2025-05-30
+          - name: event_hour
+            type: text
+            value: 16:30
+          - name: name
+            type: text
+            value: Nombre del ticket
+          - name: type
+            type: text
+            value: General, VIP, Cortesia, Cortesia VIP
+          - name: has_price
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: price
+            type: text
+            value: "20000"
+          - name: quantity
+            type: text
+            value: "10"
+          - name: dispatch_flat
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: dispatch_type
+            type: text
+            value: "0"
+            description: 1-Despacho en domicilio, 0-Retiro en Oficina Passline
+          - name: name_who_withdraws
+            type: text
+            value: Nombre quein Retira
+          - name: dispatch_region
+            type: text
+            value: "15"
+          - name: dispatch_comune
+            type: text
+            value: "101"
+          - name: dispatch_office
+            type: text
+            value: Chile express
+          - name: dispatch_email
+            type: text
+            value: tes't@test.com
+          - name: dispatch_address
+            type: text
+            value: Mapiu 81 Santiago Depto 104
+          - name: identity_document
+            type: text
+            value: 28095845-9
+          - name: dispatch_phone
+            type: text
+            value: "988524785"
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1efde7b2-5fda-4be0-8df5-f2beb8b25f52
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 30 Jan 2025 15:18:18 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 90a26f0b8ce8455a-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The value of the dispatch_email field must be email format.",
+              "timestamp": 1738250298
+          }
+  - name: error to access event
+    request:
+      url: "{{url}}/general/RegisterPhysicalTicketRequest"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: event
+            type: text
+            value: DXVHwOEpS9fNKu0JrYOXnQ@@
+          - name: event_name
+            type: text
+            value: Prueba Fpay
+          - name: event_place
+            type: text
+            value: El Lugar
+          - name: event_address
+            type: text
+            value: La dirección
+          - name: event_date
+            type: text
+            value: 2025-05-30
+          - name: event_hour
+            type: text
+            value: 16:30
+          - name: name
+            type: text
+            value: Nombre del ticket
+          - name: type
+            type: text
+            value: General, VIP, Cortesia, Cortesia VIP
+          - name: has_price
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: price
+            type: text
+            value: "20000"
+          - name: quantity
+            type: text
+            value: "10"
+          - name: dispatch_flat
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: dispatch_type
+            type: text
+            value: "0"
+            description: 1-Despacho en domicilio, 0-Retiro en Oficina Passline
+          - name: name_who_withdraws
+            type: text
+            value: Nombre quein Retira
+          - name: dispatch_region
+            type: text
+            value: "15"
+          - name: dispatch_comune
+            type: text
+            value: "101"
+          - name: dispatch_office
+            type: text
+            value: Chile express
+          - name: dispatch_email
+            type: text
+            value: test@test.com
+          - name: dispatch_address
+            type: text
+            value: Mapiu 81 Santiago Depto 104
+          - name: identity_document
+            type: text
+            value: 28095845-9
+          - name: dispatch_phone
+            type: text
+            value: "988524785"
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1efd8f9b-2b81-4700-bb5a-05effdcdf35b
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 30 Jan 2025 15:19:15 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 90a2706d4d66455a-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "You don have access",
+              "timestamp": 1738250355
+          }
+  - name: error image too tall
+    request:
+      url: "{{url}}/general/RegisterPhysicalTicketRequest"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: event
+            type: text
+            value: 7rDJvtKIx6AiEXHlipJkRQ@@@@
+          - name: event_name
+            type: text
+            value: Prueba Fpay
+          - name: event_place
+            type: text
+            value: El Lugar
+          - name: event_address
+            type: text
+            value: La dirección
+          - name: event_date
+            type: text
+            value: 2025-05-30
+          - name: event_hour
+            type: text
+            value: 16:30
+          - name: name
+            type: text
+            value: Nombre del ticket
+          - name: type
+            type: text
+            value: General, VIP, Cortesia, Cortesia VIP
+          - name: has_price
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: price
+            type: text
+            value: "20000"
+          - name: quantity
+            type: text
+            value: "10"
+          - name: dispatch_flat
+            type: text
+            value: "1"
+            description: 1-Si, 0-No
+          - name: dispatch_type
+            type: text
+            value: "0"
+            description: 1-Despacho en domicilio, 0-Retiro en Oficina Passline
+          - name: name_who_withdraws
+            type: text
+            value: Nombre quein Retira
+          - name: dispatch_region
+            type: text
+            value: "15"
+          - name: dispatch_comune
+            type: text
+            value: "101"
+          - name: dispatch_office
+            type: text
+            value: Chile express
+          - name: dispatch_email
+            type: text
+            value: test@test.com
+          - name: dispatch_address
+            type: text
+            value: Mapiu 81 Santiago Depto 104
+          - name: identity_document
+            type: text
+            value: 28095845-9
+          - name: dispatch_phone
+            type: text
+            value: "988524785"
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1efd8f9b-2b81-4700-bb5a-05effdcdf35b
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 30 Jan 2025 15:21:40 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 90a273fbf8c8b0d9-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Image too tall.",
+              "timestamp": 1738250500
+          }

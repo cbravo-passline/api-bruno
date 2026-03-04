@@ -1,0 +1,233 @@
+info:
+  name: 14. GetPaymentMethodByCountryEvent
+  type: http
+  seq: 15
+
+http:
+  method: GET
+  url: "{{url}}/general/GetPaymentMethodByCountryEvent/6528"
+  headers:
+    - name: content-type
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response by event id
+    request:
+      url: "{{url}}/general/GetPaymentMethodByCountryEvent/6528"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 24 Oct 2024 18:22:54 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7bfeb3998cbf8c-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "alias": "mp_tdc_uru",
+                  "nombre": "MercadoPago TDC",
+                  "porcentaje_cargo": "0.00",
+                  "cargo_adicional": "0.00",
+                  "cargo_minimo": "500.00"
+              },
+              {
+                  "alias": "mp_efectivo_uru",
+                  "nombre": "MercadoPago Efectivo",
+                  "porcentaje_cargo": "0.00",
+                  "cargo_adicional": "0.00",
+                  "cargo_minimo": "0.00"
+              }
+          ]
+  - name: Success response by country
+    request:
+      url: "{{url}}/general/GetPaymentMethodByCountryEvent/uruguay"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 24 Oct 2024 18:23:29 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7bff8e7cf4bf8c-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "alias": "mp_tdc_uru",
+                  "nombre": "MercadoPago TDC",
+                  "porcentaje_cargo": "0.00",
+                  "cargo_adicional": "0.00",
+                  "cargo_minimo": "500.00"
+              },
+              {
+                  "alias": "mp_efectivo_uru",
+                  "nombre": "MercadoPago Efectivo",
+                  "porcentaje_cargo": "0.00",
+                  "cargo_adicional": "0.00",
+                  "cargo_minimo": "0.00"
+              },
+              {
+                  "alias": "mp_cuotas_uru",
+                  "nombre": "MercadoPago 12 Cuotas",
+                  "porcentaje_cargo": "0.00",
+                  "cargo_adicional": "0.00",
+                  "cargo_minimo": "0.00"
+              },
+              {
+                  "alias": "prometeo",
+                  "nombre": "Prometeo",
+                  "porcentaje_cargo": "0.00",
+                  "cargo_adicional": "0.00",
+                  "cargo_minimo": "0.00"
+              },
+              {
+                  "alias": "ptos_passline",
+                  "nombre": "Puntos Passline",
+                  "porcentaje_cargo": "0.00",
+                  "cargo_adicional": "0.00",
+                  "cargo_minimo": "0.00"
+              }
+          ]
+  - name: Success response by country empty data
+    request:
+      url: "{{url}}/general/GetPaymentMethodByCountryEvent/uruguay2"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 24 Oct 2024 18:24:53 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "2"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7c019be8e4bf8c-ATL
+      body:
+        type: json
+        data: "[]"
+  - name: Success response no data
+    request:
+      url: "{{url}}/general/GetPaymentMethodByCountryEvent/123456"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 24 Oct 2024 18:42:00 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "5"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7c1ab07a658bb6-ATL
+      body:
+        type: json
+        data: "false"
+
+docs: Trae el detalle de un evento por su id.

@@ -1,0 +1,21 @@
+info:
+  name: 93. GetPlanimetrySectorData
+  type: http
+  seq: 94
+
+http:
+  method: GET
+  url: "{{url}}/event/GetPlanimetrySectorData?sector=aIxMPLHwOGQoIUYGKFYcPzB56B0uxxn7BCkW7hIO8Lg@"
+  params:
+    - name: sector
+      value: aIxMPLHwOGQoIUYGKFYcPzB56B0uxxn7BCkW7hIO8Lg@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

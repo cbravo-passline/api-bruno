@@ -1,0 +1,26 @@
+info:
+  name: 131. EditFacebookPixel
+  type: http
+  seq: 132
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditFacebookPixel"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event_id\":\"3461d7bce31452bf240f6a3076683d3c\",\r
+
+      \    \"facebook_pixel\": \"pruebatestttt\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

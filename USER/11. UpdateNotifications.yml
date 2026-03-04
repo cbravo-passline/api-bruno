@@ -1,0 +1,119 @@
+info:
+  name: 11. UpdateNotifications
+  type: http
+  seq: 12
+
+http:
+  method: PUT
+  url: "{{url}}/user/UpdateNotification"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r\n    \"notification\": 5555\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/user/UpdateNotification"
+      method: PUT
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r\n    \"notification\": 5555\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 16:43:45 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "34"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d2907baca3fb094-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "status": "SUCCESS",
+              "result": true
+          }
+  - name: Error token expired
+    request:
+      url: "{{url}}/user/UpdateNotification"
+      method: PUT
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r\n    \"notification\": 5555\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 16:54:35 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=1dH0TFM2EFLc2_23am3igL9yj2GCtjhHqwLFmfmz2dw-1728924875-1.0.1.1-2Xsf7bVDZ_Gqbqd0bCvn042lJAKrggsAfDLM525DwnTzSEGxRdMP_nyLPoEDXmr.m8KRzKjUv.5d0JfgCSLFMQ; path=/; expires=Mon, 14-Oct-24 17:24:35 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d2917947abcbf90-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "token expired"
+          }

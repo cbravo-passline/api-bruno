@@ -1,0 +1,41 @@
+info:
+  name: 122. EditEventSocialNetworks
+  type: http
+  seq: 123
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditEventSocialNetworks"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"url_web\": \"\",\r
+
+      \    \"url_twitter\": \"\",\r
+
+      \    \"url_instagram\": \"\",\r
+
+      \    \"cod_aut\": \"7187\",\r
+
+      \    \"event_hash\": \"9ddd60b02e86c52e50c81a8752f24f5f\",\r
+
+      \    \"allow_function_update\": \"0\",\r
+
+      \    \"authorize_code\": \"7187\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

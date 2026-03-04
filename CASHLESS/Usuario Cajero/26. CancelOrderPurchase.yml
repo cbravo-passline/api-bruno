@@ -1,0 +1,22 @@
+info:
+  name: 26. CancelOrderPurchase
+  type: http
+  seq: 7
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/CancelOrderPurchase"
+  body:
+    type: json
+    data: "{\r\n    \"order_id\":\"6\"\r\n}"
+  auth:
+    type: apikey
+    key: Cashier-Token
+    value: "{{cashier_token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

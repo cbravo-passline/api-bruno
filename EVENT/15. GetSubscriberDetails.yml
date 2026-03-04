@@ -1,0 +1,181 @@
+info:
+  name: 15. GetSubscriberDetails
+  type: http
+  seq: 16
+
+http:
+  method: GET
+  url: "{{url}}/event/GetSubscriberDetails/184669"
+  headers:
+    - name: Content-Type
+      value: application/json
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetSubscriberDetails/184669"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 20:02:02 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=xBQ5ZZ7FEwAbKueTuOfDKaVUahVAlQSuv_O5nLACNcA-1729022522-1.0.1.1-XrpT5uxR42N5ZwzTF643WuRuqWuSoikzR2.QJLn_J9_z8xqmYP.AfO5WLADj651sNq444_KipIeumvpo9wtT4A; path=/; expires=Tue, 15-Oct-24 20:32:02 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d32678b4af9b007-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "42461",
+                  "nombre": "Luis chacon",
+                  "rut": "260188852",
+                  "email": "lchacon@passline.cl",
+                  "telefono": "945234234",
+                  "tipo_operacion": "1",
+                  "tipo_entrada": "Prueba",
+                  "asiento": "",
+                  "socio": "0",
+                  "max_tickets_compra": "0",
+                  "id_evento": null,
+                  "id_producto": null,
+                  "id_asiento": null,
+                  "fecha_ingreso": null,
+                  "fila": null,
+                  "columna": null,
+                  "ticket_solicitado": null,
+                  "nombre_producto": null,
+                  "nombre_asiento": null
+              },
+              {
+                  "id": "49817",
+                  "nombre": "Usuario Abonado Prueba 2",
+                  "rut": "256107112",
+                  "email": "test@test.com",
+                  "telefono": "123456789",
+                  "tipo_operacion": "1",
+                  "tipo_entrada": "Prueba desde API 2",
+                  "asiento": "Fila 2",
+                  "socio": "0",
+                  "max_tickets_compra": "0",
+                  "id_evento": null,
+                  "id_producto": null,
+                  "id_asiento": null,
+                  "fecha_ingreso": null,
+                  "fila": null,
+                  "columna": null,
+                  "ticket_solicitado": null,
+                  "nombre_producto": null,
+                  "nombre_asiento": null
+              },
+              {
+                  "id": "67164",
+                  "nombre": "Ricardo Dev Prueba2",
+                  "rut": "1111111",
+                  "email": "rfigueroa@passline.dev",
+                  "telefono": "999999999",
+                  "tipo_operacion": "1",
+                  "tipo_entrada": "Prueba",
+                  "asiento": "Prueba",
+                  "socio": "0",
+                  "max_tickets_compra": "0",
+                  "id_evento": null,
+                  "id_producto": null,
+                  "id_asiento": null,
+                  "fecha_ingreso": null,
+                  "fila": null,
+                  "columna": null,
+                  "ticket_solicitado": null,
+                  "nombre_producto": null,
+                  "nombre_asiento": null
+              }
+          ]
+  - name: Error bad paratemeters
+    request:
+      url: "{{url}}/event/GetSubscriberDetails/1"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 20:10:43 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d327442ab5cb029-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required.",
+                  "The value of the event field must be numeric.",
+                  "The value of the event must be greater than 0."
+              ]
+          }
+
+docs: Devuelve una lista de todos los abonados de un productor con su detalle referente al evento

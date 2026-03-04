@@ -1,0 +1,72 @@
+info:
+  name: 34.  GetConfigurationDesh
+  type: http
+  seq: 35
+
+http:
+  method: GET
+  url: "{{url}}/general/GetConfigurationDesh"
+  headers:
+    - name: Content-Type
+      value: application/json
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/GetConfigurationDesh"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 29 Oct 2024 17:00:57 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8da4b98b39c7bf9d-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "deshabilitar_cortesias": "0",
+                  "deshabilitar_compras": "0",
+                  "deshabilitar_crear_usuarios": "0",
+                  "deshabilitar_crear_eventos": "0",
+                  "deshabilitar_crear_devoluciones": "0",
+                  "deshabilitar_perfil_usuario": "0",
+                  "deshabilitar_efectivo_rrpp": "0"
+              }
+          ]

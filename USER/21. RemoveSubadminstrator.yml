@@ -1,0 +1,177 @@
+info:
+  name: 21. RemoveSubadminstrator
+  type: http
+  seq: 22
+
+http:
+  method: DELETE
+  url: "{{url}}/user/RemoveSubadministrator"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"subId\": \"DL_Z842o6pjASWOGAWS14JWe4XqjiVRrK3b0m1jdTGo@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error subscriber not found
+    request:
+      url: "{{url}}/user/RemoveSubscriber"
+      method: DELETE
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"subscriber\": 4352588888\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 18:53:16 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d29c5739b060d1a-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "The subscriber doesn't exist."
+          }
+  - name: Success response
+    request:
+      url: "{{url}}/user/RemoveSubscriber"
+      method: DELETE
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r\n    \"subscriber\": 42461\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 18:53:41 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d29c60d0e9f0d1a-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "success",
+              "message": "The subscriber was successfully removed!."
+          }
+  - name: Error token expired
+    request:
+      url: "{{url}}/user/RemoveSubscriber"
+      method: DELETE
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"subscriber\": 4352588888\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 18:57:24 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=lq6k4esxY6v66NFXyTsb_E..cOdu8oQ6t1JfJEV_MQo-1728932244-1.0.1.1-7EVdR9onolalOJdiDglEOUDkTUkdBRq6n2On59xOyxQ1RvA7MFi_FHDu8gy1DVdFkrRDOkvzVRklS8u8j4kBaw; path=/; expires=Mon, 14-Oct-24 19:27:24 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d29cb802939b0e7-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "token expired"
+          }
+
+docs: Elimina un abonado por id de abonado que pertenece a un productor

@@ -1,0 +1,14 @@
+info:
+  name: 76. GetDeviceList
+  type: http
+  seq: 77
+
+http:
+  method: GET
+  url: "{{url}}/general/GetDeviceList"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

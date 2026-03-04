@@ -1,0 +1,30 @@
+info:
+  name: 32. EditTicketDiscount
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{url}}/cashier/EditTicketDiscount"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"ticketdiscount\":\"X4J7KmBZY6Mv7vqn2KAHfw@@\",\r
+
+      \    \"name\":\"Edit API test 2\",\r
+
+      \    \"discount_percentage\":21,\r
+
+      \    \"event\":\"SYD6ioma-dN7AByQzghFIQ@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

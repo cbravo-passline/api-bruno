@@ -1,0 +1,42 @@
+info:
+  name: 91. EditPlanimetry
+  type: http
+  seq: 92
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditPlanimetry"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: planimetria deddd prueba244
+      - name: description
+        type: text
+        value: esta es una prueba de planimetria
+      - name: image
+        type: file
+        value:
+          - /C:/Users/cbral/Downloads/414x497.png
+      - name: saleType
+        type: text
+        value: "1"
+      - name: escenaryType
+        type: text
+        value: "1"
+      - name: planimetryId
+        type: text
+        value: hI44JEWgJ4m8TxDK7etNBQ@@
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

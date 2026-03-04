@@ -1,0 +1,20 @@
+info:
+  name: 5. CheckCreatedPin
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{url}}/cashless/CheckCreatedPin"
+  headers:
+    - name: Content-Type
+      value: application/json
+  auth:
+    type: bearer
+    token: "{{Token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

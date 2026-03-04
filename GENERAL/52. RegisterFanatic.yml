@@ -1,0 +1,14 @@
+info:
+  name: 52. RegisterFanatic
+  type: http
+  seq: 53
+
+http:
+  method: POST
+  url: "{{url}}/general/RegisterFanatic"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

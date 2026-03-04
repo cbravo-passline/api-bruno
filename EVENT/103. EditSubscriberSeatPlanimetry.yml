@@ -1,0 +1,37 @@
+info:
+  name: 103. EditSubscriberSeatPlanimetry
+  type: http
+  seq: 104
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditSubscriberSeatPlanimetry"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Prueba Test\",\r
+
+      \    \"email\" : \"cbralop@gmail.comm\",\r
+
+      \    \"phone\" : \"99606096\",\r
+
+      \    \"sector\" : \"4e-h0mcZ8zAU-Pdha5ZfMw@@\",\r
+
+      \    \"seat\" : \"xMOrQiChFTNybrsVJmhu2g@@\",\r
+
+      \    \"subscriber\": \"yVJw80QDhgEeuYT_pHUKDg@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

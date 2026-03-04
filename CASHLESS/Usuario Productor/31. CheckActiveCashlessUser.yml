@@ -1,0 +1,21 @@
+info:
+  name: 31. CheckActiveCashlessUser
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{url}}/cashless/CheckActiveCashlessUser?email=ariel@passline.dev"
+  params:
+    - name: email
+      value: ariel@passline.dev
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

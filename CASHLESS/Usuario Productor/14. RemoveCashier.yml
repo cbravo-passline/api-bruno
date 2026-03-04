@@ -1,0 +1,25 @@
+info:
+  name: 14. RemoveCashier
+  type: http
+  seq: 2
+
+http:
+  method: DELETE
+  url: "{{url}}/cashless/RemoveCashier"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: User-Agent
+      value: Passline-PHP
+  body:
+    type: json
+    data: "{\r\n    \"cashier\":12\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

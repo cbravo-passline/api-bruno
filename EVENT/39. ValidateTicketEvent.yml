@@ -1,0 +1,138 @@
+info:
+  name: 39. ValidateTicketEvent
+  type: http
+  seq: 40
+
+http:
+  method: PUT
+  url: "{{url}}/event/ValidateTicketEvent/"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event\" : \"608e170b60b7fd6f11914a4ec9dfedbd\",\r
+
+      \    \"purchase\" : \"533589\",\r
+
+      \    \"data\" : \"3111620\",\r
+
+      \    \"type\" : 4\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success not validated
+    request:
+      url: "{{url}}/event/ValidateTicketEvent/"
+      method: PUT
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\" : \"3461d7bce31452bf240f6a3076683d3c\",\r
+
+          \    \"data\" : \"49225524\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 19:46:14 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d63c0a318a4c027-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "success",
+              "message": "Tickets not validated"
+          }
+  - name: Error invalid params
+    request:
+      url: "{{url}}/event/ValidateTicketEvent/"
+      method: PUT
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 19:47:07 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d63c1f24d98c027-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required.",
+                  "The data field is required."
+              ]
+          }
+
+docs: Permite traer los etickets de un usuario registrado, se envía el token.

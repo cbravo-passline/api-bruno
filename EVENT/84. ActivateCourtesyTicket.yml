@@ -1,0 +1,47 @@
+info:
+  name: 84. ActivateCourtesyTicket
+  type: http
+  seq: 85
+
+http:
+  method: POST
+  url: "{{url}}/event/ActivateCourtesyTicket"
+  body:
+    type: multipart-form
+    data:
+      - name: evento
+        type: text
+        value: dd799ee86f675bceb4ba56f01313a364
+      - name: tipo
+        type: text
+        value: "30655"
+      - name: cantidad
+        type: text
+        value: "1"
+      - name: nombre
+        type: text
+        value: ociel
+      - name: email
+        type: text
+        value: ociel@passline.dev
+      - name: fecha_termino_cortesia
+        type: text
+        value: 2025-04-30
+      - name: hora_termino
+        type: text
+        value: 21:01
+      - name: codigo_aut
+        type: text
+        value: "3568"
+      - name: rut
+        type: text
+        value: "0"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

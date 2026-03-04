@@ -1,0 +1,197 @@
+info:
+  name: 6. GetBillboardByLocation
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/event/GetBillboardByLocation"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"type\": 0,\r
+
+      \    \"country\": \"argentina\",\r
+
+      \    \"region\": 2,\r
+
+      \    \"commune\": 5001,\r
+
+      \    \"limit\":700,\r
+
+      \    \"start_date\":\"2022-12-26 00:00:00\",\r
+
+      \    \"end_date\":\"2023-01-26 23:59:59\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetBillboardByLocation"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"type\": 0,\r
+
+          \    \"country\": \"argentina\",\r
+
+          \    \"region\": 2,\r
+
+          \    \"commune\": 5001,\r
+
+          \    \"limit\":1,\r
+
+          \    \"start_date\":\"2022-12-26 00:00:00\",\r
+
+          \    \"end_date\":\"2025-01-26 23:59:59\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 01:58:26 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d2c343ffcdcbf7a-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "act_fullhome": "1",
+                  "id": "316268",
+                  "nombre": "BAR PARA FIESTAS PRIVADAS",
+                  "url": "https://www.passline.com/eventos/bar-para-fiestas-privadas-316268",
+                  "slug": "bar-para-fiestas-privadas-316268",
+                  "artistas": "",
+                  "fecha_inicio": "2024-10-14",
+                  "hora_inicio": "11:00:00",
+                  "fecha_termino": "2024-10-15",
+                  "hora_termino": "04:00:00",
+                  "promocion": "",
+                  "lugar": "VARIAS LOCACIONES",
+                  "streaming": "0",
+                  "streaming_cat": "0",
+                  "act_promo_label": "1",
+                  "comuna": "5001",
+                  "nombre_communa": "C.A.B.A.",
+                  "region": "2",
+                  "nombre_region": "Capital Federal",
+                  "dias_atencion": "0",
+                  "precio_min": "0.00",
+                  "productor": "3150425",
+                  "miniatura": "https://imagenes.passline.com/eventos/bar-para-fiestas-privadas-316268-min.jpg",
+                  "recorte": "https://imagenes.passline.com/eventos/bar-para-fiestas-privadas-316268-rec.jpg",
+                  "tiene_funciones": "0",
+                  "tiene_planimetria": "0",
+                  "agotado": "0",
+                  "disponibles": "200",
+                  "category_id": "",
+                  "category_name": "",
+                  "usa_decimales": "0",
+                  "simbolo_moneda": "$",
+                  "termino_cedula": "DNI",
+                  "cantidad_decimales": "0",
+                  "sep_decimales": ",",
+                  "sep_miles": ".",
+                  "canal_venta": "0",
+                  "formato_hora": "24",
+                  "venta_externa": "0"
+              }
+          ]
+  - name: Error bar parameters
+    request:
+      url: "{{url}}/event/GetBillboardByLocation"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 01:58:55 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d2c34f14915bf7a-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The type field is required.",
+                  "The country field is required.",
+                  "The region field is required.",
+                  "The commune field is required."
+              ]
+          }
+
+docs: Trae un json con los datos de un evento por los datos de un lugar.

@@ -1,0 +1,21 @@
+info:
+  name: 95. RemovePlanimetrySector
+  type: http
+  seq: 96
+
+http:
+  method: DELETE
+  url: "{{url}}/event/RemovePlanimetrySector?sector=TEBzsg5jEYo7hOnnTlNamw@@"
+  params:
+    - name: sector
+      value: TEBzsg5jEYo7hOnnTlNamw@@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

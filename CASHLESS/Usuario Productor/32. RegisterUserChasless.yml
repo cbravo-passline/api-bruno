@@ -1,0 +1,24 @@
+info:
+  name: 32. RegisterUserChasless
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/cashless/RegisterUserCashless"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\":\"ariel2@passline.dev\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

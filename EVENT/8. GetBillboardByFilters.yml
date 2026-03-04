@@ -1,0 +1,227 @@
+info:
+  name: 8. GetBillboardByFilters
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/event/GetBillboardByFilters"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"country\": \"mexico\",\r
+
+      \    \"type\": 0,\r
+
+      \    \"tag_id\": \"\",\r
+
+      \    \"tag\": null,\r
+
+      \    \"limit\": \"100\",\r
+
+      \    \"offset\": \"1\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetBillboardByFilters"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"commune\": \"\",\r
+
+          \    \"communeNum\": \"\",\r
+
+          \    \"country\": \"chile\",\r
+
+          \    \"end_date\": \"\",\r
+
+          \    \"region\": \"\",\r
+
+          \    \"start_date\": \"\",\r
+
+          \    \"tag\": null,\r
+
+          \    \"tag_id\": \"\",\r
+
+          \    \"text\": \"laro\",\r
+
+          \    \"limit\": \"0,300\",\r
+
+          \    \"type\": 0\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 02:38:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=EoeNLbL1TJE8b1VZpILZD6MHaSV3T1YVtyL3iQSv_C8-1728959938-1.0.1.1-DCB2ZW1jY9bsGwk2jW1PvBqbUNVJdGbUXmLzDtb0k6V_8uo_DRsRHBo.ldbgLrPAfwydeLNCQt3NGFPuws8Pig; path=/; expires=Tue, 15-Oct-24 03:08:58 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d2c6fa0d99e673d-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "act_fullhome": "0",
+                  "id": "288926",
+                  "nombre": "MAULE MUSIC - LOS FABULOSOS CADILLACS - PARQUE RÍO CLARO, TALCA",
+                  "url": "https://www.passline.com/eventos/maule-music-los-fabulosos-cadillacs-parque-rio-claro-talca",
+                  "slug": "maule-music-los-fabulosos-cadillacs-parque-rio-claro-talca",
+                  "artistas": "Los Fabulosos Cadillacs",
+                  "fecha_inicio": "2024-12-13",
+                  "hora_inicio": "16:00:00",
+                  "fecha_termino": "2024-12-13",
+                  "hora_termino": "23:45:00",
+                  "promocion": "",
+                  "lugar": "Parque Rio Claro, Talca",
+                  "streaming": "0",
+                  "streaming_cat": "0",
+                  "act_promo_label": "1",
+                  "comuna": "710",
+                  "nombre_communa": "Talca",
+                  "region": "7",
+                  "nombre_region": "VII Regi&oacute;n del Maule",
+                  "dias_atencion": "0",
+                  "precio_min": "25500.00",
+                  "productor": "2065284",
+                  "miniatura": "https://imagenes.passline.com/eventos/-400878-min.jpg",
+                  "recorte": "https://imagenes.passline.com/eventos/-400878-rec.jpg",
+                  "tiene_funciones": "0",
+                  "tiene_planimetria": "1",
+                  "agotado": "0",
+                  "disponibles": "6068",
+                  "category_id": "0",
+                  "category_name": "",
+                  "usa_decimales": "0",
+                  "simbolo_moneda": "$",
+                  "termino_cedula": "RUT",
+                  "cantidad_decimales": "0",
+                  "sep_decimales": ",",
+                  "sep_miles": ".",
+                  "canal_venta": "1",
+                  "formato_hora": "24",
+                  "venta_externa": "0"
+              }
+          ]
+  - name: Error bad response
+    request:
+      url: "{{url}}/event/GetBillboardByFilters"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \r
+
+          \    \"communeNum\": \"\",\r
+
+          \    \"commune\": \"1301\",\r
+
+          \    \"region\": \"\",\r
+
+          \    \"end_date\": \"f\",\r
+
+          \    \"start_date\": \"f\",\r
+
+          \    \"tag\": \"test\",\r
+
+          \    \"tag_id\": \"\",\r
+
+          \    \"text\": \"claro\",\r
+
+          \    \"limit\": \"0,300t\",\r
+
+          \    \"type\": 0\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 16:53:54 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d3153f47ab744ef-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The country field is required.",
+                  "The value of the limit must be in expected format /^[\\d]+,[\\d]+$/.",
+                  "The value of the start_date field must be date format 'Y-m-d H:i:s'.",
+                  "The value of the end_date field must be date format 'Y-m-d H:i:s'."
+              ]
+          }
+
+docs: Deveuelve un json con eventos por distintos filtros, incluyendo uno de texto en general que valida con nombre, comuna, nombre y artistas.

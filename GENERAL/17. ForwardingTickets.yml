@@ -1,0 +1,149 @@
+info:
+  name: 17. ForwardingTickets
+  type: http
+  seq: 18
+
+http:
+  method: POST
+  url: "{{url}}/general/ForwardingTickets"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Cristian Bravo\",\r
+
+      \    \"email\": \"ariel@passline.dev\",\r
+
+      \    \"rut\": \"15345698-2\",\r
+
+      \    \"purchase\": \"87336392\",\r
+
+      \    \"ticket\": \"107086446\"\r
+
+      }\r\n"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error no access to tickets
+    request:
+      url: "{{url}}/general/ForwardingTickets"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\": \"Test Test\",\r
+
+          \    \"email\": \"ariel.daza.develpment@gmail.com\",\r
+
+          \    \"purchase\": \"42349194\",\r
+
+          \    \"ticket\": \"12345678\"\r
+
+          }\r\n"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 24 Oct 2024 20:45:01 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7ccee36e741355-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "ERROR",
+              "message": "Ticket does not belong to the user"
+          }
+  - name: Error invalid params
+    request:
+      url: "{{url}}/general/ForwardingTickets"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 24 Oct 2024 20:46:42 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7cd1592af844f9-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The name field is required.",
+                  "The email field is required.",
+                  "The value of the email field must be email format.",
+                  "The purchase field is required.",
+                  "The value of the purchase field must be numeric.",
+                  "The value of the purchase must be greater than 0.",
+                  "The ticket field is required.",
+                  "The value of the ticket field must be numeric.",
+                  "The value of the ticket must be greater than 0."
+              ]
+          }

@@ -1,0 +1,292 @@
+info:
+  name: 20. AddShoppingCart
+  type: http
+  seq: 21
+
+http:
+  method: POST
+  url: "{{url}}/general/AddShoppingCart"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: "Bearer: U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GcFRERTFNVlJ3YlZCVllqbG1jV0Z5UlU4eWJDOVZlVWRaUWtveWJqSktXVVZLVW1wVFRrTllXbE5CUFE9PQ.TkVZeVMzUk9aV3BLVlVOeVp6ZzFabEoyYmxkNWNFSnNjbFZoT0ZSSE56TmhaRVV4Vms4clowNXZaejA9"
+      disabled: true
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id_event\": \"351806\",\r
+
+      \    \"session\": \"E7027D43-8DED-487D-A9E0-F48A84BBCB98\",\r
+
+      \    \"ipaddress\": \"192.168.7.235\",\r
+
+      \    \"ticket\": [\r
+
+      \        {\r
+
+      \            \"id\": \"2177236\",\r
+
+      \            \"quantity\": \"1\",\r
+
+      \            \"access_code\": \"\",\r
+
+      \            \"value\": \"0\",\r
+
+      \            \"nominative_items\": [\r
+
+      \                {\r
+
+      \                    \"rut\": \"28038822K\",\r
+
+      \                    \"name\": \"Ociel\",\r
+
+      \                    \"is_foreign\":false\r
+
+      \                }\r
+
+      \            ]\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/AddShoppingCart"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: "Bearer: U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GcFRERTFNVlJ3YlZCVllqbG1jV0Z5UlU4eWJDOVZlVWRaUWtveWJqSktXVVZLVW1wVFRrTllXbE5CUFE9PQ.TkVZeVMzUk9aV3BLVlVOeVp6ZzFabEoyYmxkNWNFSnNjbFZoT0ZSSE56TmhaRVV4Vms4clowNXZaejA9"
+          disabled: true
+      body:
+        type: json
+        data: "{\r
+
+          \   \"id_event\":\"184808\",\r
+
+          \   \"session\":\"E7027D43-8DED-487D-A9E0-F48A84BBCB98\",\r
+
+          \   \"ipaddress\":\"192.168.7.235\",\r
+
+          \   \"ticket\":[\r
+
+          \      {\r
+
+          \         \"id\":\"945974\",\r
+
+          \         \"quantity\":\"1\",\r
+
+          \         \"access_code\":\"\",\r
+
+          \         \"value\":\"0\",\r
+
+          \         \"nominative_items\":[\r
+
+          \            {\r
+
+          \                \"rut\":\"280388157\",\r
+
+          \                \"name\":\"Ariel Daza Castellon\" \r
+
+          \            }\r
+
+          \         ]\r
+
+          \      }\r
+
+          \   ]\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 25 Oct 2024 14:57:40 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d830f726b707bac-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "result": {
+                  "shopping_cart": 42352656,
+                  "user": "5639653",
+                  "user_name": "Ariel Daza",
+                  "user_last_name": "",
+                  "subtotal": 0,
+                  "total_comision": 0,
+                  "porc_comision": "'0.15'",
+                  "comision_metodopago": "'0'",
+                  "payment_method_comision": 0,
+                  "total": 0,
+                  "tickets_info": [
+                      {
+                          "id": "945974",
+                          "precio": "0.00",
+                          "nombre": "Entrada General",
+                          "fecha_inicio": "2024-05-13 00:00:00",
+                          "fecha_termino": "2024-12-13 23:15:00",
+                          "lugar": "1",
+                          "descripcion": "",
+                          "imagen": "",
+                          "miniatura": "",
+                          "recorte": "",
+                          "estado": "1",
+                          "quantity": "1"
+                      }
+                  ]
+              }
+          }
+  - name: RNH AddShoppingCart
+    request:
+      url: "{{url}}/general/AddShoppingCart"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: "Bearer: U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GcFRERTFNVlJ3YlZCVllqbG1jV0Z5UlU4eWJDOVZlVWRaUWtveWJqSktXVVZLVW1wVFRrTllXbE5CUFE9PQ.TkVZeVMzUk9aV3BLVlVOeVp6ZzFabEoyYmxkNWNFSnNjbFZoT0ZSSE56TmhaRVV4Vms4clowNXZaejA9"
+          disabled: true
+      body:
+        type: json
+        data: "{\r
+
+          \    \"id_event\": \"257508\",\r
+
+          \    \"session\": \"E7027D43-8DED-487D-A9E0-F48A84BBCB98\",\r
+
+          \    \"ipaddress\": \"192.168.7.235\",\r
+
+          \    \"ticket\": [\r
+
+          \        {\r
+
+          \            \"id\": \"1406344\",\r
+
+          \            \"quantity\": \"1\",\r
+
+          \            \"access_code\": \"\",\r
+
+          \            \"value\": \"0\",\r
+
+          \            \"nominative_items\": [\r
+
+          \                {\r
+
+          \                    \"rut\": \"170792025\",\r
+
+          \                    \"name\": \"Ociel\",\r
+
+          \                    \"is_foreign\": false\r
+
+          \                }\r
+
+          \            ]\r
+
+          \        }\r
+
+          \    ]\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 05 Jun 2025 13:49:16 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 94b021dbefecbd2d-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "result": {
+                  "shopping_cart": 87336229,
+                  "user": "3679",
+                  "user_name": "Produtor Prueba Prueba",
+                  "user_last_name": "",
+                  "subtotal": 0,
+                  "total_comision": 0,
+                  "porc_comision": "'0.15'",
+                  "comision_metodopago": "'0'",
+                  "payment_method_comision": 0,
+                  "total": 0,
+                  "tickets_info": [
+                      {
+                          "id": "1406344",
+                          "precio": "0.00",
+                          "nombre": "Entrada General",
+                          "fecha_inicio": null,
+                          "fecha_termino": "2025-12-31 21:00:00",
+                          "lugar": "1",
+                          "descripcion": "",
+                          "imagen": "",
+                          "miniatura": "",
+                          "recorte": "",
+                          "estado": "1",
+                          "quantity": "1"
+                      }
+                  ]
+              }
+          }
+
+docs: Permite registrar un evento favorito enviando el id del evento y del usuario.

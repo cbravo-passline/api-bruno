@@ -1,0 +1,41 @@
+info:
+  name: 30. ListEventByProducer
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{url}}/cashier/ListEventByProducer"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 30. ListEventByProducer
+    request:
+      url: "{{url}}/cashier/ListEventByProducer"
+      method: GET
+    response:
+      statusText: "500"
+      headers:
+        - name: Date
+          value: Fri, 24 Jan 2025 22:15:44 GMT
+        - name: Server
+          value: Apache/2.4.57 (Debian)
+        - name: X-Powered-By
+          value: PHP/8.1.27
+        - name: Content-Length
+          value: "0"
+        - name: Connection
+          value: close
+        - name: Content-Type
+          value: text/html; charset=UTF-8
+      body:
+        type: html
+        data: ""

@@ -1,0 +1,27 @@
+info:
+  name: 125. LoadSubPromoterByDataBase
+  type: http
+  seq: 120
+
+http:
+  method: POST
+  url: "{{url}}/general/LoadSubPromoterByDataBase"
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: ociel aguilante
+      - name: file
+        type: file
+        value:
+          - /C:/Users/ociel/OneDrive/Escritorio/prueba 2.xlsx
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

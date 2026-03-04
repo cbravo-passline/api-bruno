@@ -1,0 +1,23 @@
+info:
+  name: 3. GenerateUniqueHash
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/cashless/GenerateUniqueHash"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r\n    \"device_id\": \" 1\"\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

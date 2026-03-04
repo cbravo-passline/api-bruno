@@ -1,0 +1,76 @@
+info:
+  name: 37. GetTicketeraSliders
+  type: http
+  seq: 38
+
+http:
+  method: GET
+  url: "{{url}}/general/GetTicketeraSliders/3679"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/GetTicketeraSliders/3679"
+      method: GET
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 29 Oct 2024 18:10:29 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8da51f658e3b12d3-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "1239",
+                  "href": "",
+                  "target": "_self",
+                  "titulo": "passline",
+                  "imagen": "https://www.passline.com/imagenes/mi-sitio/banners/3679-productora-va-mgica_5.jpg"
+              },
+              {
+                  "id": "1420",
+                  "href": "",
+                  "target": "_blank",
+                  "titulo": "passline",
+                  "imagen": "https://www.passline.com/imagenes/mi-sitio/banners/3679-productora-va-mgica_6.jpg"
+              },
+              {
+                  "id": "4883",
+                  "href": "",
+                  "target": "_blank",
+                  "titulo": "dprueba",
+                  "imagen": "https://www.passline.com/imagenes/mi-sitio/banners/anticipa-1110x270_2.jpg"
+              }
+          ]

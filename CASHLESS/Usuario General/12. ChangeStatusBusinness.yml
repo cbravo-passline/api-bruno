@@ -1,0 +1,26 @@
+info:
+  name: 12. ChangeStatusBusinness
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/ChangeStatusBusiness"
+  headers:
+    - name: X-Auth-Token
+      value: bG1Icm1fU3VEeGNmTkN3R3hyWHZJc3d1dHF2c0FvcWRPWncyUG1NdGd2OEA=
+  body:
+    type: json
+    data: "{\r
+
+      \    \"producer_email\":\"productor@passline.cl\",\r
+
+      \    \"status\":1\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,15 @@
+info:
+  name: 23. SaveUserBankDetails (pendiente)
+  type: http
+  seq: 24
+
+http:
+  method: POST
+  url: "{{url}}/accreditor/SaveUserBankDetails"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

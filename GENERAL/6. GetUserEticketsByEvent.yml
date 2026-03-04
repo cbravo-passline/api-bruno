@@ -1,0 +1,474 @@
+info:
+  name: 6. GetUserEticketsByEvent
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{url}}/general/GetUserEticketsByEvent"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GT1RVVlJZbnBTSzFOSFQzWmxiRE53UkhsR0wwUk9NRUpCZG5ZMU5HdFVTMjg1Wmk4eVVtUmhPVUU0UFE9PQ.WjBJelMyaFNORkI2ZW1aMVpGbFdlVFZYWTAxWFZVZENOV3hzSzNaMVZtVkxkbWxyTkd0b01rZEtiejA9
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/GetUserEticketsByEvent"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GT1RVVlJZbnBTSzFOSFQzWmxiRE53UkhsR0wwUk9NRUpCZG5ZMU5HdFVTMjg1Wmk4eVVtUmhPVUU0UFE9PQ.WjBJelMyaFNORkI2ZW1aMVpGbFdlVFZYWTAxWFZVZENOV3hzSzNaMVZtVkxkbWxyTkd0b01rZEtiejA9
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 18:34:26 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d73d235e80db03f-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id_event": "224272",
+                  "evento_nombre": "cambio de nombre",
+                  "fecha_inicio": "2023-11-26 12:00:00",
+                  "fecha_termino": "2024-11-23 23:50:00",
+                  "evento_descripcion": "<span class=\"hljs-tag\">asdad</span><br><div align=\"right\"><span class=\"hljs-tag\">qweqwe</span><br></div><div align=\"center\"><span class=\"hljs-tag\">gdfgd</span><br></div><div align=\"right\"><span class=\"hljs-tag\"> <a href=\"http://www.google.com\">qwerty</a></span></div>",
+                  "slug": "https://www.passline.com/eventos/chico-prueba",
+                  "event_pais": "argentina",
+                  "direccion": "C. de la Ternera, 4, Centro, 28013 Madrid, España",
+                  "lugar": "Evento Venue Prueba",
+                  "ticket_pais": "chile",
+                  "comuna": "",
+                  "region": "Regi&oacute;n Metropolitana de Santiago",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "",
+                  "category": "80S Music",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": "<div>qwe</div><div><b>qwe</b></div><div><b><i>qwe</i></b></div><div><u>qwe</u><br></div>"
+              },
+              {
+                  "id_event": "246497",
+                  "evento_nombre": "evento test1",
+                  "fecha_inicio": "2024-08-18 03:35:00",
+                  "fecha_termino": "2025-09-24 02:10:00",
+                  "evento_descripcion": "evento de pruebas<br><br><br><a href=\"https://www.google.com\"> google </a><br><br>",
+                  "slug": "https://www.passline.com/eventos/evento-test1",
+                  "event_pais": "brasil",
+                  "direccion": "EMBAJADOR DOUSSINAGUE #1767, Vitacura",
+                  "lugar": "Amanda",
+                  "ticket_pais": "chile",
+                  "comuna": "Vitacura",
+                  "region": "Regi&oacute;n Metropolitana de Santiago",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "https://imagenes.passline.com/eventos/evento-test1-246497-rec.jpg",
+                  "category": "",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "225722",
+                  "evento_nombre": "soporte descuento",
+                  "fecha_inicio": "2024-11-29 00:45:00",
+                  "fecha_termino": "2024-11-29 02:10:00",
+                  "evento_descripcion": "",
+                  "slug": "https://www.passline.com/eventos/soporte-descuento",
+                  "event_pais": "uruguay",
+                  "direccion": "Rambla 25 de agosto esq. Maciel",
+                  "lugar": "Sala del Museo",
+                  "ticket_pais": "uruguay",
+                  "comuna": "General Lagos",
+                  "region": "X Regi&oacute;n de Los Lagos",
+                  "nominative_purchase": "Normal",
+                  "imagen": "",
+                  "category": "",
+                  "nombre_organizador": "malepelufo",
+                  "rut_organizador": "123-4",
+                  "terminos_y_condiciones": "Prueba de condiciones y termino"
+              },
+              {
+                  "id_event": "31114",
+                  "evento_nombre": "Prueba Fpay",
+                  "fecha_inicio": "2024-11-30 01:15:00",
+                  "fecha_termino": "2024-12-01 07:50:00",
+                  "evento_descripcion": "Este es un evento de prueba 1234.",
+                  "slug": "https://www.passline.com/eventos/prueba-fpay",
+                  "event_pais": "argentina",
+                  "direccion": "La dirección",
+                  "lugar": "El Lugar",
+                  "ticket_pais": "chile",
+                  "comuna": "",
+                  "region": "Regi&oacute;n Metropolitana de Santiago",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "https://imagenes.passline.com/eventos/prueba-fpay-155088-rec.jpg",
+                  "category": "Festival de Metal",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "263566",
+                  "evento_nombre": "Prueba Registro Biométrico",
+                  "fecha_inicio": "2024-12-02 15:00:00",
+                  "fecha_termino": "2024-12-02 23:50:00",
+                  "evento_descripcion": "",
+                  "slug": "https://www.passline.com/eventos/prueba-registro-biometrico",
+                  "event_pais": "chile",
+                  "direccion": "Direccion",
+                  "lugar": "Lugar",
+                  "ticket_pais": "chile",
+                  "comuna": "&Ntilde;u&ntilde;oa",
+                  "region": "Regi&oacute;n Metropolitana de Santiago",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "",
+                  "category": "",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "263934",
+                  "evento_nombre": "Evento GPTW landing page - Uyu",
+                  "fecha_inicio": "2025-04-24 01:20:00",
+                  "fecha_termino": "2025-04-24 01:30:00",
+                  "evento_descripcion": "",
+                  "slug": "https://www.passline.com/eventos/evento-gptw-landing-page-uyu",
+                  "event_pais": "uruguay",
+                  "direccion": "Dirección del evento",
+                  "lugar": "Lugar del evento",
+                  "ticket_pais": "uruguay",
+                  "comuna": "",
+                  "region": "I Regi&oacute;n de Tarapac&aacute;",
+                  "nominative_purchase": "Normal",
+                  "imagen": "https://imagenes.passline.com/eventos/-349179-rec.jpg",
+                  "category": "",
+                  "nombre_organizador": "",
+                  "rut_organizador": "0-",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "105015",
+                  "evento_nombre": "Pruebas de Integraciones de Chile",
+                  "fecha_inicio": "2025-06-08 21:00:00",
+                  "fecha_termino": "2025-06-08 23:00:00",
+                  "evento_descripcion": "Este es un evento de prueba",
+                  "slug": "https://www.passline.com/eventos/pruebas-de-integraciones-de-chile",
+                  "event_pais": "chile",
+                  "direccion": "La Dirección",
+                  "lugar": "El Lugar",
+                  "ticket_pais": "chile",
+                  "comuna": "Santiago",
+                  "region": "Regi&oacute;n Metropolitana de Santiago",
+                  "nominative_purchase": "Normal",
+                  "imagen": "https://imagenes.passline.com/eventos/-379294-rec.jpg",
+                  "category": "Conciertos",
+                  "nombre_organizador": "Pato Producer",
+                  "rut_organizador": "-0",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "173164",
+                  "evento_nombre": "Prueba Evento Boleteria Mexico",
+                  "fecha_inicio": "2029-05-05 00:00:00",
+                  "fecha_termino": "2029-05-05 04:15:00",
+                  "evento_descripcion": "Prueba Evento Boleteria Mexico 1234444",
+                  "slug": "https://www.passline.com/eventos/prueba-evento-boleteria-mexico",
+                  "event_pais": "mexico",
+                  "direccion": "Prueba Evento Boleteria Mexico",
+                  "lugar": "Prueba Evento Boleteria Mexico",
+                  "ticket_pais": "mexico",
+                  "comuna": "",
+                  "region": "I Regi&oacute;n de Tarapac&aacute;",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "",
+                  "category": "80S Music",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "247989",
+                  "evento_nombre": "Prueba Cortesia Panama",
+                  "fecha_inicio": "2030-02-26 00:35:00",
+                  "fecha_termino": "2030-02-26 04:30:00",
+                  "evento_descripcion": "qwe",
+                  "slug": "https://www.passline.com/eventos/prueba-cortesia-panama",
+                  "event_pais": "panama",
+                  "direccion": "qeqwew",
+                  "lugar": "qwe",
+                  "ticket_pais": "argentina",
+                  "comuna": "Zapallar",
+                  "region": "VIII Regi&oacute;n del Biob&iacute;o",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "",
+                  "category": "After Party",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": ""
+              }
+          ]
+  - name: 17. Función GetUserEticketsByEvent
+    request:
+      url: "{{url}}/general/GetUserEticketsByEvent"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GT1RVVlJZbnBTSzFOSFQzWmxiRE53UkhsR0wwUk9NRUpCZG5ZMU5HdFVTMjg1Wmk4eVVtUmhPVUU0UFE9PQ.WjBJelMyaFNORkI2ZW1aMVpGbFdlVFZYWTAxWFZVZENOV3hzSzNaMVZtVkxkbWxyTkd0b01rZEtiejA9
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 18:34:26 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d73d235e80db03f-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id_event": "224272",
+                  "evento_nombre": "cambio de nombre",
+                  "fecha_inicio": "2023-11-26 12:00:00",
+                  "fecha_termino": "2024-11-23 23:50:00",
+                  "evento_descripcion": "<span class=\"hljs-tag\">asdad</span><br><div align=\"right\"><span class=\"hljs-tag\">qweqwe</span><br></div><div align=\"center\"><span class=\"hljs-tag\">gdfgd</span><br></div><div align=\"right\"><span class=\"hljs-tag\"> <a href=\"http://www.google.com\">qwerty</a></span></div>",
+                  "slug": "https://www.passline.com/eventos/chico-prueba",
+                  "event_pais": "argentina",
+                  "direccion": "C. de la Ternera, 4, Centro, 28013 Madrid, España",
+                  "lugar": "Evento Venue Prueba",
+                  "ticket_pais": "chile",
+                  "comuna": "",
+                  "region": "Regi&oacute;n Metropolitana de Santiago",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "",
+                  "category": "80S Music",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": "<div>qwe</div><div><b>qwe</b></div><div><b><i>qwe</i></b></div><div><u>qwe</u><br></div>"
+              },
+              {
+                  "id_event": "246497",
+                  "evento_nombre": "evento test1",
+                  "fecha_inicio": "2024-08-18 03:35:00",
+                  "fecha_termino": "2025-09-24 02:10:00",
+                  "evento_descripcion": "evento de pruebas<br><br><br><a href=\"https://www.google.com\"> google </a><br><br>",
+                  "slug": "https://www.passline.com/eventos/evento-test1",
+                  "event_pais": "brasil",
+                  "direccion": "EMBAJADOR DOUSSINAGUE #1767, Vitacura",
+                  "lugar": "Amanda",
+                  "ticket_pais": "chile",
+                  "comuna": "Vitacura",
+                  "region": "Regi&oacute;n Metropolitana de Santiago",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "https://imagenes.passline.com/eventos/evento-test1-246497-rec.jpg",
+                  "category": "",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "225722",
+                  "evento_nombre": "soporte descuento",
+                  "fecha_inicio": "2024-11-29 00:45:00",
+                  "fecha_termino": "2024-11-29 02:10:00",
+                  "evento_descripcion": "",
+                  "slug": "https://www.passline.com/eventos/soporte-descuento",
+                  "event_pais": "uruguay",
+                  "direccion": "Rambla 25 de agosto esq. Maciel",
+                  "lugar": "Sala del Museo",
+                  "ticket_pais": "uruguay",
+                  "comuna": "General Lagos",
+                  "region": "X Regi&oacute;n de Los Lagos",
+                  "nominative_purchase": "Normal",
+                  "imagen": "",
+                  "category": "",
+                  "nombre_organizador": "malepelufo",
+                  "rut_organizador": "123-4",
+                  "terminos_y_condiciones": "Prueba de condiciones y termino"
+              },
+              {
+                  "id_event": "31114",
+                  "evento_nombre": "Prueba Fpay",
+                  "fecha_inicio": "2024-11-30 01:15:00",
+                  "fecha_termino": "2024-12-01 07:50:00",
+                  "evento_descripcion": "Este es un evento de prueba 1234.",
+                  "slug": "https://www.passline.com/eventos/prueba-fpay",
+                  "event_pais": "argentina",
+                  "direccion": "La dirección",
+                  "lugar": "El Lugar",
+                  "ticket_pais": "chile",
+                  "comuna": "",
+                  "region": "Regi&oacute;n Metropolitana de Santiago",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "https://imagenes.passline.com/eventos/prueba-fpay-155088-rec.jpg",
+                  "category": "Festival de Metal",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "263566",
+                  "evento_nombre": "Prueba Registro Biométrico",
+                  "fecha_inicio": "2024-12-02 15:00:00",
+                  "fecha_termino": "2024-12-02 23:50:00",
+                  "evento_descripcion": "",
+                  "slug": "https://www.passline.com/eventos/prueba-registro-biometrico",
+                  "event_pais": "chile",
+                  "direccion": "Direccion",
+                  "lugar": "Lugar",
+                  "ticket_pais": "chile",
+                  "comuna": "&Ntilde;u&ntilde;oa",
+                  "region": "Regi&oacute;n Metropolitana de Santiago",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "",
+                  "category": "",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "263934",
+                  "evento_nombre": "Evento GPTW landing page - Uyu",
+                  "fecha_inicio": "2025-04-24 01:20:00",
+                  "fecha_termino": "2025-04-24 01:30:00",
+                  "evento_descripcion": "",
+                  "slug": "https://www.passline.com/eventos/evento-gptw-landing-page-uyu",
+                  "event_pais": "uruguay",
+                  "direccion": "Dirección del evento",
+                  "lugar": "Lugar del evento",
+                  "ticket_pais": "uruguay",
+                  "comuna": "",
+                  "region": "I Regi&oacute;n de Tarapac&aacute;",
+                  "nominative_purchase": "Normal",
+                  "imagen": "https://imagenes.passline.com/eventos/-349179-rec.jpg",
+                  "category": "",
+                  "nombre_organizador": "",
+                  "rut_organizador": "0-",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "105015",
+                  "evento_nombre": "Pruebas de Integraciones de Chile",
+                  "fecha_inicio": "2025-06-08 21:00:00",
+                  "fecha_termino": "2025-06-08 23:00:00",
+                  "evento_descripcion": "Este es un evento de prueba",
+                  "slug": "https://www.passline.com/eventos/pruebas-de-integraciones-de-chile",
+                  "event_pais": "chile",
+                  "direccion": "La Dirección",
+                  "lugar": "El Lugar",
+                  "ticket_pais": "chile",
+                  "comuna": "Santiago",
+                  "region": "Regi&oacute;n Metropolitana de Santiago",
+                  "nominative_purchase": "Normal",
+                  "imagen": "https://imagenes.passline.com/eventos/-379294-rec.jpg",
+                  "category": "Conciertos",
+                  "nombre_organizador": "Pato Producer",
+                  "rut_organizador": "-0",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "173164",
+                  "evento_nombre": "Prueba Evento Boleteria Mexico",
+                  "fecha_inicio": "2029-05-05 00:00:00",
+                  "fecha_termino": "2029-05-05 04:15:00",
+                  "evento_descripcion": "Prueba Evento Boleteria Mexico 1234444",
+                  "slug": "https://www.passline.com/eventos/prueba-evento-boleteria-mexico",
+                  "event_pais": "mexico",
+                  "direccion": "Prueba Evento Boleteria Mexico",
+                  "lugar": "Prueba Evento Boleteria Mexico",
+                  "ticket_pais": "mexico",
+                  "comuna": "",
+                  "region": "I Regi&oacute;n de Tarapac&aacute;",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "",
+                  "category": "80S Music",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": ""
+              },
+              {
+                  "id_event": "247989",
+                  "evento_nombre": "Prueba Cortesia Panama",
+                  "fecha_inicio": "2030-02-26 00:35:00",
+                  "fecha_termino": "2030-02-26 04:30:00",
+                  "evento_descripcion": "qwe",
+                  "slug": "https://www.passline.com/eventos/prueba-cortesia-panama",
+                  "event_pais": "panama",
+                  "direccion": "qeqwew",
+                  "lugar": "qwe",
+                  "ticket_pais": "argentina",
+                  "comuna": "Zapallar",
+                  "region": "VIII Regi&oacute;n del Biob&iacute;o",
+                  "nominative_purchase": "F&uacute;tbol",
+                  "imagen": "",
+                  "category": "After Party",
+                  "nombre_organizador": "Productor de Prueba",
+                  "rut_organizador": "76011664-5",
+                  "terminos_y_condiciones": ""
+              }
+          ]
+
+docs: Permite traer los etickets de un usuario registrado, se envía el token.

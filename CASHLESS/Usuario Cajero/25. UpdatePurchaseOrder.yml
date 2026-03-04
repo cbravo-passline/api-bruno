@@ -1,0 +1,47 @@
+info:
+  name: 25. UpdatePurchaseOrder
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/UpdatePurchaseOrder"
+  headers:
+    - name: User-Agent
+      value: Passline-PHP
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"order_id\": \"11\",\r
+
+      \    \"sub_total\": \"9990.00\",\r
+
+      \    \"total\": \"9990.00\",\r
+
+      \    \"products\": [\r
+
+      \        {\r
+
+      \            \"id\": \"34211\", //Agua Purificada Normal\r
+
+      \            \"quantity\": \"2\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth:
+    type: apikey
+    key: Cashier-Token
+    value: "{{cashier_token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

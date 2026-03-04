@@ -1,0 +1,24 @@
+info:
+  name: 46. RemoveProductCashless
+  type: http
+  seq: 22
+
+http:
+  method: DELETE
+  url: "{{url}}/cashless/RemoveProductCashless"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"product\":\"yVJw80QDhgEeuYT_pHUKDg@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,33 @@
+info:
+  name: 46. EditPromoter
+  type: http
+  seq: 47
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditPromoter"
+  body:
+    type: multipart-form
+    data:
+      - name: promoter_id
+        type: text
+        value: "276616"
+      - name: full_name
+        type: text
+        value: ad
+      - name: phone
+        type: text
+        value: "123456"
+      - name: image
+        type: file
+        value:
+          - postman-cloud:///1eebac94-85c3-47a0-a857-646bfe591da9
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

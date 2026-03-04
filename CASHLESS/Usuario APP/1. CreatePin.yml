@@ -1,0 +1,20 @@
+info:
+  name: 1. CreatePin
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/cashless/CreatePin"
+  body:
+    type: json
+    data: "{\r\n    \"pin\":123456\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_userapp}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

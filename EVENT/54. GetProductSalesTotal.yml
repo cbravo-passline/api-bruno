@@ -1,0 +1,21 @@
+info:
+  name: 54. GetProductSalesTotal
+  type: http
+  seq: 55
+
+http:
+  method: GET
+  url: "{{url}}/event/GetProductSalesTotal?event_md5=608e170b60b7fd6f11914a4ec9dfedbd"
+  params:
+    - name: event_md5
+      value: 608e170b60b7fd6f11914a4ec9dfedbd
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

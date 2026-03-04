@@ -1,0 +1,26 @@
+info:
+  name: 101. ChangeOrderMySiteBanner
+  type: http
+  seq: 97
+
+http:
+  method: PUT
+  url: "{{url}}/general/ChangeOrderMySiteBanner"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"banner\" : \"luwhpJaRX-5wxMEY_SWwEA@@\",\r
+
+      \    \"direction\" : \"up\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

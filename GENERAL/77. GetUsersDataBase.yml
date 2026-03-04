@@ -1,0 +1,14 @@
+info:
+  name: 77. GetUsersDataBase
+  type: http
+  seq: 78
+
+http:
+  method: GET
+  url: "{{url}}/general/GetUsersDataBase"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

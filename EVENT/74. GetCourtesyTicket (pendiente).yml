@@ -1,0 +1,30 @@
+info:
+  name: 74. GetCourtesyTicket (pendiente)
+  type: http
+  seq: 75
+
+http:
+  method: POST
+  url: "{{url}}/event/GetCourtesyTicket"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\": \"{{email}}\",\r
+
+      \    \"password\": \"{{password}}\",\r
+
+      \    \"g-recaptcha-response\": \"03AFcWeA7WrV9OquPptIB_fOx3p1oSVYvMgBiSHYnsUMG0HZHoz1Q68Dc1wNbPBit8AXK8GGXD8Vd_7QiOXPLXo3hPeCZFYR0Xl5GHGkqTxcia14luQ45DtoCyef1J5mirU7TC5OEZ5ZmHVjTrkis9Sn79vCiqPGNwDvLNlWibjUZaDWW5bT3Ml7iGo4yK1OF2F35MP0iNat3xzIRg-HJcizfkZd6t-IPASaGrlEUGKiOzTLLqxNOyoygy6YK7oWOc0I7KtLh8ZcRGhEUZDhGvwAkpvc7bV4nQy29OPxGm6oPuwF6lQLfbxDMBK-yb3YgMSsU0gcfJ46Y2hMEAzAxYZdmB_lkECjhJN5kixRw8Udk1tM-9JYwiEgzd0R-bYp_7XygOQPoZOO6qk2XC7g6CPSf1ZzXXoFf4jcRUxKoiroxA6ZLSUW7kGESTrnVSjvJRxQXFn_73NITHeZxfjKgJOejxxTIOEUSxqdRnO8JyEgNNMr70qYqxmLTfVI11Ydz8-_Ob5rQaKPHnJX2oc5Xw5wu7hVk-YaABCyqr-WC3n48OyrqAGrGH9-wzRLcjFnLBTJLNHSmDSy4QuGS4TEuyFvyLIEf2WimA2kp49GUoIkqc2hk90HbiJxjKsvPQ8zUNDrP3A6r8jIbfwsrRh55aB77mBKR2E146MNMIAelsaBvYB_-BHIBsAR1uxfM1h9kL1FJCKyWKLzBdX5dJTlsYcs1L1IK0DUyrT0HWHbQNxVVhqH3jVe7fHSKIheIRLpdaKY8KpBG_SRNaQYvu8qS7Z__rYe0piRE4rpcfmc3RQ4J-dcVDoJgs4QXk04dnKcOZrWBnEClNsW6PkZ-W0FlJ9cgLPlcZvz-z7SNVfFednmVQBJVMZo9eDeJx4T_X9pPvQpe4UBesk0GJb6I9EHtiX1oAHHDGibMYeMpyYha9DFnNWM1J8AspCnmH2-61SFaqn641C4gMRLQC\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

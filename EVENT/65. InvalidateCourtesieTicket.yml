@@ -1,0 +1,17 @@
+info:
+  name: 65. InvalidateCourtesieTicket
+  type: http
+  seq: 66
+
+http:
+  method: PUT
+  url: "{{url}}/event/InvalidateCourtesieTicket"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

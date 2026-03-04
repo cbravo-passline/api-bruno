@@ -1,0 +1,789 @@
+info:
+  name: 29. GetEventAccreditationReport
+  type: http
+  seq: 30
+
+http:
+  method: POST
+  url: "{{url}}/general/GetEventAccreditationReport"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event\": \"106277\"\r
+
+      }\r\n"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error dont access to event
+    request:
+      url: "{{url}}/general/GetEventAccreditationReport"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"106277\"\r
+
+          }\r\n"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 28 Oct 2024 15:33:54 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d9bfca4f97078cc-ATL
+        - name: Content-Encoding
+          value: gzip
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "You dont have access."
+          }
+  - name: Success response
+    request:
+      url: "{{url}}/general/GetEventAccreditationReport"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"31114\"\r
+
+          }\r\n"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 28 Oct 2024 15:59:51 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d9c22a4ef06b036-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "tickets_total": [
+                  {
+                      "nombre": "Entrada general",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "DONACIÓN",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Entrada barata",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba Streaming",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Cortesia General",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Agua Purificada Normal",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Pizza Motzzarella",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Ticket General",
+                      "total": "1",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba de acretacion",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "pizza",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Producto de prueba",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "PROSCIUTTO",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Hamburgesa",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "COCA COLA",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "promo",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Cerveza heineken",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Tres erre",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "AGUA",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Cerveza",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Agua",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Piscola",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "PISCOLA",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Agua",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Jugo",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Agua",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Redbull",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Choripan",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Black",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "undurraga brut",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "2 piscolas",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Entrada",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Producto 1",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Banana Split",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Barquillo",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Ovo",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Paleta",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Vodka",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Terremoto",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "prueba",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Arepa",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Empanada",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Miel de Ulmo",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Frambuesa Menta",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Bombon Frambuesa",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Jamon de Pavo",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Polera",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Old Fashion",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Rediel",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Whisky",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Spiner",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Vegetariano",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Malta",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Malta",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Cerveza",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Cachapa",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Fresas con Crema",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Roast Beef",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Pollo Teriyaki",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Sandwich del Dia",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Crudo",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "pizza",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Vino",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "piscola",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba1",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba2",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba3",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba4",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba5",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba6",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba7",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba8",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "1redbull + 1agua",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Promo MISTRAL",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Gatorade",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Absolut",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "fernet",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Pisco Mistral",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "clases de tenis",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Fernet",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Pisco",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Uno",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "A",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Pecesito",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Caminito",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Caminito",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "A",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Otro producto",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Heineken",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Agua Mineral",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "MISTRAL 35",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "ENTRADA",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Preventa General",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "AGUA",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "prueba",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "strawberry gin forever",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "redbull experince",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "patatas",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba Producto",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "165",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "RON 3000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "PISCO 3000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "VODKA 3000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "CERVEZA 3000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "AGUA 3000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "BEBIDA",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "JUGO",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "RON 4000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "PISCO 4000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "VODKA 4000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "CERVEZA 4.000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "AGUA 4000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "JUGO 4000",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Papitas",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Whisky",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba de 100 Pesos",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "VIP",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "mezcal",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "General TT1",
+                      "total": "72",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "prueba112",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba 1333455",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "crear ticket",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba Passline",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba Passline",
+                      "total": "1",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "Prueba Ticket 5 pesos",
+                      "total": "0",
+                      "total_val": "0"
+                  },
+                  {
+                      "nombre": "prueba222",
+                      "total": "0",
+                      "total_val": "0"
+                  }
+              ],
+              "tickets_boleteria_total": [
+                  {
+                      "nombre": "Prueba Reversa POS MP",
+                      "total_val": "3",
+                      "total": "124"
+                  },
+                  {
+                      "nombre": "Producto de 500",
+                      "total_val": "0",
+                      "total": "9"
+                  },
+                  {
+                      "nombre": "Producto de 300",
+                      "total_val": "0",
+                      "total": "73"
+                  },
+                  {
+                      "nombre": "Ticket General",
+                      "total_val": "0",
+                      "total": "1"
+                  },
+                  {
+                      "nombre": "Prueba Rechazo POS MP",
+                      "total_val": "0",
+                      "total": "5"
+                  }
+              ],
+              "tickets_fisicos_total": [],
+              "tickets_extras_total": [
+                  {
+                      "nombre": null,
+                      "total": "3019",
+                      "total_val": "4"
+                  }
+              ]
+          }

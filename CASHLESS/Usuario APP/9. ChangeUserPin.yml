@@ -1,0 +1,29 @@
+info:
+  name: 9. ChangeUserPin
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/cashless/ChangeUserPin"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"old_pin\" : \"123456\",\r
+
+      \    \"new_pin\" : \"123456\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,224 @@
+info:
+  name: 10. GetEventTop10
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{url}}/event/GetEventTop10/chile"
+  headers:
+    - name: content-type
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetEventTop10/chile"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 17:41:21 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d3199764a5c673a-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "266058",
+                  "nombre": "The Color Run Santiago 2024",
+                  "slug": "the-color-run-santiago-2024",
+                  "url": "https://www.passline.com/eventos/the-color-run-santiago-2024",
+                  "fecha_inicio": "2024-11-10",
+                  "hora_inicio": "08:30:00",
+                  "fecha_termino": "2024-11-10",
+                  "hora_termino": "12:30:00",
+                  "lugar": "Ciudad Empresarial Huechuraba",
+                  "image": "https://www.passline.com/imagenes/eventos/-404975-rec.jpg"
+              },
+              {
+                  "id": "302042",
+                  "nombre": "EL ROW CHILE 2024 / DELUSIONVILLE",
+                  "slug": "el-row-chile-2024-delusionville",
+                  "url": "https://www.passline.com/eventos/el-row-chile-2024-delusionville",
+                  "fecha_inicio": "2024-12-21",
+                  "hora_inicio": "16:00:00",
+                  "fecha_termino": "2024-12-22",
+                  "hora_termino": "05:00:00",
+                  "lugar": "Espacio Riesco",
+                  "image": "https://www.passline.com/imagenes/eventos/el-row-chile-2024-delusionville-302042-rec.jpg"
+              },
+              {
+                  "id": "308769",
+                  "nombre": "BomBoia Halloween",
+                  "slug": "bomboia-halloween",
+                  "url": "https://www.passline.com/eventos/bomboia-halloween",
+                  "fecha_inicio": "2024-10-31",
+                  "hora_inicio": "23:00:00",
+                  "fecha_termino": "2024-11-01",
+                  "hora_termino": "05:00:00",
+                  "lugar": "Country Club Pan De Azucar",
+                  "image": "https://www.passline.com/imagenes/eventos/-417791-rec.jpg"
+              },
+              {
+                  "id": "287821",
+                  "nombre": "LA FERIA ON TOUR - ARTBAT",
+                  "slug": "la-feria-on-tour-artbat-287821",
+                  "url": "https://www.passline.com/eventos/la-feria-on-tour-artbat-287821",
+                  "fecha_inicio": "2024-10-31",
+                  "hora_inicio": "21:00:00",
+                  "fecha_termino": "2024-11-01",
+                  "hora_termino": "05:00:00",
+                  "lugar": "Espacio Riesco",
+                  "image": "https://www.passline.com/imagenes/eventos/-384696-rec.jpg"
+              },
+              {
+                  "id": "273912",
+                  "nombre": "FESTIGAME ITAÚ 2024 DIA 2",
+                  "slug": "festigame-2024-dia-2",
+                  "url": "https://www.passline.com/eventos/festigame-2024-dia-2",
+                  "fecha_inicio": "2024-11-16",
+                  "hora_inicio": "10:00:00",
+                  "fecha_termino": "2024-11-16",
+                  "hora_termino": "20:00:00",
+                  "lugar": "Estadio Nacional",
+                  "image": "https://www.passline.com/imagenes/eventos/festigame-itau-2024-dia-2-273912-rec_1.jpg"
+              },
+              {
+                  "id": "310244",
+                  "nombre": "LA FERIA ON TOUR - MICHAEL BIBI",
+                  "slug": "la-feria-on-tour-michael-bibi",
+                  "url": "https://www.passline.com/eventos/la-feria-on-tour-michael-bibi",
+                  "fecha_inicio": "2024-11-23",
+                  "hora_inicio": "16:00:00",
+                  "fecha_termino": "2024-11-24",
+                  "hora_termino": "00:00:00",
+                  "lugar": "Espacio Riesco",
+                  "image": "https://www.passline.com/imagenes/eventos/-416788-rec.jpg"
+              },
+              {
+                  "id": "305213",
+                  "nombre": "LA FERIA ON TOUR - CARL COX",
+                  "slug": "la-feria-on-tour-carl-cox",
+                  "url": "https://www.passline.com/eventos/la-feria-on-tour-carl-cox",
+                  "fecha_inicio": "2024-12-28",
+                  "hora_inicio": "22:00:00",
+                  "fecha_termino": "2024-12-29",
+                  "hora_termino": "05:00:00",
+                  "lugar": "Espacio Riesco",
+                  "image": "https://www.passline.com/imagenes/eventos/-420271-rec.jpg"
+              },
+              {
+                  "id": "312793",
+                  "nombre": "LA PURGA - JUEVES 31 DE OCTUBRE",
+                  "slug": "la-purga-jueves-31-de-octubre",
+                  "url": "https://www.passline.com/eventos/la-purga-jueves-31-de-octubre",
+                  "fecha_inicio": "2024-10-31",
+                  "hora_inicio": "22:00:00",
+                  "fecha_termino": "2024-11-01",
+                  "hora_termino": "04:30:00",
+                  "lugar": "ARÜNA - SKY ROOM - ARÜNA PARK",
+                  "image": "https://www.passline.com/imagenes/eventos/la-purga-jueves-31-de-octubre-312793-rec.jpg"
+              },
+              {
+                  "id": "291302",
+                  "nombre": "MASQUERADE CHILE - by CLAPTONE",
+                  "slug": "masquerade-chile-by-claptone",
+                  "url": "https://www.passline.com/eventos/masquerade-chile-by-claptone",
+                  "fecha_inicio": "2024-11-02",
+                  "hora_inicio": "16:00:00",
+                  "fecha_termino": "2024-11-03",
+                  "hora_termino": "02:00:00",
+                  "lugar": "ESPACIO RITOQUE",
+                  "image": "https://www.passline.com/imagenes/eventos/-397098-rec.jpg"
+              },
+              {
+                  "id": "290741",
+                  "nombre": "Mentes Expertas con Victor Kuppers",
+                  "slug": "mentes-expertas-con-victor-kuppers",
+                  "url": "https://www.passline.com/eventos/mentes-expertas-con-victor-kuppers",
+                  "fecha_inicio": "2024-10-29",
+                  "hora_inicio": "20:00:00",
+                  "fecha_termino": "2024-10-29",
+                  "hora_termino": "22:00:00",
+                  "lugar": "Espacio Riesco",
+                  "image": "https://www.passline.com/imagenes/eventos/-409956-rec.jpg"
+              }
+          ]
+  - name: Success empty data
+    request:
+      url: "{{url}}/event/GetEventTop10/chile2"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 17:42:20 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "2"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d319ae6efd4673a-ATL
+      body:
+        type: json
+        data: "[]"
+
+docs: Trae el detalle de un evento por su id.

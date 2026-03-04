@@ -1,0 +1,58 @@
+info:
+  name: 126. RegisterGalleryImage
+  type: http
+  seq: 127
+
+http:
+  method: POST
+  url: "{{url}}/event/RegisterGalleryImage"
+  body:
+    type: multipart-form
+    data:
+      - name: event_hash
+        type: text
+        value: efdbb1c5156b72da0dd6b9b3798042db
+      - name: image-name[a07a4f77-ea72-4ba1-963e-05d2f2aa4771]
+        type: text
+        value: ImageName1
+      - name: image-name[805c1a2e-1ddf-4013-aeb6-a1fdafea574f]
+        type: text
+        value: ImageName2
+      - name: image-name[e77696c9-e53f-4f5e-ab1b-1302039ed52a]
+        type: text
+        value: ImageName3
+      - name: image-name[f5326944-80d8-4ebc-b28a-7911c122e382]
+        type: text
+        value: ImageName4
+      - name: image-name[29b8959f-6319-47ab-832f-10f9480d4683]
+        type: text
+        value: ImageName5
+      - name: images[a07a4f77-ea72-4ba1-963e-05d2f2aa4771]
+        type: file
+        value:
+          - postman-cloud:///1f027860-68a4-4030-a17a-ff28e073a920
+      - name: images[805c1a2e-1ddf-4013-aeb6-a1fdafea574f]
+        type: file
+        value:
+          - postman-cloud:///1f003f5e-8f07-4930-ab7c-94091276a10d
+      - name: images[e77696c9-e53f-4f5e-ab1b-1302039ed52a]
+        type: file
+        value:
+          - postman-cloud:///1f07ec7b-5c28-4060-aa81-43cb39beeb17
+      - name: images[f5326944-80d8-4ebc-b28a-7911c122e382]
+        type: file
+        value:
+          - postman-cloud:///1f07ec7b-5c28-4060-aa81-43cb39beeb17
+      - name: images[29b8959f-6319-47ab-832f-10f9480d4683]
+        type: file
+        value:
+          - postman-cloud:///1f07ec7b-5c28-4060-aa81-43cb39beeb17
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,36 @@
+info:
+  name: 8. ChangeOrderLinkpassUrl
+  type: http
+  seq: 8
+
+http:
+  method: PUT
+  url: "{{url}}/linkpass/ChangeOrderLinkpassUrl"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: orderId
+        type: text
+        value: 2Yk1Czi2NsvyjvgS2NfexQ@@
+      - name: linkpassUrlId
+        type: text
+        value: alReL8mz0nEuZVBhHx2mIQ@@
+      - name: linkpassId
+        type: text
+        value: KAjnABxrIqoUBZLrMCwauA@@
+      - name: orderState
+        type: text
+        value: down
+        description: up/down
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

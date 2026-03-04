@@ -1,0 +1,26 @@
+info:
+  name: 59. ChangeStatusVenue
+  type: http
+  seq: 60
+
+http:
+  method: PUT
+  url: "{{url}}/general/ChangeStatusVenue"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"venue\":\"yVJw80QDhgEeuYT_pHUKDg@@\",\r
+
+      \    \"status\":1\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

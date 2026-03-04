@@ -1,0 +1,26 @@
+info:
+  name: 17. ChangeStatusCashier
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/ChangeStatusCashier"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"cashier\":16,\r
+
+      \    \"status\":0\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: 100. GetSubscriberPlanimetryData
+  type: http
+  seq: 101
+
+http:
+  method: GET
+  url: "{{url}}/event/GetSubscriberPlanimetryData?subscriber=eJcY2C14kD5IokXxgike8w@@&sector=feXBdHMvynwMEg5RQDRMbw@@"
+  params:
+    - name: subscriber
+      value: eJcY2C14kD5IokXxgike8w@@
+      type: query
+    - name: sector
+      value: feXBdHMvynwMEg5RQDRMbw@@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

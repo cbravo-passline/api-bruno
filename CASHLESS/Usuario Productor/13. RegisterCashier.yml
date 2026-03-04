@@ -1,0 +1,33 @@
+info:
+  name: 13. RegisterCashier
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/cashless/RegisterCashier"
+  headers:
+    - name: User-Agent
+      value: Passline-PHP
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"full_name\":\"Nombre Cajero Prueba\",\r
+
+      \    \"email\":\"test@test.com\",\r
+
+      \    \"phone\":\"955412578\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

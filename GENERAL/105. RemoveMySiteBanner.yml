@@ -1,0 +1,21 @@
+info:
+  name: 105. RemoveMySiteBanner
+  type: http
+  seq: 100
+
+http:
+  method: DELETE
+  url: "{{url}}/general/RemoveMySiteBanner"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"banner\": \"luwhpJaRX-5wxMEY_SWwEA@@\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

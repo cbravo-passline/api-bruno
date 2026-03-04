@@ -1,0 +1,118 @@
+info:
+  name: 24. ExternalLog
+  type: http
+  seq: 25
+
+http:
+  method: POST
+  url: "{{url}}/general/ExternalLog"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"log\":\"Prueba Postman 27-09-2023\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/ExternalLog"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"log\":\"Prueba Postman 27-09-2023\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 25 Oct 2024 19:17:57 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=4XDlfpkTJVgExcw0arDHOkXJe9bM6DPaHFb.KUAFj_M-1729883877-1.0.1.1-p0lnOAPPO8IKZmThpHpeqOOQAgKtSPfC9SlTABXs.krEgpkVgrrVrZpsX5H_rA9fKEK94LRz_SoMS4l1.0W6yw; path=/; expires=Fri, 25-Oct-24 19:47:57 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d848cb77d1cbcc2-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "result": "SUCCESS",
+              "message": "log added correctly"
+          }
+  - name: Error invalid params
+    request:
+      url: "{{url}}/general/ExternalLog"
+      method: POST
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 25 Oct 2024 19:18:22 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d848d543c95bcc2-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The log field is required."
+              ]
+          }

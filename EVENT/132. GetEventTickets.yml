@@ -1,0 +1,43 @@
+info:
+  name: 132. GetEventTickets
+  type: http
+  seq: 133
+
+http:
+  method: GET
+  url: "{{url}}/event/GetEventTickets/3111114?full_name=Dev1&limit=1&channel=2"
+  params:
+    - name: email
+      value: rfigueroa@passline.dev
+      type: query
+      disabled: true
+    - name: status_code
+      value: "1"
+      type: query
+      disabled: true
+    - name: full_name
+      value: Dev1
+      type: query
+    - name: limit
+      value: "1"
+      type: query
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: channel
+      value: "2"
+      type: query
+    - name: product_name
+      value: ticket
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,186 @@
+info:
+  name: 36. GetEventProductDetailsTotals
+  type: http
+  seq: 37
+
+http:
+  method: GET
+  url: "{{url}}/event/GetEventProductDetailsTotals?event_md5=608e170b60b7fd6f11914a4ec9dfedbd"
+  headers:
+    - name: content-type
+      value: application/json
+  params:
+    - name: show
+      value: "0"
+      type: query
+      disabled: true
+    - name: event_md5
+      value: 608e170b60b7fd6f11914a4ec9dfedbd
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error invalid params
+    request:
+      url: "{{url}}/event/GetEventProductDetailsTotals/?promotor=t&paytype=8&status=est&email=test"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+      params:
+        - name: promotor
+          value: t
+          type: query
+        - name: paytype
+          value: "8"
+          type: query
+        - name: status
+          value: est
+          type: query
+        - name: email
+          value: test
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 18:38:11 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d635cf6bde4bf6e-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required.",
+                  "The value of the paytype field is not allowed, the values allowed are [1,2,3,4].",
+                  "The value of the status field is not allowed, the values allowed are [0,1,2].",
+                  "The value of the email field must be email format."
+              ]
+          }
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetEventProductDetailsTotals/3461d7bce31452bf240f6a3076683d3c?promotor=&product=&paytype=&status=&email=&limit=1&page=1"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+      params:
+        - name: promotor
+          value: ""
+          type: query
+        - name: product
+          value: ""
+          type: query
+        - name: paytype
+          value: ""
+          type: query
+        - name: status
+          value: ""
+          type: query
+        - name: email
+          value: ""
+          type: query
+        - name: limit
+          value: "1"
+          type: query
+        - name: page
+          value: "1"
+          type: query
+        - name: show
+          value: "0"
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 18:40:46 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6360c04be3bd26-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "totals": [
+                  {
+                      "tickets_cortesia": "0",
+                      "tickets_vendidos": "0",
+                      "total_tickets": 0,
+                      "subtotal": null,
+                      "vendidas": "0",
+                      "devueltas": null,
+                      "anulaciones": null,
+                      "total": 0,
+                      "total_formato": "MXN $0.-",
+                      "subtotal_formato": "MXN $0.-",
+                      "devueltas_formato": "MXN $0.-",
+                      "anulaciones_formato": "MXN $0.-",
+                      "devolucionesTotal_formato": "MXN $0.-",
+                      "vendidas_formato": "0"
+                  }
+              ]
+          }
+
+docs: |-
+  Trae los eventos por periodo de fechas.
+
+  Respuesta
+
+  json de eventos por fecha.

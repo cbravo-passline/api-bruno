@@ -1,0 +1,38 @@
+info:
+  name: 24. CloneEvent
+  type: http
+  seq: 25
+
+http:
+  method: POST
+  url: "{{url}}/event/CloneEvent"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event\":\"184749\",\r
+
+      \    \"name\":\"Evento para clonar desde API - clonado\",\r
+
+      \    \"dates\":[\r
+
+      \        {\r
+
+      \            \"start\":\"2023-01-01 00:00:00\",\r
+
+      \            \"end\":\"2023-01-01 00:00:00\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

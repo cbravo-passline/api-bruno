@@ -1,0 +1,21 @@
+info:
+  name: 102. GetMySiteBannerData
+  type: http
+  seq: 98
+
+http:
+  method: GET
+  url: "{{url}}/general/GetMySiteBannerData?banner=luwhpJaRX-5wxMEY_SWwEA@@"
+  params:
+    - name: banner
+      value: luwhpJaRX-5wxMEY_SWwEA@@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

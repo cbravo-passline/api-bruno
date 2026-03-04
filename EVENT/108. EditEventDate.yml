@@ -1,0 +1,33 @@
+info:
+  name: 108. EditEventDate
+  type: http
+  seq: 109
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditEventDate"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event_hash\":\"4fa01314818b4bddb2ee47a7ef20da7c\",\r
+
+      \    \"end_date\":\"2031-12-15 01:35:00\",\r
+
+      \    \"authorize_code\" : \"0123\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

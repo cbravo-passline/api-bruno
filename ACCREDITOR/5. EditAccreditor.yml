@@ -1,0 +1,36 @@
+info:
+  name: 5. EditAccreditor
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{url}}/accreditor/EditAccreditor"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"accreditor_id\":\"D0LMsWSJukbTMy2_1uYOGA@@\",\r
+
+      \    \"name\":\"Ariel\",\r
+
+      \    \"email\":\"ariel@passline.dev\",\r
+
+      \    \"phone\":\"12345689\",\r
+
+      \    \"username\":\"arieldc1234\",\r
+
+      \    \"password\": \"123456\",\r
+
+      \    \"confirm_password\": \"1234563\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: 147. RemoveEventTicketOfficeDiscount
+  type: http
+  seq: 148
+
+http:
+  method: DELETE
+  url: "{{url}}/event/RemoveEventTicketOfficeDiscount"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"ticket_office_discount\":\"tYCzmm3zUcwqOY206BH6wOMJnkfuHoi6LVjnBtQHn0E@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

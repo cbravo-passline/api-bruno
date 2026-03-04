@@ -1,0 +1,23 @@
+info:
+  name: 129. EditMySiteData/Logo
+  type: http
+  seq: 124
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditMySiteData/Logo"
+  body:
+    type: multipart-form
+    data:
+      - name: color
+        type: text
+        value: "#BF263C"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

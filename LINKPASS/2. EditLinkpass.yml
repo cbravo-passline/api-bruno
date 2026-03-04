@@ -1,0 +1,42 @@
+info:
+  name: 2. EditLinkpass
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{url}}/linkpass/EditLinkpass"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: otro nombree
+      - name: letter_color
+        type: text
+        value: "#ffffff"
+      - name: image
+        type: file
+        value:
+          - /C:/Users/cbral/Downloads/414x497.png
+      - name: status
+        type: text
+        value: "0"
+      - name: background
+        type: text
+        value: "1"
+      - name: linkpassId
+        type: text
+        value: eYu1MDwlqfapiUOP5YAi3w@@
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

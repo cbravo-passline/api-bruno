@@ -1,0 +1,61 @@
+info:
+  name: 18. CreateOrderPurchase
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/cashless/CreateOrderPurchase"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: User-Agent
+      value: Passline-PHP
+    - name: Cashier-Token
+      value: "{{cashier_token}}"
+      disabled: true
+    - name: Cashier-Token
+      value: "123"
+      disabled: true
+  body:
+    type: json
+    data: "{\r
+
+      \    \"sub_total\": \"10200\",\r
+
+      \    \"total\": 10200,\r
+
+      \    \"description\": \"Compra prueba\",\r
+
+      \    \"products\": [\r
+
+      \        {\r
+
+      \            \"id\": \"34211\", //Agua Purificada Normal\r
+
+      \            \"quantity\": \"1\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"id\": \"29344\", //Pizza Motzzarella\r
+
+      \            \"quantity\": \"1\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth:
+    type: apikey
+    key: Cashier-Token
+    value: "{{cashier_token}}"
+    placement: header
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,42 @@
+info:
+  name: 137. EditEventNotifications
+  type: http
+  seq: 138
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditEventNotifications"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: title
+        type: text
+        value: Correos desde trello
+      - name: text
+        type: text
+        value: Prueba de mensaje
+      - name: email_test
+        type: text
+        value: cbravo@passline.dev
+      - name: event
+        type: text
+        value: 608e170b60b7fd6f11914a4ec9dfedbd
+      - name: type_request
+        type: text
+        value: real
+      - name: image
+        type: file
+        value:
+          - /C:/Users/cbral/Downloads/images_2_13.jpg
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

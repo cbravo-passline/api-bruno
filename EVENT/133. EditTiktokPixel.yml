@@ -1,0 +1,26 @@
+info:
+  name: 133. EditTiktokPixel
+  type: http
+  seq: 134
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditTiktokPixel"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event_id\":\"3461d7bce31452bf240f6a3076683d3c\",\r
+
+      \    \"tiktok_pixel\": \"testpruebaaaaatest\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

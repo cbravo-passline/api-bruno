@@ -1,0 +1,132 @@
+info:
+  name: 2. VefiyUser
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/biometric/VerifyUser/chile/trucrowd?personal_id=28038815-7&signature=cmtsX1d0b2YwbDYyUmFvTGI0ZG5zNGZqQzdOX3AxY1JabG5sSjV6REMwa0A"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: User-Agent
+      value: Passline-PHP
+  params:
+    - name: personal_id
+      value: LE51441
+      type: query
+      disabled: true
+    - name: signature
+      value: RFpzZjEydHdKS3I1cWg0d29WRGFlUUBA
+      type: query
+      disabled: true
+    - name: personal_id
+      value: 28038815-7
+      type: query
+    - name: signature
+      value: cmtsX1d0b2YwbDYyUmFvTGI0ZG5zNGZqQzdOX3AxY1JabG5sSjV6REMwa0A
+      type: query
+  body:
+    type: json
+    data: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error signature
+    request:
+      url: "{{url}}/biometric/VerifyUser/chile?personal_id=123&signature=123"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+        - name: User-Agent
+          value: Passline-PHP
+      params:
+        - name: personal_id
+          value: "123"
+          type: query
+        - name: signature
+          value: "123"
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 12 Nov 2024 19:47:27 GMT
+        - name: Server
+          value: Apache/2.4.57 (Debian)
+        - name: X-Powered-By
+          value: Passline
+        - name: Content-Length
+          value: "43"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Error signature"
+          }
+  - name: Success response
+    request:
+      url: "{{url}}/biometric/VerifyUser/chile?personal_id=28038815-7&signature=cmtsX1d0b2YwbDYyUmFvTGI0ZG5zeFcyUjU5TFJNQzJaUDR0b1BHV19zY0A="
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+        - name: User-Agent
+          value: Passline-PHP
+      params:
+        - name: personal_id
+          value: 28038815-7
+          type: query
+        - name: signature
+          value: cmtsX1d0b2YwbDYyUmFvTGI0ZG5zeFcyUjU5TFJNQzJaUDR0b1BHV19zY0A=
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 12 Nov 2024 19:48:48 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "15"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=xIj8fRgAsjldcucY9UpCnR6fEsLUFzY3MBT2w5wGffc-1731440928-1.0.1.1-hJCmtU91QbH2AZo7Eu7yUNkOvydMd0QvYuS3XoaX7VAf9QaR4aXNyLFNzObLes3eNrtUiYSGqpEBX7y0QwfFyQ; path=/; expires=Tue, 12-Nov-24 20:18:48 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8e190aa7bd84bad4-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "status": true
+          }

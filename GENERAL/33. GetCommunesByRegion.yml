@@ -1,0 +1,338 @@
+info:
+  name: 33. GetCommunesByRegion
+  type: http
+  seq: 34
+
+http:
+  method: POST
+  url: "{{url}}/general/GetCommunesByRegion"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"region\": \"13\",\r
+
+      \    \"country\": \"chile\"\r
+
+      }\r\n"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/GetCommunesByRegion"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"region\": \"13\",\r
+
+          \    \"country\": \"chile\"\r
+
+          }\r\n"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 29 Oct 2024 15:05:17 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8da41019785f8bb6-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "1310",
+                  "nombre": "&Ntilde;u&ntilde;oa"
+              },
+              {
+                  "id": "1346",
+                  "nombre": "Alhu&eacute;"
+              },
+              {
+                  "id": "1340",
+                  "nombre": "Buin"
+              },
+              {
+                  "id": "1342",
+                  "nombre": "Calera de Tango"
+              },
+              {
+                  "id": "1325",
+                  "nombre": "Cerrillos"
+              },
+              {
+                  "id": "1330",
+                  "nombre": "Cerro Navia"
+              },
+              {
+                  "id": "1333",
+                  "nombre": "Colina"
+              },
+              {
+                  "id": "1303",
+                  "nombre": "Conchal&iacute;"
+              },
+              {
+                  "id": "1345",
+                  "nombre": "Curacav&iacute;"
+              },
+              {
+                  "id": "1321",
+                  "nombre": "El Bosque"
+              },
+              {
+                  "id": "1351",
+                  "nombre": "El Monte"
+              },
+              {
+                  "id": "1324",
+                  "nombre": "Estacion Central"
+              },
+              {
+                  "id": "1304",
+                  "nombre": "Huechuraba"
+              },
+              {
+                  "id": "1302",
+                  "nombre": "Independencia"
+              },
+              {
+                  "id": "1350",
+                  "nombre": "Isla de Maipo"
+              },
+              {
+                  "id": "1320",
+                  "nombre": "La Cisterna"
+              },
+              {
+                  "id": "1314",
+                  "nombre": "La Florida"
+              },
+              {
+                  "id": "1316",
+                  "nombre": "La Granja"
+              },
+              {
+                  "id": "1317",
+                  "nombre": "La Pintana"
+              },
+              {
+                  "id": "1311",
+                  "nombre": "La Reina"
+              },
+              {
+                  "id": "1334",
+                  "nombre": "Lampa"
+              },
+              {
+                  "id": "1309",
+                  "nombre": "Las Condes"
+              },
+              {
+                  "id": "1308",
+                  "nombre": "Lo Barnechea"
+              },
+              {
+                  "id": "1323",
+                  "nombre": "Lo Espejo"
+              },
+              {
+                  "id": "1328",
+                  "nombre": "Lo Prado"
+              },
+              {
+                  "id": "1312",
+                  "nombre": "Macul"
+              },
+              {
+                  "id": "1326",
+                  "nombre": "Maip&uacute;"
+              },
+              {
+                  "id": "1344",
+                  "nombre": "Mar&iacute;a Pinto"
+              },
+              {
+                  "id": "1343",
+                  "nombre": "Melipilla"
+              },
+              {
+                  "id": "1352",
+                  "nombre": "Padre Hurtado"
+              },
+              {
+                  "id": "1341",
+                  "nombre": "Paine"
+              },
+              {
+                  "id": "1349",
+                  "nombre": "Pe&ntilde;aflor"
+              },
+              {
+                  "id": "1313",
+                  "nombre": "Pe&ntilde;alol&eacute;n"
+              },
+              {
+                  "id": "1322",
+                  "nombre": "Pedro Aguirre Cerda"
+              },
+              {
+                  "id": "1338",
+                  "nombre": "Pirque"
+              },
+              {
+                  "id": "1306",
+                  "nombre": "Providencia"
+              },
+              {
+                  "id": "1329",
+                  "nombre": "Pudahuel"
+              },
+              {
+                  "id": "1336",
+                  "nombre": "Puente Alto"
+              },
+              {
+                  "id": "1332",
+                  "nombre": "Quilicura"
+              },
+              {
+                  "id": "1327",
+                  "nombre": "Quinta Normal"
+              },
+              {
+                  "id": "1305",
+                  "nombre": "Recoleta"
+              },
+              {
+                  "id": "1331",
+                  "nombre": "Renca"
+              },
+              {
+                  "id": "1339",
+                  "nombre": "San Bernardo"
+              },
+              {
+                  "id": "1315",
+                  "nombre": "San Joaqu&iacute;n"
+              },
+              {
+                  "id": "1337",
+                  "nombre": "San Jos&eacute; de Maipo"
+              },
+              {
+                  "id": "1319",
+                  "nombre": "San Miguel"
+              },
+              {
+                  "id": "1347",
+                  "nombre": "San Pedro"
+              },
+              {
+                  "id": "1318",
+                  "nombre": "San Ram&oacute;n"
+              },
+              {
+                  "id": "1301",
+                  "nombre": "Santiago"
+              },
+              {
+                  "id": "1348",
+                  "nombre": "Talagante"
+              },
+              {
+                  "id": "1335",
+                  "nombre": "Tiltil"
+              },
+              {
+                  "id": "1307",
+                  "nombre": "Vitacura"
+              }
+          ]
+  - name: Error invalid params
+    request:
+      url: "{{url}}/general/GetCommunesByRegion"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 29 Oct 2024 16:48:33 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8da4a762f9a0bfbd-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The region field is required.",
+                  "The country field is required."
+              ]
+          }

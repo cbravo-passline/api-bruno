@@ -1,0 +1,37 @@
+info:
+  name: 109. EditEventRestrictions (pendiente)
+  type: http
+  seq: 110
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditEventRestrictions"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"age_restriction\": \"1\",\r
+
+      \    \"age_range\": \"18\",\r
+
+      \    \"event_hash\": \"9ddd60b02e86c52e50c81a8752f24f5f\",\r
+
+      \    \"allow_function_update\": \"0\",\r
+
+      \    \"authorize_code\": \"7187\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

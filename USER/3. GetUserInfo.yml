@@ -1,0 +1,132 @@
+info:
+  name: 3. GetUserInfo
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{url}}/user/GetUserInfo"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GRlVHcDJVbkZJU1Zwd2NEWkVOV2d5Vm1sRGJWVjVXRTB3TW10MEszVkdSMmhyUTNwTmVqQXhRek5uUFE9PQ.VFV4TVNIcFpUWGhJUWpCcVpsWTRZVTRyYVhSWVJtRmFTeko2T1haT2VYaHdNa2xhYVhaaU1VRnlPRDA9
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success reponse
+    request:
+      url: "{{url}}/user/GetUserInfo"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GRlVHcDJVbkZJU1Zwd2NEWkVOV2d5Vm1sRGJWVjVXRTB3TW10MEszVkdSMmhyUTNwTmVqQXhRek5uUFE9PQ.VFV4TVNIcFpUWGhJUWpCcVpsWTRZVTRyYVhSWVJtRmFTeko2T1haT2VYaHdNa2xhYVhaaU1VRnlPRDA9
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 15:02:56 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=3_TCP2IVPx2ff4C4BBdxr7de2pmW63RoOeR0zAUU0RA-1728918176-1.0.1.1-.EGAVe2qcd68uEIa2VZHgEScCqDWMYtp7NMWlIN27BdzK2u98AeoYlCGwYC.O5gd0vDjUEPKRdoFoZeQJe7oyA; path=/; expires=Mon, 14-Oct-24 15:32:56 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d287408fd3644d6-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "nombre": "Passline Passline",
+              "apellido": "Passline",
+              "email": "productor@passline.cl",
+              "telefono": "+506456789012",
+              "rut": "",
+              "pais": "chile"
+          }
+  - name: Error token expired
+    request:
+      url: "{{url}}/user/GetUserInfo"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwaE5jMnhzVkM4NU4wSjNVVkJqT1ZwRUswNU1ZakU0Wm1wWGFrWnlWbGhTYVUwNU9XdFdSRFZCZW5GRlVHcDJVbkZJU1Zwd2NEWkVOV2d5Vm1sRGJWVjVXRTB3TW10MEszVkdSMmhyUTNwTmVqQXhRek5uUFE9PQ.VFV4TVNIcFpUWGhJUWpCcVpsWTRZVTRyYVhSWVJtRmFTeko2T1haT2VYaHdNa2xhYVhaaU1VRnlPRDA9
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 15:08:56 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d287cd25f5fdd20-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "token expired"
+          }
+
+docs: |-
+  Trae los datos del usuario mediante el envío de su token
+
+  Respuesta:
+
+  StartFragment
+
+  {    "nombre": "Productor",    "email": "productor@passline.cl",    "telefono": "+503845573737",    "rut": "",    "pais": "chile"}
+
+  EndFragment

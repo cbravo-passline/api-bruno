@@ -1,0 +1,23 @@
+info:
+  name: 125. RemoveGalleryImage
+  type: http
+  seq: 126
+
+http:
+  method: DELETE
+  url: "{{url}}/event/RemoveGalleryImage"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r\n    \"gallery_id\":\"3088\"\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

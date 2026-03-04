@@ -1,0 +1,30 @@
+info:
+  name: 105. RegisterSubscriberPlanimetryExcel
+  type: http
+  seq: 106
+
+http:
+  method: POST
+  url: "{{url}}/event/RegisterSubscriberPlanimetryExcel"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: planimetry
+        type: text
+        value: Loa0YuUGgmPqnx8A1T_QAQ@@
+      - name: file
+        type: file
+        value:
+          - /C:/Users/cbral/Downloads/template_abonados.xlsx
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

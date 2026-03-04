@@ -1,0 +1,27 @@
+info:
+  name: 90. GetPlanimetrySectorDataByEvent
+  type: http
+  seq: 91
+
+http:
+  method: GET
+  url: "{{url}}/event/GetPlanimetrySectorDataByEvent?idEventMd5=608e170b60b7fd6f11914a4ec9dfedbd"
+  headers:
+    - name: content-type
+      value: application/json
+  params:
+    - name: idEventMd5
+      value: 608e170b60b7fd6f11914a4ec9dfedbd
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

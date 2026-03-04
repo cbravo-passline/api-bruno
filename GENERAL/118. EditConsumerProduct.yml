@@ -1,0 +1,53 @@
+info:
+  name: 118. EditConsumerProduct
+  type: http
+  seq: 113
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditConsumerProduct"
+  body:
+    type: multipart-form
+    data:
+      - name: product
+        type: text
+        value: FBD1K_6p2pVxtAlk-ohwig@@
+      - name: name
+        type: text
+        value: " Producto 8"
+      - name: category
+        type: text
+        value: wZdQSzKxc20TLEzvfnVAaQ@@
+      - name: description
+        type: text
+        value: Producto 8
+      - name: associated_product[0]
+        type: text
+        value: "632"
+      - name: associated_product[1]
+        type: text
+        value: "632"
+      - name: ingredients[]
+        type: text
+        value: "46"
+      - name: price
+        type: text
+        value: "23.0"
+      - name: stock
+        type: text
+        value: "23"
+      - name: sku_code
+        type: text
+        value: "123"
+      - name: cash_price
+        type: text
+        value: "123.00"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

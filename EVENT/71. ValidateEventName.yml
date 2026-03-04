@@ -1,0 +1,105 @@
+info:
+  name: 71. ValidateEventName
+  type: http
+  seq: 72
+
+http:
+  method: GET
+  url: "{{url}}/event/ValidateEventName?name=test222123"
+  params:
+    - name: name
+      value: test222123
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: response event name exist
+    request:
+      url: "{{url}}/event/ValidateEventName?name=test"
+      method: GET
+      params:
+        - name: name
+          value: test
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 26 Mar 2025 14:58:14 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "15"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 92678145be7d12e9-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "status": true
+          }
+  - name: response event name does not exist
+    request:
+      url: "{{url}}/event/ValidateEventName?name=test222123"
+      method: GET
+      params:
+        - name: name
+          value: test222123
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 26 Mar 2025 15:02:50 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "16"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: cf-cache-status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 92678801d8ea6782-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "status": false
+          }

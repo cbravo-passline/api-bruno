@@ -1,0 +1,40 @@
+info:
+  name: 68. RegisterVenueSlider
+  type: http
+  seq: 69
+
+http:
+  method: POST
+  url: "{{url}}/general/RegisterVenueSlider"
+  body:
+    type: multipart-form
+    data:
+      - name: venue
+        type: text
+        value: test
+        disabled: true
+      - name: venue
+        type: text
+        value: yVJw80QDhgEeuYT_pHUKDg@@
+      - name: title
+        type: text
+        value: Test2
+      - name: link
+        type: text
+        value: tset2
+      - name: target
+        type: text
+        value: _self
+      - name: image
+        type: file
+        value:
+          - postman-cloud:///1ef5439e-3560-4830-a34d-258793dedc4a
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,286 @@
+info:
+  name: 18. ChangeRRPPStatus
+  type: http
+  seq: 19
+
+http:
+  method: POST
+  url: "{{url}}/user/ChangeRRPPStatus"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error rrpp is disabled
+    request:
+      url: "{{url}}/user/ChangeRRPPStatus"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"d3a923185975db70ff6d9829c9ac66e1\",\r
+
+          \    /*\"rrpp\": \"473235,416616,416621,412361\",*/\r
+
+          \    \"rrpp\": \"0\",\r
+
+          \    \"status\": 2\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 19:27:36 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=nZRrynFFCSrOTJ9kce7Yi9hdbLZKcKoIwqT9lEQ3Gqg-1728934056-1.0.1.1-g1pQ4urxcqRSA8GDdbjia0Rbqq7Vs95IutsiHf6cV_dtcaPVBL5BRk.pzeIzWv6DGW0GCIu_ouuYSB51T6qqUg; path=/; expires=Mon, 14-Oct-24 19:57:36 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d29f7b9b8bb12da-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "ERROR",
+              "message": "the rrpp is disabled"
+          }
+  - name: Error token expired
+    request:
+      url: "{{url}}/user/ChangeRRPPStatus"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"d3a923185975db70ff6d9829c9ac66e1\",\r
+
+          \    /*\"rrpp\": \"473235,416616,416621,412361\",*/\r
+
+          \    \"rrpp\": \"0\",\r
+
+          \    \"status\": 2\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 19:30:31 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d29fc010b4412d6-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "token expired"
+          }
+  - name: Error don't access
+    request:
+      url: "{{url}}/user/ChangeRRPPStatus"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"d3a923185975db70ff6d9829c9ac66e1\",\r
+
+          \    \"rrpp\": \"473235,416616,416621,412361\",\r
+
+          \    /*\"rrpp\": \"0\",*/\r
+
+          \    \"status\": 2\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 20:11:17 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=_mITMMdmxpeTCjIrXne3ZK805Nu8V1fJ.WPbEvhe.oM-1728936677-1.0.1.1-S1U_6nrfHzV9tJpawkSQmHevM0Se.kzoiJEKWL5.DkYR243q8TlWvD7gP8nXJuzvJQg3iI63S1oPqmkv_YyR3A; path=/; expires=Mon, 14-Oct-24 20:41:17 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d2a37ba6ee0bfa2-ATL
+        - name: Content-Encoding
+          value: gzip
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "You dont have access."
+          }
+  - name: Success response disabled
+    request:
+      url: "{{url}}/user/ChangeRRPPStatus"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"d3a923185975db70ff6d9829c9ac66e1\",\r
+
+          \    \"rrpp\": \"473235,416616,416621,412361\",\r
+
+          \    /*\"rrpp\": \"0\",*/\r
+
+          \    \"status\": 2\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 20:15:47 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d2a3e4dd9116746-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "SUCCESS",
+              "message": "the rrpp is now disabled"
+          }
+  - name: Success response enabled
+    request:
+      url: "{{url}}/user/ChangeRRPPStatus"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"event\": \"d3a923185975db70ff6d9829c9ac66e1\",\r
+
+          \    \"rrpp\": \"473235,416616,416621,412361\",\r
+
+          \    /*\"rrpp\": \"0\",*/\r
+
+          \    \"status\": 1\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 20:16:19 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d2a3f130cb36746-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": "SUCCESS",
+              "message": "the rrpp is now enabled"
+          }

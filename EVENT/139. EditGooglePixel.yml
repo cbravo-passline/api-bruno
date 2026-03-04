@@ -1,0 +1,26 @@
+info:
+  name: 139. EditGooglePixel
+  type: http
+  seq: 140
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditGooglePixel"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event_id\":\"3461d7bce31452bf240f6a3076683d3c\",\r
+
+      \    \"google_pixel\": \"testpruebagoogletest\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

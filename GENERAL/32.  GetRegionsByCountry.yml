@@ -1,0 +1,170 @@
+info:
+  name: 32.  GetRegionsByCountry
+  type: http
+  seq: 33
+
+http:
+  method: GET
+  url: "{{url}}/general/GetRegionsByCountry/chile"
+  headers:
+    - name: Content-Type
+      value: application/json
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error no path params
+    request:
+      url: "{{url}}/general/GetRegionsByCountry"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 29 Oct 2024 14:51:45 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8da3fc470e117be1-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Invalid parameter [country]"
+          }
+  - name: Success response
+    request:
+      url: "{{url}}/general/GetRegionsByCountry/chile"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 29 Oct 2024 14:58:48 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8da4069c9fa64503-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "1",
+                  "nombre": "I Regi&oacute;n de Tarapac&aacute;"
+              },
+              {
+                  "id": "2",
+                  "nombre": "II Regi&oacute;n de Antofagasta"
+              },
+              {
+                  "id": "3",
+                  "nombre": "III Regi&oacute;n de Atacama"
+              },
+              {
+                  "id": "4",
+                  "nombre": "IV Regi&oacute;n de Coquimbo"
+              },
+              {
+                  "id": "5",
+                  "nombre": "V Regi&oacute;n de Valpara&iacute;so"
+              },
+              {
+                  "id": "6",
+                  "nombre": "VI Regi&oacute;n del Libertador General Bernardo O'Higgins"
+              },
+              {
+                  "id": "7",
+                  "nombre": "VII Regi&oacute;n del Maule"
+              },
+              {
+                  "id": "8",
+                  "nombre": "VIII Regi&oacute;n del Biob&iacute;o"
+              },
+              {
+                  "id": "9",
+                  "nombre": "IX Regi&oacute;n de la Araucan&iacute;a"
+              },
+              {
+                  "id": "10",
+                  "nombre": "X Regi&oacute;n de Los Lagos"
+              },
+              {
+                  "id": "11",
+                  "nombre": "XI Regi&oacute;n de Ays&eacute;n"
+              },
+              {
+                  "id": "12",
+                  "nombre": "XII Regi&oacute;n de Magallanes y Ant&aacute;rtica"
+              },
+              {
+                  "id": "13",
+                  "nombre": "Regi&oacute;n Metropolitana de Santiago"
+              },
+              {
+                  "id": "14",
+                  "nombre": "XIV Regi&oacute;n de Los R&iacute;os"
+              },
+              {
+                  "id": "15",
+                  "nombre": "XV Regi&oacute;n de Arica y Parinacota"
+              },
+              {
+                  "id": "16",
+                  "nombre": "Regi&oacute;n de &Ntilde;uble"
+              }
+          ]

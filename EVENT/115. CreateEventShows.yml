@@ -1,0 +1,53 @@
+info:
+  name: 115. CreateEventShows
+  type: http
+  seq: 116
+
+http:
+  method: POST
+  url: "{{url}}/event/CreateEventShows"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"eventId\" : \"608e170b60b7fd6f11914a4ec9dfedbd\",\r
+
+      \    \"shows\" : [{\r
+
+      \        \"name\" : \"funcion1\",\r
+
+      \        \"date\" : \"2025-08-10\",\r
+
+      \        \"hour_start\" : \"10:00\",\r
+
+      \        \"hour_end\" : \"17:00\"\r
+
+      \    },\r
+
+      \    {\r
+
+      \        \"name\" : \"funcion2\",\r
+
+      \        \"date\" : \"2025-08-11\",\r
+
+      \        \"hour_start\" : \"11:00\",\r
+
+      \        \"hour_end\" : \"18:00\"\r
+
+      \    }]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

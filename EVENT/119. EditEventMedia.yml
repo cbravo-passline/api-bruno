@@ -1,0 +1,75 @@
+info:
+  name: 119. EditEventMedia
+  type: http
+  seq: 120
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditEventMedia"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: multipart-form
+    data:
+      - name: event_hash
+        type: text
+        value: efdbb1c5156b72da0dd6b9b3798042db
+      - name: authorize_code
+        type: text
+        value: "8799"
+      - name: allow_function_update
+        type: text
+        value: "0"
+      - name: url_video
+        type: text
+        value: https://www.youtube.com/c/MartinValverdeOficial
+      - name: url_spotify
+        type: text
+        value: https://open.spotify.com/intl-es/artist/5aOjT1DbSYHA1jylD0zohr?si=je0yjHAmSGGucByy0nHpqA
+      - name: image
+        type: file
+        value:
+          - postman-cloud:///1f07ec7b-5c28-4060-aa81-43cb39beeb17
+      - name: banner_up
+        type: file
+        value:
+          - postman-cloud:///1f07ec7b-5c28-4060-aa81-43cb39beeb17
+      - name: banner_down
+        type: file
+        value:
+          - postman-cloud:///1f07ec7b-5c28-4060-aa81-43cb39beeb17
+      - name: banner_mail
+        type: file
+        value:
+          - postman-cloud:///1f07ec7b-5c28-4060-aa81-43cb39beeb17
+      - name: banner_discount
+        type: file
+        value:
+          - postman-cloud:///1f07ec7b-5c28-4060-aa81-43cb39beeb17
+      - name: delete_image
+        type: text
+        value: "1"
+      - name: delete_banner_up
+        type: text
+        value: "1"
+      - name: delete_banner_down
+        type: text
+        value: "1"
+      - name: delete_banner_discount
+        type: text
+        value: "1"
+      - name: delete_banner_mail
+        type: text
+        value: "1"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

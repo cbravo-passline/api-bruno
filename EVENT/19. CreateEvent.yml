@@ -1,0 +1,308 @@
+info:
+  name: 19. CreateEvent
+  type: http
+  seq: 20
+
+http:
+  method: POST
+  url: "{{url}}/event/CreateEvent"
+  headers:
+    - name: User-Agent
+      value: Dart
+  body:
+    type: multipart-form
+    data:
+      - name: is_streaming
+        type: text
+        value: "0"
+        description: requerido
+      - name: name
+        type: text
+        value: Prueba Terminal Biométrica
+        description: requerido
+      - name: type
+        type: text
+        value: "0"
+        description: requerido
+      - name: description
+        type: text
+        value: descripción
+        description: opcional
+      - name: age_restriction
+        type: text
+        value: "0"
+        disabled: true
+      - name: country
+        type: text
+        value: chile
+        description: requerido/opcional
+      - name: region
+        type: text
+        value: "13"
+        description: requerido/opcional
+      - name: comune
+        type: text
+        value: "1310"
+        description: requerido/opcional
+      - name: venue
+        type: text
+        value: "7"
+        description: opcional
+      - name: name_place
+        type: text
+        value: Lugar del Evento
+        description: opcional
+      - name: begin_date
+        type: text
+        value: 2026-12-02 20:00:00
+        description: requerido
+      - name: end_date
+        type: text
+        value: 2026-12-02 23:00:00
+        description: requerido
+      - name: address
+        type: text
+        value: Direccion
+        disabled: true
+      - name: url_video
+        type: text
+        value: https://www.youtube.com/watch?v=py6OqgSbvCc
+        disabled: true
+      - name: artist
+        type: text
+        value: Artisita 1, Artista 2
+        disabled: true
+      - name: tags
+        type: text
+        value: 4320,3519
+        disabled: true
+      - name: age_range
+        type: text
+        value: "18"
+        description: requerido
+        disabled: true
+      - name: image
+        type: file
+        value:
+          - postman-cloud:///1eebbbe6-a6dd-4fb0-80eb-10c26255d4f7
+        disabled: true
+      - name: g-recaptcha-response
+        type: text
+        value: ""
+        description: requerido/opcional
+        disabled: true
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error local
+    request:
+      url: "{{url}}/event/CreateEvent"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: country
+            type: text
+            value: chile
+          - name: type
+            type: text
+            value: "0"
+          - name: adults_only
+            type: text
+            value: "0"
+          - name: name
+            type: text
+            value: Evento test APIDEV 5
+          - name: begin_date
+            type: text
+            value: 2025-12-02 20:00:00
+          - name: end_date
+            type: text
+            value: 2025-12-02 23:00:00
+          - name: region
+            type: text
+            value: "13"
+          - name: comune
+            type: text
+            value: "1310"
+          - name: address
+            type: text
+            value: Direccion
+          - name: name_place
+            type: text
+            value: Lugar del Evento
+          - name: url_video
+            type: text
+            value: https://www.youtube.com/watch?v=py6OqgSbvCc
+          - name: artist
+            type: text
+            value: Artisita 1, Artista 2
+            disabled: true
+          - name: description
+            type: text
+            value: descripción
+            disabled: true
+          - name: tags
+            type: text
+            value: 4320,3519
+            disabled: true
+          - name: age_range
+            type: text
+            value: "18"
+            disabled: true
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1eea9ad8-81fd-4d10-b775-b5d7fe014dca
+            disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 07 Mar 2025 15:49:53 GMT
+        - name: Server
+          value: Apache/2.4.57 (Debian)
+        - name: X-Powered-By
+          value: PHP/8.1.27
+        - name: Vary
+          value: Accept-Encoding
+        - name: Content-Encoding
+          value: gzip
+        - name: Content-Length
+          value: "590"
+        - name: Keep-Alive
+          value: timeout=5, max=100
+        - name: Connection
+          value: Keep-Alive
+        - name: Content-Type
+          value: text/html; charset=UTF-8
+      body:
+        type: html
+        data: |-
+          <br />
+          <b>Warning</b>:  Undefined array key "image" in
+          <b>/var/www/html/views/Events/CreateEvent.php</b> on line
+          <b>134</b>
+          <br />
+          <br />
+          <b>Fatal error</b>:  Uncaught mysqli_sql_exception: FUNCTION pass2019_db.f_desactivar_promotor does not exist in /var/www/html/lib/mysqli/ez_sql_mysqli.php:350
+          Stack trace:
+          #0 /var/www/html/lib/mysqli/ez_sql_mysqli.php(350): mysqli-&gt;query('INSERT INTO eve...')
+          #1 /var/www/html/lib/mysqli/mysqli.php(112): ezSQL_mysqli-&gt;query('INSERT INTO eve...', 'master')
+          #2 /var/www/html/system/Repository.php(36): MySQL-&gt;insert('eventos', Array)
+          #3 /var/www/html/src/Services/CreateEventManager.php(147): Repository-&gt;save(Object(Event))
+          #4 /var/www/html/views/Events/CreateEvent.php(139): CreateEventManager-&gt;create(3679, 'chile', 0, 0, 0, 'Evento test API...', '', '2025-12-02 20:0...', '2025-12-02 23:0...', '', '', NULL, 13, 1310, 'Direccion', 'Lugar del Event...', 'https://www.you...', NULL)
+          #5 /var/www/html/utils/router/Router.php(37): CreateEventPOST-&gt;Run()
+          #6 /var/www/html/index.php(279): Router-&gt;dispatch(Array)
+          #7 {main}
+            thrown in
+          <b>/var/www/html/lib/mysqli/ez_sql_mysqli.php</b> on line
+          <b>350</b>
+          <br />
+  - name: error recaptcha
+    request:
+      url: "{{url}}/event/CreateEvent"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: country
+            type: text
+            value: chile
+          - name: type
+            type: text
+            value: "0"
+          - name: adults_only
+            type: text
+            value: "0"
+          - name: name
+            type: text
+            value: Event created from API
+          - name: begin_date
+            type: text
+            value: 2025-12-02 20:00:00
+          - name: end_date
+            type: text
+            value: 2025-12-02 23:00:00
+          - name: region
+            type: text
+            value: "13"
+          - name: comune
+            type: text
+            value: "1310"
+          - name: address
+            type: text
+            value: Direccion
+          - name: name_place
+            type: text
+            value: Lugar del Evento
+          - name: url_video
+            type: text
+            value: https://www.youtube.com/watch?v=py6OqgSbvCc
+          - name: artist
+            type: text
+            value: Artisita 1, Artista 2
+            disabled: true
+          - name: description
+            type: text
+            value: descripción
+            disabled: true
+          - name: tags
+            type: text
+            value: 4320,3519
+            disabled: true
+          - name: age_range
+            type: text
+            value: "18"
+            disabled: true
+          - name: image
+            type: file
+            value:
+              - postman-cloud:///1eebbbe6-a6dd-4fb0-80eb-10c26255d4f7
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 27 Mar 2025 19:49:21 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=A7NqZQvB0E0SzysNj3EE702903Vbi1JKUmlP1lMZ3OU-1743104961-1.0.1.1-jf5ClX.ZSMUsvGu8mgWGGkUU2ToJr2B27o9XSIE5NdpCZhM0gq3oVpTGa7Kfn3qinEq21D6UxACuV5RZiqM54IqXUnFWG4piagZZF.Ao6TM; path=/; expires=Thu, 27-Mar-25 20:19:21 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 9271691388131371-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The g-recaptcha-response field is required.",
+              "timestamp": 1743104961
+          }

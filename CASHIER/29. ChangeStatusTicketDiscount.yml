@@ -1,0 +1,26 @@
+info:
+  name: 29. ChangeStatusTicketDiscount
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{url}}/cashier/ChangeStatusTicketDiscount"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"ticketdicount\":\"SYD6ioma-dN7AByQzghFIQ@@\",\r
+
+      \    \"status\":\"1\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

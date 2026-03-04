@@ -1,0 +1,26 @@
+info:
+  name: 141. EditAnalyticsPixel
+  type: http
+  seq: 142
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditAnalyticsPixel"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"event_id\":\"3461d7bce31452bf240f6a3076683d3c\",\r
+
+      \    \"analytics_pixel\": \"testpruebatestanalytics\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

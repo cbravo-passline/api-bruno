@@ -1,0 +1,57 @@
+info:
+  name: 152. EditTicketOfficeProduct
+  type: http
+  seq: 153
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditTicketOfficeProduct"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: nombre producto123
+      - name: description
+        type: text
+        value: prueba de producto
+      - name: image
+        type: file
+        value:
+          - /C:/Users/cbral/Downloads/images_2_13 - copia.jpg
+      - name: type
+        type: text
+        value: "1"
+      - name: price
+        type: text
+        value: "15000"
+      - name: quantity
+        type: text
+        value: "50"
+      - name: end_date
+        type: text
+        value: 2029-05-05
+      - name: end_time
+        type: text
+        value: 04:48
+      - name: auth_code
+        type: text
+        value: "3947"
+      - name: event
+        type: text
+        value: 608e170b60b7fd6f11914a4ec9dfedbd
+      - name: ticket_office_product_id
+        type: text
+        value: KUliRwFms793g2fkn1wa3oAKU8omj8mo8WpnG-GsFTI@
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

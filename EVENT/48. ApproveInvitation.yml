@@ -1,0 +1,17 @@
+info:
+  name: 48. ApproveInvitation
+  type: http
+  seq: 49
+
+http:
+  method: POST
+  url: "{{url}}/event/ApproveInvitation"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

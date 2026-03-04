@@ -1,0 +1,22 @@
+info:
+  name: 8. RecoverPin
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{url}}/cashless/RecoverPin"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: User-Agent
+      value: Passline-PHP
+  auth:
+    type: bearer
+    token: "{{Token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,171 @@
+info:
+  name: 3. GetFAQtext
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{url}}/general/GetFAQtext/peru"
+  headers:
+    - name: content-type
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Succeess response
+    request:
+      url: "{{url}}/general/GetFAQtext/chile"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 17:58:01 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=mG5BGkUvHC9OELtHVVYhDEYDVnD4eCs1R0LhUHrLJTU-1729706281-1.0.1.1-pu.4hiGBJQBBigb146hV_1ySwhG1n0jkaH9eAZN_BKELKPhRn0rS04j8z68nzYE5O3Lgs046eijKskIoxuDTHQ; path=/; expires=Wed, 23-Oct-24 18:28:01 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d739ce2db7dadcb-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "preguntas_frecuentes": "<div style=\"font-weight: normal;\"><b>¿Qué es Passline?&nbsp;</b></div><div style=\"font-weight: normal;\"><b><br></b></div><div style=\"font-weight: normal;\">Passline es el primer servicio donde puedes pagar de manera fácil, rápida y en tiempo real tus entradas a eventos, discotecas, conciertos y mucho más.\n\n    La aplicación te permite revisar de manera rápida los distintos eventos, todos georreferenciados según tu ubicación o interés.&nbsp;</div><div style=\"font-weight: normal;\">Ya no más filas de espera para comprar tus entradas mientras te pierdes toda la entretención.\n\n    Passline es una aplicación social que permite publicar todo tipo de eventos y generar una ticketera online. Además agrupa todos los eventos en un solo lugar para que asi sea más cómoda y expedita la venta de entradas.&nbsp;</div><div style=\"font-weight: normal;\">Bajo la perspectiva de desarrollo social, permite dinamizar y fortalecer el apoyo al emprendimiento y la cultura promoviendo la difusión de eventos y exposiciones en espacios públicos y privados.&nbsp;</div><div style=\"font-weight: normal;\"><br></div><div style=\"font-weight: normal;\"><b>¿Cómo Compro una Entrada?&nbsp;</b></div><div style=\"font-weight: normal;\"><br></div><div style=\"font-weight: normal;\">Para comprar tus entradas a eventos es muy simple, solo debes encontrar tu panorama favorito e ingresar a la ficha del evento.\n\n    Dentro de la ficha debes seleccionar el tipo de entrada que quieres, seleccionar la cantidad de tickets y apretar el botón COMPRAR.\n\n    Luego debes seguir las instrucciones del Carro de Compra.&nbsp;</div><div style=\"font-weight: normal;\"><br></div><div style=\"\"><b>¿Cómo Pago Mis Entradas?</b></div><div style=\"font-weight: normal;\"><br></div><div style=\"font-weight: normal;\">Muy simple una vez que has seleccionado tus entradas, debes pagar con Webpay de Transbank. Que será una compra segura.&nbsp;</div><div style=\"font-weight: normal;\"><br></div><div style=\"\"><b>¿Dónde Recibo Mis Entradas?&nbsp;</b></div><div style=\"font-weight: normal;\"><br></div><div style=\"font-weight: normal;\">Una vez que tu compra ha sido validada por Transbank y Passline las entradas estarán disponibles en tu cuenta de usuario Passline y en tu correo electrónico en nuestro formato eTicket Digital.&nbsp;</div><div style=\"font-weight: normal;\"><br></div><div style=\"\"><b>¿Cómo Presento Mis Entradas?&nbsp;</b></div><div style=\"font-weight: normal;\"><br></div><div style=\"font-weight: normal;\">¡MUY SIMPLE! Las entradas debes ser presentadas en tu Smartphone al llegar al evento, será escaneado su código QR o validado con el dígito validador.&nbsp;</div><div style=\"font-weight: normal;\"><br></div><div style=\"\"><b>¿Dónde Modifico Mis Datos?&nbsp;</b></div><div style=\"font-weight: normal;\"><br></div><div style=\"font-weight: normal;\">Para modificar tus datos, ver entradas compradas, etc. debes ingresar a Tu Cuenta y en esta sección encontraras:&nbsp;&nbsp;</div><div style=\"font-weight: normal;\">• Editar tus Datos&nbsp;&nbsp;</div><div style=\"font-weight: normal;\">• Cambiar Clave&nbsp;&nbsp;</div><div style=\"font-weight: normal;\">• Mis eTickets&nbsp;&nbsp;</div><div style=\"font-weight: normal;\">• Crear Evento&nbsp;&nbsp;</div><div style=\"font-weight: normal;\">• Mis Eventos&nbsp;&nbsp;</div><div style=\"font-weight: normal;\">• Datos de Organizador</div>"
+          }
+  - name: Error slug country does not exits
+    request:
+      url: "{{url}}/general/GetFAQtext/chile2"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 18:08:36 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "42"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d73ac603a677bd5-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Data not found"
+          }
+  - name: Error invalid path params
+    request:
+      url: "{{url}}/general/GetFAQtext/"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 18:10:19 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d73aee5acdebd05-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The country field is required."
+              ]
+          }
+
+docs: |-
+  StartFragment
+
+  Trae las preguntas frecuentes de un país dado
+
+  EndFragment
+
+  Respuesta Ejemplo:
+
+  StartFragment
+
+  {    "preguntas_frecuentes": "¿Qué es Passline?\\n\\n    Passline es el primer servicio donde puedes pagar de manera fácil, rápida y en tiempo real tus entradas a eventos, discotecas, conciertos y mucho más.\\n\\n    La aplicación te permite revisar de manera rápida los distintos eventos, todos georreferenciados según tu ubicación o interés. Ya no más filas de espera para comprar tus entradas mientras te pierdes toda la entretención.\\n\\n    Passline es una aplicación social que permite publicar todo tipo de eventos y generar una ticketera online. Además agrupa todos los eventos en un solo lugar para que asi sea más cómoda y expedita la venta de entradas.\\n\\n    Bajo la perspectiva de desarrollo social, permite dinamizar y fortalecer el apoyo al emprendimiento y la cultura promoviendo la difusión de eventos y exposiciones en espacios públicos y privados.\\n\\n¿Cómo Compro una Entrada?\\n\\n    Para comprar tus entradas a eventos es muy simple, solo debes encontrar tu panorama favorito e ingresar a la ficha del evento.\\n\\n    Dentro de la ficha debes seleccionar el tipo de entrada que quieres, seleccionar la cantidad de tickets y apretar el botón COMPRAR.\\n\\n    Luego debes seguir las instrucciones del Carro de Compra.\\n\\n¿Cómo Pago Mis Entradas?\\n\\n    Muy simple una vez que has seleccionado tus entradas, debes pagar con Webpay de Transbank. Que será una compra segura.\\n\\n¿Dónde Recibo Mis Entradas?\\n\\n    Una vez que tu compra ha sido validada por Transbank y Passline las entradas estarán disponibles en tu cuenta de usuario Passline y en tu correo electrónico en nuestro formato eTicket Digital.\\n\\n¿Cómo Presento Mis Entradas?\\n\\n    ¡MUY SIMPLE! Las entradas debes ser presentadas en tu Smartphone al llegar al evento, será escaneado su código QR o validado con el dígito validador.\\n\\n¿Dónde Modifico Mis Datos?\\n\\n    Para modificar tus datos, ver entradas compradas, etc. debes ingresar a Tu Cuenta y en esta sección encontraras:\\n\\n    • Editar tus Datos\\n    • Cambiar Clave\\n    • Mis eTickets\\n    • Crear Evento\\n    • Mis Eventos\\n    • Datos de Organizador"}
+
+  EndFragment

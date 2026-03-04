@@ -1,0 +1,32 @@
+info:
+  name: 10. GetPrivateSiteData
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{url}}/general/GetPrivateSiteData/3679"
+  headers:
+    - name: content-type
+      value: application/json
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  StartFragment
+
+  Trae la información de un sitio de una productora pasándole el id de la misma
+
+  Respuesta: Ejemplo
+
+  En el json trae los datos del sitio y al interior los banner disponibles
+
+  EndFragmen
+
+  { "id": "4", "productora": "3679", "logo": "[https://dev.passline.com/imagenes/mi-sitio/logo/via-magica-pruebas.jpg"](https://dev.passline.com/imagenes/mi-sitio/logo/via-magica-pruebas.jpg"), "template": "template1", "fondo": "[https://dev.passline.com/imagenes/mi-sitio/fondo/via-magica-pruebas.jpg"](https://dev.passline.com/imagenes/mi-sitio/fondo/via-magica-pruebas.jpg"), "direccion": "Cerro Colorado 5858, Oficina 111", "email": "[info@passline.com](mailto:info@passline.com)", "telefono": "12341234", "redes_sociales": "{\\"facebook\\":\\"https:\\\\/\\\\/[www.facebook.com\\\\\\\\/passlinechile\\\\\\\\/\\\\",\\\\"twitter\\\\":\\\\"\\\\"}"](http://www.facebook.com\\\\/passlinechile\\\\/\\",\\"twitter\\":\\"\\"}"), "secciones": "{\\"home\\":1,\\"eventos\\":1,\\"ubicacion\\":1,\\"contacto\\":1}", "estado": "1", "banners": \[ { "id_categoria": "1", "href": "", "target": "_self", "titulo": "passline", "imagen": "[https://imagenes.passline.com/mi-sitio/banners/3679-productora-va-mgica_5.jpg"](https://imagenes.passline.com/mi-sitio/banners/3679-productora-va-mgica_5.jpg"), "desde": "2019-04-01 18:15:11", "hasta": "2019-04-01 18:15:11", "estado": "1", "nombre_categoria": "Inicio", "descripcion_categoria": "Banners para el Slider Principal del Home o Inicio" }, { "id_categoria": "1", "href": "", "target": "_blank", "titulo": "passline", "imagen": "[https://imagenes.passline.com/mi-sitio/banners/3679-productora-va-mgica_6.jpg"](https://imagenes.passline.com/mi-sitio/banners/3679-productora-va-mgica_6.jpg"), "desde": "2019-06-18 18:12:04", "hasta": "2019-06-18 18:12:04", "estado": "1", "nombre_categoria": "Inicio", "descripcion_categoria": "Banners para el Slider Principal del Home o Inicio" } \]}
+
+  EndFragment

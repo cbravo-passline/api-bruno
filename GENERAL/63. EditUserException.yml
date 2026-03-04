@@ -1,0 +1,14 @@
+info:
+  name: 63. EditUserException
+  type: http
+  seq: 64
+
+http:
+  method: PUT
+  url: "{{url}}/general/EditUserException"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

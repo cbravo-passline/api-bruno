@@ -1,0 +1,21 @@
+info:
+  name: 35. GetSaleProductDetailList
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{url}}/cashless/GetSaleProductDetailList?sale=oEjZCxkYdke5zPX-7JsuiA@@"
+  params:
+    - name: sale
+      value: oEjZCxkYdke5zPX-7JsuiA@@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

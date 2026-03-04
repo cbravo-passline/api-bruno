@@ -1,0 +1,20 @@
+info:
+  name: 110. RegisterProductCategory
+  type: http
+  seq: 105
+
+http:
+  method: POST
+  url: "{{url}}/general/RegisterProductCategory"
+  body:
+    type: json
+    data: "{\r\n    \"name\":\"Prueba 2\"\r\n}"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,37 @@
+info:
+  name: 120. ProductPlanimetrySectorActivation
+  type: http
+  seq: 121
+
+http:
+  method: PUT
+  url: "{{url}}/event/ProductPlanimetrySectorActivation"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: User-Agent
+      value: Dart
+  body:
+    type: json
+    data: "{\r
+
+      \    \"planimetry_id\" : \"HzeA5nEO2oFlCktFQI7EhtbRHGCaXWHCabSEGUyuvYQ@\",\r
+
+      \    \"data\" : [{\r
+
+      \        \"product_id\" : \"s26IP4AB6uoSVJUAN8PwTA@@\",\r
+
+      \        \"sector_id\" : \"VUw7-lrw-50vzAOq5goX0TB56B0uxxn7BCkW7hIO8Lg@\"\r
+
+      \    }]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,341 @@
+info:
+  name: 126. VenuesList
+  type: http
+  seq: 121
+
+http:
+  method: GET
+  url: "{{url}}/general/VenuesList/chile"
+  params:
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      disabled: true
+    - name: filter
+      value: amanda
+      type: query
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: success
+    request:
+      url: "{{url}}/general/GetVenuesList?lang=en&country=chile"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "1"
+          type: query
+          disabled: true
+        - name: lang
+          value: en
+          type: query
+        - name: country
+          value: chile
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 15:40:28 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 902f344349f653b6-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "records": [
+                  {
+                      "id": "1",
+                      "name": "Evento Venue Prueba",
+                      "slug": "evento-venue-prueba",
+                      "country": "chile",
+                      "address": "C. de la Ternera, 4, Centro, 28013 Madrid, España",
+                      "status": "0",
+                      "image": "evento-venue-prueba-1-1707326659-image.jpg",
+                      "logo": "evento-venue-prueba-1-1707326659-img.jpg",
+                      "type": "1",
+                      "max_capacity": "201",
+                      "producer_name": "Productor",
+                      "type_name": "Bar",
+                      "status_name": "Inactive",
+                      "id_enc": "yVJw80QDhgEeuYT_pHUKDg@@",
+                      "url_image": "https://www.passline.com/imagenes/venues/evento-venue-prueba-1-1707326659-image.jpg",
+                      "url_logo": "https://www.passline.com/imagenes/venues/evento-venue-prueba-1-1707326659-img.jpg",
+                      "url": "https://www.passline.com/venue/evento-venue-prueba"
+                  }
+              ],
+              "pagination": {
+                  "limit": 100,
+                  "total_records": 1,
+                  "total_pages": 1,
+                  "current_page": 1
+              }
+          }
+  - name: Error invalid country
+    request:
+      url: "{{url}}/general/GetVenuesList?lang=en&country=chile2"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: limit
+          value: "1"
+          type: query
+          disabled: true
+        - name: lang
+          value: en
+          type: query
+        - name: country
+          value: chile2
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 15:41:18 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 902f357a9f7a53b6-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Error country is not valid",
+              "timestamp": 1737042078
+          }
+  - name: Error required cuntry field
+    request:
+      url: "{{url}}/general/GetVenuesList?page=1&limit=1&lang=en"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: "1"
+          type: query
+        - name: lang
+          value: en
+          type: query
+        - name: country
+          value: chile
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 15:42:02 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 902f36925f0b53b6-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The country field is required.",
+              "timestamp": 1737042122
+          }
+  - name: Error invalid page params
+    request:
+      url: "{{url}}/general/GetVenuesList?page=1&limit=t&lang=t&country=chile"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: t
+          type: query
+        - name: lang
+          value: t
+          type: query
+        - name: country
+          value: chile
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 15:43:00 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 902f37f5a8eb53b6-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The value of the page must be greater than 0.",
+              "timestamp": 1737042180
+          }
+  - name: Error invalid limit param
+    request:
+      url: "{{url}}/general/GetVenuesList?page=1&limit=t&lang=t&country=chile"
+      method: GET
+      params:
+        - name: page
+          value: "1"
+          type: query
+        - name: limit
+          value: t
+          type: query
+        - name: lang
+          value: t
+          type: query
+        - name: country
+          value: chile
+          type: query
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Thu, 16 Jan 2025 15:43:37 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 902f38e3cbb353b6-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "message": "The value of the limit must be greater than 0.",
+              "timestamp": 1737042217
+          }

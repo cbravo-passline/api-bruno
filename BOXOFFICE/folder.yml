@@ -1,0 +1,7 @@
+info:
+  name: BOXOFFICE
+  type: folder
+  seq: 4
+
+request:
+  auth: inherit

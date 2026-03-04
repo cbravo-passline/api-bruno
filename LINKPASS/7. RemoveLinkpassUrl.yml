@@ -1,0 +1,26 @@
+info:
+  name: 7. RemoveLinkpassUrl
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: "{{url}}/linkpass/RemoveLinkpassUrl"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"linkpassUrlId\": \"D0LMsWSJukbTMy2_1uYOGA@@\",\r
+
+      \    \"linkpassId\": \"yVJw80QDhgEeuYT_pHUKDg@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

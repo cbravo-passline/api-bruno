@@ -1,0 +1,46 @@
+info:
+  name: 96. EditPlanimetrySector
+  type: http
+  seq: 97
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditPlanimetrySector"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: sillas
+      - name: description
+        type: text
+        value: sillas2
+      - name: imageSector
+        type: file
+        value:
+          - /C:/Users/cbral/Downloads/400x400.png
+      - name: activeZone
+        type: text
+        value: "1"
+      - name: sectorId
+        type: text
+        value: aIxMPLHwOGQoIUYGKFYcPzB56B0uxxn7BCkW7hIO8Lg
+      - name: imageBackground
+        type: file
+        value: []
+        disabled: true
+      - name: color
+        type: text
+        value: "#941919"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

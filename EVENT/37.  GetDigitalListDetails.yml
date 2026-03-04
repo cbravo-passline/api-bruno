@@ -1,0 +1,1233 @@
+info:
+  name: 37.  GetDigitalListDetails
+  type: http
+  seq: 38
+
+http:
+  method: GET
+  url: "{{url}}/event/GetDigitalListDetails?event_md5=608e170b60b7fd6f11914a4ec9dfedbd"
+  headers:
+    - name: content-type
+      value: application/json
+  params:
+    - name: id
+      value: 3461d7bce31452bf240f6a3076683d3c
+      type: query
+      disabled: true
+    - name: event_md5
+      value: 608e170b60b7fd6f11914a4ec9dfedbd
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetDigitalListDetails/3461d7bce31452bf240f6a3076683d3c"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+      params:
+        - name: id
+          value: 3461d7bce31452bf240f6a3076683d3c
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 18:41:57 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d63627e49474554-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "record": [
+                  {
+                      "nombre": "promo",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Cerveza heineken",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Tres erre",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "AGUA",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Cerveza",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Agua",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Piscola",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "PISCOLA",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Agua",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Jugo",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Agua",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Redbull",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Choripan",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Black",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "undurraga brut",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Entrada",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Producto 1",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Banana Split",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Barquillo",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Ovo",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Paleta",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Vodka",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Terremoto",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "prueba",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Arepa",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Empanada",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Miel de Ulmo",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Frambuesa Menta",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Bombon Frambuesa",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Jamon de Pavo",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Polera",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Old Fashion",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Rediel",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Whisky",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Spiner",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Vegetariano",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Malta",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Malta",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Cerveza",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Cachapa",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Fresas con Crema",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Roast Beef",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Pollo Teriyaki",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Sandwich del Dia",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Crudo",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "pizza",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Vino",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "piscola",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba1",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba2",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba3",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba4",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba5",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba6",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba7",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba8",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Promo MISTRAL",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Gatorade",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "fernet",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Pisco Mistral",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "clases de tenis",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Fernet",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Pisco",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Uno",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Pecesito",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Caminito",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Caminito",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Otro producto",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Heineken",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Agua Mineral",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "MISTRAL 35",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "ENTRADA",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Preventa General",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "AGUA",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "prueba",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "strawberry gin forever",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "redbull experince",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "patatas",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba Producto",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "RON 3000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "PISCO 3000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "VODKA 3000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "CERVEZA 3000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "AGUA 3000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "BEBIDA",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "JUGO",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "RON 4000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "PISCO 4000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "VODKA 4000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "CERVEZA 4.000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "AGUA 4000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "JUGO 4000",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Papitas",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Whisky",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Pizza Motzzarella",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "pizza",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "PROSCIUTTO",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Hamburgesa",
+                      "pendientes": "1",
+                      "comprados": "1",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "COCA COLA",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Agua Purificada Normal",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Producto de prueba",
+                      "pendientes": "0",
+                      "comprados": "1",
+                      "validados": "1"
+                  },
+                  {
+                      "nombre": "Producto de Prueba",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba",
+                      "pendientes": "7",
+                      "comprados": "7",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "prueba agotada",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "prueba cortesia",
+                      "pendientes": "1350",
+                      "comprados": "1350",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "prueba cerrada",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba Cortesia 2",
+                      "pendientes": "1348",
+                      "comprados": "1348",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba Cortesia 3",
+                      "pendientes": "674",
+                      "comprados": "674",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "Prueba Ricardo",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  },
+                  {
+                      "nombre": "PRODUCTO X",
+                      "pendientes": "0",
+                      "comprados": "0",
+                      "validados": "0"
+                  }
+              ],
+              "totals": {
+                  "total_tickets": "3385",
+                  "total_boletos": "0",
+                  "total_validadas": "1",
+                  "total_validaddas_bol": "0",
+                  "total_cortesias_validadas": "0",
+                  "total_compradas_validadas": "1",
+                  "total_cortesias": "3383",
+                  "total_cortesias_bol": "0",
+                  "total_compradas": "2",
+                  "total_compradas_bol": "0"
+              },
+              "event_data": {
+                  "id": "181803",
+                  "orden": "181803",
+                  "autor": "0",
+                  "fecha_ingreso": "2023-06-09 19:25:36",
+                  "editor": "0",
+                  "fecha_edicion": "2024-09-11 05:03:25",
+                  "usuario": "3679",
+                  "slug": "prueba-ricardo-uruguay",
+                  "nombre": "Prueba Ricardo Uruguay",
+                  "sku": null,
+                  "tags": "",
+                  "tipo": "3",
+                  "canal_venta": "0",
+                  "fecha_publicacion": "2023-09-27 23:50:24",
+                  "mayores": "0",
+                  "rango_edad": "18",
+                  "aforo_maximo": "0",
+                  "codigo": "3618",
+                  "pagado": "0",
+                  "vendera_entradas": "0",
+                  "fecha_inicio": "2029-06-09 00:00:00",
+                  "fecha_termino": "2029-06-09 23:45:00",
+                  "musica": "0",
+                  "fiestas": "0",
+                  "arte": "0",
+                  "ferias": "0",
+                  "familia": "0",
+                  "deportes": "0",
+                  "transportes": "0",
+                  "discotecas": "0",
+                  "turismo": "0",
+                  "night_club": "0",
+                  "teatro": "0",
+                  "mas_publico": "0",
+                  "obrasocial": "0",
+                  "educacion": "0",
+                  "otros": "0",
+                  "festivales": "0",
+                  "gamer": "0",
+                  "itinerario": "prueba ricardo itinerario 2",
+                  "artistas": "artista prueba",
+                  "descripcion": "prueba ricardo descripcion 212",
+                  "pais": "chile",
+                  "region": "1",
+                  "comuna": "252",
+                  "act_mostrar_region_comuna": "1",
+                  "direccion": "lugar prueba",
+                  "direccion_mapa": "Prueba Ricardo Uruguay",
+                  "latitud": "",
+                  "longitud": "",
+                  "lugar": "lugar prueba",
+                  "url_video": "",
+                  "id_video": "",
+                  "host_video": "",
+                  "numero_validadores": "0",
+                  "numero_supervisores": "0",
+                  "pagado_a_validadores": "0",
+                  "slider_portada": "0.00",
+                  "costo_validadores": "0.00",
+                  "costo_supervisores": "0.00",
+                  "costo_ticket_fisico": "15.00",
+                  "costo_ticket_fisico2": "0.00",
+                  "comision_ticket_fisico": "0",
+                  "cantidad_ticket_fisico": "0",
+                  "cantidad_ticket_fisico2": "0",
+                  "valor_ticket_fisico_fixed": "0.00",
+                  "valor_ticket_fisico_boleteria": "0.00",
+                  "devoluciones": "0.00",
+                  "devoluciones_manual": "0.00",
+                  "devoluciones_anterior": "0.00",
+                  "costos_bancarios": "0.00",
+                  "otros_costos": "0.00",
+                  "deuda_anterior": "0.00",
+                  "anticipo": "0.00",
+                  "porcentaje": null,
+                  "fecha_anticipo": "0000-00-00 00:00:00",
+                  "referencia_anticipo": null,
+                  "anticipo1": "0.00",
+                  "porcentaje1": null,
+                  "fecha_anticipo1": "0000-00-00 00:00:00",
+                  "referencia_anticipo1": null,
+                  "anticipo2": "0.00",
+                  "porcentaje2": null,
+                  "fecha_anticipo2": "0000-00-00 00:00:00",
+                  "referencia_anticipo2": null,
+                  "anticipo3": "0.00",
+                  "porcentaje3": null,
+                  "fecha_anticipo3": "0000-00-00 00:00:00",
+                  "referencia_anticipo3": null,
+                  "anticipo4": "0.00",
+                  "porcentaje4": null,
+                  "fecha_anticipo4": "0000-00-00 00:00:00",
+                  "referencia_anticipo4": null,
+                  "anticipo5": "0.00",
+                  "porcentaje5": null,
+                  "fecha_anticipo5": "0000-00-00 00:00:00",
+                  "referencia_anticipo5": null,
+                  "anticipo6": "0.00",
+                  "porcentaje6": null,
+                  "fecha_anticipo6": null,
+                  "referencia_anticipo6": null,
+                  "anticipo7": "0.00",
+                  "porcentaje7": null,
+                  "fecha_anticipo7": null,
+                  "referencia_anticipo7": null,
+                  "anticipo8": "0.00",
+                  "porcentaje8": null,
+                  "fecha_anticipo8": null,
+                  "referencia_anticipo8": null,
+                  "anticipo9": "0.00",
+                  "porcentaje9": null,
+                  "fecha_anticipo9": null,
+                  "referencia_anticipo9": null,
+                  "factura": "",
+                  "numero_factura": "",
+                  "liquidacion_factura": "",
+                  "numero_liquidacion_factura": "",
+                  "cierre": "",
+                  "comprobante_transferencia": null,
+                  "monto_pagado": "0.00",
+                  "comentarios_monto_pagado": "",
+                  "pago_passline": "3",
+                  "nombre_productora": "Productor de Prueba",
+                  "nombre_usuario": "Productor Prueba",
+                  "email_usuario": "productor@passline.cl",
+                  "estado_evento": "3",
+                  "motivo": "termino prueba",
+                  "fecha_suspension": "2024-06-25 10:41:33",
+                  "validadores": "",
+                  "ya_aprobado": "1",
+                  "cargo_servicio_producto": "15.00",
+                  "comision": "0.000",
+                  "cargo_servicio": "15.00",
+                  "cargo_servicio_boleteria": "0.0000",
+                  "cargo_servicio_transferencia": "0.000",
+                  "mostrar_cargo": "0",
+                  "cargo_boleteria": "15.00",
+                  "cargo_boleteria_efectivo": "15.00",
+                  "cargo_efectivo_rrpp": "0.00",
+                  "cargo_minimo": "0.00",
+                  "cargo_maximo": "0.00",
+                  "cargo_fijo": "0.00",
+                  "cargo_fijo_ticket": "0.00",
+                  "cargo_transferencia": "0.00",
+                  "deshabilitar_cargo_minimo": "0",
+                  "revenue": "0.00000",
+                  "planimetria": "",
+                  "banner_superior": null,
+                  "banner_inferior": null,
+                  "link_planimetria": "",
+                  "complemento_1": "12",
+                  "complemento_2": "2",
+                  "complemento_3": "3",
+                  "complemento_4": "4",
+                  "complemento_5": "5",
+                  "complemento_6": "6",
+                  "complemento_7": "",
+                  "complemento_8": "",
+                  "complemento_9": "",
+                  "complemento_10": "",
+                  "complemento_11": "",
+                  "complemento_12": "",
+                  "mostrar_alerta_carro": "1",
+                  "alerta_carro": "",
+                  "con_planimetria": "0",
+                  "estado": "0",
+                  "estado_pagar": "2",
+                  "descripcion_problema": "",
+                  "costo_adicional_passline": "100000.00",
+                  "arriendo_sistema_boleteria": "0.00",
+                  "cantidad_pos_transbank": "0",
+                  "arriendo_pos_transbank": "0.00",
+                  "suspendido": "1",
+                  "correlativo_evento": "001",
+                  "alerta": "0",
+                  "img_totem": null,
+                  "img_boleteria": null,
+                  "img_kiosko": null,
+                  "imagen_descuento": null,
+                  "liquidador": "100",
+                  "fecha_transferencia": "0000-00-00",
+                  "numero_transferencia": "",
+                  "abonados": "0",
+                  "validar_cortesias": "0",
+                  "numero_boleterias": "0",
+                  "boleteria_efectivo": "0.00",
+                  "boleteria_tarjeta": "0.00",
+                  "total_boleteria": "0.00",
+                  "sistema_boleteria_traslado": "0.00",
+                  "sistema_boleteria_internet": "0.00",
+                  "sistema_boleteria_otros": "0.00",
+                  "numero_totems": "0",
+                  "arriendo_totems": "0.00",
+                  "comision_totems": "0.00",
+                  "total_venta_totems": "0.00",
+                  "comision_efectivo_rrpp": "10",
+                  "mantencion_extra_totems": "0.00",
+                  "numero_pda": "0",
+                  "arriendo_pda": "0.00",
+                  "arriendo_internet": "0.00",
+                  "retencion_impuesto": "0.00",
+                  "impuesto_retenido": "0.00",
+                  "envio_sms": "0.00",
+                  "pantallas_publicidad": "0.00",
+                  "correos_masivos": "0.00",
+                  "costo_honorarios": "0.00",
+                  "camp_facebook": "0.00",
+                  "camp_adwords": "0.00",
+                  "camp_youtube": "0.00",
+                  "camp_twitter": "0.00",
+                  "camp_instagram": "0.00",
+                  "informacion_adicional": "",
+                  "operador_boleteria": "0",
+                  "venta_efectivo": "0",
+                  "link_invitacion": "0",
+                  "act_maratones": "0",
+                  "act_numero_corredor": "0",
+                  "modelo_planimetria": "0",
+                  "zoom": "75",
+                  "escenario": "0",
+                  "valor_usd": "0",
+                  "facturacion_uy": "0",
+                  "maximo_validaciones": "1",
+                  "local": "0",
+                  "validacion_externa": "1",
+                  "banner_correo": "",
+                  "banner_ticket": null,
+                  "codigo_pixel": "",
+                  "codigo_queueit": "",
+                  "codigo_google": "",
+                  "id_transferencia_deuda": null,
+                  "validacion_unica": "0",
+                  "documento_pdf": null,
+                  "documento2_pdf": null,
+                  "streaming_type": "",
+                  "streaming_cat": "0",
+                  "url_streaming": "",
+                  "url_streaming_direct": "",
+                  "account_uuid": "",
+                  "id_inplayer_asset": "",
+                  "inplayer_token": "",
+                  "streaming": "0",
+                  "streaming_additional": "",
+                  "act_test": "0",
+                  "act_chatvimeo": "0",
+                  "play_after": "0",
+                  "act_codigoacceso": "0",
+                  "sobreventa": "0",
+                  "ticketera": "1",
+                  "act_fullhome": "0",
+                  "pdf_exencion": null,
+                  "fecha_pdf_exencion": null,
+                  "act_venta_anticipa": "1",
+                  "orden_productos": "2",
+                  "act_validar_sesion": "0",
+                  "rebate": "0",
+                  "broker": "0",
+                  "passlinetv": "1",
+                  "venta_externa": "0",
+                  "url_venta_externa": "",
+                  "devolucion_automatica": "0",
+                  "act_devoluciones": "0",
+                  "tipo_descuento": "0",
+                  "venta_exclusiva": "0",
+                  "tipo_venta_exclusiva": "0",
+                  "act_declaracion_sanitaria": "0",
+                  "act_terminos_condiciones": "0",
+                  "fire_queueit": "0",
+                  "act_lightmode": "0",
+                  "act_validar_asientos": "0",
+                  "posicion_tickets_planimetria": "0",
+                  "act_excluir_broker": "0",
+                  "act_timbrado_tickets": "0",
+                  "valor_inicial_timbrado": "0",
+                  "grupo_timbrado": "0",
+                  "act_cargo_pasarelas": "1",
+                  "act_fecha_evento": "1",
+                  "act_fecha_ficha": "1",
+                  "act_promo_label": "1",
+                  "act_sorteo": "0",
+                  "act_facturacion": "0",
+                  "tipo_facturacion": "0",
+                  "act_facturacion_boleteria": "0",
+                  "tipo_facturacion_boleteria": "0",
+                  "emisor_factura": "0",
+                  "id_evento_agrupacion": "1",
+                  "id_evento_seatmap": "",
+                  "act_abonados": "0",
+                  "act_clearsale": "0",
+                  "codigo_pixel_simple": "",
+                  "comprobante_transferencia_rebate": "",
+                  "evento_reagendado": "1",
+                  "act_qr_reducido": "0",
+                  "md5_id": "3461d7bce31452bf240f6a3076683d3c",
+                  "notas_y_observaciones": "PRUEBA OBSERVACION 1",
+                  "aviso_soldout": "0",
+                  "url_spotify": "https://open.spotify.com/intl-es/album/3UedVnaIbI3SRuMLClWiJ3?si=Sd2kgtPHQASA8qiyV7dD3g",
+                  "mensaje_exito_invitado": "",
+                  "id_evento_venue": null,
+                  "emails_repetidos": "0",
+                  "motivo_rechazo": "",
+                  "venta_estimada": "0.00",
+                  "act_traspaso_abonos": "0",
+                  "act_conmebol": "0",
+                  "act_registro_biometrico": "0",
+                  "act_permitir_extranjeros": "0",
+                  "tipo_dvm": "0",
+                  "planimetria_dvm": "0",
+                  "min_entrada_dvm": "0",
+                  "max_entrada_dvm": "0",
+                  "tipo_asientos_dvm": "0",
+                  "color_dvm": "0",
+                  "setsectores_dvm": "0",
+                  "fecha_anuncio": null,
+                  "estado_fecha_anuncio": "0",
+                  "act_swappable": "1",
+                  "act_futbol_socios": "0",
+                  "id_categoria_paises_impuestos": "0",
+                  "act_compra_protegida": "1",
+                  "id_business_partner": "0",
+                  "agregar_carta_productor": "1",
+                  "act_mostrar_productos": "0"
+              }
+          }
+  - name: Error invalid params
+    request:
+      url: "{{url}}/event/GetDigitalListDetails/"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+      params:
+        - name: id
+          value: 3461d7bce31452bf240f6a3076683d3c
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 18:43:32 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6364d1c95d44fc-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event_md5 field is required."
+              ]
+          }
+  - name: Error event do not exits
+    request:
+      url: "{{url}}/event/GetDigitalListDetails/3461d7bce31452bf240f6a3076683d3c1"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+      params:
+        - name: id
+          value: 3461d7bce31452bf240f6a3076683d3c
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 18:43:47 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d63652a1a9644fc-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "The event does not exists."
+          }
+  - name: Error do not access to this event
+    request:
+      url: "{{url}}/event/GetDigitalListDetails/929718b6ac1a43a0bdca9cee291e5803"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+      params:
+        - name: id
+          value: 3461d7bce31452bf240f6a3076683d3c
+          type: query
+          disabled: true
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 18:44:30 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d636637d95544fc-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "You do not have access to this event."
+          }
+
+docs: Permite traer los etickets de un usuario registrado, se envía el token.

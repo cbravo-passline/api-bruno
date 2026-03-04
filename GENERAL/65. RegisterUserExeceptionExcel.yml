@@ -1,0 +1,22 @@
+info:
+  name: 65. RegisterUserExeceptionExcel
+  type: http
+  seq: 66
+
+http:
+  method: POST
+  url: "{{url}}/general/RegisterUserExceptionExcel"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /C:/Users/Ariel Daza/Desktop/test_excepciones.xlsx
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

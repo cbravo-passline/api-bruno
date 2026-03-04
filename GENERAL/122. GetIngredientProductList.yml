@@ -1,0 +1,21 @@
+info:
+  name: 122. GetIngredientProductList
+  type: http
+  seq: 117
+
+http:
+  method: GET
+  url: "{{url}}/general/GetIngredientList?category=wZdQSzKxc20TLEzvfnVAaQ@@"
+  params:
+    - name: category
+      value: wZdQSzKxc20TLEzvfnVAaQ@@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

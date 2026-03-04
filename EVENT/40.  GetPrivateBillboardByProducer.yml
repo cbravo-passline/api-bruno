@@ -1,0 +1,486 @@
+info:
+  name: 40.  GetPrivateBillboardByProducer
+  type: http
+  seq: 41
+
+http:
+  method: POST
+  url: "{{url}}/event/GetPrivateBillboardByProducer"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"country\": \" AND 1=1\",\r
+
+      \    \"producer\": 3679,\r
+
+      \    \"text\": \"\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/event/GetPrivateBillboardByProducer"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"country\": \"chile\",\r
+
+          \    \"producer\": 3239253,\r
+
+          \    \"text\": \"Experiencias Culinarias\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 20:34:12 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d6406e9e91ebcde-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "163765",
+                  "orden": "163765",
+                  "autor": "0",
+                  "fecha_ingreso": "2023-03-27 21:47:14",
+                  "editor": "0",
+                  "fecha_edicion": "2024-10-17 20:33:11",
+                  "usuario": "3239253",
+                  "slug": "experiencias-culinarias-para-elegir",
+                  "nombre": "Experiencias Culinarias para elegir.",
+                  "sku": "AAA045",
+                  "tags": "5524",
+                  "tipo": "1",
+                  "canal_venta": "0",
+                  "fecha_publicacion": "2024-06-17 22:26:28",
+                  "mayores": "0",
+                  "rango_edad": "0",
+                  "aforo_maximo": "0",
+                  "codigo": "6515",
+                  "pagado": "1",
+                  "vendera_entradas": "1",
+                  "fecha_inicio": "2023-12-31 00:00:00",
+                  "fecha_termino": "2024-12-30 23:45:00",
+                  "musica": "0",
+                  "fiestas": "0",
+                  "arte": "0",
+                  "ferias": "0",
+                  "familia": "0",
+                  "deportes": "0",
+                  "transportes": "0",
+                  "discotecas": "0",
+                  "turismo": "0",
+                  "night_club": "0",
+                  "teatro": "0",
+                  "mas_publico": "0",
+                  "obrasocial": "0",
+                  "educacion": "0",
+                  "otros": "0",
+                  "festivales": "0",
+                  "gamer": "0",
+                  "itinerario": "Toda venta está sujeta a confirmación de stock. En caso de no contar con el stock disponible para cursar la venta, nos comunicaremos prontamente con usted para proceder a la devolución del pago. El robo, pérdida o extravío de los tickets es de responsabilidad exclusiva del portador. Experiencias, servicios, tickets y/o productos no susceptibles de devolución en base al derecho de retracto consagrado en el artículo 3º bis de la Ley Nº 19.496.\r\n\r\nAl comprar esta experiencia, servicio, ticket y/o producto usted recibirá por mail un documento con un código único de experiencias, Gift card, Box, certificado, servicios, tickets y/o productos para la compra (El cual puede ser un código único o código de barra).\r\n*Los códigos serán enviados dentro de las primeras 48 horas después de la compra, en días hábiles. \r\n\r\nSi la compra fue realizada en fin de semana o festivo, las 48 horas comienzan a correr desde el lunes siguiente.  Si no recibe el mail con su código de confirmación para su acceso a la experiencia, puede contactarnos al siguiente mail servicioalcliente@df.cl\r\n\r\nLuego: En caso de no recibir los documentos de esta experiencia en su email, favor contactarse al email servicioalcliente@df.cl, para solicitar su envío.\r\n\r\nDirección: www.getawaybox.cl\r\nMail: sac@getawaybox.cl. Códigos/ Reservas.\r\ninfo@getawaybox.cl. Información Getawaybox\r\nTeléfono: +56991596454\r\n\r\nVigencia para hacer uso de Getaway box: hasta 30 Diciembre 2024, sujeto a disponibilidad, previa reserva con equipo de Servicio al cliente de Getaway box\r\n\r\nCualquier solicitud, consulta o requerimiento adicional a los expresamente señalados como incluidos en las experiencias, servicios, Gift Cards, Box, tickets y/o productos que se venden deberá ser tratado directamente con el Hotel, Spa, Viña, Teatro, Centro de Ski, tienda, centro deportivo, productora, u otra empresa proveedora de las experiencias, servicios, tickets y/o productos de los cuales se trate.\r\n\r\nExperiencias, Gift Cards, servicios, tickets y/o productos no susceptibles de devolución en base al derecho de retracto consagrado en el artículo 3 Bis de la Ley N 19.496. El robo, pérdida o extravío de los tickets o experiencias es de responsabilidad exclusiva del portador. Los porcentajes de descuento aplicados son siempre sobre precios de referencia de los productos. Los precios de referencia de los productos, servicios y/o experiencias son informados por nuestros proveedores. No nos hacemos responsables frente a alzas o bajas repentinas en los precios de referencia a nivel mercado.",
+                  "artistas": "",
+                  "descripcion": "<b style=\"font-family: Arial, Verdana; font-size: 10pt; font-variant-ligatures: normal; font-variant-caps: normal; font-style: normal;\">Experiencias Culinarias.</b><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">Válido 2 personas.</span></font><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">Getaway box.</span></font><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">Box Sabores.</span></font><br><br><b style=\"font-family: Arial, Verdana; font-size: 10pt; font-variant-ligatures: normal; font-variant-caps: normal; font-style: normal;\">Precio Suscriptor DF: $32.195.</b><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">Valor Referencial: $45.990.</span></font><br><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">Utilizando el código de descuento de Suscriptor DF.</span></font><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">Si no conoces el código para aplicar el descuento, escríbenos a experiencias@df.cl.</span></font><br><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">Vigencia para hacer uso de Getaway box: hasta el 30 de Diciembre de 2024.</span></font><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">Sujeto a disponibilidad, previa reserva con equipo de Servicio al cliente de Getaway box.</span></font><br><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">MÁS DE 50 RESTAURANTES PARA ELEGIR Y DAR A TU PALADAR NUEVOS SABORES PARA EXPLORAR.<br><b><i>¿Por qué no disfrutar de una comida distinta, única y llena de sabor?</i></b> Deléitate con maravillosas pastas, increíbles carnes, sabrosa gastronomía peruana, típica cocina chilena... un mundo de sabores para disfrutar!\r\n</span></font><br><br><b style=\"font-family: Arial, Verdana; font-size: 10pt; font-variant-ligatures: normal; font-variant-caps: normal;\"><i>¿Cómo canjear tu GetawayBox?<br></i></b><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">1. Entra a </span></font><a href=\"www.getawaybox.cl\" style=\"font-family: Arial, Verdana; font-size: 10pt; font-variant-ligatures: normal; font-variant-caps: normal; font-style: normal; font-weight: normal;\">www.getawaybox.cl</a><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\"> y registra el código que te enviaremos.</span></font><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">Entra aquí para validar el código enviado: </span></font><a href=\"https://clientes.getawaybox.cl/modulos/custom_inscripcion/inscribir.php\" style=\"font-family: Arial, Verdana; font-size: 10pt; font-variant-ligatures: normal; font-variant-caps: normal; font-style: normal; font-weight: normal;\">https://clientes.getawaybox.cl/modulos/custom_inscripcion/inscribir.php</a><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">2. Elije la experiencia que más te guste, reserva y disfruta.</span></font><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">3. Revisa la vigencia de tu BOX al registrar tu código.</span></font><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">4. Experiencias sujetas a disponibilidad y a reservas previas.</span></font><br><br><b style=\"font-family: Arial, Verdana; font-size: 10pt; font-variant-ligatures: normal; font-variant-caps: normal;\">Recuerda:</b><br><font face=\"Arial, Verdana\"><span style=\"font-size: 10pt;\">Cada código es único y se puede utilizar una única vez | Una vez registrado, podrás elegir una actividad para disfrutar.</span></font><br><br><font face=\"Arial, Verdana\"><span style=\"font-size: 13.3333px;\">Dirección: www.getawaybox.cl.</span></font><br><span style=\"font-family: Arial, Verdana; font-size: 13.3333px;\">Códigos/ Reservas:</span><font face=\"Arial, Verdana\"><span style=\"font-size: 13.3333px;\"> sac@getawaybox.cl.</span></font><br><span style=\"font-family: Arial, Verdana; font-size: 13.3333px;\">Información Getawaybox: </span><font face=\"Arial, Verdana\"><span style=\"font-size: 13.3333px;\">info@getawaybox.cl.</span></font><br><font face=\"Arial, Verdana\"><span style=\"font-size: 13.3333px;\">Teléfono: +56991596454.</span></font><br><font face=\"Arial, Verdana\"><span style=\"font-size: 13.3333px;\"><br></span></font><div style=\"font-size: 10pt;\"><span style=\"font-size: 10pt;\">- Los códigos serán enviados en 24 horas hábiles, el los siguientes horarios:</span></div><div times=\"\" new=\"\" roman\";=\"\" font-size:=\"\" medium;\"=\"\"><font face=\"Arial, Verdana\">- Lunes a jueves 09:00 a 18:00 horas. </font>Viernes de 09:00 a 14:00.</div><br><br><br><br><br><br><br>",
+                  "pais": "chile",
+                  "region": "13",
+                  "comuna": "1307",
+                  "act_mostrar_region_comuna": "1",
+                  "direccion": "www.getawaybox.cl",
+                  "direccion_mapa": "",
+                  "latitud": "",
+                  "longitud": "",
+                  "lugar": "www.getawaybox.cl",
+                  "url_video": "",
+                  "id_video": "",
+                  "host_video": "",
+                  "numero_validadores": "0",
+                  "numero_supervisores": "0",
+                  "pagado_a_validadores": "0",
+                  "slider_portada": "0.00",
+                  "costo_validadores": "0.00",
+                  "costo_supervisores": "0.00",
+                  "costo_ticket_fisico": "0.00",
+                  "costo_ticket_fisico2": "40.00",
+                  "comision_ticket_fisico": "0",
+                  "cantidad_ticket_fisico": "0",
+                  "cantidad_ticket_fisico2": "0",
+                  "valor_ticket_fisico_fixed": "0.00",
+                  "valor_ticket_fisico_boleteria": "0.00",
+                  "devoluciones": "0.00",
+                  "devoluciones_manual": "0.00",
+                  "devoluciones_anterior": null,
+                  "costos_bancarios": "0.00",
+                  "otros_costos": "0.00",
+                  "deuda_anterior": null,
+                  "anticipo": "0.00",
+                  "porcentaje": null,
+                  "fecha_anticipo": "0000-00-00 00:00:00",
+                  "referencia_anticipo": null,
+                  "anticipo1": "0.00",
+                  "porcentaje1": null,
+                  "fecha_anticipo1": "0000-00-00 00:00:00",
+                  "referencia_anticipo1": null,
+                  "anticipo2": "0.00",
+                  "porcentaje2": null,
+                  "fecha_anticipo2": "0000-00-00 00:00:00",
+                  "referencia_anticipo2": null,
+                  "anticipo3": "0.00",
+                  "porcentaje3": null,
+                  "fecha_anticipo3": "0000-00-00 00:00:00",
+                  "referencia_anticipo3": null,
+                  "anticipo4": "0.00",
+                  "porcentaje4": null,
+                  "fecha_anticipo4": "0000-00-00 00:00:00",
+                  "referencia_anticipo4": null,
+                  "anticipo5": "0.00",
+                  "porcentaje5": null,
+                  "fecha_anticipo5": "0000-00-00 00:00:00",
+                  "referencia_anticipo5": null,
+                  "anticipo6": "0.00",
+                  "porcentaje6": null,
+                  "fecha_anticipo6": null,
+                  "referencia_anticipo6": null,
+                  "anticipo7": "0.00",
+                  "porcentaje7": null,
+                  "fecha_anticipo7": null,
+                  "referencia_anticipo7": null,
+                  "anticipo8": "0.00",
+                  "porcentaje8": null,
+                  "fecha_anticipo8": null,
+                  "referencia_anticipo8": null,
+                  "anticipo9": "0.00",
+                  "porcentaje9": null,
+                  "fecha_anticipo9": null,
+                  "referencia_anticipo9": null,
+                  "factura": "",
+                  "numero_factura": "",
+                  "liquidacion_factura": "",
+                  "numero_liquidacion_factura": "",
+                  "cierre": "",
+                  "comprobante_transferencia": null,
+                  "monto_pagado": "0.00",
+                  "comentarios_monto_pagado": "",
+                  "pago_passline": "0",
+                  "nombre_productora": "Ediciones Financieras S.A",
+                  "nombre_usuario": "Tienda DF",
+                  "email_usuario": "experiencias@df.cl",
+                  "estado_evento": "1",
+                  "motivo": "",
+                  "fecha_suspension": "0000-00-00 00:00:00",
+                  "validadores": "",
+                  "ya_aprobado": "1",
+                  "cargo_servicio_producto": "0.00",
+                  "comision": "10.000",
+                  "cargo_servicio": "0.00",
+                  "cargo_servicio_boleteria": "0.0000",
+                  "cargo_servicio_transferencia": "0.000",
+                  "mostrar_cargo": "0",
+                  "cargo_boleteria": "13.00",
+                  "cargo_boleteria_efectivo": "13.00",
+                  "cargo_efectivo_rrpp": "0.00",
+                  "cargo_minimo": "0.00",
+                  "cargo_maximo": "0.00",
+                  "cargo_fijo": "0.00",
+                  "cargo_fijo_ticket": "0.00",
+                  "cargo_transferencia": "0.00",
+                  "deshabilitar_cargo_minimo": "1",
+                  "revenue": "0.00000",
+                  "planimetria": "",
+                  "banner_superior": "",
+                  "banner_inferior": null,
+                  "link_planimetria": "",
+                  "complemento_1": "",
+                  "complemento_2": "",
+                  "complemento_3": "",
+                  "complemento_4": "",
+                  "complemento_5": "",
+                  "complemento_6": "",
+                  "complemento_7": "",
+                  "complemento_8": "",
+                  "complemento_9": "",
+                  "complemento_10": "",
+                  "complemento_11": "",
+                  "complemento_12": "",
+                  "mostrar_alerta_carro": "1",
+                  "alerta_carro": "",
+                  "con_planimetria": "0",
+                  "estado": "1",
+                  "estado_pagar": "0",
+                  "descripcion_problema": "",
+                  "costo_adicional_passline": "0.00",
+                  "arriendo_sistema_boleteria": "0.00",
+                  "cantidad_pos_transbank": "0",
+                  "arriendo_pos_transbank": "0.00",
+                  "suspendido": "0",
+                  "correlativo_evento": "001",
+                  "alerta": "0",
+                  "img_totem": null,
+                  "img_boleteria": null,
+                  "img_kiosko": null,
+                  "imagen_descuento": null,
+                  "liquidador": "16",
+                  "fecha_transferencia": null,
+                  "numero_transferencia": null,
+                  "abonados": "0",
+                  "validar_cortesias": "0",
+                  "numero_boleterias": "0",
+                  "boleteria_efectivo": null,
+                  "boleteria_tarjeta": null,
+                  "total_boleteria": null,
+                  "sistema_boleteria_traslado": "0.00",
+                  "sistema_boleteria_internet": "0.00",
+                  "sistema_boleteria_otros": "0.00",
+                  "numero_totems": "0",
+                  "arriendo_totems": "0.00",
+                  "comision_totems": "0.00",
+                  "total_venta_totems": "0.00",
+                  "comision_efectivo_rrpp": "10",
+                  "mantencion_extra_totems": "0.00",
+                  "numero_pda": "0",
+                  "arriendo_pda": "0.00",
+                  "arriendo_internet": "0.00",
+                  "retencion_impuesto": "0.00",
+                  "impuesto_retenido": "0.00",
+                  "envio_sms": "0.00",
+                  "pantallas_publicidad": "0.00",
+                  "correos_masivos": "0.00",
+                  "costo_honorarios": "0.00",
+                  "camp_facebook": "0.00",
+                  "camp_adwords": "0.00",
+                  "camp_youtube": "0.00",
+                  "camp_twitter": "0.00",
+                  "camp_instagram": "0.00",
+                  "informacion_adicional": null,
+                  "operador_boleteria": "0",
+                  "venta_efectivo": "0",
+                  "link_invitacion": "0",
+                  "act_maratones": "0",
+                  "act_numero_corredor": "0",
+                  "modelo_planimetria": "0",
+                  "zoom": "75",
+                  "escenario": "0",
+                  "valor_usd": "0",
+                  "facturacion_uy": "0",
+                  "maximo_validaciones": "1",
+                  "local": "0",
+                  "validacion_externa": "0",
+                  "banner_correo": "",
+                  "banner_ticket": null,
+                  "codigo_pixel": "",
+                  "codigo_queueit": "",
+                  "codigo_google": "",
+                  "id_transferencia_deuda": null,
+                  "validacion_unica": "0",
+                  "documento_pdf": null,
+                  "documento2_pdf": null,
+                  "streaming_type": "",
+                  "streaming_cat": "0",
+                  "url_streaming": "",
+                  "url_streaming_direct": "",
+                  "account_uuid": "",
+                  "id_inplayer_asset": "",
+                  "inplayer_token": "",
+                  "streaming": "0",
+                  "streaming_additional": "",
+                  "act_test": "0",
+                  "act_chatvimeo": "0",
+                  "play_after": "0",
+                  "act_codigoacceso": "1",
+                  "sobreventa": "0",
+                  "ticketera": "1",
+                  "act_fullhome": "0",
+                  "pdf_exencion": null,
+                  "fecha_pdf_exencion": null,
+                  "act_venta_anticipa": "0",
+                  "orden_productos": "2",
+                  "act_validar_sesion": "0",
+                  "rebate": "0",
+                  "broker": "0",
+                  "passlinetv": "1",
+                  "venta_externa": "0",
+                  "url_venta_externa": "",
+                  "devolucion_automatica": "0",
+                  "act_devoluciones": "0",
+                  "tipo_descuento": "0",
+                  "venta_exclusiva": "0",
+                  "tipo_venta_exclusiva": "0",
+                  "act_declaracion_sanitaria": "0",
+                  "act_terminos_condiciones": "0",
+                  "fire_queueit": "0",
+                  "act_lightmode": "0",
+                  "act_validar_asientos": "0",
+                  "posicion_tickets_planimetria": "0",
+                  "act_excluir_broker": "0",
+                  "act_timbrado_tickets": "0",
+                  "valor_inicial_timbrado": "0",
+                  "grupo_timbrado": "0",
+                  "act_cargo_pasarelas": "1",
+                  "act_fecha_evento": "0",
+                  "act_fecha_ficha": "0",
+                  "act_promo_label": "1",
+                  "act_sorteo": "0",
+                  "act_facturacion": "0",
+                  "tipo_facturacion": "0",
+                  "act_facturacion_boleteria": "0",
+                  "tipo_facturacion_boleteria": "0",
+                  "emisor_factura": "0",
+                  "id_evento_agrupacion": "0",
+                  "id_evento_seatmap": "",
+                  "act_abonados": "0",
+                  "act_clearsale": "0",
+                  "codigo_pixel_simple": "",
+                  "comprobante_transferencia_rebate": "",
+                  "evento_reagendado": "1",
+                  "act_qr_reducido": "0",
+                  "md5_id": "de566effb46afa6ae0e44f3ffa5cf3ad",
+                  "notas_y_observaciones": "",
+                  "aviso_soldout": "0",
+                  "url_spotify": "",
+                  "mensaje_exito_invitado": "",
+                  "id_evento_venue": null,
+                  "emails_repetidos": "0",
+                  "motivo_rechazo": "",
+                  "venta_estimada": "0.00",
+                  "act_traspaso_abonos": "0",
+                  "act_conmebol": "0",
+                  "act_registro_biometrico": "0",
+                  "act_permitir_extranjeros": "0",
+                  "tipo_dvm": "0",
+                  "planimetria_dvm": "0",
+                  "min_entrada_dvm": "0",
+                  "max_entrada_dvm": "0",
+                  "tipo_asientos_dvm": "0",
+                  "color_dvm": "0",
+                  "setsectores_dvm": "0",
+                  "fecha_anuncio": null,
+                  "estado_fecha_anuncio": "0",
+                  "act_swappable": "1",
+                  "act_futbol_socios": "0",
+                  "id_categoria_paises_impuestos": "0",
+                  "act_compra_protegida": "1",
+                  "id_business_partner": "0",
+                  "agregar_carta_productor": "1",
+                  "act_mostrar_productos": "0",
+                  "comuna_nombre": "Vitacura",
+                  "region_nombre": "Regi&oacute;n Metropolitana de Santiago",
+                  "cant_prod1": "1",
+                  "cant_prod_total": "1",
+                  "cant_prod_disp": "0",
+                  "promocion": null,
+                  "precio_min": "45990.00",
+                  "miniatura": "-422366-min.jpg",
+                  "recorte": "-422366-rec.jpg",
+                  "evento_func_hijos": "0",
+                  "evento_func": "0",
+                  "id_evento_padre": null,
+                  "dias_atencion": "0",
+                  "nueva_planimetria": "0",
+                  "tags_description": [
+                      {
+                          "id": "5524",
+                          "nombre": "GIFT CARDS"
+                      }
+                  ]
+              }
+          ]
+  - name: Error invalid params
+    request:
+      url: "{{url}}/event/GetPrivateBillboardByProducer"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 21 Oct 2024 20:58:13 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=fVPCS67dmjWCyQ9xJg7fXxiKL.pR6jJjWyIaNcAxW2I-1729544293-1.0.1.1-zaxHQC8dQq57ialWbluRjNGUfmbnnGhxXahH.hGa8CXJXZxtvr_GSyI.0eImylVuPNW7abKnbx3LIXu82HMzAw; path=/; expires=Mon, 21-Oct-24 21:28:13 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d642a175ed8455e-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The producer field is required.",
+                  "The value of the producer field must be numeric.",
+                  "The value of the producer must be greater than 0.",
+                  "The country field is required."
+              ]
+          }
+
+docs: Trae un json con los eventos por el id de un productor dado.

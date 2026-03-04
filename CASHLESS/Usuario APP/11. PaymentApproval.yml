@@ -1,0 +1,26 @@
+info:
+  name: 11. PaymentApproval
+  type: http
+  seq: 11
+
+http:
+  method: PUT
+  url: "{{url}}/cashless/PaymentApproval"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"pin\":\"123456\",\r
+
+      \    \"order_id\":\"11\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

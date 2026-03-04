@@ -1,0 +1,21 @@
+info:
+  name: 44. GetProductCashless
+  type: http
+  seq: 20
+
+http:
+  method: GET
+  url: "{{url}}/cashless/GetProductCashless?product=GGNdBAhmIDXQqRG2WjPsyw@@"
+  params:
+    - name: product
+      value: GGNdBAhmIDXQqRG2WjPsyw@@
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

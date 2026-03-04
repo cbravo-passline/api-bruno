@@ -1,0 +1,419 @@
+info:
+  name: 1. GetCountries
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/general/GetCountries"
+  headers:
+    - name: content-type
+      value: application/json
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/general/GetCountries"
+      method: GET
+      headers:
+        - name: content-type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Wed, 23 Oct 2024 12:41:21 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=qsUUu_dvEiYM_w9RgYKK.JCatFh3hzGK0PjbOhvenaU-1729687281-1.0.1.1-W1NTEstAtpZoDA4tOWHlv5f_BZIuEmtaf953Jn34R.xuP.cNhQp6VniBuRWz7DWkpZtF4zMQire5bWtakYXGCA; path=/; expires=Wed, 23-Oct-24 13:11:21 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d71cd036db4adc3-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "13",
+                  "slug": "argentina",
+                  "nombre": "Argentina",
+                  "gmt_timezone": "GMT-3",
+                  "currency": "$",
+                  "time_zone": "America/Argentina/Buenos_Aires",
+                  "termino_moneda": "Pesos",
+                  "termino_cedula": "DNI",
+                  "termino_region": "Provincia",
+                  "termino_comuna": "Localidad",
+                  "cod_telefono": "+549",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-argentina.png",
+                  "flag_image": "https://www.passline.com/imagenes/argentina.png",
+                  "landing_image": "https://www.passline.com/assets/img/argentina.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Argentina.svg"
+              },
+              {
+                  "id": "230",
+                  "slug": "bolivia",
+                  "nombre": "Bolivia",
+                  "gmt_timezone": "GMT-4",
+                  "currency": "Bs/.",
+                  "time_zone": "America/La_Paz",
+                  "termino_moneda": "Bolivianos",
+                  "termino_cedula": "CI",
+                  "termino_region": "Departamento",
+                  "termino_comuna": "Distrito",
+                  "cod_telefono": "+591",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-bolivia.png",
+                  "flag_image": "https://www.passline.com/imagenes/bolivia.png",
+                  "landing_image": "https://www.passline.com/assets/img/bolivia.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Bolivia.svg"
+              },
+              {
+                  "id": "250",
+                  "slug": "brasil",
+                  "nombre": "Brasil",
+                  "gmt_timezone": "GMT-3",
+                  "currency": "R$",
+                  "time_zone": "America/Sao_Paulo",
+                  "termino_moneda": "Reais",
+                  "termino_cedula": "Carteira Ident.",
+                  "termino_region": "Estado",
+                  "termino_comuna": "Ciudade",
+                  "cod_telefono": "+55",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-brasil.png",
+                  "flag_image": "https://www.passline.com/imagenes/ban-brasil.png",
+                  "landing_image": "https://www.passline.com/assets/img/brasil.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Brasil.svg"
+              },
+              {
+                  "id": "46",
+                  "slug": "chile",
+                  "nombre": "Chile",
+                  "gmt_timezone": "GMT-3",
+                  "currency": "$",
+                  "time_zone": "America/Santiago",
+                  "termino_moneda": "Pesos",
+                  "termino_cedula": "RUT",
+                  "termino_region": "Regi&oacute;n",
+                  "termino_comuna": "Comuna",
+                  "cod_telefono": "+56",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-chile.png",
+                  "flag_image": "https://www.passline.com/imagenes/chile.png",
+                  "landing_image": "https://www.passline.com/assets/img/chile.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Chile.svg"
+              },
+              {
+                  "id": "232",
+                  "slug": "colombia",
+                  "nombre": "Colombia",
+                  "gmt_timezone": "GMT-5",
+                  "currency": "COP/.",
+                  "time_zone": "America/Bogota",
+                  "termino_moneda": "Pesos",
+                  "termino_cedula": "C&eacute;dula",
+                  "termino_region": "Departamento",
+                  "termino_comuna": "Ciudad",
+                  "cod_telefono": "+57",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-colombia.png",
+                  "flag_image": "https://www.passline.com/imagenes/colombia.png",
+                  "landing_image": "https://www.passline.com/assets/img/colombia.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Colombia.svg"
+              },
+              {
+                  "id": "253",
+                  "slug": "costarica",
+                  "nombre": "Costa Rica",
+                  "gmt_timezone": "GMT-6",
+                  "currency": "CRC",
+                  "time_zone": "America/Costa_Rica",
+                  "termino_moneda": "Colon",
+                  "termino_cedula": "CI",
+                  "termino_region": "Provincia",
+                  "termino_comuna": "Distritos",
+                  "cod_telefono": "+506",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/ban-costarica.png",
+                  "flag_image": "https://www.passline.com/imagenes/ban-costarica.png",
+                  "landing_image": "",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/CostaRica.svg"
+              },
+              {
+                  "id": "258",
+                  "slug": "dominicana",
+                  "nombre": "Dominicana",
+                  "gmt_timezone": "GMT-4",
+                  "currency": "RD$",
+                  "time_zone": "America/Caracas",
+                  "termino_moneda": "Pesos",
+                  "termino_cedula": "C&eacute;dula",
+                  "termino_region": "Estado",
+                  "termino_comuna": "Municipio",
+                  "cod_telefono": "+1",
+                  "formato_hora": "12",
+                  "mobile_image": "https://www.passline.com/ban-dominicana.png",
+                  "flag_image": "https://www.passline.com/imagenes/ban-dominicana.png",
+                  "landing_image": "",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/RepDom.svg"
+              },
+              {
+                  "id": "233",
+                  "slug": "ecuador",
+                  "nombre": "Ecuador",
+                  "gmt_timezone": "GMT-5",
+                  "currency": "$",
+                  "time_zone": "America/Guayaquil",
+                  "termino_moneda": "Dolares",
+                  "termino_cedula": "CI/DNI/Pasaporte",
+                  "termino_region": "Provincias",
+                  "termino_comuna": "Cantones",
+                  "cod_telefono": "+593",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-ecuador.png",
+                  "flag_image": "https://www.passline.com/imagenes/ecuador.png",
+                  "landing_image": "https://www.passline.com/assets/img/ecuador.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Ecuador.svg"
+              },
+              {
+                  "id": "256",
+                  "slug": "salvador",
+                  "nombre": "El Salvador",
+                  "gmt_timezone": "GMT-6",
+                  "currency": "USD",
+                  "time_zone": "America/El_Salvador",
+                  "termino_moneda": "Dolares",
+                  "termino_cedula": "DUI",
+                  "termino_region": "Departamento",
+                  "termino_comuna": "Municipio",
+                  "cod_telefono": "+503",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-salvador.png",
+                  "flag_image": "https://www.passline.com/imagenes/ban-salvador.png",
+                  "landing_image": "",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/ElSalvador.svg"
+              },
+              {
+                  "id": "238",
+                  "slug": "espana",
+                  "nombre": "Espa&ntilde;a",
+                  "gmt_timezone": "GMT+2",
+                  "currency": "EUR. ",
+                  "time_zone": "Europe/Madrid",
+                  "termino_moneda": "Euros",
+                  "termino_cedula": "CIF/NIF/DNI/NIE",
+                  "termino_region": "Comunidad",
+                  "termino_comuna": "Provincia",
+                  "cod_telefono": "+34",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-espana.png",
+                  "flag_image": "https://www.passline.com/imagenes/spain.png",
+                  "landing_image": "https://www.passline.com/assets/img/espana.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Espana.svg"
+              },
+              {
+                  "id": "255",
+                  "slug": "guatemala",
+                  "nombre": "Guatemala",
+                  "gmt_timezone": "GMT-6",
+                  "currency": "Q.",
+                  "time_zone": "America/Guatemala",
+                  "termino_moneda": "Quetzales",
+                  "termino_cedula": "C&eacute;dula",
+                  "termino_region": "Departamento",
+                  "termino_comuna": "Municipio",
+                  "cod_telefono": "+502",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-guatemala.png",
+                  "flag_image": "https://www.passline.com/imagenes/ban-guatemala.png",
+                  "landing_image": "",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Guatemala.svg"
+              },
+              {
+                  "id": "247",
+                  "slug": "italia",
+                  "nombre": "Italia",
+                  "gmt_timezone": "GMT+1",
+                  "currency": "EUR",
+                  "time_zone": "Europe/Rome",
+                  "termino_moneda": "Euros",
+                  "termino_cedula": "Codice Fiscale",
+                  "termino_region": "Regione",
+                  "termino_comuna": "Comune",
+                  "cod_telefono": "+39",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-italia.png",
+                  "flag_image": "https://www.passline.com/imagenes/italia.png",
+                  "landing_image": "https://www.passline.com/assets/img/italia.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Italia.svg"
+              },
+              {
+                  "id": "146",
+                  "slug": "mexico",
+                  "nombre": "M&eacute;xico",
+                  "gmt_timezone": "GMT-6",
+                  "currency": "MXN $",
+                  "time_zone": "America/El_Salvador",
+                  "termino_moneda": "Pesos",
+                  "termino_cedula": "RFC",
+                  "termino_region": "Estado",
+                  "termino_comuna": "Municipio",
+                  "cod_telefono": "+52",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-mexico.png",
+                  "flag_image": "https://www.passline.com/imagenes/mexico.png",
+                  "landing_image": "https://www.passline.com/assets/img/mexico.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Mexico.svg"
+              },
+              {
+                  "id": "241",
+                  "slug": "panama",
+                  "nombre": "Panam&aacute;",
+                  "gmt_timezone": "GMT-5",
+                  "currency": "USD.",
+                  "time_zone": "America/Panama",
+                  "termino_moneda": "Dolares",
+                  "termino_cedula": "C&eacute;dula",
+                  "termino_region": "Provincia",
+                  "termino_comuna": "Corregimiento",
+                  "cod_telefono": "+507",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/ban-panama.png",
+                  "flag_image": "https://www.passline.com/imagenes/panama.png",
+                  "landing_image": "https://www.passline.com/assets/img/panama.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Panama.svg"
+              },
+              {
+                  "id": "172",
+                  "slug": "paraguay",
+                  "nombre": "Paraguay",
+                  "gmt_timezone": "GMT-3",
+                  "currency": "&#8370;",
+                  "time_zone": "America/Asuncion",
+                  "termino_moneda": "Guaran",
+                  "termino_cedula": "C.I.",
+                  "termino_region": "Departamento",
+                  "termino_comuna": "Distrito",
+                  "cod_telefono": "+595",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-paraguay.png",
+                  "flag_image": "https://www.passline.com/imagenes/paraguay.png",
+                  "landing_image": "https://www.passline.com/assets/img/paraguay.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Paraguay.svg"
+              },
+              {
+                  "id": "173",
+                  "slug": "peru",
+                  "nombre": "Per&uacute;",
+                  "gmt_timezone": "GMT-5",
+                  "currency": "S/. ",
+                  "time_zone": "America/Lima",
+                  "termino_moneda": "Soles",
+                  "termino_cedula": "DNI",
+                  "termino_region": "Departamento",
+                  "termino_comuna": "Distrito",
+                  "cod_telefono": "+51",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-peru.png",
+                  "flag_image": "https://www.passline.com/imagenes/peru.png",
+                  "landing_image": "https://www.passline.com/assets/img/peru.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Peru.svg"
+              },
+              {
+                  "id": "229",
+                  "slug": "uruguay",
+                  "nombre": "Uruguay",
+                  "gmt_timezone": "GMT-3",
+                  "currency": "$",
+                  "time_zone": "America/Montevideo",
+                  "termino_moneda": "Pesos",
+                  "termino_cedula": "CI - DNI - CPF",
+                  "termino_region": "Departamento",
+                  "termino_comuna": "Ciudad",
+                  "cod_telefono": "+598",
+                  "formato_hora": "24",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-uruguay.png",
+                  "flag_image": "https://www.passline.com/imagenes/uruguay.png",
+                  "landing_image": "https://www.passline.com/assets/img/uruguay.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Uruguay.svg"
+              },
+              {
+                  "id": "236",
+                  "slug": "usa",
+                  "nombre": "USA",
+                  "gmt_timezone": "GMT-4",
+                  "currency": "USD. ",
+                  "time_zone": "America/New_York",
+                  "termino_moneda": "Dolar",
+                  "termino_cedula": "ID",
+                  "termino_region": "State",
+                  "termino_comuna": "County",
+                  "cod_telefono": "+1",
+                  "formato_hora": "12",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-usa.png",
+                  "flag_image": "https://www.passline.com/imagenes/flag.png",
+                  "landing_image": "https://www.passline.com/assets/img/estados-unidos.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/EEUU.svg"
+              },
+              {
+                  "id": "244",
+                  "slug": "venezuela",
+                  "nombre": "Venezuela",
+                  "gmt_timezone": "GMT-4",
+                  "currency": "USD. ",
+                  "time_zone": "America/Caracas",
+                  "termino_moneda": "Dolares",
+                  "termino_cedula": "C&eacute;dula",
+                  "termino_region": "Estado",
+                  "termino_comuna": "Municipio",
+                  "cod_telefono": "+58",
+                  "formato_hora": "12",
+                  "mobile_image": "https://www.passline.com/imagenes/ban-venezuela.png",
+                  "flag_image": "https://www.passline.com/imagenes/venezuela.png",
+                  "landing_image": "https://www.passline.com/assets/img/venezuela.png",
+                  "flag_image2": "https://www.passline.com/imagenes/flags/Venezuela.svg"
+              }
+          ]
+
+docs: |-
+  Trae todos los países.
+
+  Respuesta:
+
+  Ejemplo, al correr trae más
+
+  StartFragment
+
+  {        "id": "1",        "slug": "usany",        "nombre": "USA-NYC",        "gmt_timezone": "GMT-5",        "currency": "USD. ",        "time_zone": "America/New_York",        "mobile_image": "https://www.passline.com/imagenes/ban-usa.png",        "flag_image": "https://www.passline.com/imagenes/flag.png",        "landing_image": "https://www.passline.com/assets/img/estados-unidos.png"    },    {        "id": "13",        "slug": "argentina",        "nombre": "Argentina",        "gmt_timezone": "GMT-3",        "currency": "$",        "time_zone": "America/Argentina/Buenos_Aires",        "mobile_image": "https://www.passline.com/imagenes/ban-argentina.png",        "flag_image": "https://www.passline.com/imagenes/argentina.png",        "landing_image": "https://www.passline.com/assets/img/argentina.png"    }
+
+  EndFragment

@@ -1,0 +1,25 @@
+info:
+  name: 10. ModifyPaymentStatus
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{url}}/cashless/ModifyPaymentStatus"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"user\":\"Q3lQZHFwbldxQ2lHUUx6eDUxcllpQlVVbWR3ckJGRVZQLUg5X1MwTzNXQUA=\",\r
+
+      \    \"order\":\"1\",\r
+
+      \    \"payment_id\":\"ZTEwYWRjMzk0OWJhNTlhYmJlNTZlMDU3ZjIwZjg4M2U=\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

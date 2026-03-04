@@ -1,0 +1,235 @@
+info:
+  name: 15. RegisterSubscriber
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{url}}/user/RegisterSubscriber"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Usuario Abonado Prueba\",\r
+
+      \    \"rut\": \"270377156\",\r
+
+      \    \"email\": \"test@test.com\",\r
+
+      \    \"phone\": \"123456789\",\r
+
+      \    \"type_ticket\": \"Prueba desde API\",\r
+
+      \    \"seat_name\": \"Fila 1\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/user/RegisterSubscriber"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\": \"Usuario Abonado Prueba\",\r
+
+          \    \"rut\": \"270377156\",\r
+
+          \    \"email\": \"test@test.com\",\r
+
+          \    \"phone\": \"123456789\",\r
+
+          \    \"type_ticket\": \"Prueba desde API\",\r
+
+          \    \"seat_name\": \"Fila 1\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 18:36:24 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d29acbbe97744db-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "id": "43531",
+              "nombre": "Usuario Abonado Prueba",
+              "rut": "270377156",
+              "email": "test@test.com",
+              "telefono": "123456789",
+              "tipo_operacion": "1",
+              "tipo_entrada": "Prueba desde API",
+              "asiento": "Fila 1",
+              "socio": "0",
+              "max_tickets_compra": "0"
+          }
+  - name: Error bad parameters
+    request:
+      url: "{{url}}/user/RegisterSubscriber"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\": \"Usuario Abonado Prueba\",\r
+
+          \    \"rut\": \"270377156\",\r
+
+          \    \"email\": \"test@test.com\",\r
+
+          \    \"phone\": \"123456789\",\r
+
+          \    \"type_ticket\": \"Prueba desde API\",\r
+
+          \    \"seat_name\": \"Fila 1\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 18:24:17 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=DyBLZ5E0dtSk0Z.rpzbu.KpUYFfwDkmE.ZQ3jzxzYB8-1728930257-1.0.1.1-C4OiXTwwicUVMBmms3oIAy2Oshe5wS3dsW9fAyVh4dzjuKzyKf9_vJd6DJUmP.AEA_LQoGHTiImmNlVtxjkk7w; path=/; expires=Mon, 14-Oct-24 18:54:17 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d299afdda3a53fa-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The name field is required.",
+                  "The rut field is required.",
+                  "The email field is required.",
+                  "The value of the email field must be email format.",
+                  "The phone field is required."
+              ]
+          }
+  - name: Error token response
+    request:
+      url: "{{url}}/user/RegisterSubscriber"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\": \"Usuario Abonado Prueba\",\r
+
+          \    \"rut\": \"270377156\",\r
+
+          \    \"email\": \"test@test.com\",\r
+
+          \    \"phone\": \"123456789\",\r
+
+          \    \"type_ticket\": \"Prueba desde API\",\r
+
+          \    \"seat_name\": \"Fila 1\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 18:37:08 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+        - name: X-Powered-By
+          value: Passline
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Access-Control-Allow-Methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: Access-Control-Allow-Headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: Access-Control-Max-Age
+          value: "300"
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d29add12ab644db-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "token expired"
+          }
+
+docs: Agregar un nuevo abonado asociado a un productor

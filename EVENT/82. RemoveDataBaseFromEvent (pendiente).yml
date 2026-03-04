@@ -1,0 +1,18 @@
+info:
+  name: 82. RemoveDataBaseFromEvent (pendiente)
+  type: http
+  seq: 83
+
+http:
+  method: DELETE
+  url: "{{url}}/event/RemoveDataBaseFromEvent"
+  headers:
+    - name: content-type
+      value: application/json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

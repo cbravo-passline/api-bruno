@@ -1,0 +1,17 @@
+info:
+  name: 58. GetTicketsTotalDetails
+  type: http
+  seq: 59
+
+http:
+  method: GET
+  url: "{{url}}/event/GetTicketsTotalDetails/608e170b60b7fd6f11914a4ec9dfedbd"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

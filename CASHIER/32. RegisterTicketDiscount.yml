@@ -1,0 +1,28 @@
+info:
+  name: 32. RegisterTicketDiscount
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/cashier/RegisterTicketDiscount"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\":\"API test\",\r
+
+      \    \"discount_percentage\":\"10\",\r
+
+      \    \"event\":\"pMnzHPb-P-Q7Y7BQrrI9jg@@\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

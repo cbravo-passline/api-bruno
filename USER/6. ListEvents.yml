@@ -1,0 +1,1544 @@
+info:
+  name: 6. ListEvents
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/user/ListEvents"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\" : \"\",\r
+
+      \    \"status\" : 0,\r
+
+      \    \"key\" : \"275829\",\r
+
+      \    \"code\" : \"\",\r
+
+      \    \"country\" : \"chile\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success reponse
+    request:
+      url: https://api.passline.com/v1/user/ListEvents
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\" : \"ric\",\r
+
+          \    \"status\" : \"1\",\r
+
+          \    \"key\" : \"303060\",\r
+
+          \    \"code\" : \"9200\",\r
+
+          \    \"country\" : \"chile\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 15:17:30 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d288960bd521d64-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              },
+              {
+                  "entradas_vendidas": "0",
+                  "tickets_disponibles": "20",
+                  "evento": "303060",
+                  "nombre": "evento prueba ricardo",
+                  "fecha_inicio": "2024-10-29 19:20:00",
+                  "estado": "1",
+                  "estado_evento": "1",
+                  "codigo": "9200",
+                  "pais": "chile",
+                  "descripcion_estado_evento": "Vigente",
+                  "descripcion_estado": "Activo"
+              }
+          ]
+  - name: Error data not found
+    request:
+      url: https://api.passline.com/v1/user/ListEvents
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"name\" : \"ric\",\r
+
+          \    \"status\" : \"1\",\r
+
+          \    \"key\" : \"303060\",\r
+
+          \    \"code\" : \"92002\",\r
+
+          \    \"country\" : \"chile\"\r
+
+          }"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 15:35:05 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "43"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d28a3210d22b078-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "Not data found."
+          }
+
+docs: |-
+  Trae todos los países.
+
+  Respuesta:
+
+  Ejemplo, al correr trae más
+
+  StartFragment
+
+  {        "id": "1",        "slug": "usany",        "nombre": "USA-NYC",        "gmt_timezone": "GMT-5",        "currency": "USD. ",        "time_zone": "America/New_York",        "mobile_image": "https://www.passline.com/imagenes/ban-usa.png",        "flag_image": "https://www.passline.com/imagenes/flag.png",        "landing_image": "https://www.passline.com/assets/img/estados-unidos.png"    },    {        "id": "13",        "slug": "argentina",        "nombre": "Argentina",        "gmt_timezone": "GMT-3",        "currency": "$",        "time_zone": "America/Argentina/Buenos_Aires",        "mobile_image": "https://www.passline.com/imagenes/ban-argentina.png",        "flag_image": "https://www.passline.com/imagenes/argentina.png",        "landing_image": "https://www.passline.com/assets/img/argentina.png"    }
+
+  EndFragment
