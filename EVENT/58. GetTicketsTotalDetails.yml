@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/event/GetTicketsTotalDetails/608e170b60b7fd6f11914a4ec9dfedbd"
+  url: "{{url}}/event/GetTicketsTotalDetails?event=608e170b60b7fd6f11914a4ec9dfedbd"
+  params:
+    - name: event
+      value: 608e170b60b7fd6f11914a4ec9dfedbd
+      type: query
   auth:
     type: bearer
     token: "{{Token_productor}}"

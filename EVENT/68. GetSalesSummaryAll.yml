@@ -5,11 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/event/GetSalesSummaryAll?date_end=t"
-  params:
-    - name: date_end
-      value: t
-      type: query
+  url: "{{url}}/event/GetSalesSummaryAll/608e170b60b7fd6f11914a4ec9dfedbd"
   auth:
     type: bearer
     token: "{{Token_productor}}"

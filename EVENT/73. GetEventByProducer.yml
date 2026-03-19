@@ -10,10 +10,6 @@ http:
     - name: status
       value: "1"
       type: query
-    - name: lang
-      value: ""
-      type: query
-      disabled: true
     - name: page
       value: "1"
       type: query
@@ -29,6 +25,10 @@ http:
     - name: date_start
       value: ""
       type: query
+    - name: lang
+      value: ""
+      type: query
+      disabled: true
   auth:
     type: bearer
     token: "{{Token_productor}}"

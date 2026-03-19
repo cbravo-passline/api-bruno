@@ -5,16 +5,16 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/event/GetEventsByArtist?country=&event=Akamba&artist=Ben Böhmer"
+  url: "{{url}}/event/GetEventsByArtist?country=&event=&artist="
   params:
     - name: country
       value: ""
       type: query
     - name: event
-      value: Akamba
+      value: ""
       type: query
     - name: artist
-      value: Ben Böhmer
+      value: ""
       type: query
 
 settings:
