@@ -5,11 +5,8 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/event/GetEventByProducer?status=1&page=1&limit=100&filter=&date_end=&date_start="
+  url: "{{url}}/event/GetEventByProducer?page=1&limit=100&filter=31114&date_end=&date_start="
   params:
-    - name: status
-      value: "1"
-      type: query
     - name: page
       value: "1"
       type: query
@@ -17,7 +14,7 @@ http:
       value: "100"
       type: query
     - name: filter
-      value: ""
+      value: "31114"
       type: query
     - name: date_end
       value: ""

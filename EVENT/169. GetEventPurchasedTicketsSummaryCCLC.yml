@@ -1,14 +1,51 @@
 info:
-  name: 25. GetAttendanceList101_102
+  name: 169. GetEventPurchasedTicketsSummaryCCLC
   type: http
-  seq: 26
+  seq: 162
 
 http:
   method: GET
-  url: "{{url}}/event/GetAttendanceList101_102/608e170b60b7fd6f11914a4ec9dfedbd"
+  url: "{{url}}/event/GetEventPurchasedTicketsSummaryCCLC?event_md5=608e170b60b7fd6f11914a4ec9dfedbd"
   headers:
     - name: content-type
       value: application/json
+  params:
+    - name: event_md5
+      value: 608e170b60b7fd6f11914a4ec9dfedbd
+      type: query
+    - name: rrpp
+      value: "1"
+      type: query
+      disabled: true
+    - name: type
+      value: "0"
+      type: query
+      disabled: true
+    - name: condition
+      value: "0"
+      type: query
+      disabled: true
+    - name: status
+      value: "1"
+      type: query
+      disabled: true
+    - name: show
+      value: "0"
+      type: query
+      disabled: true
+    - name: page
+      value: ""
+      type: query
+      description: Tiene validacion
+      disabled: true
+    - name: limit
+      value: "1"
+      type: query
+      description: Tiene validacion
+      disabled: true
+  body:
+    type: json
+    data: ""
   auth:
     type: bearer
     token: "{{Token_productor}}"
@@ -22,16 +59,49 @@ settings:
 examples:
   - name: Success response
     request:
-      url: "{{url}}/event/GetAttendanceList101_102/9a1d22d97fa28747601ca65c9ede9272"
+      url: "{{url}}/event/GetEventProductDetails/3461d7bce31452bf240f6a3076683d3c"
       method: GET
       headers:
         - name: content-type
           value: application/json
+      params:
+        - name: rrpp
+          value: "1"
+          type: query
+          disabled: true
+        - name: type
+          value: "0"
+          type: query
+          disabled: true
+        - name: condition
+          value: "0"
+          type: query
+          disabled: true
+        - name: status
+          value: "1"
+          type: query
+          disabled: true
+        - name: email
+          value: ""
+          type: query
+          disabled: true
+        - name: limit
+          value: "50"
+          type: query
+          disabled: true
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: show
+          value: "0"
+          type: query
+          disabled: true
     response:
       statusText: "200"
       headers:
         - name: Date
-          value: Wed, 16 Oct 2024 18:22:45 GMT
+          value: Mon, 21 Oct 2024 13:26:37 GMT
         - name: Content-Type
           value: application/json
         - name: Transfer-Encoding
@@ -55,7 +125,7 @@ examples:
         - name: Server
           value: cloudflare
         - name: CF-RAY
-          value: 8d3a137c5a41a5ed-SCL
+          value: 8d6194936f0331d4-MIA
         - name: Content-Encoding
           value: br
       body:
@@ -64,53 +134,115 @@ examples:
           {
               "record": [
                   {
-                      "id": "226889",
-                      "evento": "109185",
-                      "rut": "33597240",
-                      "fecha_ingreso": "2022-07-01 20:35:15",
-                      "estado": "1",
-                      "estado_descripcion": "Ingreso",
-                      "android_dev": "8583c095cbe1fe02",
-                      "fecha_formato": "01-07-2022 20:35:15 ",
-                      "rut_validado": "rut incorrecto",
-                      "rut_descripcion": "*"
+                      "id": "65761914",
+                      "nombre": "Productor Prueba",
+                      "fecha_validacion": "--",
+                      "email": "productor@passline.cl",
+                      "telefono": "",
+                      "compra": "55925011",
+                      "telefono_compra": "+59854927849",
+                      "fecha": "12 Diciembre 2023 10:46",
+                      "nombre_producto": "Hamburgesa",
+                      "nombre_promotor": "--",
+                      "promotor_padre": "",
+                      "estado": "0",
+                      "tipo_pago": "Venta",
+                      "total": "5000.00",
+                      "evento": "181803",
+                      "compra_md5": "0aa17df19f8e680e672fdfe2a5a5b036",
+                      "status_description": "Vigente",
+                      "fecha_sinformato": "2023-12-12 10:46:11",
+                      "total_formato": "$5.000.-"
                   },
                   {
-                      "id": "226890",
-                      "evento": "109185",
-                      "rut": "38402051",
-                      "fecha_ingreso": "2022-07-01 20:41:19",
+                      "id": "65761873",
+                      "nombre": "Productor Prueba",
+                      "fecha_validacion": "19 Diciembre 2023 01:55",
+                      "email": "productor@passline.cl",
+                      "telefono": "",
+                      "compra": "55924971",
+                      "telefono_compra": "+59854927849",
+                      "fecha": "12 Diciembre 2023 10:42",
+                      "nombre_producto": "Producto de prueba",
+                      "nombre_promotor": "--",
+                      "promotor_padre": "",
                       "estado": "1",
-                      "estado_descripcion": "Ingreso",
-                      "android_dev": "8583c095cbe1fe02",
-                      "fecha_formato": "01-07-2022 20:41:19 ",
-                      "rut_validado": "rut incorrecto",
-                      "rut_descripcion": "*"
+                      "tipo_pago": "Venta",
+                      "total": "100.00",
+                      "evento": "181803",
+                      "compra_md5": "90c227c9f21c82e22f3ce394c8f257f9",
+                      "status_description": "Validada",
+                      "fecha_sinformato": "2023-12-12 10:42:53",
+                      "fechaValidacion_sinformato": "2023-12-19 01:55:17",
+                      "total_formato": "$100.-"
+                  }
+              ],
+              "rrpp": [],
+              "product_status": [
+                  {
+                      "status": 0,
+                      "description": "Vigente"
+                  },
+                  {
+                      "status": 1,
+                      "description": "Validada"
+                  },
+                  {
+                      "status": 2,
+                      "description": "Expirada"
+                  }
+              ],
+              "pay_type": [
+                  {
+                      "status": 1,
+                      "description": "Venta"
+                  },
+                  {
+                      "status": 2,
+                      "description": "Cortesias"
+                  },
+                  {
+                      "status": 3,
+                      "description": "Efectivo"
+                  },
+                  {
+                      "status": 4,
+                      "description": "Ventas RRPP"
+                  }
+              ],
+              "product": [
+                  {
+                      "producto": "911873",
+                      "producto_nombre": "Hamburgesa"
+                  },
+                  {
+                      "producto": "911876",
+                      "producto_nombre": "Producto de prueba"
                   }
               ],
               "event_name": {
-                  "id": "109185",
-                  "orden": "109185",
+                  "id": "181803",
+                  "orden": "181803",
                   "autor": "0",
-                  "fecha_ingreso": "2022-07-01 13:29:52",
+                  "fecha_ingreso": "2023-06-09 19:25:36",
                   "editor": "0",
                   "fecha_edicion": "2024-09-11 05:03:25",
                   "usuario": "3679",
-                  "slug": "evento-para-escaneo-de-dni-12",
-                  "nombre": "Evento para escaneo de DNI",
+                  "slug": "prueba-ricardo-uruguay",
+                  "nombre": "Prueba Ricardo Uruguay",
                   "sku": null,
-                  "tags": "5",
-                  "tipo": "0",
+                  "tags": "",
+                  "tipo": "3",
                   "canal_venta": "0",
-                  "fecha_publicacion": "2022-07-01 16:19:46",
+                  "fecha_publicacion": "2023-09-27 23:50:24",
                   "mayores": "0",
-                  "rango_edad": "0",
+                  "rango_edad": "18",
                   "aforo_maximo": "0",
-                  "codigo": "7070",
-                  "pagado": "1",
-                  "vendera_entradas": "1",
-                  "fecha_inicio": "2022-08-15 01:05:00",
-                  "fecha_termino": "2022-08-15 01:30:00",
+                  "codigo": "3618",
+                  "pagado": "0",
+                  "vendera_entradas": "0",
+                  "fecha_inicio": "2029-06-09 00:00:00",
+                  "fecha_termino": "2029-06-09 23:45:00",
                   "musica": "0",
                   "fiestas": "0",
                   "arte": "0",
@@ -128,18 +260,18 @@ examples:
                   "otros": "0",
                   "festivales": "0",
                   "gamer": "0",
-                  "itinerario": null,
-                  "artistas": "prueba",
-                  "descripcion": "prueba",
-                  "pais": "argentina",
+                  "itinerario": "prueba ricardo itinerario 2",
+                  "artistas": "artista prueba",
+                  "descripcion": "prueba ricardo descripcion 212",
+                  "pais": "chile",
                   "region": "1",
-                  "comuna": "4302",
+                  "comuna": "252",
                   "act_mostrar_region_comuna": "1",
-                  "direccion": "prueba",
-                  "direccion_mapa": "prueba",
+                  "direccion": "lugar prueba",
+                  "direccion_mapa": "Prueba Ricardo Uruguay",
                   "latitud": "",
                   "longitud": "",
-                  "lugar": "prueba",
+                  "lugar": "lugar prueba",
                   "url_video": "",
                   "id_video": "",
                   "host_video": "",
@@ -149,8 +281,8 @@ examples:
                   "slider_portada": "0.00",
                   "costo_validadores": "0.00",
                   "costo_supervisores": "0.00",
-                  "costo_ticket_fisico": "10.00",
-                  "costo_ticket_fisico2": "1.00",
+                  "costo_ticket_fisico": "15.00",
+                  "costo_ticket_fisico2": "0.00",
                   "comision_ticket_fisico": "0",
                   "cantidad_ticket_fisico": "0",
                   "cantidad_ticket_fisico2": "0",
@@ -210,23 +342,23 @@ examples:
                   "comprobante_transferencia": null,
                   "monto_pagado": "0.00",
                   "comentarios_monto_pagado": "",
-                  "pago_passline": "5",
+                  "pago_passline": "3",
                   "nombre_productora": "Productor de Prueba",
-                  "nombre_usuario": "Productor",
+                  "nombre_usuario": "Productor Prueba",
                   "email_usuario": "productor@passline.cl",
-                  "estado_evento": "2",
-                  "motivo": "",
-                  "fecha_suspension": "0000-00-00 00:00:00",
+                  "estado_evento": "3",
+                  "motivo": "termino prueba",
+                  "fecha_suspension": "2024-06-25 10:41:33",
                   "validadores": "",
                   "ya_aprobado": "1",
                   "cargo_servicio_producto": "15.00",
                   "comision": "0.000",
                   "cargo_servicio": "15.00",
-                  "cargo_servicio_boleteria": null,
+                  "cargo_servicio_boleteria": "0.0000",
                   "cargo_servicio_transferencia": "0.000",
                   "mostrar_cargo": "0",
-                  "cargo_boleteria": "3.00",
-                  "cargo_boleteria_efectivo": "3.00",
+                  "cargo_boleteria": "15.00",
+                  "cargo_boleteria_efectivo": "15.00",
                   "cargo_efectivo_rrpp": "0.00",
                   "cargo_minimo": "0.00",
                   "cargo_maximo": "0.00",
@@ -239,12 +371,12 @@ examples:
                   "banner_superior": null,
                   "banner_inferior": null,
                   "link_planimetria": "",
-                  "complemento_1": "",
-                  "complemento_2": "",
-                  "complemento_3": "",
-                  "complemento_4": "",
-                  "complemento_5": "",
-                  "complemento_6": "",
+                  "complemento_1": "12",
+                  "complemento_2": "2",
+                  "complemento_3": "3",
+                  "complemento_4": "4",
+                  "complemento_5": "5",
+                  "complemento_6": "6",
                   "complemento_7": "",
                   "complemento_8": "",
                   "complemento_9": "",
@@ -255,20 +387,20 @@ examples:
                   "alerta_carro": "",
                   "con_planimetria": "0",
                   "estado": "0",
-                  "estado_pagar": "0",
+                  "estado_pagar": "2",
                   "descripcion_problema": "",
-                  "costo_adicional_passline": "0.00",
+                  "costo_adicional_passline": "100000.00",
                   "arriendo_sistema_boleteria": "0.00",
                   "cantidad_pos_transbank": "0",
                   "arriendo_pos_transbank": "0.00",
-                  "suspendido": "0",
+                  "suspendido": "1",
                   "correlativo_evento": "001",
                   "alerta": "0",
                   "img_totem": null,
                   "img_boleteria": null,
                   "img_kiosko": null,
                   "imagen_descuento": null,
-                  "liquidador": "0",
+                  "liquidador": "100",
                   "fecha_transferencia": "0000-00-00",
                   "numero_transferencia": "",
                   "abonados": "0",
@@ -284,7 +416,7 @@ examples:
                   "arriendo_totems": "0.00",
                   "comision_totems": "0.00",
                   "total_venta_totems": "0.00",
-                  "comision_efectivo_rrpp": "3",
+                  "comision_efectivo_rrpp": "10",
                   "mantencion_extra_totems": "0.00",
                   "numero_pda": "0",
                   "arriendo_pda": "0.00",
@@ -301,7 +433,7 @@ examples:
                   "camp_twitter": "0.00",
                   "camp_instagram": "0.00",
                   "informacion_adicional": "",
-                  "operador_boleteria": "1",
+                  "operador_boleteria": "0",
                   "venta_efectivo": "0",
                   "link_invitacion": "0",
                   "act_maratones": "0",
@@ -313,7 +445,7 @@ examples:
                   "facturacion_uy": "0",
                   "maximo_validaciones": "1",
                   "local": "0",
-                  "validacion_externa": "0",
+                  "validacion_externa": "1",
                   "banner_correo": "",
                   "banner_ticket": null,
                   "codigo_pixel": "",
@@ -342,7 +474,7 @@ examples:
                   "pdf_exencion": null,
                   "fecha_pdf_exencion": null,
                   "act_venta_anticipa": "1",
-                  "orden_productos": "0",
+                  "orden_productos": "2",
                   "act_validar_sesion": "0",
                   "rebate": "0",
                   "broker": "0",
@@ -350,7 +482,7 @@ examples:
                   "venta_externa": "0",
                   "url_venta_externa": "",
                   "devolucion_automatica": "0",
-                  "act_devoluciones": "1",
+                  "act_devoluciones": "0",
                   "tipo_descuento": "0",
                   "venta_exclusiva": "0",
                   "tipo_venta_exclusiva": "0",
@@ -374,22 +506,22 @@ examples:
                   "act_facturacion_boleteria": "0",
                   "tipo_facturacion_boleteria": "0",
                   "emisor_factura": "0",
-                  "id_evento_agrupacion": "0",
-                  "id_evento_seatmap": null,
+                  "id_evento_agrupacion": "1",
+                  "id_evento_seatmap": "",
                   "act_abonados": "0",
-                  "act_clearsale": "1",
+                  "act_clearsale": "0",
                   "codigo_pixel_simple": "",
                   "comprobante_transferencia_rebate": "",
-                  "evento_reagendado": "0",
+                  "evento_reagendado": "1",
                   "act_qr_reducido": "0",
-                  "md5_id": "9a1d22d97fa28747601ca65c9ede9272",
-                  "notas_y_observaciones": null,
+                  "md5_id": "3461d7bce31452bf240f6a3076683d3c",
+                  "notas_y_observaciones": "PRUEBA OBSERVACION 1",
                   "aviso_soldout": "0",
-                  "url_spotify": null,
-                  "mensaje_exito_invitado": null,
+                  "url_spotify": "https://open.spotify.com/intl-es/album/3UedVnaIbI3SRuMLClWiJ3?si=Sd2kgtPHQASA8qiyV7dD3g",
+                  "mensaje_exito_invitado": "",
                   "id_evento_venue": null,
                   "emails_repetidos": "0",
-                  "motivo_rechazo": null,
+                  "motivo_rechazo": "",
                   "venta_estimada": "0.00",
                   "act_traspaso_abonos": "0",
                   "act_conmebol": "0",
@@ -407,25 +539,57 @@ examples:
                   "act_swappable": "1",
                   "act_futbol_socios": "0",
                   "id_categoria_paises_impuestos": "0",
-                  "act_compra_protegida": "0",
+                  "act_compra_protegida": "1",
                   "id_business_partner": "0",
                   "agregar_carta_productor": "1",
                   "act_mostrar_productos": "0"
-              },
-              "total_rows": 2
+              }
           }
-  - name: Error dont access to event
+  - name: Error Bad Invalid params
     request:
-      url: "{{url}}/event/GetAttendanceList101_102/317a496b5b7fc26b4c520d3fde54f57b"
+      url: "{{url}}/event/GetEventProductDetails/"
       method: GET
       headers:
         - name: content-type
           value: application/json
+      params:
+        - name: rrpp
+          value: "1"
+          type: query
+          disabled: true
+        - name: type
+          value: "0"
+          type: query
+          disabled: true
+        - name: condition
+          value: "0"
+          type: query
+          disabled: true
+        - name: status
+          value: "1"
+          type: query
+          disabled: true
+        - name: email
+          value: ""
+          type: query
+          disabled: true
+        - name: limit
+          value: "50"
+          type: query
+          disabled: true
+        - name: page
+          value: "1"
+          type: query
+          disabled: true
+        - name: show
+          value: "0"
+          type: query
+          disabled: true
     response:
       statusText: "200"
       headers:
         - name: Date
-          value: Wed, 16 Oct 2024 18:24:08 GMT
+          value: Mon, 21 Oct 2024 13:27:30 GMT
         - name: Content-Type
           value: application/json
         - name: Transfer-Encoding
@@ -449,50 +613,7 @@ examples:
         - name: Server
           value: cloudflare
         - name: CF-RAY
-          value: 8d3a158648839aec-MIA
-        - name: Content-Encoding
-          value: gzip
-      body:
-        type: json
-        data: |-
-          {
-              "error": "200",
-              "message": "You dont have access."
-          }
-  - name: Error invalid params
-    request:
-      url: "{{url}}/event/GetAttendanceList101_102/"
-      method: GET
-      headers:
-        - name: content-type
-          value: application/json
-    response:
-      statusText: "200"
-      headers:
-        - name: Date
-          value: Wed, 16 Oct 2024 18:58:48 GMT
-        - name: Content-Type
-          value: application/json
-        - name: Transfer-Encoding
-          value: chunked
-        - name: Connection
-          value: keep-alive
-        - name: X-Powered-By
-          value: Passline
-        - name: Access-Control-Allow-Origin
-          value: "*"
-        - name: Access-Control-Allow-Methods
-          value: GET, POST, PUT, DELETE, OPTIONS
-        - name: Access-Control-Allow-Headers
-          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
-        - name: Access-Control-Max-Age
-          value: "300"
-        - name: CF-Cache-Status
-          value: DYNAMIC
-        - name: Server
-          value: cloudflare
-        - name: CF-RAY
-          value: 8d3a484a6ba0dd21-ATL
+          value: 8d6195de8c3431d4-MIA
         - name: Content-Encoding
           value: br
       body:
@@ -505,4 +626,9 @@ examples:
               ]
           }
 
-docs: Permite traer los etickets de un usuario registrado, se envía el token.
+docs: |-
+  Trae los eventos por periodo de fechas.
+
+  Respuesta
+
+  json de eventos por fecha.

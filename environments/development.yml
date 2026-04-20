@@ -17,7 +17,7 @@ variables:
   - name: email
     value: productor@passline.cl
   - name: password
-    value: pass4321
+    value: pass4826
   - name: email_producer
     value: productor@passline.cl
   - secret: true

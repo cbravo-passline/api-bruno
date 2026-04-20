@@ -1,0 +1,39 @@
+info:
+  name: 170. EditEventTicketOfficeImage
+  type: http
+  seq: 163
+
+http:
+  method: PUT
+  url: "{{url}}/event/EditEventTicketOfficeImage"
+  headers:
+    - name: Content-Type
+      value: application/json
+      disabled: true
+  params:
+    - name: image
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: image
+        type: file
+        value:
+          - C:\Users\cbral\Downloads\384x75.png
+      - name: eventId
+        type: text
+        value: 608e170b60b7fd6f11914a4ec9dfedbd
+      - name: eventCode
+        type: text
+        value: "3947"
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

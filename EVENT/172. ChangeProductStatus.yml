@@ -1,0 +1,44 @@
+info:
+  name: 172. ChangeProductStatus
+  type: http
+  seq: 165
+
+http:
+  method: PUT
+  url: "{{url}}/event/ChangeProductStatus"
+  headers:
+    - name: Content-Type
+      value: application/json
+      disabled: true
+  params:
+    - name: image
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: product_id
+        type: text
+        value: 6sTRG2aPbm0J6XXmUc_qqXM7M5M60DK6cxaQE7RaRBA@
+      - name: affected
+        type: text
+        value: all
+      - name: category
+        type: text
+        value: "5928"
+      - name: new_status
+        type: text
+        value: deactivate
+      - name: event_id
+        type: text
+        value: 608e170b60b7fd6f11914a4ec9dfedbd
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

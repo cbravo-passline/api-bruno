@@ -12,7 +12,6 @@ http:
   body:
     type: json
     data: "{\r\n    \"text\": \"\"\r\n}"
-  auth: inherit
 
 settings:
   encodeUrl: true

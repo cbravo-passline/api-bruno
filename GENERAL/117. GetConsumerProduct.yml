@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/general/GetConsumerProduct"
+  url: "{{url}}/general/GetConsumerProduct?product"
+  params:
+    - name: product
+      value: ""
+      type: query
   body:
     type: text
     data: ""
