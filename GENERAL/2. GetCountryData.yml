@@ -178,36 +178,48 @@ examples:
           }
 
 docs: |-
-  Trae la información de un país en específico pasando el país por get
+  # Get Country Data
+  Trae la información de un país en específico mediante su slug.
 
-  Respuesta Ejemplo:
+  ### Path Parameters
+  | Nombre | Tipo | Obligatorio | Descripción |
+  | :--- | :--- | :--- | :--- |
+  | `country` | string | Sí | Es el slug del país (ej: `chile`). |
 
-  StartFragment
+  ### Casos de Respuesta
 
-  {    
+  #### ✅ Success (200 OK)
+  Retorna el objeto con la configuración regional y redes sociales.
+  > **Nota:** Si el slug no existe, retorna una respuesta vacía `{}`.
 
-  "telefono_fijo": "+569 9435 4920",   
+  #### ❌ Error: Parámetro Inválido (200 OK)
+  Ocurre cuando el slug no se encuentra en el path.
+  ```json
+  { "error": "200", "message": "Invalid parameter [country]" }
+  ### 3. Pestaña "Vars" (Path Params)
+  En Bruno, al poner `:country` en la URL, se activará la sección de **Path Params**. 
+  * **Key:** `country`
+  * **Value:** `chile` (Aquí pones tu "Valor de prueba").
 
-  "telefono_whatsapp": "+569 9435 4920",    
+  ### 4. Pestaña "Headers"
+  * **Key:** `Content-Type`
+  * **Value:** `application/json`
 
-  "direccion": "",    
+  ### 5. Pestaña "Tests" (Validación Automática)
+  Para que la documentación sea "viva", puedes añadir tests que verifiquen que la API responde lo que documentaste. Esto ayuda mucho en el flujo de Passline para asegurar que no se rompan las localizaciones:
 
-  "email": "contacto@passline.cl",    
+  ```javascript
+  test("Debe retornar GMT-3 para Chile", function() {
+    const data = res.getBody();
+    if (data.slug === "chile") {
+      expect(data.gmt_timezone).to.equal("GMT-3");
+      expect(data.cod_telefono).to.equal("+56");
+    }
+  });
 
-  "dia_atencion_desde": "lunes",    
-
-  "dia_atencion_hasta": "viernes",    
-
-  "hora_atencion_desde": "10:00",    
-
-  "hora_atencion_hasta": "18:00",    
-
-  "facebook": "https://www.facebook.com/passlinechile?fref=ts",    
-
-  "twitter": "https://twitter.com/PassLineChile",    
-
-  "instagram": "https://www.instagram.com/passline_oficial/",    
-
-  "tiktok": ""
-
-  }
+  test("Validar status de error", function() {
+    const data = res.getBody();
+    if (data.error) {
+      expect(res.getStatus()).to.be.oneOf([200, 400]);
+    }
+  });

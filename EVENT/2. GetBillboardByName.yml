@@ -11,7 +11,10 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r\n    \"name\": \"concierto\"\r\n}"
+    data: |-
+      {
+          "name": "abono"
+      }
   auth: inherit
 
 settings:

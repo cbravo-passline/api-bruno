@@ -5,10 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/event/GetEventFunctions?eventId=52e978a6c043217dafcb575f6aab193d"
+  url: "{{url}}/event/GetEventFunctions?eventId=608e170b60b7fd6f11914a4ec9dfedbd"
   params:
     - name: eventId
-      value: 52e978a6c043217dafcb575f6aab193d
+      value: 608e170b60b7fd6f11914a4ec9dfedbd
       type: query
   auth:
     type: bearer

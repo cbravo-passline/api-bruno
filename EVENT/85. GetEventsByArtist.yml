@@ -5,10 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/event/GetEventsByArtist?country=&event=&artist="
+  url: "{{url}}/event/GetEventsByArtist?country=chile&event=&artist="
   params:
     - name: country
-      value: ""
+      value: chile
       type: query
     - name: event
       value: ""

@@ -6,7 +6,9 @@ info:
 http:
   method: GET
   url: "{{url}}/event/GetFavoriteEvent"
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
 
 settings:
   encodeUrl: true

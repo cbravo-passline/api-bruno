@@ -1,20 +1,17 @@
 info:
-  name: 171. GetSummaryConsumptionsProduct (1)
+  name: 175. GetConsumptionCortesyDetail
   type: http
-  seq: 166
+  seq: 168
 
 http:
   method: GET
-  url: "{{url}}/event/GetConsumptionProduct?product=6sTRG2aPbm0J6XXmUc_qqXM7M5M60DK6cxaQE7RaRBA@&event_md5=608e170b60b7fd6f11914a4ec9dfedbd"
+  url: "{{url}}/event/GetConsumptionCourtesyDetail?purchase=RxbwgOBHELwZwdhVt8DwJA@@"
   headers:
     - name: content-type
       value: application/json
   params:
-    - name: product
-      value: 6sTRG2aPbm0J6XXmUc_qqXM7M5M60DK6cxaQE7RaRBA@
-      type: query
-    - name: event_md5
-      value: 608e170b60b7fd6f11914a4ec9dfedbd
+    - name: purchase
+      value: RxbwgOBHELwZwdhVt8DwJA@@
       type: query
     - name: page
       value: ""

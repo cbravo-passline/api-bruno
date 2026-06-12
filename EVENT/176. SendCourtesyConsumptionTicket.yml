@@ -1,0 +1,31 @@
+info:
+  name: 176. SendCourtesyConsumptionTicket
+  type: http
+  seq: 169
+
+http:
+  method: POST
+  url: "{{url}}/event/SendCourtesyConsumptionTicket"
+  body:
+    type: json
+    data: |-
+      {
+        "event": "608e170b60b7fd6f11914a4ec9dfedbd",
+        "product": "ZijNd5sDf4b4t3nNfAYn0nM7M5M60DK6cxaQE7RaRBA@",
+        "quantity": "1",
+        "name": "Cristian Bravo",
+        "email": "cbralop@gmail.com",
+        "courtesy_end_date": "2026-05-15",
+        "end_time": "22:00",
+        "auth_code": "3947",
+        "football": "1"
+      }
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

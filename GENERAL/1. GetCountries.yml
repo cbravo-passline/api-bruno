@@ -406,7 +406,7 @@ examples:
           ]
 
 docs: |-
-  Trae todos los países.
+  Trae toda la data de todos los países de passline.
 
   Respuesta:
 

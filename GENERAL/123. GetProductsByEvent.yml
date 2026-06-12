@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/general/GetProductsByEvent?event=4d0ebffeac55e9e3f97252077b15c87e&type=all"
+  url: "{{url}}/general/GetProductsByEvent?event=608e170b60b7fd6f11914a4ec9dfedbd&type=products"
   params:
     - name: event
-      value: 4d0ebffeac55e9e3f97252077b15c87e
+      value: 608e170b60b7fd6f11914a4ec9dfedbd
       type: query
     - name: type
-      value: all
+      value: products
       type: query
   auth:
     type: bearer

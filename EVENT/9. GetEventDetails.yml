@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/event/GetEventDetails/carta-de-consumo"
+  url: "{{url}}/event/GetEventDetails/506312"
   headers:
     - name: content-type
       value: application/json

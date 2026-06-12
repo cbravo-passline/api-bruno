@@ -11,19 +11,15 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    \"country\": \"chile\",\r
-
-      \    \"producer\": 4260157,\r
-
-      \    \"start_date\": \"\",\r
-
-      \    \"end_date\": \"\",\r
-
-      \    \"limit\":1000\r
-
-      }"
+    data: |-
+      {
+          "country": "chile",
+          "producer": 10360901,
+          "start_date": "",
+          "end_date": "",
+          "upper_category_id": "5",
+          "limit":1000
+      }
   auth: inherit
 
 settings:

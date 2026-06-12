@@ -11,21 +11,18 @@ http:
       value: application/json
   body:
     type: json
-    data: "{\r
-
-      \    \"country\": \"mexico\",\r
-
-      \    \"type\": 0,\r
-
-      \    \"tag_id\": \"\",\r
-
-      \    \"tag\": null,\r
-
-      \    \"limit\": \"100\",\r
-
-      \    \"offset\": \"1\"\r
-
-      }"
+    data: |-
+      {
+          "country": "chile",
+          "text": "",
+          "producer": "",
+          "type": 0,
+          "tag_id": "",
+          "tag": "",
+          "upper_category_id": "8",
+          "limit": "1000",
+          "offset": "1"
+      }
   auth: inherit
 
 settings:

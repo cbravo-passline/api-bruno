@@ -1,0 +1,32 @@
+info:
+  name: 179. SaveSubscriberTicketConfig
+  type: http
+  seq: 172
+
+http:
+  method: POST
+  url: "{{url}}/event/SaveSubscriberTicketConfig"
+  body:
+    type: json
+    data: |-
+      {
+        "event": "608e170b60b7fd6f11914a4ec9dfedbd",
+        "ticket_abonado": [
+          "Prueba",
+          "sMycCj7uboM-dFsd9kWkSWthQC6YDjH6Z2kQXhpE8CE@"
+        ],
+        "ticket_asignado": [
+          "0mvDiUjcsACaZqdhL3xCiA@@",
+          "NZ3gf2kG3hXbX4B6aq_OWnM7M5M60DK6cxaQE7RaRBA@"
+        ],
+        "precios": []
+      }
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

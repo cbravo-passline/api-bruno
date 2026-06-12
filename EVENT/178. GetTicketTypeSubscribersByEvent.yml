@@ -1,0 +1,194 @@
+info:
+  name: 178. GetTicketTypeSubscribersByEvent
+  type: http
+  seq: 171
+
+http:
+  method: GET
+  url: "{{url}}/event/GetTicketTypeSubscribersByEvent?event=608e170b60b7fd6f11914a4ec9dfedbd&search="
+  headers:
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: event
+      value: 608e170b60b7fd6f11914a4ec9dfedbd
+      type: query
+    - name: search
+      value: ""
+      type: query
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response
+    request:
+      url: "{{url}}/user/GetSubscribers"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 17:14:03 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Set-Cookie
+          value: __cf_bm=unOZfE1T.2HBriPii.EGQXA0dMBzlLmA1aQMST4odbQ-1728926043-1.0.1.1-QY4ca38BjVcJxW8Xg1_dTFuv.ZyHwATeeB1nS6GBNzDMoWiA8xcFzGlgd.y8zX9DLr04Vzna6ugcS203Ip3Vnw; path=/; expires=Mon, 14-Oct-24 17:44:03 GMT; domain=.passline.com; HttpOnly; Secure; SameSite=None
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d29341c8e68bcf0-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "42461",
+                  "nombre": "Luis chacon",
+                  "rut": "260188852",
+                  "email": "lchacon@passline.cl",
+                  "telefono": "945234234",
+                  "tipo_operacion": "1",
+                  "tipo_entrada": "Prueba",
+                  "asiento": "",
+                  "socio": "0",
+                  "max_tickets_compra": "0"
+              },
+              {
+                  "id": "49817",
+                  "nombre": "Usuario Abonado Prueba 2",
+                  "rut": "256107112",
+                  "email": "test@test.com",
+                  "telefono": "123456789",
+                  "tipo_operacion": "1",
+                  "tipo_entrada": "Prueba desde API 2",
+                  "asiento": "Fila 2",
+                  "socio": "0",
+                  "max_tickets_compra": "0"
+              },
+              {
+                  "id": "67164",
+                  "nombre": "Ricardo Dev Prueba2",
+                  "rut": "1111111",
+                  "email": "rfigueroa@passline.dev",
+                  "telefono": "999999999",
+                  "tipo_operacion": "1",
+                  "tipo_entrada": "Prueba",
+                  "asiento": "Prueba",
+                  "socio": "0",
+                  "max_tickets_compra": "0"
+              }
+          ]
+  - name: Error token expired
+    request:
+      url: "{{url}}/user/GetSubscribers"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 17:18:17 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d293a4e3c15dd20-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "error": "200",
+              "message": "token expired"
+          }
+  - name: Success empty response
+    request:
+      url: "{{url}}/user/GetSubscribers"
+      method: GET
+      headers:
+        - name: Content-Type
+          value: application/json
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Mon, 14 Oct 2024 17:18:47 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "2"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d293b08997edd20-ATL
+      body:
+        type: json
+        data: "[]"
+
+docs: Devuelve todos los abonados de un productor

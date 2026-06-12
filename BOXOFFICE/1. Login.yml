@@ -13,17 +13,15 @@ http:
       value: Dart
   body:
     type: json
-    data: "{\r
-
-      \   //\"email\": \"rurrea@passline.dev\",\r
-
-      \    //\"password\": \"123456\"\r
-
-      \   \"email\": \"productor@passline.cl\",\r
-
-      \    \"password\": \"123456\"\r
-
-      }"
+    data: |-
+      {
+         //"email": "rurrea@passline.dev",
+         //"password": "123456"
+         "email": "sole_pino@hotmail.com",
+         "password": "Vito2015"
+         //"email" : "ariel@passline.dev",
+         //"password" : "123456"
+      }
 
 settings:
   encodeUrl: true

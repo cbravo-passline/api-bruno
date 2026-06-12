@@ -1,0 +1,184 @@
+info:
+  name: 180. RemoveSubscriberTicketConfig
+  type: http
+  seq: 173
+
+http:
+  method: DELETE
+  url: "{{url}}/event/RemoveSubscriberTicketConfig"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "event": "608e170b60b7fd6f11914a4ec9dfedbd"
+      }
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Success response not remove
+    request:
+      url: "{{url}}/event/RemoveFavoriteEvent"
+      method: DELETE
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+          disabled: true
+      body:
+        type: json
+        data: "{\r\n    \"event\": 184627\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 19:49:38 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "12"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d3255638b2f673b-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "result": 0
+          }
+  - name: Success remove succeess
+    request:
+      url: "{{url}}/event/RemoveFavoriteEvent"
+      method: DELETE
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+          disabled: true
+      body:
+        type: json
+        data: "{\r\n    \"event\": 315083\r\n}"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 19:50:14 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "12"
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d325641893f673b-ATL
+      body:
+        type: json
+        data: |-
+          {
+              "result": 1
+          }
+  - name: Error bad parameters
+    request:
+      url: "{{url}}/event/RemoveFavoriteEvent"
+      method: DELETE
+      headers:
+        - name: content-type
+          value: application/json
+        - name: Authorization
+          value: Bearer U1Zjd2QwaENPR05KUWxad01FbDJZVWxPTjB4V1FUMDk.VjFscVZYQmtObHBhVDBoR1VqWm5ZVUpvVG0welVEbFJaeXN2WjJGR0swdDZTazA1VlVKMVRXOVZiR1pYTVZCT1JVODROVEY0V0RWSWVrNVplazVpZW5SUFJYaEdhRVZPYzJkMU4xQnRiRTlWWnpFMFMwczBaSEJ6YzFSV1luSmpka2xMYzBkRFduVlZkM0kwY0V0UFNXNVJTazlIYVdvelUyVjBSbWQzWVV3dmRYWkpiMEp6TW5FNEwzQTFURGxXSzA1MGJrWnZWRFZVYmk5c1VHTldRMDFxUmtFekwxVjNWSFJOUFE9PQ.ZWpoclowUnhXVlV5Y3pCclZrTm5WakJ2YzJZeVNYcFJiREZHTkU1aWVVZ3lUVzV0UWpaS1VYRnRRVDA9
+          disabled: true
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Tue, 15 Oct 2024 19:50:45 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d325702bcce673b-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The event field is required.",
+                  "The value of the event field must be numeric.",
+                  "The value of the event must be greater than 0."
+              ]
+          }
+
+docs: Permite eliminar un evento favorito mediante el envío del token y el id del evento.
