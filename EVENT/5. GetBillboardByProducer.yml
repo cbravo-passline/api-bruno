@@ -14,10 +14,10 @@ http:
     data: |-
       {
           "country": "chile",
-          "producer": 10360901,
+          "producer": 3679,
           "start_date": "",
           "end_date": "",
-          "upper_category_id": "5",
+          "upper_category_id": "",
           "limit":1000
       }
   auth: inherit

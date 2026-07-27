@@ -5,25 +5,24 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/event/GetDigitalList?event_md5=608e170b60b7fd6f11914a4ec9dfedbd&limit=10000"
+  url: "{{url}}/event/GetDigitalList?event_md5=2dee8fceaa31ddb18891684f6956f114&limit=10000&text=134465077"
   headers:
     - name: content-type
       value: application/json
   params:
-    - name: text
-      value: ANULADO
-      type: query
-      disabled: true
-    - name: lang
-      value: en
-      type: query
-      disabled: true
     - name: event_md5
-      value: 608e170b60b7fd6f11914a4ec9dfedbd
+      value: 2dee8fceaa31ddb18891684f6956f114
       type: query
     - name: limit
       value: "10000"
       type: query
+    - name: text
+      value: "134465077"
+      type: query
+    - name: lang
+      value: en
+      type: query
+      disabled: true
   body:
     type: json
     data: ""

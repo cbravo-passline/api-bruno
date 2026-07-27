@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/event/GetDigitalListDetails?event_md5=608e170b60b7fd6f11914a4ec9dfedbd"
+  url: "{{url}}/event/GetDigitalListDetails?event_md5=2dee8fceaa31ddb18891684f6956f114"
   headers:
     - name: content-type
       value: application/json
@@ -15,7 +15,7 @@ http:
       type: query
       disabled: true
     - name: event_md5
-      value: 608e170b60b7fd6f11914a4ec9dfedbd
+      value: 2dee8fceaa31ddb18891684f6956f114
       type: query
   body:
     type: json

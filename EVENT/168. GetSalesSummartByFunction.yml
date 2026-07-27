@@ -5,11 +5,35 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/event/EticketSalesDetails/608e170b60b7fd6f11914a4ec9dfedbd?discount_code=&rrpp=&prodcut=&condition=&status=&email=&limit=&page="
+  url: "{{url}}/event/EticketSalesDetails/608e170b60b7fd6f11914a4ec9dfedbd?discount_code=&rrpp=1&prodcut=&condition=1&status=1&email=&limit=&page="
   headers:
     - name: Content-Type
       value: application/json
   params:
+    - name: discount_code
+      value: ""
+      type: query
+    - name: rrpp
+      value: "1"
+      type: query
+    - name: prodcut
+      value: ""
+      type: query
+    - name: condition
+      value: "1"
+      type: query
+    - name: status
+      value: "1"
+      type: query
+    - name: email
+      value: ""
+      type: query
+    - name: limit
+      value: ""
+      type: query
+    - name: page
+      value: ""
+      type: query
     - name: rrpp
       value: "917833"
       type: query
@@ -24,9 +48,6 @@ http:
       type: query
       description: 0 Vigente, 1 Validada, 2 Expirada
       disabled: true
-    - name: discount_code
-      value: ""
-      type: query
     - name: email
       value: luischr@gmail.com
       type: query
@@ -43,27 +64,6 @@ http:
       value: "2"
       type: query
       disabled: true
-    - name: rrpp
-      value: ""
-      type: query
-    - name: prodcut
-      value: ""
-      type: query
-    - name: condition
-      value: ""
-      type: query
-    - name: status
-      value: ""
-      type: query
-    - name: email
-      value: ""
-      type: query
-    - name: limit
-      value: ""
-      type: query
-    - name: page
-      value: ""
-      type: query
   auth:
     type: bearer
     token: "{{Token_productor}}"

@@ -1,0 +1,112 @@
+info:
+  name: 136. AdditionalServices
+  type: http
+  seq: 131
+
+http:
+  method: POST
+  url: "{{url}}/general/AdditionalServices"
+  headers:
+    - name: content-type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          //"event_id": "608e170b60b7fd6f119414a4ec9dfedbd",
+          "event_id": "608e170b60b7fd6f11914a4ec9dfedbd",
+          "chk_pos": "1",
+          "chk_maquinas": "",
+          "chk_barras": "1",
+          "comentaries": "esta es una prueba prueba en prod 10"
+      }
+  auth:
+    type: bearer
+    token: "{{Token_productor}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Error invalid params
+    request:
+      url: "{{url}}/general/PasslineContact"
+      method: POST
+      headers:
+        - name: content-type
+          value: application/json
+      body:
+        type: json
+        data: "{\r
+
+          \    \"nombre\": \"NombreTest\",\r
+
+          \    \"apellido\":\"ApellidoTest\",\r
+
+          \    \"email\":\"correo@pruebas.cl\",\r
+
+          \    \"telefono\": \"12345678\",\r
+
+          \    \"mensaje\": \"mensaje de pruebas\",\r
+
+          \    \"country\": \"chile\",\r
+
+          \    \"g-recaptcha-response\": \"12345\"\r
+
+          }\r\n"
+    response:
+      statusText: "200"
+      headers:
+        - name: Date
+          value: Fri, 25 Oct 2024 01:01:03 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: x-powered-by
+          value: Passline
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, PUT, DELETE, OPTIONS
+        - name: access-control-allow-headers
+          value: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization
+        - name: access-control-max-age
+          value: "300"
+        - name: via
+          value: 1.1 google
+        - name: CF-Cache-Status
+          value: DYNAMIC
+        - name: Server
+          value: cloudflare
+        - name: CF-RAY
+          value: 8d7e45f03fba53c8-ATL
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "error": "400",
+              "messages": [
+                  "The nombre field is required.",
+                  "The apellido field is required.",
+                  "The email field is required.",
+                  "The value of the email field must be email format.",
+                  "The telefono field is required.",
+                  "The mensaje field is required.",
+                  "The country field is required."
+              ]
+          }
+
+docs: |-
+  Trae los eventos por periodo de fechas.
+
+  Respuesta
+
+  json de eventos por fecha.

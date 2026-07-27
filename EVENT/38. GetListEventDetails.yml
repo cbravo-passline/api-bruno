@@ -8,11 +8,10 @@ http:
   url: "{{url}}/event/GetListEventDetails"
   body:
     type: json
-    data: "{\r
-
-      \    \"events\": [\"'hola\", \"181803\"]\r
-
-      }"
+    data: |-
+      {
+          "events": ["'hola", "31114"]
+      }
   auth:
     type: bearer
     token: "{{Token_productor}}"

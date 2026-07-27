@@ -8,13 +8,11 @@ http:
   url: "{{url}}/event/GetCountryByBillboardHome"
   body:
     type: json
-    data: "{\r
-
-      \    \"country\": \"chile\",\r
-
-      \    \"limit\":\"0,8\"\r
-
-      }"
+    data: |-
+      {
+          "country": "argentina",
+          "limit":"0,8"
+      }
   auth: inherit
 
 settings:

@@ -17,6 +17,6 @@ variables:
   - name: email
     value: productor@passline.cl
   - name: password
-    value: pass4321
+    value: pass4826
   - secret: true
     name: Token_refresh_productor
