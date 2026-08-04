@@ -1,15 +1,11 @@
 info:
-  name: 88. GetBankList
+  name: 113. GetConfigEventGrouping
   type: http
-  seq: 89
+  seq: 92
 
 http:
   method: GET
-  url: "{{url}}/general/GetBankList?country=chile"
-  params:
-    - name: country
-      value: chile
-      type: query
+  url: "{{url}}/general/GetConfigEventGrouping"
   auth:
     type: bearer
     token: "{{Token_productor}}"

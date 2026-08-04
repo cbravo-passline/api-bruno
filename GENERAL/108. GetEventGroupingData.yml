@@ -1,11 +1,15 @@
 info:
-  name: 99. GetMySiteBannerList
+  name: 108. GetEventGroupingData
   type: http
-  seq: 96
+  seq: 90
 
 http:
   method: GET
-  url: "{{url}}/general/GetMySiteBannerList"
+  url: "{{url}}/general/GetEventGroupingData?group="
+  params:
+    - name: group
+      value: ""
+      type: query
   auth:
     type: bearer
     token: "{{Token_productor}}"

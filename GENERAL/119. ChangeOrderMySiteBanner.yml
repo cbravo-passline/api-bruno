@@ -1,18 +1,18 @@
 info:
-  name: 86. EditOrganizerData
+  name: 119. ChangeOrderMySiteBanner
   type: http
-  seq: 87
+  seq: 97
 
 http:
   method: PUT
-  url: "{{url}}/general/ChangeOrderVenueSlider"
+  url: "{{url}}/general/ChangeOrderMySiteBanner"
   body:
     type: json
     data: "{\r
 
-      \    \"venue_slider\":\"CRDCVDmI2_JrRjvPNll6Rw@@\",\r
+      \    \"banner\" : \"luwhpJaRX-5wxMEY_SWwEA@@\",\r
 
-      \    \"direction\":\"up\"\r
+      \    \"direction\" : \"up\"\r
 
       }"
   auth:

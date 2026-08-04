@@ -1,7 +1,7 @@
 info:
   name: 82. GetWebEticketSales
   type: http
-  seq: 83
+  seq: 82
 
 http:
   method: GET

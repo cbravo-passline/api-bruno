@@ -1,11 +1,15 @@
 info:
-  name: 95. GetConfigEventGrouping
+  name: 77. GetUserExceptionsList
   type: http
-  seq: 93
+  seq: 126
 
 http:
   method: GET
-  url: "{{url}}/general/GetConfigEventGrouping"
+  url: "{{url}}/general/GetUserExceptionsList?searching="
+  params:
+    - name: searching
+      value: ""
+      type: query
   auth:
     type: bearer
     token: "{{Token_productor}}"

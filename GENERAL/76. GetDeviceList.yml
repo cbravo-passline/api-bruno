@@ -1,7 +1,7 @@
 info:
   name: 76. GetDeviceList
   type: http
-  seq: 77
+  seq: 76
 
 http:
   method: GET

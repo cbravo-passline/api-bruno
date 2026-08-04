@@ -1,7 +1,7 @@
 info:
   name: 77. GetUsersDataBase
   type: http
-  seq: 78
+  seq: 77
 
 http:
   method: GET

@@ -1,16 +1,18 @@
 info:
-  name: 93. RemoveEventGrouping
+  name: 114. EditConfigEventGrouping
   type: http
-  seq: 92
+  seq: 93
 
 http:
-  method: DELETE
-  url: "{{url}}/general/RemoveEventGrouping"
+  method: PUT
+  url: "{{url}}/general/ChangeOrderVenueSlider"
   body:
     type: json
     data: "{\r
 
-      \    \"group\":\"GBKzDX9xzHOhL_Y6DEPjhA@@\"\r
+      \    \"venue_slider\":\"CRDCVDmI2_JrRjvPNll6Rw@@\",\r
+
+      \    \"direction\":\"up\"\r
 
       }"
   auth:

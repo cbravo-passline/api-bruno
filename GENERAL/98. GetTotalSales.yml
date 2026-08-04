@@ -1,28 +1,23 @@
 info:
-  name: 81. GetTotalMonthlySales
+  name: 98. GetTotalSales
   type: http
-  seq: 82
+  seq: 80
 
 http:
   method: GET
-  url: "{{url}}/general/GetTotalMonthlySales?lang=en&end_date=2025-02-28&begin_date=2024-12-01"
+  url: "{{url}}/general/GetTotalSales?page=1&limit=1&lang=en&event_status=1"
   params:
     - name: page
       value: "1"
       type: query
-      disabled: true
     - name: limit
       value: "1"
       type: query
-      disabled: true
     - name: lang
       value: en
       type: query
-    - name: end_date
-      value: 2025-02-28
-      type: query
-    - name: begin_date
-      value: 2024-12-01
+    - name: event_status
+      value: "1"
       type: query
   auth:
     type: bearer

@@ -1,11 +1,11 @@
 info:
-  name: 97. GetUserBankData
+  name: 105. GetUserBankDetails
   type: http
-  seq: 95
+  seq: 87
 
 http:
   method: GET
-  url: "{{url}}/general/GetUserBankData"
+  url: "{{url}}/general/GetUserBankDetails"
   auth:
     type: bearer
     token: "{{Token_productor}}"

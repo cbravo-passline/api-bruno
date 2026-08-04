@@ -1,7 +1,7 @@
 info:
   name: 79. EditPaypalManager
   type: http
-  seq: 80
+  seq: 79
 
 http:
   method: PUT
